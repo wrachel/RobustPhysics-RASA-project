@@ -1,0 +1,55 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - inquire_frequency_domain
+  - inquire_frequency_vector
+  - specify_frequency_sample
+  - input_spectral_data
+  - add_spectral_data_dialog
+  - copy_paste_spectral_data
+
+responses:
+  utter_greet:
+    - text: "Hey! How are you?"
+
+  utter_cheer_up:
+    - text: "Here is something to cheer you up:"
+      image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+    - text: "Did that help you?"
+
+  utter_happy:
+    - text: "Great, carry on!"
+
+  utter_goodbye:
+    - text: "Bye"
+
+  utter_iamabot:
+    - text: "I am a bot, powered by Rasa."
+
+  utter_explain_frequency_vector:
+    - text: "To create a frequency vector, go under the Tree solution domain node and add the frequency vector."
+
+  utter_explain_frequency_sample:
+    - text: "Set the frequency sample for solving the model in the window below the Tree solution domain node."
+
+  utter_explain_input_spectral_data:
+    - text: "To input spectral data, store frequency-dependent input data like Permittivity and Conductivity in the model database called 'Spectral Data'."
+
+  utter_explain_add_spectral_data_dialog:
+    - text: "To add spectral data, right-click and select 'add' to open a dialog box for entering the necessary information."
+
+  utter_explain_copy_paste_spectral_data:
+    - text: "You can manually enter Spectral Data in the provided grids or copy & paste it from a spreadsheet."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

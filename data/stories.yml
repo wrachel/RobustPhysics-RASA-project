@@ -1,0 +1,51 @@
+version: "3.1"
+
+stories:
+  - story: happy path
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_great
+      - action: utter_happy
+
+  - story: sad path 1
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - intent: affirm
+      - action: utter_happy
+
+  - story: sad path 2
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - intent: deny
+      - action: utter_goodbye
+
+  - story: User inquires about frequency vector and sample
+    steps:
+      - intent: inquire_frequency_vector
+      - action: utter_explain_frequency_vector
+      - intent: specify_frequency_sample
+      - action: utter_explain_frequency_sample
+
+  - story: User asks about inputting spectral data
+    steps:
+      - intent: input_spectral_data
+      - action: utter_explain_input_spectral_data
+
+  - story: User asks how to add spectral data using dialog box
+    steps:
+      - intent: add_spectral_data_dialog
+      - action: utter_explain_add_spectral_data_dialog
+
+  - story: User wants to know about copying and pasting spectral data
+    steps:
+      - intent: copy_paste_spectral_data
+      - action: utter_explain_copy_paste_spectral_data

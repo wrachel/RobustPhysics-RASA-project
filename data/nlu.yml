@@ -1,0 +1,121 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - hello there
+      - good morning
+      - good evening
+      - moin
+      - hey there
+      - let's go
+      - hey dude
+      - goodmorning
+      - goodevening
+      - good afternoon
+
+  - intent: goodbye
+    examples: |
+      - cu
+      - good by
+      - cee you later
+      - good night
+      - bye
+      - goodbye
+      - have a nice day
+      - see you around
+      - bye bye
+      - see you later
+
+  - intent: affirm
+    examples: |
+      - yes
+      - y
+      - indeed
+      - of course
+      - that sounds good
+      - correct
+
+  - intent: deny
+    examples: |
+      - no
+      - n
+      - never
+      - I don't think so
+      - don't like that
+      - no way
+      - not really
+
+  - intent: mood_great
+    examples: |
+      - perfect
+      - great
+      - amazing
+      - feeling like a king
+      - wonderful
+      - I am feeling very good
+      - I am great
+      - I am amazing
+      - I am going to save the world
+      - super stoked
+      - extremely good
+      - so so perfect
+      - so good
+      - so perfect
+
+  - intent: mood_unhappy
+    examples: |
+      - my day was horrible
+      - I am sad
+      - I don't feel very well
+      - I am disappointed
+      - super sad
+      - I'm so sad
+      - sad
+      - very sad
+      - unhappy
+      - not good
+      - not very good
+      - extremly sad
+      - so saad
+      - so sad
+
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?
+
+  - intent: inquire_frequency_domain
+    examples: |
+      - How do I create a frequency domain?
+      - Explain the steps for setting up a frequency domain.
+
+  - intent: inquire_frequency_vector
+    examples: |
+      - How do I create a frequency vector?
+      - Explain adding a frequency vector under the Tree solution domain node.
+
+  - intent: specify_frequency_sample
+    examples: |
+      - How can I set a frequency sample?
+      - Specify the frequency sample for solving the model.
+
+  - intent: input_spectral_data
+    examples: |
+      - Tell me about inputting spectral data.
+      - How to store frequency-dependent input data like Permittivity and Conductivity?
+
+  - intent: add_spectral_data_dialog
+    examples: |
+      - How do I add spectral data?
+      - Explain the process of right-clicking and selecting "add" to enter spectral data.
+
+  - intent: copy_paste_spectral_data
+    examples: |
+      - Can I cut and paste spectral data from a spreadsheet?
+      - How to Copy & Paste spectral data into the grid from a spreadsheet.
