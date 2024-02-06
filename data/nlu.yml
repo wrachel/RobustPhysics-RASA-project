@@ -119,3 +119,80 @@ nlu:
     examples: |
       - Can I cut and paste spectral data from a spreadsheet?
       - How to Copy & Paste spectral data into the grid from a spreadsheet.
+  - intent: create_cylindrical_fairing_volume
+    examples: |
+      - create cylindrical fairing volume
+      - how to create a cylindrical fairing volume
+  - intent: create_spacecraft_volume
+    examples: |
+      - create spacecraft volume
+      - how to create a spacecraft volume
+      - add spacecraft volume
+  - intent: cut_shape
+    examples: |
+      - cut shape
+      - how to cut a shape
+  - intent: add_ellipsoid
+    examples: |
+      - add ellipsoid
+      - how to add an ellipsoid
+      - create ellipsoid
+  - intent: add_sphere
+    examples: |
+      - add sphere
+      - how to add a sphere
+      - create sphere
+  - intent: ask_tree_view
+    examples: |
+      - what is tree view
+      - explain tree view
+      - tell me about the tree view
+      - tree view details
+  - intent: pan_model
+    examples: |
+      - how to pan the model
+      - panning the model
+      - move the model
+      - pan controls
+  - intent: scroll_in_out
+    examples: |
+      - how do i scroll in or out
+      - zooming in and out
+      - scrolling in the model
+      - zoom controls
+  - intent: rotate_model
+    examples: |
+      - how do i rotate the model
+      - rotating the model
+      - model rotation
+      - rotate controls
+  - intent: hide_objects
+    examples: |
+      - can i hide objects
+      - hiding objects
+      - toggle visibility
+      - hide and show objects
+  - intent: add_3d_geometry
+    examples: |
+      - how to add 3d geometry
+      - adding 3d shapes
+      - create 3d geometry
+      - geometry addition
+  - intent: wire_constructions
+    examples: |
+      - what are wire constructions
+      - explain wire constructions
+      - wire properties
+      - details on wires
+  - intent: add_connectors
+    examples: |
+      - how to add connectors
+      - adding connectors
+      - connectors in the model
+      - add wire junctions
+  - intent: create_junction
+    examples: |
+      - how to create a junction
+      - creating junctions
+      - junction creation
+      - automatically create junctions

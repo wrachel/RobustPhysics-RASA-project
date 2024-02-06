@@ -14,6 +14,20 @@ intents:
   - input_spectral_data
   - add_spectral_data_dialog
   - copy_paste_spectral_data
+  - create_cylindrical_fairing_volume
+  - create_spacecraft_volume
+  - cut_shape
+  - add_ellipsoid
+  - add_sphere
+  - ask_tree_view
+  - pan_model
+  - scroll_in_out
+  - rotate_model
+  - hide_objects
+  - add_3d_geometry
+  - wire_constructions
+  - add_connectors
+  - create_junction
 
 responses:
   utter_greet:
@@ -49,7 +63,57 @@ responses:
 
   utter_explain_copy_paste_spectral_data:
     - text: "You can manually enter Spectral Data in the provided grids or copy & paste it from a spreadsheet."
+  utter_create_cylindrical_fairing_volume:
+  - text: "To create a cylindrical fairing volume, click on the “Add Cylinder” button, specify the height, radius, and position data, then hit Save."
+  utter_create_spacecraft_volume:
+  - text: "Select a spacecraft volume from the Toolbar Click on the “Add [3D solid selected]” button, specify the dimensions and position data, then hit Save."
+  utter_cut_shape:
+  - text: "To cut a shape:\n\nSelect a shape either in the 3D window (or in the Model tab)\n\nUsing Ctrl + click, select a second shape.\n\nHit the Toolbar CUT button to perform the cut.\n\n\nNote: The second shape will always cut the first shape. Both shapes must be intersecting for this to work. This functionality works with other cut shapes and combined shapes as well."
+  utter_add_ellipsoid:
+  - text: "To add an ellipsoid, click on the “Add Ellipsoid” button, specify the 3 radii and position data, then hit Save.\n\nEdit Height (e.g., above Cylinder) in 3D Location tab."
+  utter_add_sphere:
+  - text: "To add a sphere, click on the “Add Sphere” button, specify the radius and position data, then hit Save."
+  utter_ask_tree_view:
+    - text: "Tree view on the left of the main window shows all the input and output data to the software. When the program starts, it is empty by default."
 
+  utter_pan_model:
+    - text: "Use keyboard arrows or mouse wheel to pan the model."
+
+  utter_scroll_in_out:
+    - text: "Scroll your mouse to zoom in or out."
+
+  utter_rotate_model:
+    - text: "Click the right mouse button and move to rotate."
+
+  utter_hide_objects:
+    - text: "In “MODEL tab” click to select a Model Object & hit SPACEBAR to toggle VISIBILITY ON / OFF."
+
+  utter_add_3d_geometry:
+    - text: "Can be done either via the Tree View under Geometry → Exterior Field or the 3D Model window tool palette."
+
+  utter_wire_constructions:
+    - text: "Wire constructions found under 1D Cable Current Fields → Wires Sections in the Tree / Table view. Wires have the following properties (all units in meters): Conductor material & diameter + Insulation material & thickness."
+
+  utter_add_connectors:
+    - text: "Can be added via the Tree view under Wire Junctions → Connectors or directly within the 3D Model Window via the Tool Palette."
+
+  utter_create_junction:
+    - text: "To automatically create a “Junction” at intersections of Cavities and Geometries, select the “Cavity Intersect” Button. This will create junctions at all points where a cable crosses a face of a cavity or geometry."
+    
+actions:
+  - utter_create_cylindrical_fairing_volume
+  - utter_create_spacecraft_volume
+  - utter_cut_shape
+  - utter_add_ellipsoid
+  - utter_add_sphere
+  - utter_pan_model
+  - utter_scroll_in_out
+  - utter_rotate_model
+  - utter_hide_objects
+  - utter_add_3d_geometry
+  - utter_wire_constructions
+  - utter_add_connectors
+  - utter_create_junction
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

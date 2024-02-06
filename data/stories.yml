@@ -49,3 +49,65 @@ stories:
     steps:
       - intent: copy_paste_spectral_data
       - action: utter_explain_copy_paste_spectral_data
+  - story: create cylindrical fairing volume
+    steps:
+      - intent: create_cylindrical_fairing_volume
+      - action: utter_create_cylindrical_fairing_volume
+  - story: create spacecraft volume
+    steps:
+      - intent: create_spacecraft_volume
+      - action: utter_create_spacecraft_volume
+  - story: cut shape
+    steps:
+      - intent: cut_shape
+      - action: utter_cut_shape
+  - story: add ellipsoid
+    steps:
+      - intent: add_ellipsoid
+      - action: utter_add_ellipsoid
+  - story: add sphere
+    steps:
+      - intent: add_sphere
+      - action: utter_add_sphere
+  - story: ask about tree view
+    steps:
+      - intent: ask_tree_view
+      - action: utter_ask_tree_view
+  - story: inquire about panning the model
+    steps:
+      - intent: pan_model
+      - action: utter_pan_model
+  - story: question about scrolling in or out
+    steps:
+      - intent: scroll_in_out
+      - action: utter_scroll_in_out
+
+  - story: ask how to rotate the model
+    steps:
+      - intent: rotate_model
+      - action: utter_rotate_model
+
+  - story: inquire about hiding objects
+    steps:
+      - intent: hide_objects
+      - action: utter_hide_objects
+
+  - story: ask how to add 3d geometry
+    steps:
+      - intent: add_3d_geometry
+      - action: utter_add_3d_geometry
+
+  - story: inquire about wire constructions
+    steps:
+      - intent: wire_constructions
+      - action: utter_wire_constructions
+
+  - story: ask how to add connectors
+    steps:
+      - intent: add_connectors
+      - action: utter_add_connectors
+
+  - story: inquire about creating a junction
+    steps:
+      - intent: create_junction
+      - action: utter_create_junction
