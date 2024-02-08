@@ -50,6 +50,21 @@ responses:
   utter_explain_copy_paste_spectral_data:
     - text: "You can manually enter Spectral Data in the provided grids or copy & paste it from a spreadsheet."
 
+  utter_explain_external_efield_constraints:
+    - text: "In model tree/spectral data, define an Electric Field (V/m) spectrum. In Tree/Table view Excitation/Constraint/Wavefield, 
+    right click edit. In 3D model view, select cavity wavefield and click constraint source button in Toolbar. Finally, right click and edit
+    the Add Constraint dialog to define E-field spectrum level."
+
+  utter_explain_max_min_field_limits:
+   - text: "Select solver setting from Menu Bar. In Dialog, define the Probability Percentiles that you would like model to use to calculate
+   Max and Min E-field levels in each cavity wavefield. At Menu Bar/Solve, select "Solve Cavity Model". Wait for "Calculation complete" 
+   or "Error message" to be displayed."
+
+  utter_explain_efield_outputs:
+  - text: "Outputs specral data are shown under Outputs node. Tile Windows (Plots) can be viewed by using Menu Bar/Windows/Tile option
+  to display all open plots. Finally, in the Plot dialog, click the "Table" tab to access the Graphed Outputs in tabular data form.
+  "Copy and Paste to spreadsheet for reports, post-processing, etc."
+
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

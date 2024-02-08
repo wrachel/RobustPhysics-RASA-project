@@ -49,3 +49,20 @@ stories:
     steps:
       - intent: copy_paste_spectral_data
       - action: utter_explain_copy_paste_spectral_data
+  
+  - story: User wants to know how to add external electric field constraints for excitation
+    steps:
+    - intent: excitation_external_efield_constraints
+    - action: utter_explain_external_efield_constraints
+
+  - story: User wants to know how to solve for the mean and statistical max, min field limits.
+    steps:
+    - intent: solve_max_min_field_limit
+    - action: utter_explain_max_min_field_limits
+
+  - story: User wants to see how to view E-field outputs.
+    steps:
+    - intent: view_efield_outputs
+    - action: utter_explain_efield_outputs
+
+  

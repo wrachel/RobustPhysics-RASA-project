@@ -119,3 +119,16 @@ nlu:
     examples: |
       - Can I cut and paste spectral data from a spreadsheet?
       - How to Copy & Paste spectral data into the grid from a spreadsheet.
+  - intent: excitation_external_efield_constraints
+    examples: |
+    - How can I add an external electric field constraint?
+    - Explain adding external electric field contrainst.  
+  - intent: solve_max_min_field_limit
+    examples: |
+    - How do I solve for the maximum and minimum field limits?
+    - Explain how to solve the mean and statistical max and min field limits.
+  - intent: view_efield_outputs
+    examples: |
+    - How do I view the E-field outputs?
+    - Explain how to see the output data from the E-field.
+
