@@ -50,6 +50,27 @@ responses:
   utter_explain_copy_paste_spectral_data:
     - text: "You can manually enter Spectral Data in the provided grids or copy & paste it from a spreadsheet."
 
+  utter_explain_add_cable_segment:
+    - text: "To add a cable segment, go under the Tree view and add a cable segment under 1D Cable Current Fields → Segments by right-clicking and hitting 'Add'."
+
+  utter_explain_add_wires:
+    - text: "To add wires, specify the desired number of wires and the connectors that are being linked."
+
+  utter_explain_specify_connectors:
+    - text: "Specify the connectors that are being linked."
+
+  utter_explain_create_common_backbone_cable_segment:
+    - text: "Within the 3D Model Window, you can use the tool palette to create cable segments using the appropriate icon (click on Create Segment)."
+
+  utter_explain_edit_segment_cross_section:
+    - text: "While creating Cable Segments, it is useful to use the Edit Segment Cross Section option in order to specify important information for calculations."
+
+  utter_explain_find_closest_reflecting_plane:
+    - text: "The 'Find Closest Plane' button will recalculate the value for the closest proximate reflecting plane for this specific cable segment."
+
+  utter_explain_override_calculated_value:
+    - text: "When checked, the 'Override Calculated Value' checkbox allows the user to use their own values for the distance to ground plane and the Direction Cosine vector of the distance."
+
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

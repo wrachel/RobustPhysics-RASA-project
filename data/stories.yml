@@ -49,3 +49,41 @@ stories:
     steps:
       - intent: copy_paste_spectral_data
       - action: utter_explain_copy_paste_spectral_data
+
+  - story: Add cable segment
+    steps:
+      - intent: add_cable_segment
+      - action: utter_explain_add_cable_segment
+
+  - story: Add wires and specify connectors
+    steps:
+      - intent: add_wires
+      - action: utter_explain_add_wires
+      - intent: specify_connectors
+      - action: utter_explain_specify_connectors
+
+  - story: Add cable segment in 3D Geometry Window
+    steps:
+      - intent: add_cable_segment
+      - action: utter_explain_add_cable_segment
+      - intent: create_common_backbone_cable_segment
+      - action: utter_explain_create_common_backbone_cable_segment
+
+  - story: Add and Edit Cable Segment
+    steps:
+      - intent: add_cable_segment
+      - action: utter_explain_add_cable_segment
+      - intent: create_common_backbone_cable_segment
+      - action: utter_explain_create_common_backbone_cable_segment
+      - intent: edit_segment_cross_section
+      - action: utter_explain_edit_segment_cross_section
+
+  - story: Find Closest Reflecting Plane
+    steps:
+      - intent: find_closest_proximate_reflecting_plane
+      - action: utter_explain_find_closest_reflecting_plane
+
+  - story: Override Calculated Value
+    steps:
+      - intent: override_calculated_value
+      - action: utter_explain_override_calculated_value
