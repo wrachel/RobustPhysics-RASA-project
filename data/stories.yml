@@ -49,3 +49,12 @@ stories:
     steps:
       - intent: copy_paste_spectral_data
       - action: utter_explain_copy_paste_spectral_data
+  
+  - story: User inquires about cavity wavefield
+    steps:
+      - intent: inquire_cavity_wavefield
+      - action: utter_explain_create_cavity_wavefield
+      - intent: define_dielectric_gas_volume_cavity_wavefield
+      - action: utter_explain_define_dielectric_volume
+      - intent: define_q_factor_cavity_wavefield
+      - action: explain_q_factor

@@ -119,3 +119,25 @@ nlu:
     examples: |
       - Can I cut and paste spectral data from a spreadsheet?
       - How to Copy & Paste spectral data into the grid from a spreadsheet.
+  
+  - intent: inquire_cavity_wavefield
+    examples: |
+      - How do I create a cavity wavefield?
+      - How are cavity wavefields displayed?
+
+  - intent: define_dielectric_gas_volume_cavity_wavefield
+    examples: |
+      - How do I define a dielectric gas?
+      - How do I edit cavity volume?
+
+  - intent: define_q_factor_cavity_wavefield
+    examples: |
+      - How do I find the total q factor for a cavity wavefield?
+      - What are the components of loss factor that establish a total q factor?
+      - What is wall loss?
+      - What is Absorption Section?
+      - Can I add Reciever Antenna Loss?
+      - Where is Reflective Loss?
+      - How do I add Dielectric Laminate Loss?
+
+    
