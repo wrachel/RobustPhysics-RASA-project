@@ -1,6 +1,11 @@
 from openai import OpenAI
+from dotenv import load_dotenv, find_dotenv, get_key
 
-api_key = ""
+# Automatically find and load the .env file
+load_dotenv(find_dotenv())
+
+# Directly get the API key value
+api_key = get_key(find_dotenv(), "OPENAI_API_KEY")
 
 
 client = OpenAI()
@@ -18,8 +23,10 @@ client.api_key = api_key
 # Retrieve the state of a fine-tune
 retrieve_response = client.fine_tuning.jobs.retrieve("ftjob-bNv7FO6fFX0VEYAF0tm4gQfT")
 
-print(retrieve_response)
+# print(retrieve_response)
 
+print("Enter your prompt:")
+prompt = input()
 
 fine_tuned_model = retrieve_response.fine_tuned_model
 
@@ -27,13 +34,15 @@ fine_tuned_model = retrieve_response.fine_tuned_model
 response = client.chat.completions.create(
     model=fine_tuned_model,
     messages=[
-        {"role": "system", "content": "Hello"},
-        {"role": "user", "content": "How do I speed up my model"},
+        {"role": "system", "content": "I am here to help you fix your EMC models!"},
+        {"role": "user", "content": prompt},
     ],
 )
 
 # Assuming you want to print the content of the first completion choice
-print(response)
+print("")
+for choice in response.choices:
+    print(choice.message.content)
 
 # # Cancel a job
 # client.fine_tuning.jobs.cancel("ftjob-Bhac4EyBcw5zGuURX3kaOHRP")
