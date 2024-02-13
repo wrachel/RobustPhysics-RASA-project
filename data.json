@@ -1,0 +1,30 @@
+[{
+    "answers": {"answer_start": [0], "text": ["Right-click ADD in the left window to create a new data object."]},
+    "context": "Right-click ADD in the left window to create a new data object.",
+    "question": "How do I create an object using the Tree View?"
+},
+{
+    "answers": {"answer_start": [0], "test": ["Define excitation levels, loss mechanisms in each cavity, and aperture junctions between cavities. Use a power balance matrix to calculate the statistical mean coupled E-fields."]},
+    "context": "Define excitation levels, loss mechanisms in each cavity, and aperture junctions between cavities. Use a power balance matrix to calculate the statistical mean coupled E-fields.",
+    "question": "How do I calculate the Statistical mean coupled E-fields?"
+},
+{
+    "answers": {"answer_start": [0], "test": ["The rectangular prism icon adds a rectangular prism to the model."]},
+    "context": "The rectangular prism icon adds a rectangular prism to the model.",
+    "question": "What does the rectangular prism icon do?"
+},
+{
+    "answers": {"answer_start": [0], "test": ["The cyliner icon adds a cyliner to the model."]},
+    "context": "The cyliner icon adds a cyliner to the model.",
+    "question": "What does the cylinder icon do?"
+},
+{
+    "answers": {"answer_start": [0], "test": ["The add power source icon adds a power source to the selected cavity wavefield."]},
+    "context": "The add power source icon adds a power source to the selected cavity wavefield.",
+    "question": "What does the add power source icon do?"
+},
+{
+    "answers": {"answer_start": [0], "test": ["There are two fully-associative model interaction windows: Tree & Tabular List view and 3D Model Window."]},
+    "context": "There are two fully-associative model interaction windows: Tree & Tabular List view and 3D Model Window.",
+    "question": "What are the model interaction windows?"
+}]
