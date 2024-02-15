@@ -49,3 +49,34 @@ stories:
     steps:
       - intent: copy_paste_spectral_data
       - action: utter_explain_copy_paste_spectral_data
+      
+  - story: Model Tree Spectral Data
+    steps:
+    - intent: model_tree_spectral_data
+    - action: utter_model_tree_spectral_data
+  
+  - story: Add Tx Power Input
+    steps:
+    - intent: add_tx_power_input
+    - action: utter_add_tx_power_input
+  
+  - story: Edit Tx Power Inputs
+    steps:
+    - intent: edit_tx_power_inputs
+    - action: utter_edit_tx_power_inputs
+  
+  - story: Locate Tx Power Inputs in 3D
+    steps:
+    - intent: locate_tx_power_inputs_3d
+    - action: utter_locate_tx_power_inputs_3d
+  
+  - story: Edit Component
+    steps:
+    - intent: edit_component
+    - action: utter_edit_component
+  
+  - story: Delete Component
+    steps:
+    - intent: delete_component
+    - action: utter_delete_component
+  
