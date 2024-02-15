@@ -119,3 +119,39 @@ nlu:
     examples: |
       - Can I cut and paste spectral data from a spreadsheet?
       - How to Copy & Paste spectral data into the grid from a spreadsheet.
+
+  - intent: model_tree_spectral_data
+    examples: |
+      - How do I model tree data required for an antenna power input?
+      - Explain the process for modeling tree data in the context of antenna power input.
+      - What steps should I follow to set up tree data for antenna power calculations?
+  
+  - intent: add_tx_power_input
+    examples: |
+      - How do I add Tx power input?
+      - Can you guide me in adding Tx power input to the system?
+      - Explain the procedure for including Tx power input in the simulation.
+  
+  - intent: edit_tx_power_inputs
+    examples: |
+      - How do I edit Tx power inputs?
+      - Can I modify the existing Tx power inputs?
+      - Explain the steps to make changes to the Tx power inputs.
+  
+  - intent: locate_tx_power_inputs_3d
+    examples: |
+      - How do I locate the Tx power inputs in 3d geometry?
+      - Explain the process of finding Tx power inputs within the 3D geometry.
+      - What are the steps to identify the location of Tx power inputs in 3D?
+  
+  - intent: edit_component
+    examples: |
+      - How do I edit a component?
+      - Can you guide me in modifying a component?
+      - Explain the procedure for making changes to a component.
+  
+  - intent: delete_component
+    examples: |
+      - How do I delete a component?
+      - Can you guide me in removing a component from the system?
+      - Explain the procedure for deleting a component.
