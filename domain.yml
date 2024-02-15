@@ -50,6 +50,24 @@ responses:
   utter_explain_copy_paste_spectral_data:
     - text: "You can manually enter Spectral Data in the provided grids or copy & paste it from a spreadsheet."
 
+  utter_model_tree_spectral_data:
+    - text: "To model tree data for an antenna power input, you can follow these steps: In Model Tree/Spectral Data, enter S11. Then, in Model Tree / Power, define a Power (W) spectrum. Finally, in Model Tree / Antenna, define the antenna name and S11."
+
+  utter_add_tx_power_input:
+    - text: "To add Tx power input, you can follow these steps: In Tree / Table view, go to Excitation / Power Inputs, right-click the field, and click edit. If you're in the 3D Model Window, select the cavit wavefield and click the power source button in the toolbar."
+
+  utter_edit_tx_power_inputs:
+    - text: "To edit Tx power inputs, go to the power inputs dialog, add multiple Tx sources, define the antenna & power spectrum for each, and define the location of the antenna in 3D. This defaults to the center of the cavity."
+
+  utter_locate_tx_power_inputs_3d:
+    - text: "To locate the Tx power inputs in 3D geometry, right-click on the 3D power input object -> Edit excitation. You can edit, move, delete it, etc."
+
+  utter_edit_component:
+    - text: "To edit a component, right-click the component you'd like to edit, and click the 'edit' option."
+
+  utter_delete_component:
+    - text: "To delete a component, right-click the component you'd like to delete, and click the 'delete' option."
+
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
