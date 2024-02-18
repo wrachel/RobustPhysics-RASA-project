@@ -196,3 +196,180 @@ nlu:
       - creating junctions
       - junction creation
       - automatically create junctions
+  - intent: ask_about_simulation_tool
+    examples: |
+      - What is the simulation tool defined in the Math Spec I?
+      - How does the simulation tool described in the paper work?
+      - Can you explain the simulation tool mentioned in the section?
+      - What method does the simulation tool use to predict electromagnetic field levels?
+
+  - intent: ask_about_statistical_power_balance_method
+    examples: |
+      - What is Lyon's statistical power balance method?
+      - Who introduced the statistical power balance method?
+      - Can you provide details about the statistical power balance method proposed by Lyon in 1962?
+      - How does the statistical power balance method predict vibration and acoustic response?
+
+  - intent: ask_about_SEA_framework
+    examples: |
+      - What is statistical energy analysis (SEA)?
+      - Who laid the foundations for statistical power balance modeling of EM fields in reverberant, multi-modal domains?
+      - Can you explain the framework of statistical energy analysis introduced by Lyon in 1962?
+      - How does SEA relate to predicting EM fields in reverberant domains?
+
+  - intent: ask_about_deterministic_models_vs_statistical_reduction
+    examples: |
+      - What are the limitations of deterministic models for estimating EM fields?
+      - How do deterministic models compare to statistical reduction methods in predicting EM fields?
+      - Can you explain why deterministic models may not reliably estimate predicted EM fields?
+      - What is the role of statistical reduction in accounting for uncertainties in EM parameters?
+
+  - intent: ask_about_modal_expansion_basis
+    examples: |
+      - How does Bremner use a modal expansion basis for predicting EM field response?
+      - What is the significance of modal expansion basis in predicting EM field response?
+      - Can you elaborate on how modal expansion basis predicts the statistical moments of EM field response?
+      - What role does a selection of probability density function play in predicting EM field response?
+
+  - intent: ask_about_application_of_statistical_power_balance_approach
+    examples: |
+     - How is Hill's statistical power balance approach applied in the paper?
+     - Can you provide examples of the application of statistical power balance approach to EM environments?
+     - What are the results of applying Junqua's approach to modeling EM environments in connected cavities?
+     - How does Junqua's approach benefit space vehicle EMC design?
+
+  - intent: ask_about_Inverse_Gamma_distribution
+    examples: |
+      - What is the Inverse Gamma distribution proposed by Bremner?
+      - How does the Inverse Gamma distribution differ from the Log Normal distribution?
+      - Can you explain the advantages of using an Inverse Gamma distribution for frequency variance?
+      - What implications does the Inverse Gamma distribution have on predicting EM field strength?
+
+  - intent: ask_about_E_field_PDF
+    examples: |
+      - What is the new E field PDF proposed in the paper?
+      - How is the E field PDF calculated from mean and variance of energy?
+      - Can you explain the validity of the new E field PDF across different cavity Q factors?
+      - What are the characteristics of the new E field PDF in predicting EM field properties?
+  - intent: ask_about_energy_subsystem_in_SPB_modelling
+    examples: |
+      - What is an energy subsystem in statistical power balance modeling?
+      - Can you explain the concept of an energy subsystem in SPB modeling?
+      - What are the characteristics of an energy subsystem in statistical power balance?
+      - How do differences in reverberant energy levels arise in connected cavity fields in SPB modeling?
+      - What causes variations in reverberant energy levels among connected cavity fields in SPB modeling?
+  - intent: ask_about_total_energy_in_cavity
+    examples: |
+      - What is the total energy of the reverberant field in a cavity?
+      - Can you explain the concept of total energy in a cavity with volume?
+      - How is the total energy of the reverberant field calculated in a cavity?
+      - What are the components involved in calculating the total energy of the reverberant field in a cavity?
+      - Can you provide details about the equation for the total energy of the reverberant field in a cavity?
+  - intent: ask_about_average_modal_density
+    examples: |
+      - What is the average electromagnetic modal density in an enclosed volume?
+      - Can you explain how the average electromagnetic modal density is calculated?
+      - How does Hill's work relate to the calculation of the average electromagnetic modal density?
+      - What factors determine the average electromagnetic modal density in an enclosed volume?
+      - Can you provide details about the calculation of the average electromagnetic modal density in an enclosed volume?
+  - intent: ask_about_power_balance_principle
+    examples: |
+     - What is the power balance principle for cavity reverberant fields?
+      - Can you explain how the power balance principle applies to reverberant fields in a cavity?
+      - How does the power input from an external source relate to the total power dissipated by losses in a reverberant field?
+      - What are the components of the power balance principle for cavity reverberant fields?
+      - Can you provide details about the power balance principle described in the section?
+  - intent: ask_about_statistical_power_balance_modeling
+    examples: |
+      - What is statistical power balance modeling?
+      - Can you explain the concept of statistical power balance modeling?
+      - How is energy dissipation described in statistical power balance modeling?
+      - What are coupling cross sections in statistical power balance modeling?
+      - Can you provide details about Lyon's dimensionless loss factor notation in statistical power balance modeling?
+  - intent: ask_about_power_balance_model
+    examples: |
+      - What is the power balance model described in the section?
+      - Can you explain the components of the power balance model equation?
+      - How are damping loss factors calculated in the power balance model?
+      - Why are open aperture loss and leakage loss not included in each cavity's damping loss factor?
+      - Can you provide details about the coupling loss factor in the power balance model?
+  - intent: ask_about_absorption_coefficient
+    examples: |
+      - What is the absorption coefficient?
+      - Can you explain how the absorption coefficient is defined?
+      - How is the average damping loss factor due to absorption calculated?
+      - What is the reflection loss for RF absorbing materials?
+      - How are the losses from the absorption of constituent materials and printed circuit board traces quantified?
+  - intent: ask_about_coupling_loss_factor
+    examples: |
+      - What is the coupling loss factor?
+      - Can you explain how the coupling loss factor is defined?
+      - How are Lyon's statistical energy analysis coupling loss factors different from aperture cross section?
+      - What is the power transmission coefficient (PTC)?
+      - How is the transmission cross section of an aperture defined?
+      - Can you provide details about the reciprocity relationship of coupling loss factors?
+  - intent: ask_about_layered_materials
+    examples: |
+      - What roles do two-dimensional panels of layered materials play in high-frequency electromagnetic field engineering?
+      - Can you explain the significance of layered materials in electromagnetic field engineering?
+      - What are the different types of materials that can make up layered laminates in electromagnetic field engineering?
+      - How are laminated sheets represented in the statistical power balance (SPB) model?
+      - Can you provide details about the reflection, transmission, and absorption characteristics of layered materials in electromagnetic fields?
+  - intent: ask_about_transfer_matrix_method
+    examples: |
+      - What is the transfer matrix method used for in multi-layer laminates?
+      - Can you explain how the transfer matrix method is used to calculate surface reflection and transmission coefficients in multi-layer laminates?
+      - How are the reflection and transmission coefficients of a multi-layer laminate calculated?
+      - What are the "macro" properties of a multi-layer laminate derived from the transfer matrix method?
+      - Can you provide details about the options for averaging in reverberant EM field modeling?
+  - intent: ask_about_dielectric_material_properties
+    examples: |
+      - What are the properties that define a dielectric material?
+      - Can you explain the characteristics of dielectric materials?
+      - How are permittivity, permeability, and conductivity related in dielectric materials?
+      - Are the properties of dielectric materials constant or frequency-dependent?
+  - intent: ask_about_conductive_material_properties
+    examples: |
+      - What are the properties that define a highly conductive material?
+      - Can you explain the characteristics of highly conductive materials?
+      - How are conductivity and permeability related in highly conductive materials?
+      - Are the properties of highly conductive materials constant or frequency-dependent?
+  - intent: ask_about_stochastic_wave_mechanics
+    examples: |
+      - What is stochastic wave mechanics?
+      - Can you explain how stochastic wave mechanics is used to define EM field responses?
+      - How does stochastic wave mechanics handle arbitrarily complex cavity fields?
+      - What is meant by a converged prediction in statistical models?
+      - How are modal parameters treated in stochastic wave mechanics?
+      - What factors contribute to uncertainty in dynamic systems at higher frequencies?
+  - intent: ask_about_frequency_stirred_probability_distribution
+    examples: |
+      - What is the "frequency-stirred" probability distribution?
+      - Can you explain how the frequency-stirred probability distribution differs from the exponential distribution used in reverberation chambers?
+      - How is the unconditional electric field PDF defined in the context of Bayesian statistics?
+      - What is the relationship between the mean field in each cavity and the total energy?
+      - How is the relative variance of the energy of a reverberant wave field derived based on modal overlap?
+      - Can you provide details about the matrix formulation provided by Langley & Cotoni for propagating the relative variance in a network of multiply connected reverberant fields?
+  - intent: ask_about_energy_probability_distribution
+    examples: |
+      - What are the proposed probability distributions for energy?
+      - Can you explain the differences between the Gamma, Log-Normal, and Complex Wishart distributions for energy?
+      - How is energy related to the mean-squared electric field levels over the enclosure volume?
+      - What is the Chi Square distribution in the context of energy?
+      - Why is the Inverse Gamma distribution considered more suitable for under-moded fields?
+      - What is the form of the Inverse Gamma distribution for energy?
+  - intent: ask_about_unconditional_electric_field_PDF
+    examples: |
+      - Is there a closed form solution for the unconditional electric field PDF?
+      - How is the unconditional electric field PDF calculated?
+      - What assumptions are made for the marginal energy PDF in deriving the unconditional electric field PDF?
+      - Can you explain the parameters involved in the new distribution for electric field level?
+      - What is the significance of the parameters in the new distribution for electric field level?
+  - intent: ask_about_lossy_cavities
+    examples: |
+      - How are reverberant fields affected in lossy cavities?
+      - Can you explain the role of absorber materials in lossy cavities?
+      - What factors contribute to the presence of a direct field in lossy cavities?
+      - How is the total field calculated in lossy cavities?
+      - What is the significance of the Rice distribution in lossy cavities?
+      - What observations were made in the spatial field distribution shown in [25]?
