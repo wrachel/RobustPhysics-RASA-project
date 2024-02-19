@@ -119,6 +119,50 @@ nlu:
     examples: |
       - Can I cut and paste spectral data from a spreadsheet?
       - How to Copy & Paste spectral data into the grid from a spreadsheet.
+
+  - intent: add_cable_segment
+    examples: |
+      - Add a cable segment
+      - Create a cable segment
+      - Add a cable segment under 1D Cable Current Fields → Segments
+      - How do I add a cable segment?
+      - Can I create a cable segment?
+  - intent: add_wires
+    examples: |
+      - Add wires
+      - Add desired number of wires
+      - How to add wires?
+      - Specify the number of wires
+  - intent: specify_connectors
+    examples: |
+      - Specify connectors
+      - Specify the connectors that are being linked
+      - How do I specify connectors?
+      - Can I link connectors?
+
+  - intent: create_common_backbone_cable_segment
+    examples: |
+      - Create a common backbone cable segment
+      - How do I create a common backbone cable segment?
+      - Use the tool palette to create cable segments in the 3D Geometry Window
+
+  - intent: edit_segment_cross_section
+    examples: |
+      - Use Edit Segment Cross Section option
+      - How do I specify information for calculations?
+      - What is the Edit Segment Cross Section used for?
+
+  - intent: find_closest_proximate_reflecting_plane
+    examples: |
+      - Find Closest Proximate Reflecting Plane
+      - How to find the closest reflecting plane?
+      - What does the "Find Closest Plane" button do?
+
+  - intent: override_calculated_value
+    examples: |
+      - Override Calculated Value
+      - What happens when I check the Override Calculated Value checkbox?
+      - How to use my own values for distance to ground plane?
   - intent: ask_unit
     examples: |
       - What is the unit for [voltage](parameter_type)?
