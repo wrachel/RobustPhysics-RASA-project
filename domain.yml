@@ -14,6 +14,13 @@ intents:
   - input_spectral_data
   - add_spectral_data_dialog
   - copy_paste_spectral_data
+  - add_cable_segment
+  - add_wires
+  - specify_connectors
+  - create_common_backbone_cable_segment
+  - edit_segment_cross_section
+  - find_closest_proximate_reflecting_plane
+  - override_calculated_value
   - ask_unit
   - ask_input_parameters
   - ask_spectral_data
