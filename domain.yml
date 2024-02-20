@@ -8,47 +8,67 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
-  - inquire_frequency_domain
-  - inquire_frequency_vector
-  - specify_frequency_sample
-  - input_spectral_data
-  - add_spectral_data_dialog
-  - copy_paste_spectral_data
+  
+  - model_tree_spectral_data
+  - add_tx_power_input
+  - edit_tx_power_inputs
+  - locate_tx_power_inputs_3d
+  - edit_component
+  - delete_component
+  - inquire_conductors
+  - inquire_wire_definition
+  - inquire_shield_definition
+  - inquire_shield_transfer_impedance
+  - inquire_shield_construction_subclasses
+  - inquire_inductance
+  - inquire_aperture_inductance
+  - inquire_braid_inductance
+  - inquire_skin_inductance
+  - inquire_cable_structure
+  - inquire_bundle_structure
+  - inquire_high_frequency_behavior
+  - inquire_differential_modes
+  - inquire_ground_return_path_steel
+  - inquire_wire_return_path_fiberglass
+  - inquire_shield_return_path_umbilical_cable
+  - inquire_algorithm_properties_calculation
+  - inquire_integration_transfer_impedance
+  - inquire_approximation_radiation_impedance
+  - inquire_reference_choice_ground
+  - inquire_reference_choice_outermost
+  - inquire_reference_choice_outermost_unique
+  - inquire_reference_choice_outermost_general
+  - inquire_reference_choice_mathematical_practice
+  - inquire_algorithm_first_step
+  - inquire_leaf_node_definition
+  - inquire_non_leaf_non_root_node_definition
+  - inquire_root_node_definition
+  - inquire_node_relationships
+  - inquire_radiation_impedance
+  - define_radiation_impedance
+  - describe_dm_radiation_resistance
+  - inquire_direct_approach_radiation_resistance
+  - inquire_reciprocal_approach_radiation_resistance
 
 responses:
   utter_greet:
-    - text: "Hey! How are you?"
+  - text: "Hey! How are you?"
 
   utter_cheer_up:
-    - text: "Here is something to cheer you up:"
-      image: "https://i.imgur.com/nGF1K8f.jpg"
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
 
   utter_did_that_help:
-    - text: "Did that help you?"
+  - text: "Did that help you?"
 
   utter_happy:
-    - text: "Great, carry on!"
+  - text: "Great, carry on!"
 
   utter_goodbye:
-    - text: "Bye"
+  - text: "Bye"
 
   utter_iamabot:
-    - text: "I am a bot, powered by Rasa."
-
-  utter_explain_frequency_vector:
-    - text: "To create a frequency vector, go under the Tree solution domain node and add the frequency vector."
-
-  utter_explain_frequency_sample:
-    - text: "Set the frequency sample for solving the model in the window below the Tree solution domain node."
-
-  utter_explain_input_spectral_data:
-    - text: "To input spectral data, store frequency-dependent input data like Permittivity and Conductivity in the model database called 'Spectral Data'."
-
-  utter_explain_add_spectral_data_dialog:
-    - text: "To add spectral data, right-click and select 'add' to open a dialog box for entering the necessary information."
-
-  utter_explain_copy_paste_spectral_data:
-    - text: "You can manually enter Spectral Data in the provided grids or copy & paste it from a spreadsheet."
+  - text: "I am a bot, powered by Rasa."
 
   utter_model_tree_spectral_data:
     - text: "To model tree data for an antenna power input, you can follow these steps: In Model Tree/Spectral Data, enter S11. Then, in Model Tree / Power, define a Power (W) spectrum. Finally, in Model Tree / Antenna, define the antenna name and S11."
@@ -67,6 +87,113 @@ responses:
 
   utter_delete_component:
     - text: "To delete a component, right-click the component you'd like to delete, and click the 'delete' option."
+  
+  utter_respond_conductors_description:
+    - text: "Conductors in the Cable Harness model are objects that carry electrical currents and support voltages relative to the Cable Section Reference (or Ground). They include two distinct sub-classes – Wires and Shields."
+
+  utter_respond_wire_definition:
+    - text: "Each wire in the Cable Harness model is defined by Solid Conductor Material and the diameter of a central conduction core, along with an external insulation layer defined by Dielectric Solid Material and thickness."
+
+  utter_respond_shield_definition:
+    - text: "A Shield in the Cable Harness model is a hollow conducting shell that typically surrounds one or more Wires. In most applications, each Shield in a Cable Section is a conductor that carries its own unique current and voltage relative to Ground, even when the Shield is selected as the Reference in a two-conductor cable (e.g., coaxial cable)."
+
+  utter_respond_shield_transfer_impedance:
+    - text: "Shield Transfer Impedance in the Cable Harness model is an intrinsic per-unit-length (PUL) property of the Shield Section. It relates the voltage induced between the center conductor and the shield to the shield current."
+
+  utter_respond_shield_construction_subclasses:
+    - text: "Two sub-classes of Shield Construction are supported in the Cable Harness model:
+      1. A Tube / Foil Shield, which is impervious but semi-rigid.
+      2. A Braided Shield, which is flexible but porous."
+
+  utter_respond_inductance:
+    - text: "Inductance in the Cable Harness model is the penetration inductance, which is the sum of the aperture inductance and the braid inductance."
+
+  utter_respond_aperture_inductance:
+    - text: "The aperture inductance in the Cable Harness model is due to the magnetic coupling through the hole. Here, the apertures are modelled as ellipses"
+
+  utter_respond_braid_inductance:
+    - text: "The braid inductance in the Cable Harness model is due to the interaction between the two interlaced halves of the braid."
+
+  utter_respond_skin_inductance:
+    - text: "The skin inductance in the Cable Harness model is due to the eddy current in the apertures’ walls excited by the magnetic field penetrating the shield."
+
+  utter_respond_cable_structure:
+    - text: "A cable in the Cable Harness model has multiple conductors, each with dielectric insulation. It may also have a conductive shield and/or a protective sheath."
+
+  utter_respond_bundle_structure:
+    - text: "A bundle or module within a cable harness line segment may contain multiple cable assemblies. The bundle may have an additional conducting shield and/or protective sheath. The corresponding 'topology' of the cross-section properties for each cable harness line segment may be quite complex, and this complexity is managed by a KBL data structure defined by the cable harness industry."
+
+  utter_respond_high_frequency_behavior:
+    - text: "At high frequencies, a current travels as a transverse electromagnetic (TEM) wave on the surface of each conductor. Since there must always be a current return path, TEM modes on a multiconductor cable are treated as a Transmission Line (as distinct from a Wave Guide) with currents transmitted in multiple Differential Modes (DM)."
+
+  utter_respond_differential_modes:
+    - text: "Since the current return path may not always be the electrical Ground, the number of DMs is not always equal to Nc, the number of conductors."
+
+  utter_respond_ground_return_path_steel:
+    - text: "In a steel-bodied automobile or aluminum fuselage aircraft, the structure material is a good electric conductor and zero potential Ground. It can serve as the current return path for all wires in a cable section."
+
+  utter_respond_wire_return_path_fiberglass:
+    - text: "In a fiberglass boat, where there is no conducting Ground structure, a single Reference conductor in the cable must be chosen as the Ground-equivalent Return Path or Reference."
+
+  utter_respond_shield_return_path_umbilical_cable:
+    - text: "In an umbilical cable between spacecraft on a launch pad and launch tower, where there is no close/proximate Ground for return current, a Shield conductor in the cable is typically designed to be the Return Path or Reference."
+
+  utter_respond_algorithm_properties_calculation:
+    - text: "We present an algorithm to calculate the per-unit-length (PUL) properties of cable harnesses with some cables inside shields. The algorithm mainly solves three problems:
+      1. The capacitance, inductance, and conductance matrices are calculated from FreeFEM simulations. Shields cut the whole simulation area into several disconnected domains. We have to run FreeFem several times on the connected domains inside or outside shields, then combine the results from multiple FreeFem simulations.
+      2. A shield is described by its transfer impedance. The algorithm integrates the transfer impedance into PUL properties.
+      3. An approximation method is developed to estimate the PUL radiation impedance."
+
+  utter_respond_integration_transfer_impedance:
+    - text: "The algorithm integrates transfer impedance into PUL properties by describing a shield with its transfer impedance. This process is essential for accurate calculations in cable harnesses with shields."
+
+  utter_respond_approximation_radiation_impedance:
+    - text: "The algorithm uses an approximation method to estimate the PUL radiation impedance. This allows for efficient and reliable calculations in the context of cable harness properties."
+
+  utter_respond_reference_choice_ground:
+    - text: "If there is a lossless ground in close proximity, always use the ground as the reference. A ground is a large conductor with zero resistance and constant voltage everywhere, making it a natural choice of the reference."
+
+  utter_respond_reference_choice_outermost:
+    - text: "If the first rule doesn't apply, the outermost conductor is used as the reference in the transmission line model."
+
+  utter_respond_reference_choice_outermost_unique:
+    - text: "When there is one outermost shield and all other conductors are inside the shield, there is a unique choice of the reference, and the outermost shield is selected as the reference."
+
+  utter_respond_reference_choice_outermost_general:
+    - text: "If there are multiple outermost shields or wires, any outermost shield or wire can be chosen as the reference."
+
+  utter_respond_reference_choice_mathematical_practice:
+    - text: "Mathematically speaking, any conductor can be used as the reference in the transmission line model. However, in practice, it seems strange to use a wire inside a shield."
+
+  utter_respond_algorithm_first_step:
+    - text: "The first step of the algorithm is to build a tree diagram based on the harness geometry. The tree diagrams depict the arrangement of conductors (wires or shields) in the cable harness."
+
+  utter_respond_leaf_node_definition:
+    - text: "A leaf node in the tree diagram is a node without any children. It represents the end points of the tree branches."
+
+  utter_respond_non_leaf_non_root_node_definition:
+    - text: "A non-leaf non-root node in the tree diagram always represents a shield. It is a node that has children and is not the root of the tree."
+
+  utter_respond_root_node_definition:
+    - text: "The root node in the tree diagram can be the open space or the outermost shield. It is always labeled as 0 to indicate that the system reference is defined as conductor 0."
+
+  utter_respond_node_relationships:
+    - text: "The children of a node in the tree diagram are the conductors directly inside the shield or the open space. The descendants of a node include all the conductors inside the node."
+
+  utter_respond_radiation_impedance:
+    - text: "The radiation impedance in a cable harness is defined to model the radiation from the cable harness. It represents the Ohmic loss consumed by the radiation impedance. The radiation impedance can be treated as a per-unit-length (PUL) property or as a lumped element, depending on the modeling approach used."
+
+  utter_respond_define_radiation_impedance:
+    - text: "The radiation impedance in a cable harness is defined to model the radiation from the cable harness. It represents the Ohmic loss consumed by the radiation impedance. The radiation impedance can be treated as a per-unit-length (PUL) property or as a lumped element, depending on the modeling approach used."
+
+  utter_respond_describe_dm_radiation_resistance:
+    - text: "Numerical calculations have shown that the differential mode (DM) radiation resistance of a transmission line is independent of the length of the line and the termination. It can be found from a finite length of line that is terminated with a matched load and driven with a matched source, determining the total energy radiated."
+
+  utter_respond_direct_approach_radiation_resistance:
+    - text: "The direct approach to finding the radiation resistance of a transmission line involves calculating the radiated field from the current on the line and integrating it over the sphere. This approach requires accurate modeling of the radiated field."
+
+  utter_respond_reciprocal_approach_radiation_resistance:
+    - text: "In the reciprocal approach for determining the radiation resistance of a transmission line, the response of the line to an external field is found using a closed-form solution. This method provides an alternative perspective, considering the impact of an external field on the line's behavior."
 
 session_config:
   session_expiration_time: 60
