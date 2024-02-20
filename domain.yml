@@ -14,6 +14,45 @@ intents:
   - input_spectral_data
   - add_spectral_data_dialog
   - copy_paste_spectral_data
+  - solve_max_min_field_limit
+  - view_efield_outputs
+  - describe_connector_model
+  - describe_junction_model
+  - describe_junction_relationship
+  - describe_junction_structure
+  - describe_junction_matrices
+  - describe_external_field_source
+  - describe_plane_wave
+  - describe_multiconductor_transmission_line
+  - ask_generalized_telegrapher_equations
+  - ask_telegrapher_equations_components
+  - explain_modal_relationship
+  - describe_generalized_telegrapher_solution
+  - explain_network_description
+  - describe_network_solution_process
+  - consider_iterative_solution
+  - mention_external_field_terms
+  - describe_network_ports
+  - calculate_power_available
+  - calculate_power_delivered
+  - explain_scattering_parameter
+  - separate_current_components
+  - explain_loss_in_network
+  - distinguish_loss_roles
+  - calculate_loss_equations
+  - clarify_loss_roles
+  - explain_ohmic_loss
+  - describe_thevenin_circuit
+  - describe_norton_circuit
+  - explain_transfer_impedance
+  - describe_segment_as_antenna
+  - calculate_mean_power_matched_load
+  - explain_distributed_voltage_source_integration
+  - describe_gaussian_quadrature
+  - explain_quadrature_requirements
+  - describe_source_translation
+  - outline_quadrature_formula
+  - excitation_external_efield_constraints
 
 responses:
   utter_greet:
@@ -51,19 +90,124 @@ responses:
     - text: "You can manually enter Spectral Data in the provided grids or copy & paste it from a spreadsheet."
 
   utter_explain_external_efield_constraints:
-    - text: "In model tree/spectral data, define an Electric Field (V/m) spectrum. In Tree/Table view Excitation/Constraint/Wavefield, 
-    right click edit. In 3D model view, select cavity wavefield and click constraint source button in Toolbar. Finally, right click and edit
-    the Add Constraint dialog to define E-field spectrum level."
+    - text: "In model tree/spectral data, define an Electric Field (V/m) spectrum. In Tree/Table view Excitation/Constraint/Wavefield, right click edit. In 3D model view, select cavity wavefield and click constraint source button in Toolbar. Finally, right click and edit the Add Constraint dialog to define E-field spectrum level."
 
   utter_explain_max_min_field_limits:
-   - text: "Select solver setting from Menu Bar. In Dialog, define the Probability Percentiles that you would like model to use to calculate
-   Max and Min E-field levels in each cavity wavefield. At Menu Bar/Solve, select "Solve Cavity Model". Wait for "Calculation complete" 
-   or "Error message" to be displayed."
+    - text: "Select solver setting from Menu Bar. In Dialog, define the Probability Percentiles that you would like model to use to calculate Max and Min E-field levels in each cavity wavefield. At Menu Bar/Solve, select Solve Cavity Model. Wait for Calculation complete or Error message to be displayed."
 
   utter_explain_efield_outputs:
-  - text: "Outputs specral data are shown under Outputs node. Tile Windows (Plots) can be viewed by using Menu Bar/Windows/Tile option
-  to display all open plots. Finally, in the Plot dialog, click the "Table" tab to access the Graphed Outputs in tabular data form.
-  "Copy and Paste to spreadsheet for reports, post-processing, etc."
+    - text: "Outputs specral data are shown under Outputs node. Tile Windows (Plots) can be viewed by using Menu Bar/Windows/Tile option to display all open plots. Finally, in the Plot dialog, click the Table tab to access the Graphed Outputs in tabular data form. Copy and Paste to spreadsheet for reports, post-processing, etc."
+
+  utter_explanation_connector_model:
+    - text: "A Connector model object makes the electrical connection between MTL Conductors and the Load Impedances and Excitations Sources at the Terminations of a Cable Harness"
+  
+  utter_explanation_junction_model:
+    - text: "A Junction model object makes the electrical connection between Conductors of two or more co-joined MTL segments. The junction is modeled as include N pins (or nodes) where the conductors meet. These may be physical junctions where connectors are included or simply branches where some conductors in a physical cable bundle branch out in a different direction as shown in the figure above. A junction may represent a branch, a splice, a termination, or a simple connection of two MTL segments."
+
+  utter_explanation_junction_relationship:
+    - text: "The combined relationship for the kth junction in the network is Y_k V_k + Z_k I_k = P_k. The equation for the kth junction in the network is given by Y_k V_k + Z_k I_k = P_k, where Y_k is the admittance interaction matrix, Z_k is the impedance interaction matrix, V_k is the vector of voltages at the ends of the conductors, I_k is the vector of currents flowing from the pin onto the conductors, and P_k is the source vector."
+  
+  utter_explanation_junction_structure:
+    - text: "A junction will consist of N pins (or terminals) to which the conductors are connected. The nth pin has Mn conductors attached. The conductors connected to the pin can be from multiple different segments or from the same segment. If Mn > 2, the pin is acting as a splice. If Mn = 1, the pin is a termination. If Mn = 2, the junction is likely to be part of a branch."
+
+  utter_explanation_junction_matrice:
+    - text: "The impedance and admittance matrices for the junction are found from Kirchhoff’s current laws. The voltage at the end of segment 1 is related to the voltage at the end of segment m from the voltage law: V_1 + V_s1 + Z_1 I_1 - Z_m I_s - V_sm = V_m"
+      
+  utter_explanation_external_field_source:
+    - text: "An ideally diffuse field within a cavity can be written as a superposition of uniform plane waves. Each plane wave in the expansion excites the propagating modes on the line. The excitation by a plane wave is modeled as a set of current and voltage sources at the termination of the line. The local reference of the line is aligned on the z axis, allowing the excitation source model of Paul (2008) to be used. The plane wave incidence angle and polarization vectors are rotated to account for the difference between the local (z-aligned) and physical coordinates."
+  
+  utter_explanation_plane_wave:
+    - text: "A plane wave in the local coordinate system can be written as E^i = a_p * exp[jk(xsin(theta)cos(phi) + ysin(theta)sin(phi)+zcos(phi)] = (a_xE_x + a_yE_y + a_yE_z) * e^(-jB_y y) * e^(-jB_z z) where a_p is an arbitrary polarization vector, k is the free-space wavenumber, and theta and phi are the elevation and azimuth angles from which the wave is incident. With this excitation, the induced voltage and currents on the MTL segments are V_FT (L) = 1/2 * Y^(-1) T (M+N_ - E_T(L), I_FT (L) = 1/2 * Y^(-1) T (N-M)."
+
+  utter_explanation_multiconductor_transmission_line:
+    - text: "A multiconductor transmission line (MTL) consists of N+1 conductors. One conductor, typically a ground plane or shield, acts as a reference conductor. The potentials on the other N conductors are referenced to the reference conductor. The line currents are specified on the N conductors. The current on the reference conductor is understood to be the negative of the sum of the currents on the N conductors."
+
+  utter_respond_generalized_telegrapher_equations:
+    - text: "The Generalized Telegrapher's Equations (GTE) describe the propagation of electromagnetic waves in multiconductor transmission lines."
+
+  utter_respond_telegrapher_equations_components:
+    - text: "The GTE components include voltage vector, current vector, impedance matrix, admittance matrix, and they are functions of frequency and physical parameters like resistance, inductance, capacitance, and conductance."
+
+  utter_respond_modal_relationship:
+    - text: "The voltages and currents on the individual conductors are related to the modal voltages and currents through V(z) = T_V * V_m(z), I(z) = T_l * I_m(z) where z is the position of the length of the line."
+
+  utter_respond_generalized_telegrapher_solution:
+    - text: "The solution of the generalized Telegrapher's equations yields both forward (+z) and backward (-z) propagating modes. The modal voltages and currents are given by V_m = e^(-gamma * z) * V+_m + e^(gamma * z) * V-_m, I_m = e^(-gamma * z) * I+_m + e^(gamma * z) * I-_m."
+  
+  utter_respond_network_description:
+    - text: "A network consists of K MTLs that include a total of conductors. The order 2 BLT equations allow the finding of the currents at either end of each conductor, giving an overall system order of."
+
+  utter_respond_network_solution_process:
+    - text: "The currents at each end of the MTL segments are found by solving the BLT equations. The network current scattering matrix, network propagation matrix, network current vector, and network current source matrix are involved in the solution process."
+
+  utter_respond_iterative_solution:
+    - text: "Iterative solution using BICGSTAB was considered for the network, but it proved more computationally expensive with the relatively low order of the systems generated in testing."
+
+  utter_respond_external_field_terms:
+    - text: "The current and voltage source terms due to external fields are absorbed into the BLT equations, eliminating the need for a separate source term to account for external field excitation."
+
+  utter_respond_network_ports_description:
+    - text: "The network has M ports, each with its own reference impedance Rm. A matched voltage source with internal impedance Rm is placed on port m, and load impedances Rn are placed on all other ports n = 1..M, n ≠ m."
+
+  utter_respond_power_available_calculation:
+    - text: "The power available from the source is equal to the power that would be delivered to its matched load, where P_available = 0.5 * |V|^2 / Rm."
+
+  utter_respond_power_delivered_calculation:
+    - text: "The power delivered to the load on port n is Pn = 0.5 * |In|^2 * Rn, and the wave exiting port n is related to this power calculation."
+
+  utter_respond_scattering_parameter_explanation:
+    - text: "The scattering parameter Smn is given by a formula involving the network current scattering matrix and propagation matrix."
+
+  utter_respond_current_component_separation:
+    - text: "From the network solution, the current entering port m can be separated into inward and outward propagating wave components, where the reflection coefficient looking into the port is equal to the scattering parameter Smm."
+
+  utter_respond_loss_in_network_explanation:
+    - text: "The loss in the network is primarily due to resistance, which includes lumped resistance elements, multi-conductor transmission line (MTL) PUL resistance, and radiation resistance."
+
+  utter_respond_distinguish_loss_roles:
+    - text: "Lumped resistance elements and MTL PUL resistance contribute to overall network loss, while radiation resistance plays a distinct role. It is crucial to distinguish between these types of losses."
+
+  utter_respond_loss_equations_calculation:
+    - text: "Loss due to resistance, whether Ohmic or radiation, is calculated using the same equations. Despite the common calculation method, it is essential to recognize the different roles that Ohmic loss and radiation play in the network."
+
+  utter_respond_clarify_loss_roles:
+    - text: "Distinguishing between lumped resistance, MTL PUL resistance, and radiation resistance is important for understanding their distinct effects on network performance. Clear differentiation helps in accurate network analysis and modeling."
+
+  utter_respond_ohmic_loss_explanation:
+    - text: "The network solver calculates the voltage and current at both ends of a cable segment, providing the necessary information to calculate lumped element loss. Ohmic loss is computed on all MTL terminals, with different equations for Thevenin and Norton equivalent circuits."
+
+  utter_respond_thevenin_circuit_description:
+    - text: "When the resistance is in a Thevenin circuit, it is in series with the MTL. The Ohmic loss at a terminal (P^Ohm_term) is given by 1/2 Re[|I_term|^2 R^Ohm_term]. The resistors at terminal 1B and 2A in the figure are in series with the MTL, forming a Thevenin equivalent circuit."
+
+  utter_respond_norton_circuit_description:
+    - text: "When the resistance is in a Norton circuit, it is in parallel with the MTL. The Ohmic loss at a terminal (P^Ohm_term) is given by 1/2 Re[|V_term|^2 / R^Ohm_term]. The resistors at terminal 1A and 2E in the figure are in parallel with the MTL, forming a Norton equivalent circuit."
+
+  utter_respond_transfer_impedance_explanation:
+    - text: "For a shield, the transfer impedance Z is equivalent to the Ohmic resistance of a wire. Z is a complex variable, and the Re function is added to the expressions to ensure the loss is a real number."
+
+  utter_respond_segment_as_antenna_description:
+    - text: "The segment exposed to a diffuse field acts as a receiving antenna with a radiation resistance, as found above. An equivalent voltage source is determined to account for the excitation by the external field."
+
+  utter_respond_mean_power_matched_load_calculation:
+    - text: "The mean power delivered to a matched load placed on the output of an antenna in an ideal diffuse field is calculated as <P_r> = 1/2 * (E_0)^2 / eta * lambda^2 / (4pi), where I is the current induced in the load by the field, R_rad is the antenna radiation resistance, and E_0 is the RMS field strength."
+
+  utter_respond_distributed_voltage_source_integration_explanation:
+    - text: "The integration of the distributed voltage source is evaluated using Gaussian quadrature, and the formula for P_d, n is given by 1/2 * Σ_(l = 1)^(t) (w_l * L_n [V_E, x_L]), where w_i is the Gaussian quadrature weighting, and x_l = L/2 * (1 + cos(theta_l)) is the position of the sample point on the line, with theta_l being the Gaussian quadrature node."
+
+  utter_respond_gaussian_quadrature_description:
+    - text: "Gaussian quadrature is a numerical method for approximating definite integrals. In the context of the distributed voltage source integration, Gaussian quadrature weighting (w_i) plays a crucial role in determining the accuracy of the integration. Sample points (x_l) are calculated using x_l = L/2 * (1 + cos(theta_l)), where theta_l represents the Gaussian quadrature node."
+
+  utter_respond_quadrature_requirements_explanation:
+    - text: "Quadrature requires the network to be solved with sources placed at multiple interior points on the line. The segment containing the source does not need to be split at the point of the voltage source. The voltage source at position x = x_l is translated to become voltage and current sources at x = L. The quadrature formula then becomes P_d,n = 1/2 Σ_(l = 1)^(L) (w_l * L_n [V_E(L-x_l), L])."
+
+  utter_respond_source_translation_description:
+    - text: "The voltage source is translated for multiple interior points on the line by transforming it into voltage and current sources at x = L. This eliminates the need to split the segment containing the source, simplifying the quadrature approach and reducing computational costs."
+
+  utter_explanation_junction_matrices:
+    - text: "The impedance and admittance matrices for the junction are found from Kirchhoff’s current laws. The voltage at the end of segment 1 is related to the voltage at the end of segment m from the voltage law: V_1 + V_s1 + Z_1 I_1 - Z_m I_s - V_sm = V_m"
+
+  utter_respond_quadrature_formula_outline:
+    - text: "The updated quadrature formula after voltage source translation is P_d,n = 1/2 Σ_(l = 1)^(L) (w_l * L_n [V_E(L-x_l), L]). The network needs to be solved L times using this quadrature approach. However, since the network is only set up once, no matrix inversions are required in the solution stage, minimizing the computational cost."
 
 session_config:
   session_expiration_time: 60
