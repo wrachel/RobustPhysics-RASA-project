@@ -323,6 +323,7 @@ nlu:
     - How is the direct approach used to find the radiation resistance of a transmission line?
     - Explain the steps involved in finding the radiation resistance through a direct approach, considering the radiated field and current on the line.
     - Tell me about the direct approach to calculate the radiation resistance.
+    - How do I calculate the radiation resistance?
 
 - intent: inquire_reciprocal_approach_radiation_resistance
   examples: |
