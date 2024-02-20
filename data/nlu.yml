@@ -120,241 +120,241 @@ nlu:
       - Can I cut and paste spectral data from a spreadsheet?
       - How to Copy & Paste spectral data into the grid from a spreadsheet.
 
-# math specs 1 | section 12
+  # math specs 1 | section 12
 
-- intent: ask_quantiles_definition
-  examples: |
-    - What are quantiles in the context of electric field levels?
-    - Can you explain the concept of quantiles?
-    - What do you mean by quantiles?
+  - intent: ask_quantiles_definition
+    examples: |
+      - What are quantiles in the context of electric field levels?
+      - Can you explain the concept of quantiles?
+      - What do you mean by quantiles?
 
-- intent: ask_pdf_description
-  examples: |
-    - Can you describe the probability density function (PDF) for electric field levels?
-    - What is the probability density function (PDF) used for?
-    - How is the probability density function (PDF) calculated?
+  - intent: ask_pdf_description
+    examples: |
+      - Can you describe the probability density function (PDF) for electric field levels?
+      - What is the probability density function (PDF) used for?
+      - How is the probability density function (PDF) calculated?
 
-- intent: ask_cumulative_distribution_function
-  examples: |
-    - What is the cumulative distribution function (CDF) for electric field levels?
-    - Can you explain the cumulative distribution function (CDF)?
-    - How is the cumulative distribution function (CDF) related to the PDF?
+  - intent: ask_cumulative_distribution_function
+    examples: |
+      - What is the cumulative distribution function (CDF) for electric field levels?
+      - Can you explain the cumulative distribution function (CDF)?
+      - How is the cumulative distribution function (CDF) related to the PDF?
 
-- intent: ask_quantiles_computation
-  examples: |
-    - How are quantiles computed from the cumulative distribution function (CDF)?
-    - What is the process for computing quantiles?
-    - Can you explain how to compute quantiles from the CDF?
+  - intent: ask_quantiles_computation
+    examples: |
+      - How are quantiles computed from the cumulative distribution function (CDF)?
+      - What is the process for computing quantiles?
+      - Can you explain how to compute quantiles from the CDF?
 
-- intent: ask_relative_variance_single_cavity
-  examples: |
-    - What is the relative variance of reverberant energy for a single cavity?
-    - Can you explain the relative variance of reverberant energy in a single cavity?
-    - How is the relative variance of reverberant energy calculated for a single cavity?
+  - intent: ask_relative_variance_single_cavity
+    examples: |
+      - What is the relative variance of reverberant energy for a single cavity?
+      - Can you explain the relative variance of reverberant energy in a single cavity?
+      - How is the relative variance of reverberant energy calculated for a single cavity?
 
-- intent: ask_relative_variance_multiple_cavities
-  examples: |
-    - What is the relative variance of reverberant energy for multiple connected cavities?
-    - Can you explain the relative variance of reverberant energy in multiple connected cavities?
-    - How is the relative variance of reverberant energy calculated for multiple cavities?
+  - intent: ask_relative_variance_multiple_cavities
+    examples: |
+      - What is the relative variance of reverberant energy for multiple connected cavities?
+      - Can you explain the relative variance of reverberant energy in multiple connected cavities?
+      - How is the relative variance of reverberant energy calculated for multiple cavities?
 
-- intent: ask_probabilistic_variance_power_input
-  examples: |
-    - What is the probabilistic variance formulation for power input?
-    - Can you explain the probabilistic variance formulation for power input?
-    - How is the probabilistic variance formulation for power input evaluated?
+  - intent: ask_probabilistic_variance_power_input
+    examples: |
+      - What is the probabilistic variance formulation for power input?
+      - Can you explain the probabilistic variance formulation for power input?
+      - How is the probabilistic variance formulation for power input evaluated?
 
-- intent: ask_probabilistic_variance_aperture_coupling_power
-  examples: |
-    - What is the probabilistic variance formulation for aperture coupling power?
-    - Can you explain the probabilistic variance formulation for aperture coupling power?
-    - How is the probabilistic variance formulation for aperture coupling power evaluated?
+  - intent: ask_probabilistic_variance_aperture_coupling_power
+    examples: |
+      - What is the probabilistic variance formulation for aperture coupling power?
+      - Can you explain the probabilistic variance formulation for aperture coupling power?
+      - How is the probabilistic variance formulation for aperture coupling power evaluated?
 
-- intent: ask_effective_modal_overlap
-  examples: |
-    - What is the effective modal overlap for multiple connected cavities?
-    - Can you explain the effective modal overlap in the context of multiple connected cavities?
-    - How is the effective modal overlap calculated for connected cavities?
+  - intent: ask_effective_modal_overlap
+    examples: |
+      - What is the effective modal overlap for multiple connected cavities?
+      - Can you explain the effective modal overlap in the context of multiple connected cavities?
+      - How is the effective modal overlap calculated for connected cavities?
 
-- intent: ask_effective_total_loss_factor
-  examples: |
-    - What is the effective total loss factor for multiple connected cavities?
-    - Can you explain the effective total loss factor in the context of multiple connected cavities?
-    - How is the effective total loss factor calculated for connected cavities?
+  - intent: ask_effective_total_loss_factor
+    examples: |
+      - What is the effective total loss factor for multiple connected cavities?
+      - Can you explain the effective total loss factor in the context of multiple connected cavities?
+      - How is the effective total loss factor calculated for connected cavities?
 
-- intent: ask_statistical_ensemble_formulation
-  examples: |
-    - What is the statistical ensemble formulation for the energy of a reverberant wave field?
-    - Can you explain the statistical ensemble formulation for reverberant wave field energy?
-    - How does the statistical ensemble formulation relate to the energy of a reverberant wave field?
+  - intent: ask_statistical_ensemble_formulation
+    examples: |
+      - What is the statistical ensemble formulation for the energy of a reverberant wave field?
+      - Can you explain the statistical ensemble formulation for reverberant wave field energy?
+      - How does the statistical ensemble formulation relate to the energy of a reverberant wave field?
 
-- intent: ask_maximum_minimum_response_spectrum_levels
-  examples: |
-    - What are the maximum and minimum response spectrum levels?
-    - Can you explain the concept of maximum and minimum response spectrum levels?
-    - How are the maximum and minimum response spectrum levels calculated?
+  - intent: ask_maximum_minimum_response_spectrum_levels
+    examples: |
+      - What are the maximum and minimum response spectrum levels?
+      - Can you explain the concept of maximum and minimum response spectrum levels?
+      - How are the maximum and minimum response spectrum levels calculated?
 
-- intent: ask_mean_electric_field
-  examples: |
-    - What is the mean electric field in a cavity?
-    - Can you explain the concept of the mean electric field?
-    - How is the mean electric field calculated in a cavity?
+  - intent: ask_mean_electric_field
+    examples: |
+      - What is the mean electric field in a cavity?
+      - Can you explain the concept of the mean electric field?
+      - How is the mean electric field calculated in a cavity?
 
-- intent: ask_local_electric_field_frequency_stirred
-  examples: |
-    - What are the stochastic limits of the frequency-stirred local electric field in a cavity?
-    - Can you explain the stochastic limits of the frequency-stirred local electric field?
-    - How are the stochastic limits of the frequency-stirred local electric field determined?
+  - intent: ask_local_electric_field_frequency_stirred
+    examples: |
+      - What are the stochastic limits of the frequency-stirred local electric field in a cavity?
+      - Can you explain the stochastic limits of the frequency-stirred local electric field?
+      - How are the stochastic limits of the frequency-stirred local electric field determined?
 
-- intent: ask_s21_of_local_electric_field_frequency_stirred
-  examples: |
-    - How does the S21 response relate to the frequency-stirred local electric field in a cavity?
-    - Can you explain the relationship between S21 response and the frequency-stirred local electric field?
-    - What is the significance of S21 response in the context of the frequency-stirred local electric field?
+  - intent: ask_s21_of_local_electric_field_frequency_stirred
+    examples: |
+      - How does the S21 response relate to the frequency-stirred local electric field in a cavity?
+      - Can you explain the relationship between S21 response and the frequency-stirred local electric field?
+      - What is the significance of S21 response in the context of the frequency-stirred local electric field?
 
-# math specs 1 | section 13
+  # math specs 1 | section 13
 
-- intent: ask_direct_field_calculation
-  examples: |
-    - How is the direct field calculated?
-    - Can you explain the calculation of the direct electric field?
-    - What is the formula for calculating the direct field?
+  - intent: ask_direct_field_calculation
+    examples: |
+      - How is the direct field calculated?
+      - Can you explain the calculation of the direct electric field?
+      - What is the formula for calculating the direct field?
 
-- intent: ask_total_field_calculation
-  examples: |
-    - How is the total field calculated?
-    - Can you explain how the total electric field is calculated?
-    - What is the process for calculating the total field?
+  - intent: ask_total_field_calculation
+    examples: |
+      - How is the total field calculated?
+      - Can you explain how the total electric field is calculated?
+      - What is the process for calculating the total field?
 
-- intent: ask_near_field_corrections
-  examples: |
-    - What are the near field corrections?
-    - Can you explain the corrections applied to the near field?
-    - How are near field corrections accounted for?
+  - intent: ask_near_field_corrections
+    examples: |
+      - What are the near field corrections?
+      - Can you explain the corrections applied to the near field?
+      - How are near field corrections accounted for?
 
-- intent: ask_field_distribution
-  examples: |
-    - What is the distribution of the total field?
-    - Can you explain the spatial distribution of the field?
-    - How is the field distributed within the cavity?
+  - intent: ask_field_distribution
+    examples: |
+      - What is the distribution of the total field?
+      - Can you explain the spatial distribution of the field?
+      - How is the field distributed within the cavity?
 
-# math specs 1 | section 14
+  # math specs 1 | section 14
 
-- intent: ask_specific_graph_instances
-  examples: |
-    - What are some specific graph instances
-    - Can you provide some graph instances
-    - Specific graph results instannces for 0ne0thrid octave solution frequency range
+  - intent: ask_specific_graph_instances
+    examples: |
+      - What are some specific graph instances
+      - Can you provide some graph instances
+      - Specific graph results instannces for 0ne0thrid octave solution frequency range
 
-# math specs 2 | section 1
+  # math specs 2 | section 1
 
-- intent: ask_simulation_tool_explanation
-  examples: |
-    - Can you explain how RobustPhysics' new simulation tool works?
-    - What does the hybrid solution offered by RobustPhysics entail?
-    - Can you provide more details about the statistical electromagnetics simulation tool?
+  - intent: ask_simulation_tool_explanation
+    examples: |
+      - Can you explain how RobustPhysics' new simulation tool works?
+      - What does the hybrid solution offered by RobustPhysics entail?
+      - Can you provide more details about the statistical electromagnetics simulation tool?
 
-- intent: ask_simulation_tool_features
-  examples: |
-    - What are the main features of RobustPhysics' simulation tool?
-    - Can you outline the key functionalities of the simulation tool?
-    - What tasks can the simulation tool perform?
+  - intent: ask_simulation_tool_features
+    examples: |
+      - What are the main features of RobustPhysics' simulation tool?
+      - Can you outline the key functionalities of the simulation tool?
+      - What tasks can the simulation tool perform?
 
-- intent: ask_simulation_tool_use_cases
-  examples: |
-    - How can RobustPhysics' simulation tool be used in real-world applications?
-    - Can you provide examples of scenarios where the simulation tool is beneficial?
-    - In what contexts can the simulation tool be applied?
-    - What are Robust Physics simulation tool use cases
+  - intent: ask_simulation_tool_use_cases
+    examples: |
+      - How can RobustPhysics' simulation tool be used in real-world applications?
+      - Can you provide examples of scenarios where the simulation tool is beneficial?
+      - In what contexts can the simulation tool be applied?
+      - What are Robust Physics simulation tool use cases
 
-# math specs 2 | section 2
+  # math specs 2 | section 2
 
-- intent: ask_cable_harness_model
-  examples: |
-    - What is a cable harness model?
-    - Explain the cable harness model.
-    - Can you provide details about the cable harness model?
+  - intent: ask_cable_harness_model
+    examples: |
+      - What is a cable harness model?
+      - Explain the cable harness model.
+      - Can you provide details about the cable harness model?
 
-- intent: ask_separable_form
-  examples: |
-    - What is the separable form of TEM mode fields?
-    - Explain the concept of separable form in TEM mode fields.
-    - Can you elaborate on the separable form of fields?
+  - intent: ask_separable_form
+    examples: |
+      - What is the separable form of TEM mode fields?
+      - Explain the concept of separable form in TEM mode fields.
+      - Can you elaborate on the separable form of fields?
 
-- intent: ask_deterministic_transmission_line_modeling
-  examples: |
-    - How does deterministic transmission line modeling work?
-    - Can you explain the process of deterministic transmission line modeling?
-    - What are the computational steps involved in deterministic transmission line modeling?
+  - intent: ask_deterministic_transmission_line_modeling
+    examples: |
+      - How does deterministic transmission line modeling work?
+      - Can you explain the process of deterministic transmission line modeling?
+      - What are the computational steps involved in deterministic transmission line modeling?
 
-- intent: ask_canonical_test_cases
-  examples: |
-    - What are the canonical test cases for transmission line models?
-    - Can you provide details about the canonical test cases?
-    - What configurations are used for testing transmission line computational modules?
+  - intent: ask_canonical_test_cases
+    examples: |
+      - What are the canonical test cases for transmission line models?
+      - Can you provide details about the canonical test cases?
+      - What configurations are used for testing transmission line computational modules?
 
-# math specs 2 | section 3
+  # math specs 2 | section 3
 
-- intent: ask_model_solution_parameters
-  examples: |
-    - What are the model solution parameters?
-    - Explain the parameters for the model solution.
-    - Can you provide details about the solution parameters?
+  - intent: ask_model_solution_parameters
+    examples: |
+      - What are the model solution parameters?
+      - Explain the parameters for the model solution.
+      - Can you provide details about the solution parameters?
 
-- intent: ask_frequency_solution_vector
-  examples: |
-    - What is the frequency solution vector?
-    - Explain the concept of frequency solution vector.
-    - Can you elaborate on the frequency solution vector?
+  - intent: ask_frequency_solution_vector
+    examples: |
+      - What is the frequency solution vector?
+      - Explain the concept of frequency solution vector.
+      - Can you elaborate on the frequency solution vector?
 
-- intent: ask_constant_bandwidth
-  examples: |
-    - How do constant bandwidth parameters work?
-    - Explain the constant bandwidth option.
-    - What is the tabular data input format for constant bandwidth?
+  - intent: ask_constant_bandwidth
+    examples: |
+      - How do constant bandwidth parameters work?
+      - Explain the constant bandwidth option.
+      - What is the tabular data input format for constant bandwidth?
 
-- intent: ask_logarithmic_bandwidth
-  examples: |
-    - What is logarithmic bandwidth used for?
-    - Explain the logarithmic bandwidth option.
-    - Can you provide details about the Third Octave option?
+  - intent: ask_logarithmic_bandwidth
+    examples: |
+      - What is logarithmic bandwidth used for?
+      - Explain the logarithmic bandwidth option.
+      - Can you provide details about the Third Octave option?
 
-- intent: ask_octave_frequencies
-  examples: |
-    - What are octave frequencies?
-    - Explain the concept of octave frequencies.
-    - Can you provide details about the fractional octave frequencies?
+  - intent: ask_octave_frequencies
+    examples: |
+      - What are octave frequencies?
+      - Explain the concept of octave frequencies.
+      - Can you provide details about the fractional octave frequencies?
 
-# math specs 2 | section 4
+  # math specs 2 | section 4
 
-- intent: ask_spectral_data_input
-  examples: |
-    - What are the classes of spectral data?
-    - Explain the types of spectral data.
-    - Can you provide details about spectral data input?
+  - intent: ask_spectral_data_input
+    examples: |
+      - What are the classes of spectral data?
+      - Explain the types of spectral data.
+      - Can you provide details about spectral data input?
 
-- intent: ask_material_properties
-  examples: |
-    - What are materials with complex, frequency-dependent properties?
-    - Explain materials with frequency-dependent properties.
-    - Can you provide details about materials with complex properties?
+  - intent: ask_material_properties
+    examples: |
+      - What are materials with complex, frequency-dependent properties?
+      - Explain materials with frequency-dependent properties.
+      - Can you provide details about materials with complex properties?
 
-# math specs 2 | section 5
+  # math specs 2 | section 5
 
-- intent: ask_dielectric_gas_properties
-  examples: |
-    - What are the properties of dielectric gas?
-    - Can you provide details about dielectric gas properties?
-    - Explain the characteristics of dielectric gas.
-    
-- intent: ask_dielectric_solid_properties
-  examples: |
-    - What are the properties of dielectric solid?
-    - Can you provide details about dielectric solid properties?
-    - Explain the characteristics of dielectric solid.
-    
-- intent: ask_solid_conductor_properties
-  examples: |
-    - What are the properties of solid conductor?
-    - Can you provide details about solid conductor properties?
-    - Explain the characteristics of solid conductor.
+  - intent: ask_dielectric_gas_properties
+    examples: |
+      - What are the properties of dielectric gas?
+      - Can you provide details about dielectric gas properties?
+      - Explain the characteristics of dielectric gas.
+      
+  - intent: ask_dielectric_solid_properties
+    examples: |
+      - What are the properties of dielectric solid?
+      - Can you provide details about dielectric solid properties?
+      - Explain the characteristics of dielectric solid.
+      
+  - intent: ask_solid_conductor_properties
+    examples: |
+      - What are the properties of solid conductor?
+      - Can you provide details about solid conductor properties?
+      - Explain the characteristics of solid conductor.

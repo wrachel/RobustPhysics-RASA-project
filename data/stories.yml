@@ -50,204 +50,204 @@ stories:
       - intent: copy_paste_spectral_data
       - action: utter_explain_copy_paste_spectral_data
 
-# math specs 1 | section 12
+  # math specs 1 | section 12
 
-- story: User asks about quantiles definition
-  steps:
-  - intent: ask_quantiles_definition
-  - action: utter_quantiles_definition_explanation
+  - story: User asks about quantiles definition
+    steps:
+      - intent: ask_quantiles_definition
+      - action: utter_quantiles_definition_explanation
 
-- story: User asks about PDF description
-  steps:
-  - intent: ask_pdf_description
-  - action: utter_pdf_description_explanation
+  - story: User asks about PDF description
+    steps:
+      - intent: ask_pdf_description
+      - action: utter_pdf_description_explanation
 
-- story: User asks about cumulative distribution function
-  steps:
-  - intent: ask_cumulative_distribution_function
-  - action: utter_cumulative_distribution_function_explanation
+  - story: User asks about cumulative distribution function
+    steps:
+      - intent: ask_cumulative_distribution_function
+      - action: utter_cumulative_distribution_function_explanation
 
-- story: User asks about quantiles computation
-  steps:
-  - intent: ask_quantiles_computation
-  - action: utter_quantiles_computation_explanation
+  - story: User asks about quantiles computation
+    steps:
+      - intent: ask_quantiles_computation
+      - action: utter_quantiles_computation_explanation
 
-- story: User asks about relative variance of reverberant energy for a single cavity
-  steps:
-  - intent: ask_relative_variance_single_cavity
-  - action: utter_relative_variance_single_cavity_explanation
+  - story: User asks about relative variance of reverberant energy for a single cavity
+    steps:
+      - intent: ask_relative_variance_single_cavity
+      - action: utter_relative_variance_single_cavity_explanation
 
-- story: User asks about relative variance of reverberant energy for multiple connected cavities
-  steps:
-  - intent: ask_relative_variance_multiple_cavities
-  - action: utter_relative_variance_multiple_cavities_explanation
+  - story: User asks about relative variance of reverberant energy for multiple connected cavities
+    steps:
+      - intent: ask_relative_variance_multiple_cavities
+      - action: utter_relative_variance_multiple_cavities_explanation
 
-- story: User asks about probabilistic variance formulation for power input
-  steps:
-  - intent: ask_probabilistic_variance_power_input
-  - action: utter_probabilistic_variance_power_input_explanation
+  - story: User asks about probabilistic variance formulation for power input
+    steps:
+      - intent: ask_probabilistic_variance_power_input
+      - action: utter_probabilistic_variance_power_input_explanation
 
-- story: User asks about probabilistic variance formulation for aperture coupling power
-  steps:
-  - intent: ask_probabilistic_variance_aperture_coupling_power
-  - action: utter_probabilistic_variance_aperture_coupling_power_explanation
+  - story: User asks about probabilistic variance formulation for aperture coupling power
+    steps:
+      - intent: ask_probabilistic_variance_aperture_coupling_power
+      - action: utter_probabilistic_variance_aperture_coupling_power_explanation
 
-- story: User asks about effective modal overlap for multiple connected cavities
-  steps:
-  - intent: ask_effective_modal_overlap
-  - action: utter_effective_modal_overlap_explanation
+  - story: User asks about effective modal overlap for multiple connected cavities
+    steps:
+      - intent: ask_effective_modal_overlap
+      - action: utter_effective_modal_overlap_explanation
 
-- story: User asks about effective total loss factor for multiple connected cavities
-  steps:
-  - intent: ask_effective_total_loss_factor
-  - action: utter_effective_total_loss_factor_explanation
+  - story: User asks about effective total loss factor for multiple connected cavities
+    steps:
+      - intent: ask_effective_total_loss_factor
+      - action: utter_effective_total_loss_factor_explanation
 
-- story: User asks about statistical ensemble formulation for reverberant wave field energy
-  steps:
-  - intent: ask_statistical_ensemble_formulation
-  - action: utter_statistical_ensemble_formulation_explanation
+  - story: User asks about statistical ensemble formulation for reverberant wave field energy
+    steps:
+      - intent: ask_statistical_ensemble_formulation
+      - action: utter_statistical_ensemble_formulation_explanation
 
-- story: User asks about maximum and minimum response spectrum levels
-  steps:
-  - intent: ask_maximum_minimum_response_spectrum_levels
-  - action: utter_maximum_minimum_response_spectrum_levels_explanation
+  - story: User asks about maximum and minimum response spectrum levels
+    steps:
+      - intent: ask_maximum_minimum_response_spectrum_levels
+      - action: utter_maximum_minimum_response_spectrum_levels_explanation
 
-- story: User asks about mean electric field in a cavity
-  steps:
-  - intent: ask_mean_electric_field
-  - action: utter_mean_electric_field_explanation
+  - story: User asks about mean electric field in a cavity
+    steps:
+      - intent: ask_mean_electric_field
+      - action: utter_mean_electric_field_explanation
 
-- story: User asks about stochastic limits of frequency-stirred local electric field in a cavity
-  steps:
-  - intent: ask_local_electric_field_frequency_stirred
-  - action: utter_local_electric_field_frequency_stirred_explanation
+  - story: User asks about stochastic limits of frequency-stirred local electric field in a cavity
+    steps:
+      - intent: ask_local_electric_field_frequency_stirred
+      - action: utter_local_electric_field_frequency_stirred_explanation
 
-- story: User asks about relationship between S21 response and frequency-stirred local electric field
-  steps:
-  - intent: ask_s21_of_local_electric_field_frequency_stirred
-  - action: utter_s21_of_local_electric_field_frequency_stirred_explanation
+  - story: User asks about relationship between S21 response and frequency-stirred local electric field
+    steps:
+      - intent: ask_s21_of_local_electric_field_frequency_stirred
+      - action: utter_s21_of_local_electric_field_frequency_stirred_explanation
 
 
-# math specs 1 | section 13
+  # math specs 1 | section 13
 
-- story: User asks about direct field calculation
-  steps:
-  - intent: ask_direct_field_calculation
-  - action: utter_direct_field_calculation_explanation
+  - story: User asks about direct field calculation
+    steps:
+    - intent: ask_direct_field_calculation
+    - action: utter_direct_field_calculation_explanation
 
-- story: User asks about total field calculation
-  steps:
-  - intent: ask_total_field_calculation
-  - action: utter_total_field_calculation_explanation
+  - story: User asks about total field calculation
+    steps:
+    - intent: ask_total_field_calculation
+    - action: utter_total_field_calculation_explanation
 
-- story: User asks about near field corrections
-  steps:
-  - intent: ask_near_field_corrections
-  - action: utter_near_field_corrections_explanation
+  - story: User asks about near field corrections
+    steps:
+    - intent: ask_near_field_corrections
+    - action: utter_near_field_corrections_explanation
 
-- story: User asks about field distribution
-  steps:
-  - intent: ask_field_distribution
-  - action: utter_field_distribution_explanation
+  - story: User asks about field distribution
+    steps:
+    - intent: ask_field_distribution
+    - action: utter_field_distribution_explanation
 
-# math specs 1 | section 14
+  # math specs 1 | section 14
 
-- story: User asks for specific graph instances
-  steps:
-  - intent: ask_specific_graph_instances
-  - action: utter_specific_graph_instances
+  - story: User asks for specific graph instances
+    steps:
+    - intent: ask_specific_graph_instances
+    - action: utter_specific_graph_instances
 
-# math specs 2 | section 1
+  # math specs 2 | section 1
 
-- story: User asks for simulation tool explanation
-  steps:
-  - intent: simulation_tool_explanation
-  - action: utter_simulation_tool_explanation
+  - story: User asks for simulation tool explanation
+    steps:
+    - intent: simulation_tool_explanation
+    - action: utter_simulation_tool_explanation
 
-- story: User asks for simulation tool features
-  steps:
-  - intent: ask_simulation_tool_features
-  - action: utter_simulation_tool_features
+  - story: User asks for simulation tool features
+    steps:
+    - intent: ask_simulation_tool_features
+    - action: utter_simulation_tool_features
 
-- story: User asks for simulation tool features
-  steps:
-  - intent: ask_simulation_tool_use_cases
-  - action: utter_simulation_tool_use_cases
+  - story: User asks for simulation tool features
+    steps:
+    - intent: ask_simulation_tool_use_cases
+    - action: utter_simulation_tool_use_cases
 
-# math specs 2 | section 2
+  # math specs 2 | section 2
 
-- story: User asks for cable harness model explanation
-  steps:
-  - intent: ask_cable_harness_model
-  - action: utter_cable_harness_model_explanation
+  - story: User asks for cable harness model explanation
+    steps:
+    - intent: ask_cable_harness_model
+    - action: utter_cable_harness_model_explanation
 
-- story: User asks for separable form of TEM mode fields explanation
-  steps:
-  - intent: ask_separable_form
-  - action: utter_separable_form_explanation
+  - story: User asks for separable form of TEM mode fields explanation
+    steps:
+    - intent: ask_separable_form
+    - action: utter_separable_form_explanation
 
-- story: User asks for deterministic transmission line modeling process
-  steps:
-  - intent: ask_deterministic_transmission_line_modeling
-  - action: utter_deterministic_transmission_line_modeling_process
+  - story: User asks for deterministic transmission line modeling process
+    steps:
+    - intent: ask_deterministic_transmission_line_modeling
+    - action: utter_deterministic_transmission_line_modeling_process
 
-- story: User asks for canonical test cases explanation
-  steps:
-  - intent: ask_canonical_test_cases
-  - action: utter_canonical_test_cases_explanation
+  - story: User asks for canonical test cases explanation
+    steps:
+    - intent: ask_canonical_test_cases
+    - action: utter_canonical_test_cases_explanation
 
-# math specs 2 | section 3
+  # math specs 2 | section 3
 
-- story: User asks for model solution parameters explanation
-  steps:
-  - intent: ask_model_solution_parameters
-  - action: utter_model_solution_parameters_explanation
+  - story: User asks for model solution parameters explanation
+    steps:
+    - intent: ask_model_solution_parameters
+    - action: utter_model_solution_parameters_explanation
 
-- story: User asks for frequency solution vector explanation
-  steps:
-  - intent: ask_frequency_solution_vector
-  - action: utter_frequency_solution_vector_explanation
+  - story: User asks for frequency solution vector explanation
+    steps:
+    - intent: ask_frequency_solution_vector
+    - action: utter_frequency_solution_vector_explanation
 
-- story: User asks for constant bandwidth explanation
-  steps:
-  - intent: ask_constant_bandwidth
-  - action: utter_constant_bandwidth_explanation
+  - story: User asks for constant bandwidth explanation
+    steps:
+    - intent: ask_constant_bandwidth
+    - action: utter_constant_bandwidth_explanation
 
-- story: User asks for logarithmic bandwidth explanation
-  steps:
-  - intent: ask_logarithmic_bandwidth
-  - action: utter_logarithmic_bandwidth_explanation
+  - story: User asks for logarithmic bandwidth explanation
+    steps:
+    - intent: ask_logarithmic_bandwidth
+    - action: utter_logarithmic_bandwidth_explanation
 
-- story: User asks for octave frequencies explanation
-  steps:
-  - intent: ask_octave_frequencies
-  - action: utter_octave_frequencies_explanation
+  - story: User asks for octave frequencies explanation
+    steps:
+    - intent: ask_octave_frequencies
+    - action: utter_octave_frequencies_explanation
 
-# math specs 2 | section 4
+  # math specs 2 | section 4
 
-- story: User asks about spectral data input
-  steps:
-  - intent: ask_spectral_data_input
-  - action: utter_spectral_data_input_explanation
+  - story: User asks about spectral data input
+    steps:
+    - intent: ask_spectral_data_input
+    - action: utter_spectral_data_input_explanation
 
-- story: User asks about materials with complex properties
-  steps:
-  - intent: ask_material_properties
-  - action: utter_material_properties_explanation
+  - story: User asks about materials with complex properties
+    steps:
+    - intent: ask_material_properties
+    - action: utter_material_properties_explanation
 
-# math specs 2 | section 5
+  # math specs 2 | section 5
 
-- story: User asks about dielectric gas properties
-  steps:
-  - intent: ask_dielectric_gas_properties
-  - action: utter_dielectric_gas_properties_explanation
+  - story: User asks about dielectric gas properties
+    steps:
+    - intent: ask_dielectric_gas_properties
+    - action: utter_dielectric_gas_properties_explanation
 
-- story: User asks about dielectric solid properties
-  steps:
-  - intent: ask_dielectric_solid_properties
-  - action: utter_dielectric_solid_properties_explanation
+  - story: User asks about dielectric solid properties
+    steps:
+    - intent: ask_dielectric_solid_properties
+    - action: utter_dielectric_solid_properties_explanation
 
-- story: User asks about solid conductor properties
-  steps:
-  - intent: ask_solid_conductor_properties
-  - action: utter_solid_conductor_properties_explanation
+  - story: User asks about solid conductor properties
+    steps:
+    - intent: ask_solid_conductor_properties
+    - action: utter_solid_conductor_properties_explanation
