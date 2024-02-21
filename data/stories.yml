@@ -242,3 +242,51 @@ stories:
     steps:
       - intent: ask_about_voltage_source_distribution
       - action: utter_answer_voltage_source_distribution
+  - story: ask about total power dissipation
+    steps:
+      - intent: ask_about_total_power_dissipation
+      - action: utter_answer_total_power_dissipation
+  - story: ask about cable harness response
+    steps:
+      - intent: ask_about_cable_harness_response
+      - action: utter_answer_cable_harness_response
+  - story: ask about cavity wavefields processing
+    steps:
+      - intent: ask_about_cavity_wavefields_processing
+      - action: utter_answer_cavity_wavefields_processing
+  - story: ask about mean field levels calculation
+    steps:
+      - intent: ask_about_mean_field_levels_calculation
+      - action: utter_answer_mean_field_levels_calculation
+  - story: ask about stochastic limits definition
+    steps:
+      - intent: ask_about_stochastic_limits_definition
+      - action: utter_answer_stochastic_limits_definition
+  - story: ask about uncoupled cable harness limits
+    steps:
+      - intent: ask_about_uncoupled_cable_harness_limits
+      - action: utter_answer_uncoupled_cable_harness_limits
+  - story: ask about cable harness limits inside cavities
+    steps:
+      - intent: ask_about_cable_harness_limits_inside_cavities
+      - action: utter_answer_cable_harness_limits_inside_cavities
+  - story: ask about cable harness limits inside cavities terminal inputs
+    steps:
+      - intent: ask_about_cable_harness_limits_inside_cavities_terminal_inputs
+      - action: utter_answer_cable_harness_limits_inside_cavities_terminal_inputs
+  - story: ask about loss factor due to cavity radiation resistance
+    steps:
+      - intent: ask_about_loss_factor_due_to_cavity_radiation_resistance
+      - action: utter_answer_loss_factor_due_to_cavity_radiation_resistance
+  - story: ask about loss factor due to antenna loss
+    steps:
+      - intent: ask_about_loss_factor_due_to_antenna_loss
+      - action: utter_answer_loss_factor_due_to_antenna_loss
+  - story: ask about voltage calclation using reciprocal theorem
+    steps:
+      - intent: ask_about_voltage_calculation_using_reciprocal_theorem
+      - action: utter_answer_voltage_calculation_using_reciprocal_theorem
+  - story: ask about current calculation using reciprocal theorem
+    steps:
+      - intent: ask_about_current_calculation_using_reciprocal_theorem
+      - action: utter_answer_current_calculation_using_reciprocal_theorem

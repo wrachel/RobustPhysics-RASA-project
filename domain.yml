@@ -59,6 +59,18 @@ intents:
   - ask_about_diffuse_field_modeling
   - ask_about_cavity_loss_factor_calculation
   - ask_about_voltage_source_distribution
+  - ask_about_total_power_dissipation
+  - ask_about_cable_harness_response
+  - ask_about_cavity_wavefields_processing
+  - ask_about_mean_field_levels_calculation
+  - ask_about_stochastic_limits_definition
+  - ask_about_uncoupled_cable_harness_limits
+  - ask_about_cable_harness_limits_inside_cavities
+  - ask_about_cable_harness_limits_inside_cavities_terminal_inputs
+  - ask_about_loss_factor_due_to_cavity_radiation_resistance
+  - ask_about_loss_factor_due_to_antenna_loss
+  - ask_about_voltage_calculation_using_reciprocal_theorem
+  - ask_about_current_calculation_using_reciprocal_theorem
 responses:
   utter_greet:
     - text: "Hey! How are you?"
@@ -198,6 +210,36 @@ responses:
     - text: "To calculate the cavity loss factor due to radiation loading, the field excitation is applied with any nominal value, such as unity. The radiation resistance is used to find the loading that an MTL segment within a network places on a particular cavity. The segment exposed to the diffuse field acts as a receiving antenna with a radiation resistance, and an equivalent voltage source that accounts for the excitation by the external field is found. The mean power delivered to a matched load placed on the output of an antenna in an ideal diffuse field can be calculated using a specific equation. An equivalent circuit model is then used to deliver the mean-square power to the matched load. The appropriate 'diffuse' voltage source is determined and added to the line, and the power dissipated by the network loads is summed. The power 'dissipated' in the load should not be included since that power is radiated back into the cavity field. The quality factor due to the network loading is found using another equation involving cavity volume, angular frequency, and mean energy density in the diffuse field."
   utter_answer_voltage_source_distribution:
     - text: "The voltage source due to a diffuse field ideally should be distributed across the line segment, similar to the distribution of the radiation resistance along the line. However, because the source is incoherent, the contributions of the differential voltage sources on the line must be added incoherently. The distributed voltage source on the line, represented by Q(x), is calculated using an integration formula evaluated using Gaussian quadrature. The network solution that gives the power dissipated in the nth network load when a voltage source of magnitude V(x) is placed at position x on the line can be determined using this approach. The quadrature requires the network to be solved with sources placed at multiple interior points on the line. Translation matrices are used to translate the voltage source at position x to become voltage and current sources at specific points. The network must be solved L times using the quadrature approach, but the network is only set up once so no matrix inversions are required in the solution stage, minimizing the computational cost. Finally, the vector of Cable Segment Loading Q factors should be written to the RhoPhy Model Data Structure, referencing appropriate Spectral Data objects for spectral data and damping loss factor."
+  utter_answer_total_power_dissipation:
+    - text: "The total power dissipated by all losses is equal to the fraction of power loss, denoted as alpha, times the field energy level occurring at rate omega (rad/s). The Q factor, which is the inverse of the loss factor, is a key parameter in determining the total cavity wavefield loss factor. This factor accounts for contributions from multiple different loss mechanisms, including those defined in the Math Spec I [Uncoupled] Cavity Wavefields Analysis. Additionally, in coupled cable-cavity analysis, each cable segment behaves like an antenna, contributing an additional loss mechanism to each cavity wavefield that contains one or more cable segments."
+  utter_answer_cable_harness_response:
+    - text: "For applied (deterministic) voltage and current sources defined in the Terminal Blocks of the model, the OSU Comp. Mod. II transmission Line code calculates the complex and deterministic cable harness response. The results of this calculation are then written to the RhoPhy Data Structure."
+  utter_answer_cavity_wavefields_processing:
+    - text: "For each of the F Cavity Wavefields in sequence, the OSU Comp. Mod. II transmission Line code performs the following steps:
+       1. It calculates the effective voltage sources on all of the cable segments and their conductors within the cavity, assuming coherent common (antenna) mode coupling.
+       2. It calculates the complex and deterministic cable harness response.
+       3. The results of these calculations are then written to the RhoPhy Data Structure.
+       This process is repeated for each of the F Cavity Wavefield Excitation Load cases, and the results are also written to the RhoPhy Data Structure."
+  utter_answer_mean_field_levels_calculation:
+    - text: "To calculate the statistical mean total voltage magnitude of response at the cable harness nodes, the OSU Comp. Mod. II transmission Line code assumes all of the F+1 excitation load cases are statistically uncorrelated and performs the necessary calculations. The resulting vectors of total voltage magnitude field levels are then written to the RhoPhy Data Structure under 'OUTPUTS / COUPLED CABLE-CAVITY FIELD / Mean Field Levels / Voltage – Junctions'.
+       Similarly, the statistical mean total current magnitude of response in the termination loads and the statistical mean 2-port S parameter magnitude are calculated using similar processes and written to the RhoPhy Data Structure under 'OUTPUTS / COUPLED CABLE-CAVITY FIELD / Mean Field Levels / Current - Junctions' and 'OUTPUTS / COUPLED CABLE-CAVITY FIELD / Mean Field Levels / S parameters' respectively."
+  utter_answer_stochastic_limits_definition:
+    - text: "The stochastic limits for any field response are defined by the quantiles of the probability density function or cumulative probability distribution for any user-defined probability. In the case of reverberant electric field magnitude in each cavity wavefield, these stochastic limits are already defined in Math Spec I and implemented in RhoPhy code from Alpha Release 1 (February 2022).
+       However, the stochastic limits of coupled cable voltage and current response are somewhat more complex due to multiple components with different probability distributions."
+  utter_answer_uncoupled_cable_harness_limits:
+    - text: "In the case of a cable harness where all segments are outside all cavities but excited by terminal inputs, it is considered uncoupled. In NASA Release 1, the maximum, mean, and minimum stochastic limits will all be equal to the magnitude of the uncoupled (deterministic) cable segment result."
+  utter_answer_cable_harness_limits_inside_cavities:
+    - text: "A cable harness with segments inside one or more cavities but not excited by terminal inputs will have a Rayleigh probability density function. For each Rayleigh distributed response variable (voltage, current, S parameter), the Quantiles of the Rayleigh distribution (i.e., Max X, Mean X, Min X) scale on the standard deviation of the zero-mean, normally distributed real and imaginary parts of the complex random variable, which is calculated as the mean magnitude response to the cavity wavefield excitation. For terminal voltages, the stochastic limits for user-defined probabilities are calculated using the formula provided. For junction currents and port S parameters, similar formulas are used to determine the stochastic limits."
+  utter_answer_cable_harness_limits_inside_cavities_terminal_inputs:
+    - text: "A cable with segments inside one or more cavities and excited by terminal inputs will have a Rice probability density function. For each Rice distributed total response variable (voltage, current, S parameter), the Quantiles of the Rice distribution (i.e., Max XT, Mean XT, Min XT) scale on two parameters: the deterministic response to applied terminal loads and the standard deviation of the Rayleigh distributed response to all cavity field excitations. There is no closed form solution for the Quantiles of the Rice distribution, so they have to be iteratively calculated from the Rice Cumulative distribution using the Marcum Q function of order 1. For user-defined probabilities, the corresponding Max XT and Min XT are simple roots of the monotonically increasing Rice Cumulative distribution."
+  utter_answer_loss_factor_due_to_cavity_radiation_resistance:
+    - text: "The loss factor due to the coupling between radiation resistance and the electromagnetic field is calculated based on the mean-squared value of the electric field inside the reverberant chamber and the Ohmic loss at the radiation resistance. Essentially, the loss factor is determined by the radiation S parameter calculated from radiation emission. A voltage source is added in series with the radiation resistance, and the resulting radiated power is calculated. Then, the loss factor due to the circuit/antenna absorption is computed using a specific formula, taking into account the volume of the cavity."
+  utter_answer_loss_factor_due_to_antenna_loss:
+    - text: "The loss factor of a cavity due to antenna loss considers the coupling between radiation resistance and the electromagnetic field, as well as the power loss at impedance/admittance. It involves summations over radiation resistances in the cavity, current/voltage sources added, and pins in junctions. The loss factor accounts for the radiation power on radiation resistance when a current/voltage source is placed at specific locations. If the radiation resistance and impedance/admittance belong to the same cavity, the radiation part is not considered since the radiation into the same cavity is not considered as a loss."
+  utter_answer_voltage_calculation_using_reciprocal_theorem:
+    - text: "To calculate the voltages at any point of a circuit in a reverberant cavity using the reciprocal theorem, we can utilize an ideal radiation antenna in the cavity. By applying a current source to drive the antenna, with an ideal impedance match, the power input to the cavity is given by the formula . The mean square of the E field in the cavity is then calculated as . To determine the voltage at a point in our circuit, we can switch the current source and voltage meter and use the same approach. The resulting equation for the voltage giving the mean-squared E-field is . Here,  has the unit of ;  is the vacuum impedance."
+  utter_answer_current_calculation_using_reciprocal_theorem:
+    - text: "To calculate the currents in a circuit generated by the electromagnetic field using the reciprocal theorem, we should place a unit voltage source at the same location in the cavity and calculate the radiation into the cavity . This process yields the equation , where  has the unit of ."
 actions:
   - utter_create_cylindrical_fairing_volume
   - utter_create_spacecraft_volume
@@ -243,6 +285,18 @@ actions:
   - utter_answer_diffuse_field_modeling
   - utter_answer_cavity_loss_factor_calculation
   - utter_answer_voltage_source_distribution
+  - utter_answer_total_power_dissipation
+  - utter_answer_cable_harness_response
+  - utter_answer_cavity_wavefields_processing
+  - utter_answer_mean_field_levels_calculation
+  - utter_answer_stochastic_limits_definition
+  - utter_answer_uncoupled_cable_harness_limits
+  - utter_answer_cable_harness_limits_inside_cavities
+  - utter_answer_cable_harness_limits_inside_cavities_terminal_inputs
+  - utter_answer_loss_factor_due_to_cavity_radiation_resistance
+  - utter_answer_loss_factor_due_to_antenna_loss
+  - utter_answer_voltage_calculation_using_reciprocal_theorem
+  - utter_answer_current_calculation_using_reciprocal_theorem
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
