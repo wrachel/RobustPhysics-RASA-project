@@ -373,3 +373,49 @@ nlu:
       - How is the total field calculated in lossy cavities?
       - What is the significance of the Rice distribution in lossy cavities?
       - What observations were made in the spatial field distribution shown in [25]?
+  - intent: ask_about_hybrid_model_solution
+    examples: |
+      - How is the hybrid deterministic-statistical coupling model solved?
+      - Can you explain the three-step process involved in solving the hybrid model?
+      - What is the first step in the hybrid model solution?
+      - What does the second step involve in the hybrid model solution?
+      - How are the total cable harness currents and terminal voltages modeled in the hybrid solution?
+      - What factors affect the mean-squared current in a conductor in the hybrid model solution?
+  - intent: ask_about_RhoPhy_data_structure_definition
+    examples: |
+      - What is the RhoPhy Data Structure used for?
+      - Can you explain the components of the RhoPhy Data Structure?
+      - How are cable segments defined within the RhoPhy Data Structure?
+      - What is the purpose of uncoupled cable analysis in the RhoPhy model?
+      - How is the radiation impedance defined in the RhoPhy model?
+      - What is the common mode (CM) radiation assumption in the RhoPhy model?
+      - How is the total power radiated to free field calculated in the RhoPhy model?
+  - intent: ask_about_conductor_radiated_power
+    examples: |
+      - How is the radiated power calculated from the lumped radiation impedance in a conductor?
+      - Can you explain the process for calculating radiated power from lumped radiation impedance?
+      - What are the components involved in determining the radiated power from lumped radiation impedance?
+      - How does the current network solver output contribute to calculating radiated power?
+      - What is the significance of the conductor and cable segments in determining radiated power?
+  - intent: ask_about_diffuse_field_modeling
+    examples: |
+      - How is an ideally diffuse field within a cavity modeled?
+      - Can you explain the concept of a superposition of uniform plane waves in cavity modeling?
+      - What is the role of current and voltage sources in modeling plane wave excitation?
+      - How are plane wave incidence angle and polarization vectors accounted for in cavity modeling?
+      - What are the equations used to represent induced voltage and currents on MTL segments?
+      - What is the significance of the excitation source model by Paul (2008) in cavity modeling?
+  - intent: ask_about_cavity_loss_factor_calculation
+    examples: |
+      - How is the cavity loss factor calculated due to radiation loading?
+      - Can you explain the process of determining the cavity loss factor from radiation loading?
+      - What is the significance of radiation resistance in calculating the cavity loss factor?
+      - How are equivalent voltage sources determined to account for external field excitation?
+      - What is the equation used to calculate the mean power delivered to a matched load in an ideal diffuse field?
+  - intent: ask_about_voltage_source_distribution
+    examples: |
+      - How is the voltage source distributed across the line segment?
+      - Can you explain the incoherent distribution of voltage sources on the line?
+      - What is the significance of Gaussian quadrature in evaluating the integration?
+      - How are the translation matrices used in the quadrature approach?
+      - What is the role of the Cable Segment Loading Q factors in the RhoPhy Model Data Structure?

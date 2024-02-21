@@ -218,3 +218,27 @@ stories:
     steps:
       - intent: ask_about_lossy_cavities
       - action: utter_answer_lossy_cavities
+  - story: ask about hybrid model solution
+    steps:
+      - intent: ask_about_hybrid_model_solution
+      - action: utter_answer_hybrid_model_solution
+  - story: ask about RhoPhy data structure definition
+    steps:
+      - intent: ask_about_RhoPhy_data_structure_definition
+      - action: utter_answer_RhoPhy_data_structure_definition
+  - story: ask about conductor radiated power
+    steps:
+      - intent: ask_about_conductor_radiated_power
+      - action: utter_answer_conductor_radiated_power
+  - story: ask about diffuse field modeling
+    steps:
+      - intent: ask_about_diffuse_field_modeling
+      - action: utter_answer_diffuse_field_modeling
+  - story: ask about cavity loss factor calculation
+    steps:
+      - intent: ask_about_cavity_loss_factor_calculation
+      - action: utter_answer_cavity_loss_factor_calculation
+  - story: ask about voltage source distribution
+    steps:
+      - intent: ask_about_voltage_source_distribution
+      - action: utter_answer_voltage_source_distribution
