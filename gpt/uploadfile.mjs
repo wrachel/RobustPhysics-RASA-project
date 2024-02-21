@@ -1,3 +1,6 @@
+// idk why i started this project with javascript - aj
+// this file can be ignored
+
 import fs from 'fs';
 import fetch from 'node-fetch'; // Make sure your environment is properly set for ES modules
 import { OpenAI } from 'openai'; // Adjusted import based on typical OpenAI SDK usage
