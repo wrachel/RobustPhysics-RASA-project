@@ -502,3 +502,22 @@ class ExplainSolidConductorProperties(Action):
     ) -> List[Dict[Text, Any]]:
         dispatcher.utter_message("Solid conductor properties include permeability, conductivity, and mass density.")
 
+class ActionBuildAircraftEMCModel(Action):
+    def name(self) -> Text:
+        return "action_build_aircraft_emc_model"
+
+    async def run(
+        self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]
+    ) -> List[Dict[Text, Any]]:
+        dispatcher.utter_message("To build an aircraft system-level EMC model using Stochastica, follow these steps:\n1. Import simple 3D geometry data using Stochastica's modeling toolbar.\n2. Define area junctions between connected fields and specify field excitation sources.\n3. Solve uncoupled cavity fields and plot output results, including stochastic limits.\n4. Refine the model based on diagnostic plots and adjust sources or transmission paths as necessary.")
+        return []
+
+class ActionBuildAutomobileEMCModel(Action):
+    def name(self) -> Text:
+        return "action_build_automobile_emc_model"
+
+    async def run(
+        self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]
+    ) -> List[Dict[Text, Any]]:
+        dispatcher.utter_message("To build an automobile system-level EMC model using Stochastica, follow these steps:\n1. Import 3D geometry data and define cavity field parameters.\n2. Define area junctions and specify field excitation sources.\n3. Solve cavity fields, plot output results, and analyze stochastic limits.\n4. Create multi-pin connectors, wire conductors, and solve cable harness.\n5. Couple models, identify cable-cavity interactions, and solve coupled model for comprehensive analysis.")
+        return []

@@ -358,3 +358,31 @@ nlu:
       - What are the properties of solid conductor?
       - Can you provide details about solid conductor properties?
       - Explain the characteristics of solid conductor.
+
+# website
+
+- intent: ask_build_aircraft_emc_model
+  examples: |
+    - how do you build an aircraft system-level EMC model using Stochastica
+    - steps to create an EMC model for aircraft systems with Stochastica
+    - how to construct an aircraft EMC model using Stochastica
+    - explain the process of building an aircraft EMC model using Stochastica
+    - learning how to create an EMC model for aircraft systems
+    - instructions on building an aircraft EMC model with Stochastica
+    - using Stochastica to build an EMC model for aircraft systems
+    - procedure for building an aircraft EMC model using Stochastica
+    - tutorial on how to construct an aircraft EMC model using Stochastica
+    - explain how to create an aircraft EMC model using Stochastica
+
+- intent: ask_build_automobile_emc_model
+  examples: |
+    - how do you build an automobile system-level EMC model using Stochastica
+    - steps to create an EMC model for automobiles with Stochastica
+    - how to construct an automobile EMC model using Stochastica
+    - explain the process of building an automobile EMC model using Stochastica
+    - learning how to create an EMC model for automobiles
+    - instructions on building an automobile EMC model with Stochastica
+    - using Stochastica to build an EMC model for automobiles
+    - procedure for building an automobile EMC model using Stochastica
+    - tutorial on how to construct an automobile EMC model using Stochastica
+    - explain how to create an automobile EMC model using Stochastica
