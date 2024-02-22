@@ -1,54 +1,99 @@
 version: "3.1"
-
 stories:
-  - story: happy path
-    steps:
-      - intent: greet
-      - action: utter_greet
-      - intent: mood_great
-      - action: utter_happy
 
-  - story: sad path 1
-    steps:
-      - intent: greet
-      - action: utter_greet
-      - intent: mood_unhappy
-      - action: utter_cheer_up
-      - action: utter_did_that_help
-      - intent: affirm
-      - action: utter_happy
+- story: Add new material flow
+  steps:
+  - intent: add_material
+  - action: utter_ask_material_type
+  - intent: add_material
+    entities:
+      - material_type: "Dielectric Solid"
+  - action: utter_ask_material_name
+  - intent: add_material
+    entities:
+      - material_name: "New Dielectric Material"
+  - action: utter_ask_properties
+  - intent: add_material
+    entities:
+      - permittivity: "high"
+      - permeability: "medium"
+      - conductivity: "low"
+  - action: add_material
 
-  - story: sad path 2
-    steps:
-      - intent: greet
-      - action: utter_greet
-      - intent: mood_unhappy
-      - action: utter_cheer_up
-      - action: utter_did_that_help
-      - intent: deny
-      - action: utter_goodbye
+- story: Edit material properties flow
+  steps:
+  - intent: edit_material
+  - action: utter_ask_material_name
+  - intent: edit_material
+    entities:
+      - material_name: "Existing Material"
+  - action: utter_ask_properties
+  - intent: edit_material
+    entities:
+      - permittivity: "updated value"
+  - action: edit_material
 
-  - story: User inquires about frequency vector and sample
-    steps:
-      - intent: inquire_frequency_vector
-      - action: utter_explain_frequency_vector
-      - intent: specify_frequency_sample
-      - action: utter_explain_frequency_sample
+- story: Delete material flow
+  steps:
+  - intent: delete_material
+  - action: utter_ask_material_name
+  - intent: delete_material
+    entities:
+      - material_name: "Obsolete Material"
+  - action: delete_material
 
-  - story: User asks about inputting spectral data
-    steps:
-      - intent: input_spectral_data
-      - action: utter_explain_input_spectral_data
+- story: Help with material selection flow
+  steps:
+  - intent: help_with_material_selection
+  - action: utter_help_with_material_selection
 
-  - story: User asks how to add spectral data using dialog box
-    steps:
-      - intent: add_spectral_data_dialog
-      - action: utter_explain_add_spectral_data_dialog
+- story: List all materials flow
+  steps:
+  - intent: list_all_materials
+  - action: utter_list_all_materials
 
   - story: User wants to know about copying and pasting spectral data
     steps:
       - intent: copy_paste_spectral_data
       - action: utter_explain_copy_paste_spectral_data
+
+  - story: Add cable segment
+    steps:
+      - intent: add_cable_segment
+      - action: utter_explain_add_cable_segment
+
+  - story: Add wires and specify connectors
+    steps:
+      - intent: add_wires
+      - action: utter_explain_add_wires
+      - intent: specify_connectors
+      - action: utter_explain_specify_connectors
+
+  - story: Add cable segment in 3D Geometry Window
+    steps:
+      - intent: add_cable_segment
+      - action: utter_explain_add_cable_segment
+      - intent: create_common_backbone_cable_segment
+      - action: utter_explain_create_common_backbone_cable_segment
+
+  - story: Add and Edit Cable Segment
+    steps:
+      - intent: add_cable_segment
+      - action: utter_explain_add_cable_segment
+      - intent: create_common_backbone_cable_segment
+      - action: utter_explain_create_common_backbone_cable_segment
+      - intent: edit_segment_cross_section
+      - action: utter_explain_edit_segment_cross_section
+
+  - story: Find Closest Reflecting Plane
+    steps:
+      - intent: find_closest_proximate_reflecting_plane
+      - action: utter_explain_find_closest_reflecting_plane
+
+  - story: Override Calculated Value
+    steps:
+     - intent: override_calculated_value
+      - action: utter_explain_override_calculated_value
   
   - story: User inquires about cavity wavefield
     steps:
@@ -64,3 +109,246 @@ stories:
     steps:
       - intent: define_q_factor_cavity_wavefield
       - action: utter_explain_q_factor
+
+     
+  # Math specs I - Section 3
+  - story: Unit Inquiry
+    steps:
+      - intent: ask_unit
+        entities:
+          - parameter_type: "voltage"
+      - action: utter_ask_unit
+  - story: Input Parameters Inquiry
+    steps:
+      - intent: ask_input_parameters
+      - action: utter_ask_input_parameters
+  - story: Spectral Data Inquiry
+    steps:
+      - intent: ask_spectral_data
+      - action: utter_ask_spectral_data
+  - story: Classes of Spectral Data Inquiry
+    steps:
+      - intent: ask_classes_spectral_data
+      - action: utter_ask_classes_spectral_data
+  - story: Data Structure Inquiry
+    steps:
+      - intent: ask_data_structure
+      - action: utter_ask_data_structure
+  - story: Frequency Range Inquiry
+    steps:
+      - intent: ask_frequency_range
+      - action: utter_ask_frequency_range
+  - story: Data Forms Inquiry
+    steps:
+      - intent: ask_data_forms
+      - action: utter_ask_data_forms
+  - story: Parameter Units Inquiry
+    steps:
+      - intent: ask_parameter_units
+      - action: utter_ask_parameter_units
+  - story: Reflection Loss Inquiry
+    steps:
+      - intent: ask_reflection_loss
+      - action: utter_ask_reflection_loss
+  - story: Insertion Loss Inquiry
+    steps:
+      - intent: ask_insertion_loss
+      - action: utter_ask_insertion_loss
+  - story: Shielding Effectiveness Inquiry
+    steps:
+      - intent: ask_shielding_effectiveness
+      - action: utter_ask_shielding_effectiveness
+  - story: Spectral Synthesis with Distributions
+    steps:
+      - intent: ask_spectral_synthesis
+      - action: utter_ask_spectral_synthesis
+  - story: Rayleigh Distribution Inquiry
+    steps:
+      - intent: ask_rayleigh_distribution
+      - action: utter_ask_pdf_distribution
+  - story: Normal Distribution Inquiry
+    steps:
+      - intent: ask_normal_distribution
+      - action: utter_ask_pdf_distribution
+  - story: Log-normal Distribution Inquiry
+    steps:
+      - intent: ask_log_normal_distribution
+      - action: utter_ask_pdf_distribution
+  - story: Complex Constant Synthesis Inquiry
+    steps:
+      - intent: ask_complex_constant_synthesis
+      - action: utter_ask_complex_constant_synthesis
+
+  - story: Rational Function Synthesis Inquiry
+    steps:
+      - intent: ask_rational_function_synthesis
+      - action: utter_ask_rational_function_synthesis
+
+  - story: PDF Distribution Synthesis Inquiry
+    steps:
+      - intent: ask_pdf_distribution
+      - action: utter_ask_pdf_distribution
+
+  - story: CDF Distribution Synthesis Inquiry
+    steps:
+      - intent: ask_cdf_distribution
+      - action: utter_ask_cdf_distribution
+  - story: Exponential Distribution Inquiry /// New story
+    steps:
+      - intent: ask_exponential_distribution
+      - action: utter_ask_exponential_distribution
+  - story: Lomax Distribution Inquiry
+    steps:
+      - intent: ask_lomax_distribution
+      - action: utter_ask_lomax_distribution
+
+  - story: Inverse Gamma Distribution Inquiry
+    steps:
+      - intent: ask_inverse_gamma_distribution
+      - action: utter_ask_inverse_gamma_distribution
+  - story: Log-Normal Distribution Fit
+    steps:
+      - intent: ask_log_normal_distribution_fit
+      - action: utter_ask_log_normal_distribution_fit
+
+  - story: Calculate PDF Parameters
+    steps:
+      - intent: ask_calculate_pdf_parameters
+      - action: utter_ask_calculate_pdf_parameters
+
+  - story: Find Alternative PDF Model
+    steps:
+      - intent: ask_find_alternative_pdf_model
+      - action: utter_ask_find_alternative_pdf_model
+
+  - story: Inverse-Gamma Distribution Fit
+    steps:
+      - intent: ask_inverse_gamma_distribution_fit
+      - action: utter_ask_inverse_gamma_distribution_fit
+
+  - story: Calculate Inverse-Gamma Parameters
+    steps:
+      - intent: ask_calculate_inverse_gamma_parameters
+      - action: utter_ask_calculate_inverse_gamma_parameters
+
+  - story: Lomax Distribution Unconditional PDF
+    steps:
+      - intent: ask_lomax_distribution_unconditional_pdf
+      - action: utter_ask_lomax_distribution_unconditional_pdf
+
+  - story: Calculate Lomax Parameters
+    steps:
+      - intent: ask_calculate_lomax_parameters
+      - action: utter_ask_calculate_lomax_parameters
+
+  - story: Calculate Lomax CDF
+    steps:
+      - intent: ask_calculate_lomax_cdf
+      - action: utter_ask_calculate_lomax_cdf
+
+  - story: Calculate Lomax Quantiles
+    steps:
+      - intent: ask_calculate_lomax_quantiles
+      - action: utter_ask_calculate_lomax_quantiles
+
+  - story: Reverberant Field Magnitude PDF
+    steps:
+      - intent: ask_reverberant_field_magnitude_pdf
+      - action: utter_ask_reverberant_field_magnitude_pdf
+
+  - story: Calculate Mean Field PDF
+    steps:
+      - intent: ask_calculate_mean_field_pdf
+      - action: utter_ask_calculate_mean_field_pdf
+
+  - story: Calculate Uncertainty PDF
+    steps:
+      - intent: ask_calculate_uncertainty_pdf
+      - action: utter_ask_calculate_uncertainty_pdf
+
+  - story: No Uncertainty in Source Current and Q Factor
+    steps:
+      - intent: ask_no_uncertainty
+      - action: utter_ask_no_uncertainty
+
+  - story: Uncertainty in Q Factor and Frequency Variance in Input Conductance
+    steps:
+      - intent: ask_uncertainty_q_factor_frequency_variance
+      - action: utter_ask_uncertainty_q_factor_frequency_variance
+
+  - story: PDF Model with Uncertainty in Q Factor and Frequency Variance in Input Conductance
+    steps:
+      - intent: ask_pdf_model_uncertainty_q_factor_frequency_variance
+      - action: utter_ask_pdf_model_uncertainty_q_factor_frequency_variance
+
+  - story: Statistical Distribution of Reverberant Field Q Factors
+    steps:
+      - intent: ask_statistical_distribution_q_factors
+      - action: utter_ask_statistical_distribution_q_factors
+
+  - story: Uncertainty in All Three Mean Field Variables
+    steps:
+      - intent: ask_uncertainty_all_mean_field_variables
+      - action: utter_ask_uncertainty_all_mean_field_variables
+
+  - story: Marginal PDF Modeled with Inverse-Gamma Distribution
+    steps:
+      - intent: ask_marginal_pdf_modeled_inverse_gamma
+      - action: utter_ask_marginal_pdf_modeled_inverse_gamma
+
+  - story: Closed Form Analytic Solution with Log-Normal Distribution
+    steps:
+      - intent: ask_closed_form_analytic_solution_log_normal
+      - action: utter_ask_closed_form_analytic_solution_log_normal
+
+  - story: Implementation Insight and Parameter Deduction for Lomax Distribution
+    steps:
+      - intent: ask_implementation_insight_parameter_deduction
+      - action: utter_ask_implementation_insight_parameter_deduction
+
+  - story: Excitation Uncertainty Inquiry
+    steps:
+      - intent: ask_excitation_uncertainty
+      - action: utter_ask_excitation_uncertainty
+
+  - story: Source Current Treatment
+    steps:
+      - intent: consider_source_current_as_random_variable
+      - action: utter_consider_source_current_as_random_variable
+
+  - story: PDF Model for Excitation Uncertainty
+    steps:
+      - intent: derive_pdf_model_excitation_uncertainty
+      - action: utter_derive_pdf_model_excitation_uncertainty
+
+  - story: Calculate Mean Point Input Conductance
+    steps:
+      - intent: calculate_mean_point_input_conductance
+      - action: utter_calculate_mean_point_input_conductance
+
+  - story: Incorporate Excitation Uncertainty
+    steps:
+      - intent: add_excitation_uncertainty_algorithm
+      - action: utter_add_excitation_uncertainty_algorithm
+
+  - story: Add construction flow
+    steps:
+    - intent: add_construction
+    - action: utter_ask_construction_type
+    - intent: add_construction
+      entities:
+        - construction_type: "PEC Backed Laminate"
+    - action: utter_ask_laminate_name
+    - intent: add_construction
+      entities:
+        - laminate_name: "New Laminate"
+    - action: utter_ask_layer_name
+    - intent: add_construction
+      entities:
+        - layer_name: "Layer 1"
+    - action: utter_ask_thickness
+    - intent: add_construction
+      entities:
+        - thickness: "0.005"
+    - action: add_construction
+
