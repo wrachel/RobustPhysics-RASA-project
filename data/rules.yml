@@ -1,13 +1,42 @@
 version: "3.1"
-
 rules:
 
-- rule: Say goodbye anytime the user says goodbye
+- rule: Add material rule
   steps:
-  - intent: goodbye
-  - action: utter_goodbye
+  - intent: add_material
+  - action: utter_ask_material_type
+  - action: utter_ask_material_name
+  - action: utter_ask_properties
+  - action: add_material
 
-- rule: Say 'I am a bot' anytime the user challenges
+- rule: Edit material properties rule
   steps:
-  - intent: bot_challenge
-  - action: utter_iamabot
+  - intent: edit_material
+  - action: utter_ask_material_name
+  - action: utter_ask_properties
+  - action: edit_material
+
+- rule: Delete material rule
+  steps:
+  - intent: delete_material
+  - action: utter_ask_material_name
+  - action: delete_material
+
+- rule: Help with material selection rule
+  steps:
+  - intent: help_with_material_selection
+  - action: utter_help_with_material_selection
+
+- rule: List all materials rule
+  steps:
+  - intent: list_all_materials
+  - action: utter_list_all_materials
+
+- rule: Add construction rule
+  steps:
+  - intent: add_construction
+  - action: utter_ask_construction_type
+  - action: utter_ask_laminate_name
+  - action: utter_ask_layer_name
+  - action: utter_ask_thickness
+  - action: add_construction
