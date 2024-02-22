@@ -1,6 +1,6 @@
 version: "3.1"
-intents:
 
+intents:
   - greet
   - goodbye
   - affirm
@@ -69,79 +69,8 @@ intents:
   - derive_pdf_model_excitation_uncertainty
   - calculate_mean_point_input_conductance
   - add_excitation_uncertainty_algorithm
-  - add_material
-  - edit_material
-  - delete_material
-  - add_construction
-  - edit_construction
-  - delete_construction
-  - add_branch
-  - edit_branch
-  - delete_branch
-  - query_material_properties
-  - query_construction_details
-  - help_with_material_selection
-  - help_with_construction_configuration
-  - list_all_materials
-  - list_all_constructions
-  
-entities:
-  - material_type
-  - material_name
-  - permittivity
-  - permeability
-  - conductivity
-  - construction_type
-  - laminate_name
-  - layer_name
-  - thickness
-  - branch_name
-slots:
-  material_type:
-    type: text
-  material_name:
-    type: text
-  permittivity:
-    type: text
-  permeability:
-    type: text
-  conductivity:
-    type: text
-  construction_type:
-    type: text
-  laminate_name:
-    type: text
-  layer_name:
-    type: text
-  thickness:
-    type: text
-  branch_name:
-    type: text
+
 responses:
-  utter_ask_material_type:
-    - text: "What type of material are you working with? (Dielectric Gas, Dielectric Solid, Conductive Solid)"
-  utter_ask_material_name:
-    - text: "What's the name of the material?"
-  utter_ask_properties:
-    - text: "Please provide the permittivity, permeability, and if applicable, the conductivity."
-  utter_ask_construction_type:
-    - text: "Is this a PEC Backed Laminate or an Open-Backed Laminate?"
-  utter_ask_laminate_name:
-    - text: "What's the name of the laminate?"
-  utter_ask_layer_name:
-    - text: "What's the name of the layer?"
-  utter_ask_thickness:
-    - text: "What's the thickness of this layer in meters?"
-  utter_ask_branch_name:
-    - text: "What is the name of the branch you'd like to add or edit?"
-  utter_help_with_material_selection:
-    - text: "You can choose from Dielectric Gases like air, Dielectric Solids such as MAST MR21 RF Sheet, or Conductive Solids like steel. Which one are you interested in?"
-  utter_help_with_construction_configuration:
-    - text: "Constructions can be either PEC Backed Laminate or Open-Backed Laminate. Each has specific properties and configurations. Which one do you need help with?"
-  utter_list_all_materials:
-    - text: "Here are all the materials currently available..."
-  utter_list_all_constructions:
-    - text: "Currently, we have the following constructions configured..."
   utter_greet:
     - text: "Hey! How are you?"
 
@@ -314,4 +243,3 @@ responses:
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
-

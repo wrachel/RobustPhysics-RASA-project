@@ -1,4 +1,5 @@
 version: "3.1"
+
 nlu:
   - intent: greet
     examples: |
@@ -363,49 +364,3 @@ nlu:
       - How is excitation uncertainty incorporated into the model?
       - Explain the procedure for adding excitation uncertainty algorithmically.
       - What steps are taken to include excitation uncertainty in the model?
-  - intent: add_material
-    examples: |
-      - I need to add a new material for my project.
-      - How can I include a new type of dielectric solid in the database?
-      - What's the process to enter a new conductive solid?
-  - intent: edit_material
-    examples: |
-      - I made a mistake with the permittivity value of air, need to edit.
-      - Update the conductivity for steel, it's incorrect.
-  - intent: delete_material
-    examples: |
-      - Delete the material I just added by mistake.
-      - I need to remove an obsolete material from our list.
-  - intent: add_construction
-    examples: |
-      - Guide me through adding a new PEC backed laminate.
-      - I want to create an open-backed laminate for my simulation.
-  - intent: edit_construction
-    examples: |
-      - How to edit the thickness of a layer in my laminate?
-      - I need to change the material for one of my construction layers.
-  - intent: delete_construction
-    examples: |
-      - Remove the construction I accidentally created.
-      - How do I delete a construction that's no longer needed?
-  - intent: add_branch
-    examples: |
-      - Show me how to add a branch to an existing cable segment.
-      - I need to insert a new branch for detailed simulation.
-  - intent: edit_branch
-    examples: |
-      - How can I modify the properties of a branch?
-      - I need to update the length of an existing branch.
-  - intent: query_material_properties
-    examples: |
-      - What are the properties of MAST MR21 RF Sheet?
-      - Can you give me the permittivity of air?
-  - intent: help_with_material_selection
-    examples: |
-      - I'm not sure which material to use for a dielectric gas.
-      - Help me choose a conductive solid for my construction.
-  - intent: help_with_construction_configuration
-    examples: |
-      - I need assistance setting up a PEC backed laminate.
-      - How do I configure an open-backed laminate?
-
