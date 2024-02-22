@@ -1,55 +1,90 @@
 version: "3.1"
-
 intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
-  - inquire_frequency_domain
-  - inquire_frequency_vector
-  - specify_frequency_sample
-  - input_spectral_data
-  - add_spectral_data_dialog
-  - copy_paste_spectral_data
-
+  - add_material
+  - edit_material
+  - delete_material
+  - add_construction
+  - edit_construction
+  - delete_construction
+  - add_branch
+  - edit_branch
+  - delete_branch
+  - query_material_properties
+  - query_construction_details
+  - help_with_material_selection
+  - help_with_construction_configuration
+  - list_all_materials
+  - list_all_constructions
+entities:
+  - material_type
+  - material_name
+  - permittivity
+  - permeability
+  - conductivity
+  - construction_type
+  - laminate_name
+  - layer_name
+  - thickness
+  - branch_name
+slots:
+  material_type:
+    type: text
+  material_name:
+    type: text
+  permittivity:
+    type: text
+  permeability:
+    type: text
+  conductivity:
+    type: text
+  construction_type:
+    type: text
+  laminate_name:
+    type: text
+  layer_name:
+    type: text
+  thickness:
+    type: text
+  branch_name:
+    type: text
 responses:
-  utter_greet:
-    - text: "Hey! How are you?"
-
-  utter_cheer_up:
-    - text: "Here is something to cheer you up:"
-      image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-    - text: "Did that help you?"
-
-  utter_happy:
-    - text: "Great, carry on!"
-
-  utter_goodbye:
-    - text: "Bye"
-
-  utter_iamabot:
-    - text: "I am a bot, powered by Rasa."
-
-  utter_explain_frequency_vector:
-    - text: "To create a frequency vector, go under the Tree solution domain node and add the frequency vector."
-
-  utter_explain_frequency_sample:
-    - text: "Set the frequency sample for solving the model in the window below the Tree solution domain node."
-
-  utter_explain_input_spectral_data:
-    - text: "To input spectral data, store frequency-dependent input data like Permittivity and Conductivity in the model database called 'Spectral Data'."
-
-  utter_explain_add_spectral_data_dialog:
-    - text: "To add spectral data, right-click and select 'add' to open a dialog box for entering the necessary information."
-
-  utter_explain_copy_paste_spectral_data:
-    - text: "You can manually enter Spectral Data in the provided grids or copy & paste it from a spreadsheet."
-
-session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true
+  utter_ask_material_type:
+    - text: "What type of material are you working with? (Dielectric Gas, Dielectric Solid, Conductive Solid)"
+  utter_ask_material_name:
+    - text: "What's the name of the material?"
+  utter_ask_properties:
+    - text: "Please provide the permittivity, permeability, and if applicable, the conductivity."
+  utter_ask_construction_type:
+    - text: "Is this a PEC Backed Laminate or an Open-Backed Laminate?"
+  utter_ask_laminate_name:
+    - text: "What's the name of the laminate?"
+  utter_ask_layer_name:
+    - text: "What's the name of the layer?"
+  utter_ask_thickness:
+    - text: "What's the thickness of this layer in meters?"
+  utter_ask_branch_name:
+    - text: "What is the name of the branch you'd like to add or edit?"
+  utter_help_with_material_selection:
+    - text: "You can choose from Dielectric Gases like air, Dielectric Solids such as MAST MR21 RF Sheet, or Conductive Solids like steel. Which one are you interested in?"
+  utter_help_with_construction_configuration:
+    - text: "Constructions can be either PEC Backed Laminate or Open-Backed Laminate. Each has specific properties and configurations. Which one do you need help with?"
+  utter_list_all_materials:
+    - text: "Here are all the materials currently available..."
+  utter_list_all_constructions:
+    - text: "Currently, we have the following constructions configured..."
+actions:
+  - add_material
+  - edit_material
+  - delete_material
+  - add_construction
+  - edit_construction
+  - delete_construction
+  - add_branch
+  - edit_branch
+  - delete_branch
+  - query_material_properties
+  - query_construction_details
+  - help_with_material_selection
+  - help_with_construction_configuration
+  - list_all_materials
+  - list_all_constructions

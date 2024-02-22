@@ -1,51 +1,74 @@
 version: "3.1"
-
 stories:
-  - story: happy path
-    steps:
-      - intent: greet
-      - action: utter_greet
-      - intent: mood_great
-      - action: utter_happy
 
-  - story: sad path 1
-    steps:
-      - intent: greet
-      - action: utter_greet
-      - intent: mood_unhappy
-      - action: utter_cheer_up
-      - action: utter_did_that_help
-      - intent: affirm
-      - action: utter_happy
+- story: Add new material flow
+  steps:
+  - intent: add_material
+  - action: utter_ask_material_type
+  - intent: add_material
+    entities:
+      - material_type: "Dielectric Solid"
+  - action: utter_ask_material_name
+  - intent: add_material
+    entities:
+      - material_name: "New Dielectric Material"
+  - action: utter_ask_properties
+  - intent: add_material
+    entities:
+      - permittivity: "high"
+      - permeability: "medium"
+      - conductivity: "low"
+  - action: add_material
 
-  - story: sad path 2
-    steps:
-      - intent: greet
-      - action: utter_greet
-      - intent: mood_unhappy
-      - action: utter_cheer_up
-      - action: utter_did_that_help
-      - intent: deny
-      - action: utter_goodbye
+- story: Edit material properties flow
+  steps:
+  - intent: edit_material
+  - action: utter_ask_material_name
+  - intent: edit_material
+    entities:
+      - material_name: "Existing Material"
+  - action: utter_ask_properties
+  - intent: edit_material
+    entities:
+      - permittivity: "updated value"
+  - action: edit_material
 
-  - story: User inquires about frequency vector and sample
-    steps:
-      - intent: inquire_frequency_vector
-      - action: utter_explain_frequency_vector
-      - intent: specify_frequency_sample
-      - action: utter_explain_frequency_sample
+- story: Delete material flow
+  steps:
+  - intent: delete_material
+  - action: utter_ask_material_name
+  - intent: delete_material
+    entities:
+      - material_name: "Obsolete Material"
+  - action: delete_material
 
-  - story: User asks about inputting spectral data
-    steps:
-      - intent: input_spectral_data
-      - action: utter_explain_input_spectral_data
+- story: Help with material selection flow
+  steps:
+  - intent: help_with_material_selection
+  - action: utter_help_with_material_selection
 
-  - story: User asks how to add spectral data using dialog box
-    steps:
-      - intent: add_spectral_data_dialog
-      - action: utter_explain_add_spectral_data_dialog
+- story: List all materials flow
+  steps:
+  - intent: list_all_materials
+  - action: utter_list_all_materials
 
-  - story: User wants to know about copying and pasting spectral data
-    steps:
-      - intent: copy_paste_spectral_data
-      - action: utter_explain_copy_paste_spectral_data
+- story: Add construction flow
+  steps:
+  - intent: add_construction
+  - action: utter_ask_construction_type
+  - intent: add_construction
+    entities:
+      - construction_type: "PEC Backed Laminate"
+  - action: utter_ask_laminate_name
+  - intent: add_construction
+    entities:
+      - laminate_name: "New Laminate"
+  - action: utter_ask_layer_name
+  - intent: add_construction
+    entities:
+      - layer_name: "Layer 1"
+  - action: utter_ask_thickness
+  - intent: add_construction
+    entities:
+      - thickness: "0.005"
+  - action: add_construction

@@ -1,121 +1,47 @@
 version: "3.1"
-
 nlu:
-  - intent: greet
-    examples: |
-      - hey
-      - hello
-      - hi
-      - hello there
-      - good morning
-      - good evening
-      - moin
-      - hey there
-      - let's go
-      - hey dude
-      - goodmorning
-      - goodevening
-      - good afternoon
-
-  - intent: goodbye
-    examples: |
-      - cu
-      - good by
-      - cee you later
-      - good night
-      - bye
-      - goodbye
-      - have a nice day
-      - see you around
-      - bye bye
-      - see you later
-
-  - intent: affirm
-    examples: |
-      - yes
-      - y
-      - indeed
-      - of course
-      - that sounds good
-      - correct
-
-  - intent: deny
-    examples: |
-      - no
-      - n
-      - never
-      - I don't think so
-      - don't like that
-      - no way
-      - not really
-
-  - intent: mood_great
-    examples: |
-      - perfect
-      - great
-      - amazing
-      - feeling like a king
-      - wonderful
-      - I am feeling very good
-      - I am great
-      - I am amazing
-      - I am going to save the world
-      - super stoked
-      - extremely good
-      - so so perfect
-      - so good
-      - so perfect
-
-  - intent: mood_unhappy
-    examples: |
-      - my day was horrible
-      - I am sad
-      - I don't feel very well
-      - I am disappointed
-      - super sad
-      - I'm so sad
-      - sad
-      - very sad
-      - unhappy
-      - not good
-      - not very good
-      - extremly sad
-      - so saad
-      - so sad
-
-  - intent: bot_challenge
-    examples: |
-      - are you a bot?
-      - are you a human?
-      - am I talking to a bot?
-      - am I talking to a human?
-
-  - intent: inquire_frequency_domain
-    examples: |
-      - How do I create a frequency domain?
-      - Explain the steps for setting up a frequency domain.
-
-  - intent: inquire_frequency_vector
-    examples: |
-      - How do I create a frequency vector?
-      - Explain adding a frequency vector under the Tree solution domain node.
-
-  - intent: specify_frequency_sample
-    examples: |
-      - How can I set a frequency sample?
-      - Specify the frequency sample for solving the model.
-
-  - intent: input_spectral_data
-    examples: |
-      - Tell me about inputting spectral data.
-      - How to store frequency-dependent input data like Permittivity and Conductivity?
-
-  - intent: add_spectral_data_dialog
-    examples: |
-      - How do I add spectral data?
-      - Explain the process of right-clicking and selecting "add" to enter spectral data.
-
-  - intent: copy_paste_spectral_data
-    examples: |
-      - Can I cut and paste spectral data from a spreadsheet?
-      - How to Copy & Paste spectral data into the grid from a spreadsheet.
+- intent: add_material
+  examples: |
+    - I need to add a new material for my project.
+    - How can I include a new type of dielectric solid in the database?
+    - What's the process to enter a new conductive solid?
+- intent: edit_material
+  examples: |
+    - I made a mistake with the permittivity value of air, need to edit.
+    - Update the conductivity for steel, it's incorrect.
+- intent: delete_material
+  examples: |
+    - Delete the material I just added by mistake.
+    - I need to remove an obsolete material from our list.
+- intent: add_construction
+  examples: |
+    - Guide me through adding a new PEC backed laminate.
+    - I want to create an open-backed laminate for my simulation.
+- intent: edit_construction
+  examples: |
+    - How to edit the thickness of a layer in my laminate?
+    - I need to change the material for one of my construction layers.
+- intent: delete_construction
+  examples: |
+    - Remove the construction I accidentally created.
+    - How do I delete a construction that's no longer needed?
+- intent: add_branch
+  examples: |
+    - Show me how to add a branch to an existing cable segment.
+    - I need to insert a new branch for detailed simulation.
+- intent: edit_branch
+  examples: |
+    - How can I modify the properties of a branch?
+    - I need to update the length of an existing branch.
+- intent: query_material_properties
+  examples: |
+    - What are the properties of MAST MR21 RF Sheet?
+    - Can you give me the permittivity of air?
+- intent: help_with_material_selection
+  examples: |
+    - I'm not sure which material to use for a dielectric gas.
+    - Help me choose a conductive solid for my construction.
+- intent: help_with_construction_configuration
+  examples: |
+    - I need assistance setting up a PEC backed laminate.
+    - How do I configure an open-backed laminate?
