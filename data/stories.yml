@@ -290,3 +290,163 @@ stories:
     steps:
       - intent: ask_about_current_calculation_using_reciprocal_theorem
       - action: utter_answer_current_calculation_using_reciprocal_theorem
+  - story: ask about transfer matrix method1
+    steps:
+      - intent: ask_about_transfer_matrix_method1
+      - action: utter_answer_transfer_matrix_method1
+  - story: ask about wave reflection and transmission in dielectric layers
+    steps:
+      - intent: ask_about_wave_reflection_and_transmission_in_dielectric_layers
+      - action: utter_answer_wave_reflection_and_transmission_in_dielectric_layers
+  - story: ask about continuity along interface of dielectric layers
+    steps:
+      - intent: ask_about_continuity_along_interface_of_dielectric_layers
+      - action: utter_answer_continuity_along_interface_of_dielectric_layers
+  - story: ask about generalization to multi layered structure
+    steps:
+      - intent: ask_about_generalization_to_multi_layered_structure
+      - action: utter_answer_generalization_to_multi_layered_structure
+  - story: ask about transmission coefficient definition
+    steps:
+      - intent: ask_about_transmission_coefficient_definition
+      - action: utter_answer_transmission_coefficient_definition
+  - story: ask about average power transmission coefficient
+    steps:
+      - intent: ask_about_average_power_transmission_coefficient
+      - action: utter_answer_average_power_transmission_coefficient
+  - story: ask about power transmission loss definition
+    steps:
+      - intent: ask_about_power_transmission_loss_definition
+      - action: utter_answer_power_transmission_loss_definition
+  - story: ask about absoption coefficient definition
+    steps:
+      - intent: ask_about_absorption_coefficient_definition
+      - action: utter_answer_absorption_coefficient_definition
+  - story: ask about field incidence absorption coefficient
+    steps:
+      - intent: ask_about_field_incidence_absorption_coefficient
+      - action: utter_answer_field_incidence_absorption_coefficient
+  - story: ask about cavity damping loss factor contributions
+    steps:
+      - intent: ask_about_cavity_damping_loss_factor_contributions
+      - action: utter_answer_cavity_damping_loss_factor_contributions
+  - story: ask about wall losses
+    steps:
+      - intent: ask_about_wall_losses
+      - action: utter_answer_wall_losses
+  - story: ask about absorption cross sections
+    steps:
+      - intent: ask_about_absorption_cross_sections
+      - action: utter_answer_absorption_cross_sections
+  - story: ask about antenna loading losses
+    steps:
+      - intent: ask_about_antenna_loading_losses
+      - action: utter_answer_antenna_loading_losses
+  - story: ask about modal damping loss mechanism
+    steps:
+      - intent: ask_about_modal_damping_loss_mechanism
+      - action: utter_answer_modal_damping_loss_mechanism
+  - story: ask about skin depth
+    steps:
+      - intent: ask_about_skin_depth
+      - action: utter_answer_skin_depth
+  - story: ask about reflection loss definition
+    steps:
+      - intent: ask_about_reflection_loss_definition
+      - action: utter_answer_reflection_loss_definition
+  - story: ask about average reflection loss
+    steps:
+      - intent: ask_about_average_reflection_loss
+      - action: utter_answer_average_reflection_loss
+  - story: ask about absoption coefficient definition
+    steps:
+      - intent: ask_about_absorption_coefficient_definition1
+      - action: utter_answer_absorption_coefficient_definition1
+  - story: ask about cavity damping loss factor
+    steps:
+      - intent: ask_about_cavity_damping_loss_factor
+      - action: utter_answer_cavity_damping_loss_factor
+  - story: ask about absoption section definition
+    steps:
+      - intent: ask_about_absorption_section_definition
+      - action: utter_answer_absorption_section_definition
+  - story: ask about cavity reverberant wavefield damping loss factor
+    steps:
+      - intent: ask_about_cavity_reverberant_wavefield_damping_loss_factor
+      - action: utter_answer_cavity_reverberant_wavefield_damping_loss_factor
+  - story: provide energy subsystem parameters
+    steps:
+      - intent: provide_energy_subsystem_parameters
+      - action: utter_provide_energy_subsystem_parameters
+  - story: specify energy subsystem dimensions
+    steps:
+      - intent: specify_energy_subsystem_dimensions
+      - action: utter_specify_energy_subsystem_dimensions
+  - story: specify additional parameters energy subsystem
+    steps:
+      - intent: specify_additional_parameters_energy_subsystem
+      - action: utter_specify_additional_parameters_energy_subsystem
+  - story: explain free propagation wavenumber
+    steps:
+      - intent: explain_free_propagation_wavenumber
+      - action: utter_explain_free_propagation_wavenumber
+  - story: define cavity modal density
+    steps:
+      - intent: define_cavity_modal_density
+      - action: utter_define_cavity_modal_density
+  - story: describe total energy reverberant wavefield
+    steps:
+      - intent: describe_total_energy_reverberant_wavefield
+      - action: utter_describe_total_energy_reverberant_wavefield
+  - story: explain mean squared electric field
+    steps:
+      - intent: explain_mean_squared_electric_field
+      - action: utter_explain_mean_squared_electric_field
+  - story: provide energy to eu conversion
+    steps:
+      - intent: provide_energy_to_eu_conversion
+      - action: utter_provide_energy_to_eu_conversion
+  - story: explain internal losses cavity subsystem
+    steps:
+      - intent: explain_internal_losses_cavity_subsystem
+      - action: utter_explain_internal_losses_cavity_subsystem
+  - story: express internal losses q factor
+    steps:
+      - intent: express_internal_losses_q_factor
+      - action: utter_express_internal_losses_q_factor
+  - story: mention inverse measured q factors
+    steps:
+      - intent: mention_inverse_measured_q_factors
+      - action: utter_mention_inverse_measured_q_factors
+  - story: explain wall loss factor function
+    steps:
+      - intent: explain_wall_loss_factor_function
+      - action: utter_explain_wall_loss_factor_function
+  - story: define parameters wall loss factor
+    steps:
+      - intent: define_parameters_wall_loss_factor
+      - action: utter_define_parameters_wall_loss_factor
+  - story: explain field incidence absorption
+    steps:
+      - intent: explain_field_incidence_absorption
+      - action: utter_explain_field_incidence_absorption
+  - story: define parameters field incidence absorption
+    steps:
+      - intent: define_parameters_field_incidence_absorption
+      - action: utter_define_parameters_field_incidence_absorption
+  - story: explain antenna loading losses
+    steps:
+      - intent: explain_antenna_loading_losses
+      - action: utter_explain_antenna_loading_losses
+  - story: define parameters antenna loading losses
+    steps:
+      - intent: define_parameters_antenna_loading_losses
+      - action: utter_define_parameters_antenna_loading_losses
+  - story: explain absorption section
+    steps:
+      - intent: explain_absorption_section
+      - action: utter_explain_absorption_section
+  - story: define parameters absorption section
+    steps:
+      - intent: define_parameters_absorption_section
+      - action: utter_define_parameters_absorption_section
