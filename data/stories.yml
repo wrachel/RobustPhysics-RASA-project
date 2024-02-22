@@ -49,7 +49,20 @@ stories:
     steps:
       - intent: copy_paste_spectral_data
       - action: utter_explain_copy_paste_spectral_data
+  - story: User inquires about cavity wavefield
+    steps:
+      - intent: inquire_cavity_wavefield
+      - action: utter_explain_create_cavity_wavefield
   
+  - story: User asks to define dielectric gas
+    steps:
+      - intent: define_dielectric_gas_volume_cavity_wavefield
+      - action: utter_explain_define_dielectric_volume
+  
+  - story: User asks about q factor
+    steps:
+      - intent: define_q_factor_cavity_wavefield
+      - action: utter_explain_q_factor
   - story: User wants to know how to add external electric field constraints for excitation
     steps:
     - intent: excitation_external_efield_constraints

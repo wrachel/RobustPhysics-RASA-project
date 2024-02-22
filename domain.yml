@@ -14,6 +14,9 @@ intents:
   - input_spectral_data
   - add_spectral_data_dialog
   - copy_paste_spectral_data
+  - inquire_cavity_wavefield
+  - define_dielectric_gas_volume_cavity_wavefield
+  - define_q_factor_cavity_wavefield
   - solve_max_min_field_limit
   - view_efield_outputs
   - describe_connector_model
@@ -125,6 +128,12 @@ responses:
 
   utter_locate_tx_power_inputs_3d:
     - text: "To locate the Tx power inputs in 3D geometry, right-click on the 3D power input object -> Edit excitation. You can edit, move, delete it, etc."
+
+  utter_explain_copy_paste_spectral_data:
+    - text: "You can manually enter Spectral Data in the provided grids or copy & paste it from a spreadsheet."
+  
+  utter_explain_create_cavity_wavefield:
+    - text: "To create a Cavity Wave Field, select the cavity geometry from the Geometry Table or view in the 3D window. Click the Create Cavity Wavefield Icon in the Toolbar. Edit dialog will open to complete definition of Cavity reverberant electromagnetic wavefield. In 3D Window, Cavity Wavefields displayed with GREEN BORDER on selected Geometry. In Tree view, Cavity Wavefields are listed in Table view."
 
   utter_edit_component:
     - text: "To edit a component, right-click the component you'd like to edit, and click the 'edit' option."
@@ -354,6 +363,12 @@ responses:
   utter_respond_quadrature_formula_outline:
     - text: "The updated quadrature formula after voltage source translation is P_d,n = 1/2 Σ_(l = 1)^(L) (w_l * L_n [V_E(L-x_l), L]). The network needs to be solved L times using this quadrature approach. However, since the network is only set up once, no matrix inversions are required in the solution stage, minimizing the computational cost."
 
+  utter_explain_define_dielectric_volume:
+    - text: "To EDIT dialog for each Cavity, name the wavefield model, define the Dielectric Gas, and define the cavity Volume"
+  
+  utter_explain_q_factor:
+    - text: "Multiple different components of Loss Factor may need to be defined to establish the Total Q factor for each Cavity Wavefield. These can include Wall Loss, Reflection Loss, and Laminate Loss. To add Wall Loss, in the dialog, select ADD “Wall Loss” components, and define Conductive Solid Material and Exposed surface Area. For Absorption Section, in the dialog, select ADD “Absorption Section” components. Units are an effective area (m2). Multiple Absorption Sections are allowed. For Reciever Antenna Loss, in the dialog, select ADD “Receiver” antenna loss components and reference the antenna. Multiple Absorption Sections are allowed. To add Reflection Loss, in the dialog, select ADD “User-def Reflection Loss” components. Define Reflection Loss of wall material and Exposed surface Area. Multiple Reflection Loss surfaces are allowed. For Laminate Loss, in the dialog, select ADD “Laminate Loss” components. Define the PEC-backed Dielectric Laminate, Exposed surface Area, and Range of EM field incidence. Multiple Laminate surfaces are allowed."
+  
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
