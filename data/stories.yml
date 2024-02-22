@@ -1,51 +1,230 @@
 version: "3.1"
 
 stories:
-  - story: happy path
-    steps:
-      - intent: greet
-      - action: utter_greet
-      - intent: mood_great
-      - action: utter_happy
 
-  - story: sad path 1
-    steps:
-      - intent: greet
-      - action: utter_greet
-      - intent: mood_unhappy
-      - action: utter_cheer_up
-      - action: utter_did_that_help
-      - intent: affirm
-      - action: utter_happy
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
 
-  - story: sad path 2
-    steps:
-      - intent: greet
-      - action: utter_greet
-      - intent: mood_unhappy
-      - action: utter_cheer_up
-      - action: utter_did_that_help
-      - intent: deny
-      - action: utter_goodbye
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
 
-  - story: User inquires about frequency vector and sample
-    steps:
-      - intent: inquire_frequency_vector
-      - action: utter_explain_frequency_vector
-      - intent: specify_frequency_sample
-      - action: utter_explain_frequency_sample
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
 
-  - story: User asks about inputting spectral data
-    steps:
-      - intent: input_spectral_data
-      - action: utter_explain_input_spectral_data
+- story: Model Tree Spectral Data
+  steps:
+  - intent: model_tree_spectral_data
+  - action: utter_model_tree_spectral_data
 
-  - story: User asks how to add spectral data using dialog box
-    steps:
-      - intent: add_spectral_data_dialog
-      - action: utter_explain_add_spectral_data_dialog
+- story: Add Tx Power Input
+  steps:
+  - intent: add_tx_power_input
+  - action: utter_add_tx_power_input
 
-  - story: User wants to know about copying and pasting spectral data
-    steps:
-      - intent: copy_paste_spectral_data
-      - action: utter_explain_copy_paste_spectral_data
+- story: Edit Tx Power Inputs
+  steps:
+  - intent: edit_tx_power_inputs
+  - action: utter_edit_tx_power_inputs
+
+- story: Locate Tx Power Inputs in 3D
+  steps:
+  - intent: locate_tx_power_inputs_3d
+  - action: utter_locate_tx_power_inputs_3d
+
+- story: Edit Component
+  steps:
+  - intent: edit_component
+  - action: utter_edit_component
+
+- story: Delete Component
+  steps:
+  - intent: delete_component
+  - action: utter_delete_component
+
+- story: User asks about conductors in the Cable Harness model
+  steps:
+  - intent: inquire_conductors
+  - action: utter_respond_conductors_description
+
+- story: User inquires about wire definition in Cable Harness
+  steps:
+  - intent: inquire_wire_definition
+  - action: utter_respond_wire_definition
+
+- story: User asks about Shield in the Cable Harness model
+  steps:
+  - intent: inquire_shield_definition
+  - action: utter_respond_shield_definition
+
+- story: User asks about Shield Transfer Impedance in Cable Harness
+  steps:
+  - intent: inquire_shield_transfer_impedance
+  - action: utter_respond_shield_transfer_impedance
+
+- story: User inquires about Shield Construction subclasses
+  steps:
+  - intent: inquire_shield_construction_subclasses
+  - action: utter_respond_shield_construction_subclasses
+
+- story: User asks about inductance in Cable Harness
+  steps:
+  - intent: inquire_inductance
+  - action: utter_respond_inductance
+
+- story: User inquires about aperture inductance in Cable Harness
+  steps:
+  - intent: inquire_aperture_inductance
+  - action: utter_respond_aperture_inductance
+
+- story: User asks about braid inductance in Cable Harness
+  steps:
+  - intent: inquire_braid_inductance
+  - action: utter_respond_braid_inductance
+
+- story: User inquires about skin inductance in Cable Harness
+  steps:
+  - intent: inquire_skin_inductance
+  - action: utter_respond_skin_inductance
+
+- story: User asks about cable structure in Cable Harness
+  steps:
+  - intent: inquire_cable_structure
+  - action: utter_respond_cable_structure
+
+- story: User inquires about bundle structure in Cable Harness
+  steps:
+  - intent: inquire_bundle_structure
+  - action: utter_respond_bundle_structure
+
+- story: User inquires about high-frequency behavior in Cable Harness
+  steps:
+  - intent: inquire_high_frequency_behavior
+  - action: utter_respond_high_frequency_behavior
+
+- story: User asks about Differential Modes in multiconductor cables
+  steps:
+  - intent: inquire_differential_modes
+  - action: utter_respond_differential_modes
+
+- story: User asks about Ground Return Path in steel-bodied automobile
+  steps:
+  - intent: inquire_ground_return_path_steel
+  - action: utter_respond_ground_return_path_steel
+
+- story: User inquires about Wire Return Path in fiberglass boat
+  steps:
+  - intent: inquire_wire_return_path_fiberglass
+  - action: utter_respond_wire_return_path_fiberglass
+
+- story: User asks about Shield Return Path in umbilical cable
+  steps:
+  - intent: inquire_shield_return_path_umbilical_cable
+  - action: utter_respond_shield_return_path_umbilical_cable
+
+- story: User inquires about the algorithm for PUL properties calculation
+  steps:
+  - intent: inquire_algorithm_properties_calculation
+  - action: utter_respond_algorithm_properties_calculation
+
+- story: User asks about integrating transfer impedance into PUL properties
+  steps:
+  - intent: inquire_integration_transfer_impedance
+  - action: utter_respond_integration_transfer_impedance
+
+- story: User wants details on the approximation method for radiation impedance
+  steps:
+  - intent: inquire_approximation_radiation_impedance
+  - action: utter_respond_approximation_radiation_impedance
+
+- story: User asks about reference choice with a lossless ground nearby
+  steps:
+  - intent: inquire_reference_choice_ground
+  - action: utter_respond_reference_choice_ground
+
+- story: User inquires about using the outermost conductor as the reference
+  steps:
+  - intent: inquire_reference_choice_outermost
+  - action: utter_respond_reference_choice_outermost
+
+- story: User asks about the unique choice of reference with one outermost shield
+  steps:
+  - intent: inquire_reference_choice_outermost_unique
+  - action: utter_respond_reference_choice_outermost_unique
+
+- story: User inquires about choosing reference with multiple outermost shields or wires
+  steps:
+  - intent: inquire_reference_choice_outermost_general
+  - action: utter_respond_reference_choice_outermost_general
+
+- story: User wants to know about mathematical and practical considerations in reference choice
+  steps:
+  - intent: inquire_reference_choice_mathematical_practice
+  - action: utter_respond_reference_choice_mathematical_practice
+
+- story: User asks about the first step of the algorithm in cable harness calculations
+  steps:
+  - intent: inquire_algorithm_first_step
+  - action: utter_respond_algorithm_first_step
+
+- story: User inquires about the definition of a leaf node in the tree diagram
+  steps:
+  - intent: inquire_leaf_node_definition
+  - action: utter_respond_leaf_node_definition
+
+- story: User asks about non-leaf non-root nodes in the tree diagram
+  steps:
+  - intent: inquire_non_leaf_non_root_node_definition
+  - action: utter_respond_non_leaf_non_root_node_definition
+
+- story: User wants to know about the root node in the tree diagram
+  steps:
+  - intent: inquire_root_node_definition
+  - action: utter_respond_root_node_definition
+
+- story: User asks about relationships between nodes in the tree diagram
+  steps:
+  - intent: inquire_node_relationships
+  - action: utter_respond_node_relationships
+
+- story: User asks for the definition of radiation impedance in a cable harness
+  steps:
+  - intent: inquire_radiation_impedance
+  - action: utter_respond_radiation_impedance
+
+- story: User asks for the definition of radiation impedance in a cable harness
+  steps:
+  - intent: define_radiation_impedance
+  - action: utter_respond_define_radiation_impedance
+  
+- story: User asks about the characteristics of DM radiation resistance in a transmission line
+  steps:
+  - intent: describe_dm_radiation_resistance
+  - action: utter_respond_describe_dm_radiation_resistance
+
+- story: User inquires about the direct approach to finding radiation resistance
+  steps:
+  - intent: inquire_direct_approach_radiation_resistance
+  - action: utter_respond_direct_approach_radiation_resistance
+
+- story: User asks about the reciprocal approach in determining radiation resistance
+  steps:
+  - intent: inquire_reciprocal_approach_radiation_resistance
+  - action: utter_respond_reciprocal_approach_radiation_resistance
