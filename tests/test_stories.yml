@@ -89,3 +89,27 @@ stories:
       are you a bot?
     intent: bot_challenge
   - action: utter_iamabot
+  
+- story: User asks about creating a frequency vector
+  steps:
+  - user: |
+      How do I create a frequency vector?
+  - action: explain_frequency_vector
+  - user: |
+      Can you also specify how to set a frequency sample?
+  - action: explain_frequency_sample
+
+- story: User inquires about inputting spectral data
+  steps:
+  - user: |
+      Tell me about inputting spectral data.
+  - action: explain_input_spectral_data
+  - user: |
+      How can I add spectral data using a dialog box?
+  - action: explain_add_spectral_data_dialog
+
+- story: User wants to know about copying and pasting spectral data
+  steps:
+  - user: |
+      Can I cut and paste spectral data from a spreadsheet?
+  - action: explain_copy_paste_spectral_data
