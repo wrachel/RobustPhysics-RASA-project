@@ -1,332 +1,581 @@
 version: "3.1"
 
 nlu:
-- intent: greet
-  examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - hello there
+      - good morning
+      - good evening
+      - moin
+      - hey there
+      - let's go
+      - hey dude
+      - goodmorning
+      - goodevening
+      - good afternoon
 
-- intent: goodbye
-  examples: |
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
+  - intent: goodbye
+    examples: |
+      - cu
+      - good by
+      - cee you later
+      - good night
+      - bye
+      - goodbye
+      - have a nice day
+      - see you around
+      - bye bye
+      - see you later
 
-- intent: affirm
-  examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
+  - intent: affirm
+    examples: |
+      - yes
+      - y
+      - indeed
+      - of course
+      - that sounds good
+      - correct
 
-- intent: deny
-  examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
+  - intent: deny
+    examples: |
+      - no
+      - n
+      - never
+      - I don't think so
+      - don't like that
+      - no way
+      - not really
 
-- intent: mood_great
-  examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
+  - intent: mood_great
+    examples: |
+      - perfect
+      - great
+      - amazing
+      - feeling like a king
+      - wonderful
+      - I am feeling very good
+      - I am great
+      - I am amazing
+      - I am going to save the world
+      - super stoked
+      - extremely good
+      - so so perfect
+      - so good
+      - so perfect
 
-- intent: mood_unhappy
-  examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
+  - intent: mood_unhappy
+    examples: |
+      - my day was horrible
+      - I am sad
+      - I don't feel very well
+      - I am disappointed
+      - super sad
+      - I'm so sad
+      - sad
+      - very sad
+      - unhappy
+      - not good
+      - not very good
+      - extremly sad
+      - so saad
+      - so sad
 
-- intent: bot_challenge
-  examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?
 
-- intent: model_tree_spectral_data
-  examples: |
-    - How do I model tree data required for an antenna power input?
-    - Explain the process for modeling tree data in the context of antenna power input.
-    - What steps should I follow to set up tree data for antenna power calculations?
+  - intent: inquire_frequency_domain
+    examples: |
+      - How do I create a frequency domain?
+      - Explain the steps for setting up a frequency domain.
 
-- intent: add_tx_power_input
-  examples: |
-    - How do I add Tx power input?
-    - Can you guide me in adding Tx power input to the system?
-    - Explain the procedure for including Tx power input in the simulation.
+  - intent: inquire_frequency_vector
+    examples: |
+      - How do I create a frequency vector?
+      - Explain adding a frequency vector under the Tree solution domain node.
 
-- intent: edit_tx_power_inputs
-  examples: |
-    - How do I edit Tx power inputs?
-    - Can I modify the existing Tx power inputs?
-    - Explain the steps to make changes to the Tx power inputs.
+  - intent: specify_frequency_sample
+    examples: |
+      - How can I set a frequency sample?
+      - Specify the frequency sample for solving the model.
 
-- intent: locate_tx_power_inputs_3d
-  examples: |
-    - How do I locate the Tx power inputs in 3d geometry?
-    - Explain the process of finding Tx power inputs within the 3D geometry.
-    - What are the steps to identify the location of Tx power inputs in 3D?
+  - intent: input_spectral_data
+    examples: |
+      - Tell me about inputting spectral data.
+      - How to store frequency-dependent input data like Permittivity and Conductivity?
 
-- intent: edit_component
-  examples: |
-    - How do I edit a component?
-    - Can you guide me in modifying a component?
-    - Explain the procedure for making changes to a component.
+  - intent: add_spectral_data_dialog
+    examples: |
+      - How do I add spectral data?
+      - Explain the process of right-clicking and selecting "add" to enter spectral data.
 
-- intent: delete_component
-  examples: |
-    - How do I delete a component?
-    - Can you guide me in removing a component from the system?
-    - Explain the procedure for deleting a component.
+  - intent: copy_paste_spectral_data
+    examples: |
+      - Can I cut and paste spectral data from a spreadsheet?
+      - How to Copy & Paste spectral data into the grid from a spreadsheet.
 
-- intent: inquire_conductors
-  examples: |
-    - What are conductors in the Cable Harness model?
-    - Explain the role of conductors in Cable Harness.
-    - Tell me about the sub-classes of conductors in the Cable Harness model.
+  - intent: excitation_external_efield_constraints
+    examples: |
+      - How can I add an external electric field constraint?
+      - Explain adding external electric field contrainst.  
 
-- intent: inquire_wire_definition
-  examples: |
-    - How is each wire defined in the Cable Harness model?
-    - Define a wire in the Cable Harness model.
-    - Explain the properties of a wire in the Cable Harness model.
+  - intent: solve_max_min_field_limit
+    examples: |
+      - How do I solve for the maximum and minimum field limits?
+      - Explain how to solve the mean and statistical max and min field limits.
 
-- intent: inquire_shield_definition
-  examples: |
-    - What is a Shield in the Cable Harness model?
-    - Define the characteristics of a Shield.
-    - Explain the role of a Shield in the Cable Harness model.
+  - intent: view_efield_outputs
+    examples: |
+      - How do I view the E-field outputs?
+      - Explain how to see the output data from the E-field.
 
-- intent: inquire_shield_transfer_impedance
-  examples: |
-    - What is Shield Transfer Impedance in the Cable Harness model?
-    - Explain the concept of Shield Transfer Impedance.
-    - Tell me about Shield Transfer Impedance.
+  - intent: describe_connector_model
+    examples: |
+      - What is a connector model?
+      - Explain a connector model.
 
-- intent: inquire_shield_construction_subclasses
-  examples: |
-    - What are the sub-classes of Shield Construction in the Cable Harness model?
-    - Describe the supported Shield Construction sub-classes.
-    - Tell me about Shield Construction options.
+  - intent: describe_junction_model
+    examples: |
+      - What is a junction model?
+      - Explain junction models.
 
-- intent: inquire_inductance
-  examples: |
-    - What is inductance in the Cable Harness model?
-    - Explain the concept of inductance.
-    - Tell me about penetration inductance in Cable Harness.
+  - intent: describe_junction_relationship
+    examples: |
+      - What is the combined relationship for the kth junction network?
 
-- intent: inquire_aperture_inductance
-  examples: |
-    - What is aperture inductance in Cable Harness?
-    - Explain aperture inductance.
-    - Tell me about the magnetic coupling through holes in Cable Harness.
+  - intent: describe_junction_structure
+    examples: |
+      - Describe the junction structure.
+
+  - intent: describe_junction_matrices
+    examples: |
+      - Describe junction matrix structure.
+      - How does Kirchhoff's current laws relate to matrices. 
   
-- intent: inquire_braid_inductance
-  examples: |
-    - What is braid inductance in Cable Harness?
-    - Explain the concept of braid inductance.
-    - Tell me about the interaction between halves of the braid in Cable Harness.
+  - intent: describe_external_field_source
+    examples: |
+      - Describe external field sources.
 
-- intent: inquire_skin_inductance
-  examples: |
-    - What is skin inductance in Cable Harness?
-    - Explain skin inductance.
-    - Tell me about eddy currents in the apertures' walls in Cable Harness.
+  - intent: describe_plane_wave
+    examples: |
+      - Describe plane waves formula.
 
-- intent: inquire_cable_structure
-  examples: |
-    - Describe the structure of a cable in Cable Harness.
-    - What are the components of a cable in Cable Harness?
-    - Explain the topology of the cross-section properties for a cable harness line segment.
+  - intent: describe_multiconductor_transmission_line
+    examples: |
+      - Explain multiconductor transmission lines.
+      - How does a multiconductor transmission line work?
 
-- intent: inquire_bundle_structure
-  examples: |
-    - What is a bundle or module within a cable harness line segment?
-    - Describe the structure of a bundle in Cable Harness.
-    - Explain the components of a bundle in Cable Harness.
+  - intent: ask_generalized_telegrapher_equations
+    examples: |
+      - What are the Generalized Telegrapher's Equations?
+      - Explain GTE in transmission lines.
+      - Tell me about multiconductor transmission lines.
 
-- intent: inquire_high_frequency_behavior
-  examples: |
-    - How does current behave at high frequencies in Cable Harness?
-    - Explain the behavior of current as a transverse electromagnetic wave.
-    - Tell me about Transmission Line behavior in multiconductor cables at high frequencies.
+  - intent: ask_telegrapher_equations_components
+    examples: |
+        - What are the components of the Telegrapher's equations?
+        - List the elements in the GTE.
+        - Explain impedance and admittance matrices.
 
-- intent: inquire_differential_modes
-  examples: |
-    - What are Differential Modes in multiconductor cables?
-    - Explain the concept of Differential Modes.
-    - Tell me about the number of Differential Modes in relation to the number of conductors.
+  - intent: explain_modal_relationship
+    examples: |
+        - How are the voltages and currents related to modal voltages and currents?
+        - Explain the relationship between V(z) and V_m(z).
+        - Tell me about the connection between individual conductors and modal voltages.
 
-- intent: inquire_ground_return_path_steel
-  examples: |
-    - How does the Ground Return Path work in a steel-bodied automobile or aluminum fuselage aircraft?
-    - Explain the role of the structure material as the Ground Return Path.
-    - Tell me about the current return path in a steel-bodied automobile.
+  - intent: describe_generalized_telegrapher_solution
+    examples: |
+        - What is the solution of the generalized Telegrapher's equations?
+        - Explain the forward and backward propagating modes in transmission lines.
+        - Describe the modal voltages and currents in transmission line solutions.
 
-- intent: inquire_wire_return_path_fiberglass
-  examples: |
-    - How is the Wire Return Path managed in a fiberglass boat?
-    - Explain the choice of a Reference conductor as the Ground-equivalent Return Path.
-    - Tell me about the absence of a conducting Ground structure in a fiberglass boat.
+  - intent: explain_network_description
+    examples: |
+        - Describe the network consisting of K MTLs and conductors.
+        - What are the order 2 BLT equations used for in the network?
+        - Explain the terms like network current scattering matrix and network propagation matrix.
 
-- intent: inquire_shield_return_path_umbilical_cable
-  examples: |
-    - How does the Shield serve as the Return Path in an umbilical cable between spacecraft on a launch pad?
-    - Explain the absence of a close Ground for return current in an umbilical cable.
-    - Tell me about the design choice of using a Shield conductor as the Return Path in an umbilical cable.
+  - intent: describe_network_solution_process
+    examples: |
+        - How are the currents at each end of MTL segments found in the network?
+        - Explain the two-step process for solving the network equations.
+        - What is the role of the matrix in the network solution?
 
-- intent: inquire_algorithm_properties_calculation
-  examples: |
-    - Can you explain the algorithm for calculating PUL properties of cable harnesses with shields?
-    - What are the main problems solved by the algorithm in cable harness calculations?
-    - Tell me about the process of calculating capacitance, inductance, and conductance matrices from FreeFEM simulations.
+  - intent: consider_iterative_solution
+    examples: |
+        - Why was iterative solution using BICGSTAB considered for the network?
+        - Compare sparse LU factorization and iterative solution for network solutions.
+        - Discuss the computational aspects of solving the network equations.
 
-- intent: inquire_integration_transfer_impedance
-  examples: |
-    - How does the algorithm integrate transfer impedance into PUL properties for shields?
-    - Explain the method used to incorporate shield transfer impedance in the PUL properties calculation.
-    - Tell me about the process of integrating transfer impedance into the algorithm.
+  - intent: mention_external_field_terms
+    examples: |
+        - How are external field terms accounted for in the BLT equations?
+        - Explain the handling of current and voltage source terms due to external fields.
+        - Is a separate source term needed for external field excitation in the network equations?
 
-- intent: inquire_approximation_radiation_impedance
-  examples: |
-    - Can you provide details about the approximation method used to estimate PUL radiation impedance in the algorithm?
-    - How is the PUL radiation impedance approximated in the algorithm?
-    - Tell me about the development of the approximation method for radiation impedance in PUL properties calculation.
+  - intent: describe_network_ports
+    examples: |
+        - How are the ports in the network described?
+        - Explain the matched voltage source and load impedances on the ports.
+        - What happens after solving the network?
 
-- intent: inquire_reference_choice_ground
-  examples: |
-    - How is the reference conductor chosen in the presence of a lossless ground?
-    - Explain the rules for choosing the reference when there is a ground nearby.
-    - Tell me about the choice of reference in the first scenario shown in the figures.
+  - intent: calculate_power_available
+    examples: |
+        - How is the power available from the source calculated?
+        - Explain the relationship between source voltage and current for matched loads.
+        - What is the wave entering port m after solving the network?
 
-- intent: inquire_reference_choice_outermost
-  examples: |
-    - When do we use the outermost conductor as the reference in the transmission line model?
-    - Explain the rules for choosing the outermost conductor as the reference.
-    - Tell me about the scenarios where the outermost conductor is chosen as the reference.
+  - intent: calculate_power_delivered
+    examples: |
+        - How is the power delivered to the load on port n calculated?
+        - Describe the wave exiting port n and the factors involved.
+        - What is the significance of the negative sign in the power calculation?
 
-- intent: inquire_reference_choice_outermost_unique
-  examples: |
-    - How is the reference chosen when there is one outermost shield and all other conductors are inside the shield?
-    - Explain the unique choice of reference in scenarios with a single outermost shield.
-    - Tell me about the scenarios where there is a unique choice of reference as shown in the second example.
+  - intent: explain_scattering_parameter
+    examples: |
+        - What is the scattering parameter in the context of network solutions?
+        - Explain the formula for the scattering parameter Smn.
+        - How is the scattering parameter related to the network solution?
 
-- intent: inquire_reference_choice_outermost_general
-  examples: |
-    - How is the reference chosen when there are multiple outermost shields or wires?
-    - Explain the choice of reference in scenarios where any outermost shield or wire can be chosen.
-    - Tell me about the scenarios where multiple choices of reference are possible as shown in the third example.
+  - intent: separate_current_components
+    examples: |
+        - How can the current entering port m be separated into propagating wave components?
+        - What is the reflection coefficient looking into the port?
+        - Explain the relationship between the reflection coefficient and the scattering parameter.
 
-- intent: inquire_reference_choice_mathematical_practice
-  examples: |
-    - Can any conductor be used as the reference mathematically in the transmission line model?
-    - Explain the mathematical perspective on choosing the reference conductor.
-    - Tell me about the practical considerations when choosing a reference conductor in the transmission line model.
+  - intent: explain_loss_in_network
+    examples: |
+        - What contributes to the loss in the network?
+        - Explain the role of resistance in network loss.
+        - How is Ohmic loss modeled in the network?
 
-- intent: inquire_algorithm_first_step
-  examples: |
-    - What is the first step of the algorithm in cable harness calculations?
-    - Explain the process of building a tree diagram based on harness geometry in the algorithm.
-    - Tell me about the tree diagram construction in the initial step of the algorithm.
+  - intent: distinguish_loss_roles
+    examples: |
+        - How do lumped resistance elements contribute to network loss?
+        - What is the role of multi-conductor transmission line (MTL) PUL resistance in network loss?
+        - Why is it important to distinguish between Ohmic loss and radiation in the network?
 
-- intent: inquire_leaf_node_definition
-  examples: |
-    - What is a leaf node in the tree diagram?
-    - Explain the concept of a leaf node in the context of the algorithm.
-    - Tell me about nodes without any children in the tree diagram.
+  - intent: calculate_loss_equations
+    examples: |
+        - How is loss due to resistance calculated in the network?
+        - Explain the equations used for modeling Ohmic loss and radiation loss.
+        - Are the calculations for Ohmic loss and radiation loss the same?
 
-- intent: inquire_non_leaf_non_root_node_definition
-  examples: |
-    - What is a non-leaf non-root node in the tree diagram?
-    - Explain the characteristics of a non-leaf non-root node in the algorithm.
-    - Tell me about nodes that are shields in the tree diagram.
+  - intent: clarify_loss_roles
+    examples: |
+        - Can you clarify the distinct roles of Ohmic loss and radiation loss in the network?
+        - Explain the differences between the effects of lumped resistance, MTL PUL resistance, and radiation resistance.
+        - How should we differentiate between the two types of losses in network analysis?
 
-- intent: inquire_root_node_definition
-  examples: |
-    - What is the root node in the tree diagram?
-    - Explain the role and characteristics of the root node in the algorithm.
-    - Tell me about the labeling of the root node as 0 in the tree diagram.
+  - intent: explain_ohmic_loss
+    examples: |
+        - How is Ohmic loss calculated on a lumped element in a network?
+        - Explain the equations for calculating Ohmic loss on MTL terminals.
+        - What is the significance of Thevenin and Norton equivalent circuits in calculating Ohmic loss?
 
-- intent: inquire_node_relationships
-  examples: |
-    - How are the children of a node determined in the tree diagram?
-    - Explain the relationships between nodes, children, and descendants in the algorithm.
-    - Tell me about the criteria for defining the root and children of a node in the tree diagram.
+  - intent: describe_thevenin_circuit
+    examples: |
+        - How does Ohmic loss differ when the resistance is in a Thevenin circuit?
+        - Explain the equation for Ohmic loss in a Thevenin equivalent circuit.
+        - What is the role of resistance in series with MTL terminals?
 
-- intent: inquire_radiation_impedance
-  examples: |
-    - What is the radiation impedance?
-    - Explain the role of radiation impedance in modeling radiation from a cable harness.
-    - Tell me about the characteristics of radiation impedance as a PUL property or a lumped element.
+  - intent: describe_norton_circuit
+    examples: |
+        - How does Ohmic loss differ when the resistance is in a Norton circuit?
+        - Explain the equation for Ohmic loss in a Norton equivalent circuit.
+        - What is the role of resistance in parallel with MTL terminals?
 
-- intent: define_radiation_impedance
-  examples: |
-    - What is the definition of radiation impedance in a cable harness?
-    - Explain the role of radiation impedance in modeling radiation from a cable harness.
-    - Tell me about the characteristics of radiation impedance as a PUL property or a lumped element.
+  - intent: explain_transfer_impedance
+    examples: |
+        - What is the relationship between the transfer impedance and Ohmic resistance in a shield?
+        - How is the transfer impedance of a shield equivalent to Ohmic resistance?
+        - Why is the transfer impedance a complex variable in this context?
 
-- intent: describe_dm_radiation_resistance
-  examples: |
-    - What is the characteristic of the differential mode (DM) radiation resistance in a transmission line?
-    - Explain the findings from numerical calculations regarding the DM radiation resistance and its independence on line length and termination.
-    - Tell me about the approach used to determine the DM radiation resistance from a finite length of line with a matched load and source.
+  - intent: describe_segment_as_antenna
+    examples: |
+        - How does a segment exposed to a diffuse field act as a receiving antenna?
+        - Explain the concept of radiation resistance for an antenna exposed to a diffuse field.
+        - What is the equivalent voltage source that accounts for external field excitation?
 
-- intent: inquire_direct_approach_radiation_resistance
-  examples: |
-    - How is the direct approach used to find the radiation resistance of a transmission line?
-    - Explain the steps involved in finding the radiation resistance through a direct approach, considering the radiated field and current on the line.
-    - Tell me about the direct approach to calculate the radiation resistance.
-    - How do I calculate the radiation resistance?
+  - intent: calculate_mean_power_matched_load
+    examples: |
+        - How is the mean power delivered to a matched load calculated for an antenna in an ideal diffuse field?
+        - Explain the formula for mean power <P_r> in the context of an antenna in a diffuse field.
+        - What are the factors involved in calculating the mean power delivered to a matched load?
 
-- intent: inquire_reciprocal_approach_radiation_resistance
-  examples: |
-    - What is the reciprocal approach in determining the radiation resistance of a transmission line?
-    - Explain how the reciprocal approach works, finding the response of the line to an external field with a closed-form solution.
-    - Tell me about the reciprocal approach for calculating radiation resistance.
+  - intent: explain_distributed_voltage_source_integration
+    examples: |
+        - How is the integration of the distributed voltage source evaluated?
+        - Explain the formula for P_d, n using Gaussian quadrature.
+        - What are the variables involved in the Gaussian quadrature weighting and sample point position calculations?
+
+  - intent: describe_gaussian_quadrature
+    examples: |
+        - What is Gaussian quadrature and how is it used in evaluating integrals?
+        - Explain the role of Gaussian quadrature weighting (w_i) in the integration process.
+        - How are sample points (x_l) determined in Gaussian quadrature for the distributed voltage source integration?
+
+  - intent: explain_quadrature_requirements
+    examples: |
+        - What are the requirements for using quadrature in solving the network?
+        - Explain the necessity of placing sources at multiple interior points on the line for quadrature.
+        - How can the network be solved without rebuilding it at each case during quadrature?
+
+  - intent: describe_source_translation
+    examples: |
+        - How is the voltage source translated for multiple interior points on the line in quadrature?
+        - Explain the process of translating a voltage source at position x=x_l to become sources at x=L.
+        - Why is it not necessary to split the segment containing the source in the network during quadrature?
+
+  - intent: outline_quadrature_formula
+    examples: |
+        - Can you outline the quadrature formula for P_d,n after the voltage source translation?
+        - What is the updated formula for quadrature (P_d,n) after translating the voltage source?
+        - How does the quadrature formula change when the source is translated to x=L?
+
+  - intent: model_tree_spectral_data
+    examples: |
+      - How do I model tree data required for an antenna power input?
+      - Explain the process for modeling tree data in the context of antenna power input.
+      - What steps should I follow to set up tree data for antenna power calculations?
+
+  - intent: add_tx_power_input
+    examples: |
+      - How do I add Tx power input?
+      - Can you guide me in adding Tx power input to the system?
+      - Explain the procedure for including Tx power input in the simulation.
+
+  - intent: edit_tx_power_inputs
+    examples: |
+      - How do I edit Tx power inputs?
+      - Can I modify the existing Tx power inputs?
+      - Explain the steps to make changes to the Tx power inputs.
+
+  - intent: locate_tx_power_inputs_3d
+    examples: |
+      - How do I locate the Tx power inputs in 3d geometry?
+      - Explain the process of finding Tx power inputs within the 3D geometry.
+      - What are the steps to identify the location of Tx power inputs in 3D?
+
+  - intent: edit_component
+    examples: |
+      - How do I edit a component?
+      - Can you guide me in modifying a component?
+      - Explain the procedure for making changes to a component.
+
+  - intent: delete_component
+    examples: |
+      - How do I delete a component?
+      - Can you guide me in removing a component from the system?
+      - Explain the procedure for deleting a component.
+
+  - intent: inquire_conductors
+    examples: |
+      - What are conductors in the Cable Harness model?
+      - Explain the role of conductors in Cable Harness.
+      - Tell me about the sub-classes of conductors in the Cable Harness model.
+
+  - intent: inquire_wire_definition
+    examples: |
+      - How is each wire defined in the Cable Harness model?
+      - Define a wire in the Cable Harness model.
+      - Explain the properties of a wire in the Cable Harness model.
+
+  - intent: inquire_shield_definition
+    examples: |
+      - What is a Shield in the Cable Harness model?
+      - Define the characteristics of a Shield.
+      - Explain the role of a Shield in the Cable Harness model.
+
+  - intent: inquire_shield_transfer_impedance
+    examples: |
+      - What is Shield Transfer Impedance in the Cable Harness model?
+      - Explain the concept of Shield Transfer Impedance.
+      - Tell me about Shield Transfer Impedance.
+
+  - intent: inquire_shield_construction_subclasses
+    examples: |
+      - What are the sub-classes of Shield Construction in the Cable Harness model?
+      - Describe the supported Shield Construction sub-classes.
+      - Tell me about Shield Construction options.
+
+  - intent: inquire_inductance
+    examples: |
+      - What is inductance in the Cable Harness model?
+      - Explain the concept of inductance.
+      - Tell me about penetration inductance in Cable Harness.
+
+  - intent: inquire_aperture_inductance
+    examples: |
+      - What is aperture inductance in Cable Harness?
+      - Explain aperture inductance.
+      - Tell me about the magnetic coupling through holes in Cable Harness.
+
+  - intent: inquire_braid_inductance
+    examples: |
+      - What is braid inductance in Cable Harness?
+      - Explain the concept of braid inductance.
+      - Tell me about the interaction between halves of the braid in Cable Harness.
+
+  - intent: inquire_skin_inductance
+    examples: |
+      - What is skin inductance in Cable Harness?
+      - Explain skin inductance.
+      - Tell me about eddy currents in the apertures' walls in Cable Harness.
+
+  - intent: inquire_cable_structure
+    examples: |
+      - Describe the structure of a cable in Cable Harness.
+      - What are the components of a cable in Cable Harness?
+      - Explain the topology of the cross-section properties for a cable harness line segment.
+
+  - intent: inquire_bundle_structure
+    examples: |
+      - What is a bundle or module within a cable harness line segment?
+      - Describe the structure of a bundle in Cable Harness.
+      - Explain the components of a bundle in Cable Harness.
+
+  - intent: inquire_high_frequency_behavior
+    examples: |
+      - How does current behave at high frequencies in Cable Harness?
+      - Explain the behavior of current as a transverse electromagnetic wave.
+      - Tell me about Transmission Line behavior in multiconductor cables at high frequencies.
+
+  - intent: inquire_differential_modes
+    examples: |
+      - What are Differential Modes in multiconductor cables?
+      - Explain the concept of Differential Modes.
+      - Tell me about the number of Differential Modes in relation to the number of conductors.
+
+  - intent: inquire_ground_return_path_steel
+    examples: |
+      - How does the Ground Return Path work in a steel-bodied automobile or aluminum fuselage aircraft?
+      - Explain the role of the structure material as the Ground Return Path.
+      - Tell me about the current return path in a steel-bodied automobile.
+
+  - intent: inquire_wire_return_path_fiberglass
+    examples: |
+      - How is the Wire Return Path managed in a fiberglass boat?
+      - Explain the choice of a Reference conductor as the Ground-equivalent Return Path.
+      - Tell me about the absence of a conducting Ground structure in a fiberglass boat.
+
+  - intent: inquire_shield_return_path_umbilical_cable
+    examples: |
+      - How does the Shield serve as the Return Path in an umbilical cable between spacecraft on a launch pad?
+      - Explain the absence of a close Ground for return current in an umbilical cable.
+      - Tell me about the design choice of using a Shield conductor as the Return Path in an umbilical cable.
+
+  - intent: inquire_algorithm_properties_calculation
+    examples: |
+      - Can you explain the algorithm for calculating PUL properties of cable harnesses with shields?
+      - What are the main problems solved by the algorithm in cable harness calculations?
+      - Tell me about the process of calculating capacitance, inductance, and conductance matrices from FreeFEM simulations.
+
+  - intent: inquire_integration_transfer_impedance
+    examples: |
+      - How does the algorithm integrate transfer impedance into PUL properties for shields?
+      - Explain the method used to incorporate shield transfer impedance in the PUL properties calculation.
+      - Tell me about the process of integrating transfer impedance into the algorithm.
+
+  - intent: inquire_approximation_radiation_impedance
+    examples: |
+      - Can you provide details about the approximation method used to estimate PUL radiation impedance in the algorithm?
+      - How is the PUL radiation impedance approximated in the algorithm?
+      - Tell me about the development of the approximation method for radiation impedance in PUL properties calculation.
+
+  - intent: inquire_reference_choice_ground
+    examples: |
+      - How is the reference conductor chosen in the presence of a lossless ground?
+      - Explain the rules for choosing the reference when there is a ground nearby.
+      - Tell me about the choice of reference in the first scenario shown in the figures.
+
+  - intent: inquire_reference_choice_outermost
+    examples: |
+      - When do we use the outermost conductor as the reference in the transmission line model?
+      - Explain the rules for choosing the outermost conductor as the reference.
+      - Tell me about the scenarios where the outermost conductor is chosen as the reference.
+
+  - intent: inquire_reference_choice_outermost_unique
+    examples: |
+      - How is the reference chosen when there is one outermost shield and all other conductors are inside the shield?
+      - Explain the unique choice of reference in scenarios with a single outermost shield.
+      - Tell me about the scenarios where there is a unique choice of reference as shown in the second example.
+
+  - intent: inquire_reference_choice_outermost_general
+    examples: |
+      - How is the reference chosen when there are multiple outermost shields or wires?
+      - Explain the choice of reference in scenarios where any outermost shield or wire can be chosen.
+      - Tell me about the scenarios where multiple choices of reference are possible as shown in the third example.
+
+  - intent: inquire_reference_choice_mathematical_practice
+    examples: |
+      - Can any conductor be used as the reference mathematically in the transmission line model?
+      - Explain the mathematical perspective on choosing the reference conductor.
+      - Tell me about the practical considerations when choosing a reference conductor in the transmission line model.
+
+  - intent: inquire_algorithm_first_step
+    examples: |
+      - What is the first step of the algorithm in cable harness calculations?
+      - Explain the process of building a tree diagram based on harness geometry in the algorithm.
+      - Tell me about the tree diagram construction in the initial step of the algorithm.
+
+  - intent: inquire_leaf_node_definition
+    examples: |
+      - What is a leaf node in the tree diagram?
+      - Explain the concept of a leaf node in the context of the algorithm.
+      - Tell me about nodes without any children in the tree diagram.
+
+  - intent: inquire_non_leaf_non_root_node_definition
+    examples: |
+      - What is a non-leaf non-root node in the tree diagram?
+      - Explain the characteristics of a non-leaf non-root node in the algorithm.
+      - Tell me about nodes that are shields in the tree diagram.
+
+  - intent: inquire_root_node_definition
+    examples: |
+      - What is the root node in the tree diagram?
+      - Explain the role and characteristics of the root node in the algorithm.
+      - Tell me about the labeling of the root node as 0 in the tree diagram.
+
+  - intent: inquire_node_relationships
+    examples: |
+      - How are the children of a node determined in the tree diagram?
+      - Explain the relationships between nodes, children, and descendants in the algorithm.
+      - Tell me about the criteria for defining the root and children of a node in the tree diagram.
+
+  - intent: inquire_radiation_impedance
+    examples: |
+      - What is the radiation impedance?
+      - Explain the role of radiation impedance in modeling radiation from a cable harness.
+      - Tell me about the characteristics of radiation impedance as a PUL property or a lumped element.
+
+  - intent: define_radiation_impedance
+    examples: |
+      - What is the definition of radiation impedance in a cable harness?
+      - Explain the role of radiation impedance in modeling radiation from a cable harness.
+      - Tell me about the characteristics of radiation impedance as a PUL property or a lumped element.
+
+  - intent: describe_dm_radiation_resistance
+    examples: |
+      - What is the characteristic of the differential mode (DM) radiation resistance in a transmission line?
+      - Explain the findings from numerical calculations regarding the DM radiation resistance and its independence on line length and termination.
+      - Tell me about the approach used to determine the DM radiation resistance from a finite length of line with a matched load and source.
+
+  - intent: inquire_direct_approach_radiation_resistance
+    examples: |
+      - How is the direct approach used to find the radiation resistance of a transmission line?
+      - Explain the steps involved in finding the radiation resistance through a direct approach, considering the radiated field and current on the line.
+      - Tell me about the direct approach to calculate the radiation resistance.
+      - How do I calculate the radiation resistance?
+
+  - intent: inquire_reciprocal_approach_radiation_resistance
+    examples: |
+      - What is the reciprocal approach in determining the radiation resistance of a transmission line?
+      - Explain how the reciprocal approach works, finding the response of the line to an external field with a closed-form solution.
+      - Tell me about the reciprocal approach for calculating radiation resistance.
