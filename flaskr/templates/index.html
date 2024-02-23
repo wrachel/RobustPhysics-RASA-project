@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+<script src="{{ url_for('static', filename='js/required.js')}}"></script>
+{% block content %}
+    <h1>TALK TO RASA</h1>
+        <form method="post">
+            <br>
+            <input type="text" name="rasa"
+                placeholder="Write Here"></input>
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+    <h1>{% block title %} Messages {% endblock %}</h1>
+    {% for message in messages %}
+        <div class='message'>
+            <p>{{ message['question'] }}</p>
+            <p>{{ message['response'] }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}
