@@ -2,13 +2,13 @@ from flask import Flask, render_template, request, jsonify,flash,redirect,url_fo
 import os,sys,requests, json
 from flaskwebgui import FlaskUI
 
-messages = [
+messages = [{'question': 'my question','response': 'my response'}
             ]
 
 app = Flask(__name__)
 app.config.from_pyfile('config.py')
 app.config['SECRET KEY'] = '2acae7b3b9b0c8bdb86669e2d05816403537301edb125a52'
-ui = FlaskUI(app, width=500, height=500)
+ui = FlaskUI(app, width=500, height=500,port=8080)
 
 
 @app.route('/',methods=('GET','POST'))
@@ -35,5 +35,5 @@ def home():
   return render_template('index.html', messages=messages)
 
 if __name__ == "__main__":
-  app.run(debug=True)
-  # ui.run()
+  # app.run(debug=True)
+  ui.run()
