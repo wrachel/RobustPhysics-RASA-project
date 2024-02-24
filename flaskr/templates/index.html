@@ -1,20 +1,22 @@
 {% extends 'base.html' %}
+<link rel="stylesheet" href="../static/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 <script src="{{ url_for('static', filename='js/required.js')}}"></script>
 {% block content %}
-    <h1>TALK TO RASA</h1>
-        <form method="post">
-            <br>
-            <input type="text" name="rasa"
-                placeholder="Write Here"></input>
-            <br>
-            <button type="submit">Submit</button>
-        </form>
     <h1>{% block title %} Messages {% endblock %}</h1>
     {% for message in messages %}
-        <div class='message'>
-            <p>{{ message['question'] }}</p>
-            <p>{{ message['response'] }}</p>
+            <div class="message">
+                <p class="question">{{ message['question'] }}</p>
+                <p class="response">{{ message['response'] }}</p>
         </div>
     {% endfor %}
+    <div class="form">
+    <h1>TALK TO RASA</h1>
+        <form method="post">
+            <input type="text" name="rasa" class="input-text"
+                placeholder="What's your question?  "></input>
+        </form>
+    </div>
 {% endblock %}
+

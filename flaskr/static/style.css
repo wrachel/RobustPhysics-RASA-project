@@ -1,0 +1,49 @@
+nav {
+    font-size: 13px;
+}
+
+.message {
+    padding: 5px;
+    margin: 5px;
+    background-color: #f3f3f3
+}
+
+.input-text {
+    text-align: left;
+    border-radius: 10px;
+    padding:5px;
+    padding-left:15px;
+    border-style:hidden;
+    background-color: #d3d3d3;
+    color: black;
+    width:90%;
+}
+
+.form {
+    position:fixed;
+    left:0px;
+    bottom:50px;
+    width:100%;
+}
+
+h1 {
+    margin-left: 15px;
+}
+
+form {
+    margin-left: 20px;
+    margin-bottom: 5px;
+}
+
+p {
+    padding-top: 5px;
+    margin-left: 25px;
+}
+
+.question {
+    font-weight:700;
+}
+
+.response {
+    font-weight:400;
+}

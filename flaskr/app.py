@@ -2,7 +2,10 @@ from flask import Flask, render_template, request, jsonify,flash,redirect,url_fo
 import os,sys,requests, json
 from flaskwebgui import FlaskUI
 
-messages = [
+messages = [ {'question': "Hi",
+              'response': "go away"},
+              {'question': "Hi x2",
+              'response': "I'm filing a restraining order"},
             ]
 
 app = Flask(__name__)
