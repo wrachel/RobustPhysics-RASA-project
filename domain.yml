@@ -146,6 +146,62 @@ intents:
   - define_parameters_antenna_loading_losses
   - explain_absorption_section
   - define_parameters_absorption_section
+  - add_cable_segment
+  - add_wires
+  - specify_connectors
+  - create_common_backbone_cable_segment
+  - edit_segment_cross_section
+  - find_closest_proximate_reflecting_plane
+  - override_calculated_value
+  - ask_unit
+  - ask_input_parameters
+  - ask_spectral_data
+  - ask_classes_spectral_data
+  - ask_data_structure
+  - ask_frequency_range
+  - ask_data_forms
+  - ask_parameter_units
+  - ask_reflection_loss
+  - ask_insertion_loss
+  - ask_shielding_effectiveness
+  - ask_spectral_synthesis
+  - ask_complex_constant_synthesis
+  - ask_rational_function_synthesis
+  - ask_pdf_distribution
+  - ask_cdf_distribution
+  - ask_rayleigh_distribution
+  - ask_normal_distribution
+  - ask_log_normal_distribution
+  - ask_lomax_distribution
+  - ask_inverse_gamma_distribution
+  - ask_exponential_distribution
+  - ask_chi_distribution
+  - ask_log_normal_distribution_fit
+  - ask_calculate_pdf_parameters
+  - ask_find_alternative_pdf_model
+  - ask_inverse_gamma_distribution_fit
+  - ask_calculate_inverse_gamma_parameters
+  - ask_lomax_distribution_unconditional_pdf
+  - ask_calculate_lomax_parameters
+  - ask_calculate_lomax_cdf
+  - ask_calculate_lomax_quantiles
+  - ask_reverberant_field_magnitude_pdf
+  - ask_calculate_mean_field_pdf
+  - ask_calculate_uncertainty_pdf
+  - ask_no_uncertainty
+  - ask_uncertainty_q_factor_frequency_variance
+  - ask_pdf_model_uncertainty_q_factor_frequency_variance
+  - ask_statistical_distribution_q_factors
+  - ask_uncertainty_all_mean_field_variables
+  - ask_marginal_pdf_modeled_inverse_gamma
+  - ask_closed_form_analytic_solution_log_normal
+  - ask_implementation_insight_parameter_deduction
+  - ask_excitation_uncertainty
+  - consider_source_current_as_random_variable
+  - derive_pdf_model_excitation_uncertainty
+  - calculate_mean_point_input_conductance
+  - add_excitation_uncertainty_algorithm
+
 responses:
   utter_greet:
     - text: "Hey! How are you?"
@@ -499,103 +555,238 @@ responses:
   utter_define_parameters_absorption_section:
     - text: "The absorption section for complex 3D objects within the cavity represents the averaged losses over steradians and all polarities. From Hill’s Q models, this is derived as per the averaging process described in the model."
 
-# actions:
-#   - utter_create_cylindrical_fairing_volume
-#   - utter_create_spacecraft_volume
-#   - utter_cut_shape
-#   - utter_add_ellipsoid
-#   - utter_add_sphere
-#   - utter_pan_model
-#   - utter_scroll_in_out
-#   - utter_rotate_model
-#   - utter_hide_objects
-#   - utter_add_3d_geometry
-#   - utter_wire_constructions
-#   - utter_add_connectors
-#   - utter_create_junction
-#   - utter_answer_simulation_tool
-#   - utter_answer_statistical_power_balance_method
-#   - utter_answer_SEA_framework
-#   - utter_answer_deterministic_models_vs_statistical_reduction
-#   - utter_answer_modal_expansion_basis
-#   - utter_answer_application_of_statistical_power_balance_approach
-#   - utter_answer_Inverse_Gamma_distribution
-#   - utter_answer_E_field_PDF
-#   - utter_answer_energy_subsystem_in_SPB_modelling
-#   - utter_answer_total_energy_in_cavity
-#   - utter_answer_average_modal_density
-#   - utter_answer_power_balance_principle
-#   - utter_answer_statistical_power_balance_modeling
-#   - utter_answer_power_balance_model
-#   - utter_answer_absorption_coefficient
-#   - utter_answer_coupling_loss_factor
-#   - utter_answer_layered_materials
-#   - utter_answer_transfer_matrix_method
-#   - utter_answer_dielectric_material_properties
-#   - utter_answer_conductive_material_properties
-#   - utter_answer_stochastic_wave_mechanics
-#   - utter_answer_frequency_stirred_probability_distribution
-#   - utter_answer_energy_probability_distribution
-#   - utter_answer_unconditional_electric_field_PDF
-#   - utter_answer_lossy_cavities
-#   - utter_answer_hybrid_model_solution
-#   - utter_answer_RhoPhy_data_structure_definition
-#   - utter_answer_conductor_radiated_power
-#   - utter_answer_diffuse_field_modeling
-#   - utter_answer_cavity_loss_factor_calculation
-#   - utter_answer_voltage_source_distribution
-#   - utter_answer_total_power_dissipation
-#   - utter_answer_cable_harness_response
-#   - utter_answer_cavity_wavefields_processing
-#   - utter_answer_mean_field_levels_calculation
-#   - utter_answer_stochastic_limits_definition
-#   - utter_answer_uncoupled_cable_harness_limits
-#   - utter_answer_cable_harness_limits_inside_cavities
-#   - utter_answer_cable_harness_limits_inside_cavities_terminal_inputs
-#   - utter_answer_loss_factor_due_to_cavity_radiation_resistance
-#   - utter_answer_loss_factor_due_to_antenna_loss
-#   - utter_answer_voltage_calculation_using_reciprocal_theorem
-#   - utter_answer_current_calculation_using_reciprocal_theorem
-#   - utter_answer_transfer_matrix_method1
-#   - utter_answer_wave_reflection_and_transmission_in_dielectric_layers
-#   - utter_answer_continuity_along_interface_of_dielectric_layers
-#   - utter_answer_generalization_to_multi_layered_structure
-#   - utter_answer_transmission_coefficient_definition
-#   - utter_answer_average_power_transmission_coefficient
-#   - utter_answer_power_transmission_loss_definition
-#   - utter_answer_absorption_coefficient_definition
-#   - utter_answer_field_incidence_absorption_coefficient
-#   - utter_answer_cavity_damping_loss_factor_contributions
-#   - utter_answer_wall_losses
-#   - utter_answer_absorption_cross_sections
-#   - utter_answer_antenna_loading_losses
-#   - utter_answer_modal_damping_loss_mechanism
-#   - utter_answer_skin_depth
-#   - utter_answer_reflection_loss_definition
-#   - utter_answer_average_reflection_loss
-#   - utter_answer_absorption_coefficient_definition1
-#   - utter_answer_cavity_damping_loss_factor
-#   - utter_answer_absorption_section_definition
-#   - utter_answer_cavity_reverberant_wavefield_damping_loss_factor
-#   - utter_provide_energy_subsystem_parameters
-#   - utter_specify_energy_subsystem_dimensions
-#   - utter_specify_additional_parameters_energy_subsystem
-#   - utter_explain_free_propagation_wavenumber
-#   - utter_define_cavity_modal_density
-#   - utter_describe_total_energy_reverberant_wavefield
-#   - utter_explain_mean_squared_electric_field
-#   - utter_provide_energy_to_eu_conversion
-#   - utter_explain_internal_losses_cavity_subsystem
-#   - utter_express_internal_losses_q_factor
-#   - utter_mention_inverse_measured_q_factors
-#   - utter_explain_wall_loss_factor_function
-#   - utter_define_parameters_wall_loss_factor
-#   - utter_explain_field_incidence_absorption
-#   - utter_define_parameters_field_incidence_absorption
-#   - utter_explain_antenna_loading_losses
-#   - utter_define_parameters_antenna_loading_losses
-#   - utter_explain_absorption_section
-#   - utter_define_parameters_absorption_section
+  # actions:
+  #   - utter_create_cylindrical_fairing_volume
+  #   - utter_create_spacecraft_volume
+  #   - utter_cut_shape
+  #   - utter_add_ellipsoid
+  #   - utter_add_sphere
+  #   - utter_pan_model
+  #   - utter_scroll_in_out
+  #   - utter_rotate_model
+  #   - utter_hide_objects
+  #   - utter_add_3d_geometry
+  #   - utter_wire_constructions
+  #   - utter_add_connectors
+  #   - utter_create_junction
+  #   - utter_answer_simulation_tool
+  #   - utter_answer_statistical_power_balance_method
+  #   - utter_answer_SEA_framework
+  #   - utter_answer_deterministic_models_vs_statistical_reduction
+  #   - utter_answer_modal_expansion_basis
+  #   - utter_answer_application_of_statistical_power_balance_approach
+  #   - utter_answer_Inverse_Gamma_distribution
+  #   - utter_answer_E_field_PDF
+  #   - utter_answer_energy_subsystem_in_SPB_modelling
+  #   - utter_answer_total_energy_in_cavity
+  #   - utter_answer_average_modal_density
+  #   - utter_answer_power_balance_principle
+  #   - utter_answer_statistical_power_balance_modeling
+  #   - utter_answer_power_balance_model
+  #   - utter_answer_absorption_coefficient
+  #   - utter_answer_coupling_loss_factor
+  #   - utter_answer_layered_materials
+  #   - utter_answer_transfer_matrix_method
+  #   - utter_answer_dielectric_material_properties
+  #   - utter_answer_conductive_material_properties
+  #   - utter_answer_stochastic_wave_mechanics
+  #   - utter_answer_frequency_stirred_probability_distribution
+  #   - utter_answer_energy_probability_distribution
+  #   - utter_answer_unconditional_electric_field_PDF
+  #   - utter_answer_lossy_cavities
+  #   - utter_answer_hybrid_model_solution
+  #   - utter_answer_RhoPhy_data_structure_definition
+  #   - utter_answer_conductor_radiated_power
+  #   - utter_answer_diffuse_field_modeling
+  #   - utter_answer_cavity_loss_factor_calculation
+  #   - utter_answer_voltage_source_distribution
+  #   - utter_answer_total_power_dissipation
+  #   - utter_answer_cable_harness_response
+  #   - utter_answer_cavity_wavefields_processing
+  #   - utter_answer_mean_field_levels_calculation
+  #   - utter_answer_stochastic_limits_definition
+  #   - utter_answer_uncoupled_cable_harness_limits
+  #   - utter_answer_cable_harness_limits_inside_cavities
+  #   - utter_answer_cable_harness_limits_inside_cavities_terminal_inputs
+  #   - utter_answer_loss_factor_due_to_cavity_radiation_resistance
+  #   - utter_answer_loss_factor_due_to_antenna_loss
+  #   - utter_answer_voltage_calculation_using_reciprocal_theorem
+  #   - utter_answer_current_calculation_using_reciprocal_theorem
+  #   - utter_answer_transfer_matrix_method1
+  #   - utter_answer_wave_reflection_and_transmission_in_dielectric_layers
+  #   - utter_answer_continuity_along_interface_of_dielectric_layers
+  #   - utter_answer_generalization_to_multi_layered_structure
+  #   - utter_answer_transmission_coefficient_definition
+  #   - utter_answer_average_power_transmission_coefficient
+  #   - utter_answer_power_transmission_loss_definition
+  #   - utter_answer_absorption_coefficient_definition
+  #   - utter_answer_field_incidence_absorption_coefficient
+  #   - utter_answer_cavity_damping_loss_factor_contributions
+  #   - utter_answer_wall_losses
+  #   - utter_answer_absorption_cross_sections
+  #   - utter_answer_antenna_loading_losses
+  #   - utter_answer_modal_damping_loss_mechanism
+  #   - utter_answer_skin_depth
+  #   - utter_answer_reflection_loss_definition
+  #   - utter_answer_average_reflection_loss
+  #   - utter_answer_absorption_coefficient_definition1
+  #   - utter_answer_cavity_damping_loss_factor
+  #   - utter_answer_absorption_section_definition
+  #   - utter_answer_cavity_reverberant_wavefield_damping_loss_factor
+  #   - utter_provide_energy_subsystem_parameters
+  #   - utter_specify_energy_subsystem_dimensions
+  #   - utter_specify_additional_parameters_energy_subsystem
+  #   - utter_explain_free_propagation_wavenumber
+  #   - utter_define_cavity_modal_density
+  #   - utter_describe_total_energy_reverberant_wavefield
+  #   - utter_explain_mean_squared_electric_field
+  #   - utter_provide_energy_to_eu_conversion
+  #   - utter_explain_internal_losses_cavity_subsystem
+  #   - utter_express_internal_losses_q_factor
+  #   - utter_mention_inverse_measured_q_factors
+  #   - utter_explain_wall_loss_factor_function
+  #   - utter_define_parameters_wall_loss_factor
+  #   - utter_explain_field_incidence_absorption
+  #   - utter_define_parameters_field_incidence_absorption
+  #   - utter_explain_antenna_loading_losses
+  #   - utter_define_parameters_antenna_loading_losses
+  #   - utter_explain_absorption_section
+  #   - utter_define_parameters_absorption_section
+  utter_explain_add_cable_segment:
+    - text: "To add a cable segment, go under the Tree view and add a cable segment under 1D Cable Current Fields → Segments by right-clicking and hitting 'Add'."
+
+  utter_explain_add_wires:
+    - text: "To add wires, specify the desired number of wires and the connectors that are being linked."
+
+  utter_explain_specify_connectors:
+    - text: "Specify the connectors that are being linked."
+
+  utter_explain_create_common_backbone_cable_segment:
+    - text: "Within the 3D Model Window, you can use the tool palette to create cable segments using the appropriate icon (click on Create Segment)."
+
+  utter_explain_edit_segment_cross_section:
+    - text: "While creating Cable Segments, it is useful to use the Edit Segment Cross Section option in order to specify important information for calculations."
+
+  utter_explain_find_closest_reflecting_plane:
+    - text: "The 'Find Closest Plane' button will recalculate the value for the closest proximate reflecting plane for this specific cable segment."
+
+  utter_explain_override_calculated_value:
+    - text: "When checked, the 'Override Calculated Value' checkbox allows the user to use their own values for the distance to ground plane and the Direction Cosine vector of the distance."
+
+  utter_ask_unit:
+    - text: "The unit for the provided parameter is unfeaturized."
+  utter_ask_input_parameters:
+    - text: "The input parameters include voltage, current, length, time, etc."
+  utter_ask_spectral_data:
+    - text: "The spectral data includes power, voltage, electric field, energy, current, magnetic field, permittivity, permeability, conductivity, reflection loss, insertion loss, shielding effectiveness, S parameter, Q factor, and loss factor."
+  utter_ask_classes_spectral_data:
+    - text: "The classes of spectral data are power (input, received), voltage, electric field, energy, current, magnetic field, permittivity, permeability, conductivity, reflection loss, insertion loss, and shielding effectiveness."
+  utter_ask_data_structure:
+    - text: "The data structure of spectral data consists of a table of real-valued numbers at various frequencies, and the admissible input data forms are dB RMS in band and EU (Engineering Unit) RMS in band."
+  utter_ask_frequency_range:
+    - text: "The frequency range for spectral data is defined from the lowest frequency to the highest frequency provided."
+  utter_ask_data_forms:
+    - text: "The admissible input data forms for spectral data include dB RMS in band and EU RMS in band."
+  utter_ask_parameter_units:
+    - text: "The units for voltage, current, length, time, etc., are defined in the SI unit system."
+  utter_ask_reflection_loss:
+    - text: "Reflection loss refers to the loss of signal strength due to reflection at a surface interface."
+  utter_ask_insertion_loss:
+    - text: "Insertion loss is the loss of signal power resulting from the insertion of a device into a transmission line or optical fiber."
+  utter_ask_shielding_effectiveness:
+    - text: "Shielding effectiveness measures the ability of a material to attenuate electromagnetic fields and prevent electromagnetic interference."
+  utter_ask_spectral_synthesis:
+    - text: "There are various methods for spectral synthesis, including creating complex constants, rational functions, and probability density functions (PDF). How can I assist you further with spectral synthesis?"
+  utter_ask_complex_constant_synthesis:
+    - text: "To synthesize a constant in the frequency domain, please provide both the real and imaginary parts."
+  utter_ask_rational_function_synthesis:
+    - text: "To synthesize a rational function in the frequency domain, please provide the coefficients for the rational function."
+  utter_ask_pdf_distribution:
+    - text: "To synthesize a probability density function (PDF) for a specific distribution, please specify the distribution type and parameters."
+  utter_ask_cdf_distribution:
+    - text: "To synthesize a cumulative distribution function (CDF) for a specific distribution, please specify the distribution type and parameters."
+  utter_ask_rayleigh_distribution:
+    - text: "The Rayleigh distribution is characterized by a single parameter known as the scale parameter. It is defined over the entire real axis."
+  utter_ask_normal_distribution:
+    - text: "The normal distribution is characterized by two parameters, the mean and standard deviation, and is defined over the entire real axis."
+  utter_ask_log_normal_distribution:
+    - text: "The log-normal distribution is characterized by two parameters, mu and sigma, and is used to model variables whose logarithm is normally distributed."
+  utter_ask_lomax_distribution:
+    - text: "The Lomax distribution, also known as the Pareto Type II distribution, is a heavy-tail probability distribution used in various fields such as business, economics, and queueing theory."
+  utter_ask_inverse_gamma_distribution:
+    - text: "The inverse gamma distribution is a two-parameter family of continuous probability distributions on the positive real line, often used to model the reciprocal of a variable distributed according to the gamma distribution."
+  utter_ask_exponential_distribution:
+    - text: "The Exponential distribution is characterized by a single parameter known as the rate parameter. It is defined over the entire real axis."
+  utter_ask_chi_distribution:
+    - text: "The Chi distribution is characterized by 2 degrees of freedom and is commonly used to model the un-averaged electric field magnitude in overmoded conditions such as reverberation test chambers."
+  utter_ask_log_normal_distribution_fit:
+    - text: "The Log-Normal distribution is utilized as a good fit to measured ensembles. Would you like to know more about how it fits?"
+  utter_ask_calculate_pdf_parameters:
+    - text: "To calculate PDF parameters, we need to determine the mean and variance. Shall I explain how to calculate them?"
+  utter_ask_find_alternative_pdf_model:
+    - text: "Searching for an alternative PDF model that allows a closed form analytical solution. Interested to learn more about it?"
+  utter_ask_inverse_gamma_distribution_fit:
+    - text: "The Inverse-Gamma distribution fits the ensemble well, especially at the upper range of values. Would you like to know how it fits?"
+  utter_ask_calculate_inverse_gamma_parameters:
+    - text: "Calculating Inverse-Gamma distribution parameters involves defining them in terms of the known mean field equation and relative variance equation. Shall I explain the calculation process?"
+  utter_ask_lomax_distribution_unconditional_pdf:
+    - text: "The unconditional PDF for Lomax distribution represents the probability density function of the unconditional electric field. Do you want to learn more about it?"
+  utter_ask_calculate_lomax_parameters:
+    - text: "To calculate Lomax distribution parameters, we need to determine the parameters defined in terms of the known mean field equation and relative variance equation. Shall I explain how to calculate them?"
+  utter_ask_calculate_lomax_cdf:
+    - text: "Calculating the cumulative density function (CDF) for Lomax distribution involves a specific process. Would you like to know more about it?"
+  utter_ask_calculate_lomax_quantiles:
+    - text: "Calculating quantiles for Lomax distribution involves a specific process. Interested to learn more about it?"
+  utter_ask_reverberant_field_magnitude_pdf:
+    - text: "The PDF for reverberant field magnitude represents the probability density function of the (un-squared) magnitude of the reverberant field. Do you want to know more about it?"
+  utter_ask_calculate_mean_field_pdf:
+    - text: "Calculating PDF for mean field involves several factors. Shall I explain the calculation process?"
+  utter_ask_calculate_uncertainty_pdf:
+    - text: "To calculate PDF for uncertainty, we need to consider various factors. Would you like to learn more about it?"
+  utter_ask_no_uncertainty:
+    - text: "When there is no uncertainty in the source current and Q factor, x and y are not random variables and can be replaced by their constant values."
+    - text: "In the absence of uncertainty in the source current and Q factor, x and y become constants, resulting in a simplified equation."
+  utter_ask_uncertainty_q_factor_frequency_variance:
+    - text: "Uncertainty in Q factor and frequency variance in input conductance lead to a different scenario. Let me explain."
+    - text: "When there is uncertainty in Q factor and frequency variance in input conductance, the system behaves differently. Allow me to elaborate."
+  utter_ask_pdf_model_uncertainty_q_factor_frequency_variance:
+    - text: "The PDF model is affected by uncertainty in Q factor and frequency variance in input conductance. Here's how it works."
+    - text: "Let me explain how uncertainty in Q factor and frequency variance in input conductance impacts the PDF model."
+  utter_ask_statistical_distribution_q_factors:
+    - text: "Determining the statistical distributions of reverberant field Q factors is an important aspect. Here's how it's done."
+    - text: "The statistical distributions of reverberant field Q factors play a crucial role. Let me walk you through the process."
+  utter_ask_uncertainty_all_mean_field_variables:
+    - text: "What happens when there is uncertainty in all three mean field variables? Let's explore this scenario."
+    - text: "When uncertainty exists in all three mean field variables, it leads to interesting outcomes. Allow me to explain."
+  utter_ask_marginal_pdf_modeled_inverse_gamma:
+    - text: "Modeling the marginal PDF with the inverse-gamma distribution is significant. Here's how it's accomplished."
+    - text: "Let me explain how the marginal PDF is modeled using the inverse-gamma distribution."
+  utter_ask_closed_form_analytic_solution_log_normal:
+    - text: "Understanding the closed form analytic solution with the log-normal distribution is essential. Here's what you need to know."
+    - text: "Let's delve into the closed form analytic solution with the log-normal distribution."
+  utter_ask_implementation_insight_parameter_deduction:
+    - text: "Gaining insight into the implementation and parameter deduction for the Lomax Distribution is crucial. Let's explore further."
+    - text: "Understanding the implementation and parameter deduction for the Lomax Distribution is important. Here's what you should know."
+  utter_ask_excitation_uncertainty:
+    - text: "Excitation uncertainty introduces variability in the system due to the random nature of the source current. Let me explain further."
+    - text: "Considering the source current as a random variable adds uncertainty to the system. Allow me to elaborate."
+
+  utter_consider_source_current_as_random_variable:
+    - text: "In our model, we treat the source current as a random variable instead of a constant. This accounts for excitation uncertainty."
+    - text: "The source current in our model is considered as a random variable, following a log-normal distribution to represent excitation uncertainty."
+
+  utter_derive_pdf_model_excitation_uncertainty:
+    - text: "The PDF model for excitation uncertainty is derived through a rigorous process. Let me walk you through it."
+    - text: "Deriving the PDF model for excitation uncertainty involves several steps. Here's how it's done."
+
+  utter_calculate_mean_point_input_conductance:
+    - text: "The mean point input conductance is calculated using a specific formula that takes various factors into account."
+    - text: "Calculating the mean point input conductance involves certain calculations based on the characteristics of the system."
+
+  utter_add_excitation_uncertainty_algorithm:
+    - text: "Incorporating excitation uncertainty algorithmically follows a similar procedure as for Q uncertainty. I'll explain the steps involved."
+    - text: "Adding excitation uncertainty to the model is done systematically, similar to how Q uncertainty is handled. Let me outline the process."
+
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

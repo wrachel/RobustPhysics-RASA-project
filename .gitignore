@@ -1,3 +1,4 @@
 models
 .rasa\cache
 .rasa
+.DS_Store

@@ -844,3 +844,248 @@ nlu:
     examples: |
       - What does the absorption section represent for complex 3D objects within the cavity?
       - Can you explain the averaging process for absorption section from Hill's Q models?
+
+  - intent: add_cable_segment
+    examples: |
+      - Add a cable segment
+      - Create a cable segment
+      - Add a cable segment under 1D Cable Current Fields → Segments
+      - How do I add a cable segment?
+      - Can I create a cable segment?
+  - intent: add_wires
+    examples: |
+      - Add wires
+      - Add desired number of wires
+      - How to add wires?
+      - Specify the number of wires
+  - intent: specify_connectors
+    examples: |
+      - Specify connectors
+      - Specify the connectors that are being linked
+      - How do I specify connectors?
+      - Can I link connectors?
+
+  - intent: create_common_backbone_cable_segment
+    examples: |
+      - Create a common backbone cable segment
+      - How do I create a common backbone cable segment?
+      - Use the tool palette to create cable segments in the 3D Geometry Window
+
+  - intent: edit_segment_cross_section
+    examples: |
+      - Use Edit Segment Cross Section option
+      - How do I specify information for calculations?
+      - What is the Edit Segment Cross Section used for?
+
+  - intent: find_closest_proximate_reflecting_plane
+    examples: |
+      - Find Closest Proximate Reflecting Plane
+      - How to find the closest reflecting plane?
+      - What does the "Find Closest Plane" button do?
+
+  - intent: override_calculated_value
+    examples: |
+      - Override Calculated Value
+      - What happens when I check the Override Calculated Value checkbox?
+      - How to use my own values for distance to ground plane?
+  - intent: ask_unit
+    examples: |
+      - What is the unit for [voltage](parameter_type)?
+      - Tell me the unit for [permeability](parameter_type).
+  - intent: ask_input_parameters
+    examples: |
+      - What are input parameters?
+      - List input parameters.
+  - intent: ask_spectral_data
+    examples: |
+      - What is spectral data input?
+      - Explain spectral data.
+  - intent: ask_classes_spectral_data
+    examples: |
+      - What are classes of spectral data?
+      - List spectral data classes.
+  - intent: ask_data_structure
+    examples: |
+      - What is the data structure of spectral data?
+      - Explain the structure of spectral data.
+  - intent: ask_frequency_range
+    examples: |
+      - What is the frequency range for spectral data?
+      - Define the lowest and highest frequencies for spectral data.
+  - intent: ask_data_forms
+    examples: |
+      - What are the admissible input data forms for spectral data?
+      - Explain the forms of input data accepted for spectral data.
+  - intent: ask_parameter_units
+    examples: |
+      - What are the units for voltage, current, length, time, etc.?
+      - List the units for different parameters.
+  - intent: ask_reflection_loss
+    examples: |
+      - Explain reflection loss.
+      - What is the concept of reflection loss?
+  - intent: ask_insertion_loss
+    examples: |
+      - Describe insertion loss.
+      - What is meant by insertion loss?
+  - intent: ask_shielding_effectiveness
+    examples: |
+      - What is shielding effectiveness?
+      - Explain the concept of shielding effectiveness.
+  - intent: ask_spectral_synthesis
+    examples: |
+      - How to synthesize spectral data?
+      - Explain methods for spectral synthesis.
+  - intent: ask_complex_constant_synthesis
+    examples: |
+      - How to create a constant in the frequency domain?
+      - Explain complex constant synthesis.
+  - intent: ask_rational_function_synthesis
+    examples: |
+      - How to create a rational function in the frequency domain?
+      - Explain rational function synthesis.
+  - intent: ask_pdf_distribution
+    examples: |
+      - How to synthesize a probability density function (PDF)?
+      - Explain PDF synthesis for distributions.
+  - intent: ask_cdf_distribution
+    examples: |
+      - How to synthesize a cumulative distribution function (CDF)?
+      - Explain CDF synthesis for distributions.
+  - intent: ask_rayleigh_distribution
+    examples: |
+      - How to use the Rayleigh distribution to generate spectral data?
+      - Explain spectral data generation with the Rayleigh distribution.
+  - intent: ask_normal_distribution
+    examples: |
+      - How can I utilize the normal distribution for spectral data generation?
+      - Explain generating spectral data using the normal distribution.
+  - intent: ask_log_normal_distribution
+    examples: |
+      - What are the steps to generate spectral data using the log-normal distribution?
+      - Explain log-normal distribution for spectral data synthesis.
+  - intent: ask_lomax_distribution
+    examples: |
+      - How can the Lomax distribution be applied to spectral data analysis?
+      - Explain the parameters and usage of the Lomax distribution for spectral data modeling.
+  - intent: ask_inverse_gamma_distribution
+    examples: |
+      - How is the inverse gamma distribution used in spectral data analysis?
+      - Explain the characteristics and applications of the inverse gamma distribution for spectral data modeling.
+  - intent: ask_exponential_distribution
+    examples: |
+      - How can I use the Exponential distribution for spectral data modeling?
+      - Explain the characteristics of the Exponential distribution for spectral data analysis.
+  - intent: ask_chi_distribution
+    examples: |
+      - How is the Chi distribution used to model un-averaged electric field magnitude?
+      - Explain the characteristics of the Chi distribution in overmoded conditions like reverberation test chambers.
+  - intent: ask_log_normal_distribution_fit
+    examples: |
+      - How does the Log-Normal distribution fit measured ensembles?
+      - Explain the fit of Log-Normal distribution to measured ensembles
+  - intent: ask_calculate_pdf_parameters
+    examples: |
+      - How to calculate PDF parameters?
+      - Explain the calculation of PDF parameters
+  - intent: ask_find_alternative_pdf_model
+    examples: |
+      - What is the alternative PDF model?
+      - Explain the search for an alternative PDF model
+  - intent: ask_inverse_gamma_distribution_fit
+    examples: |
+      - How does the Inverse-Gamma distribution fit the ensemble?
+      - Explain the fit of Inverse-Gamma distribution to the ensemble
+  - intent: ask_calculate_inverse_gamma_parameters
+    examples: |
+      - How to calculate Inverse-Gamma distribution parameters?
+      - Explain the calculation of Inverse-Gamma distribution parameters
+  - intent: ask_lomax_distribution_unconditional_pdf
+    examples: |
+      - What is the unconditional PDF for Lomax distribution?
+      - Explain the unconditional PDF for Lomax distribution
+  - intent: ask_calculate_lomax_parameters
+    examples: |
+      - How to calculate Lomax distribution parameters?
+      - Explain the calculation of Lomax distribution parameters
+  - intent: ask_calculate_lomax_cdf
+    examples: |
+      - How to calculate CDF for Lomax distribution?
+      - Explain the calculation of CDF for Lomax distribution
+  - intent: ask_calculate_lomax_quantiles
+    examples: |
+      - How to calculate quantiles for Lomax distribution?
+      - Explain the calculation of quantiles for Lomax distribution
+  - intent: ask_reverberant_field_magnitude_pdf
+    examples: |
+      - What is the PDF for reverberant field magnitude?
+      - Explain the PDF for reverberant field magnitude
+  - intent: ask_calculate_mean_field_pdf
+    examples: |
+      - How to calculate PDF for mean field?
+      - Explain the calculation of PDF for mean field
+  - intent: ask_calculate_uncertainty_pdf
+    examples: |
+      - How to calculate PDF for uncertainty?
+      - Explain the calculation of PDF for uncertainty
+  - intent: ask_no_uncertainty
+    examples: |
+      - What happens when there is no uncertainty in the source current and Q factor?
+      - Explain the case where there is no uncertainty in source current and Q factor.
+  - intent: ask_uncertainty_q_factor_frequency_variance
+    examples: |
+      - What happens when there is uncertainty in Q factor and frequency variance in input conductance?
+      - Explain the scenario with uncertainty in Q factor and frequency variance in input conductance.
+  - intent: ask_pdf_model_uncertainty_q_factor_frequency_variance
+    examples: |
+      - How is the PDF model affected by uncertainty in Q factor and frequency variance in input conductance?
+      - Explain the PDF model with uncertainty in Q factor and frequency variance in input conductance.
+  - intent: ask_statistical_distribution_q_factors
+    examples: |
+      - How are the statistical distributions of reverberant field Q factors determined?
+      - Explain the determination of statistical distributions of reverberant field Q factors.
+  - intent: ask_uncertainty_all_mean_field_variables
+    examples: |
+      - What happens when there is uncertainty in all three mean field variables?
+      - Explain the scenario with uncertainty in all three mean field variables.
+  - intent: ask_marginal_pdf_modeled_inverse_gamma
+    examples: |
+      - How is the marginal PDF modeled with the inverse-gamma distribution?
+      - Explain the modeling of marginal PDF with the inverse-gamma distribution.
+  - intent: ask_closed_form_analytic_solution_log_normal
+    examples: |
+      - What is the closed form analytic solution with the log-normal distribution?
+      - Explain the closed form analytic solution with the log-normal distribution.
+  - intent: ask_implementation_insight_parameter_deduction
+    examples: |
+      - Can you provide insight into the implementation and parameter deduction for the Lomax Distribution?
+      - Explain the implementation insight and parameter deduction for the Lomax Distribution.
+  - intent: ask_excitation_uncertainty
+    examples: |
+      - How does excitation uncertainty affect the system?
+      - Explain excitation uncertainty.
+      - What is the impact of excitation uncertainty?
+
+  - intent: consider_source_current_as_random_variable
+    examples: |
+      - How is the source current treated in the model?
+      - Explain the treatment of source current in the model.
+      - Is the source current considered as a constant in the model?
+
+  - intent: derive_pdf_model_excitation_uncertainty
+    examples: |
+      - How is the PDF model derived for excitation uncertainty?
+      - Explain the derivation of the PDF model for excitation uncertainty.
+      - What is the procedure for deriving the PDF model for excitation uncertainty?
+
+  - intent: calculate_mean_point_input_conductance
+    examples: |
+      - How is the mean point input conductance calculated?
+      - Explain the calculation of mean point input conductance.
+      - What method is used to determine the mean point input conductance?
+
+  - intent: add_excitation_uncertainty_algorithm
+    examples: |
+      - How is excitation uncertainty incorporated into the model?
+      - Explain the procedure for adding excitation uncertainty algorithmically.
+      - What steps are taken to include excitation uncertainty in the model?
