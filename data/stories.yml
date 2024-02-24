@@ -924,3 +924,198 @@ stories:
     steps:
       - intent: define_q_factor_cavity_wavefield
       - action: utter_explain_q_factor
+
+  - story: User wants to know how to add external electric field constraints for excitation
+    steps:
+      - intent: excitation_external_efield_constraints
+      - action: utter_explain_external_efield_constraints
+
+  - story: User wants to know how to solve for the mean and statistical max, min field limits.
+    steps:
+      - intent: solve_max_min_field_limit
+      - action: utter_explain_max_min_field_limits
+
+  - story: User wants to see how to view E-field outputs.
+    steps:
+      - intent: view_efield_outputs
+      - action: utter_explain_efield_outputs
+
+  - story: describe connector model
+    steps:
+      - intent: describe_connector_model
+      - action: utter_explanation_connector_model
+
+  - story: describe junction model
+    steps:
+      - intent: describe_junction_model
+      - action: utter_explanation_junction_model
+
+  - story: describe junction relationship
+    steps:
+      - intent: describe_junction_relationship
+      - action: utter_explanation_junction_relationship
+
+  - story: describe junction structure
+    steps:
+      - intent: describe_junction_structure
+      - action: utter_explanation_junction_structure
+
+  - story: describe junction matrices
+    steps:
+      - intent: describe_junction_matrices
+      - action: utter_explanation_junction_matrices
+
+  - story: describe external field source
+    steps:
+      - intent: describe_external_field_source
+      - action: utter_explanation_external_field_source
+
+  - story: describe plane wave
+    steps:
+      - intent: describe_plane_wave
+      - action: utter_explanation_plane_wave
+
+  - story: describe multiconductor transmission line
+    steps:
+      - intent: describe_multiconductor_transmission_line
+      - action: utter_explanation_multiconductor_transmission_line
+
+  - story: gte explanation
+    steps:
+      - intent: ask_generalized_telegrapher_equations
+      - action: utter_respond_generalized_telegrapher_equations
+
+  - story: components of gte
+    steps:
+      - intent: ask_telegrapher_equations_components
+      - action: utter_respond_telegrapher_equations_components
+
+  - story: explain modal relationship
+    steps:
+      - intent: explain_modal_relationship
+      - action: utter_respond_modal_relationship
+
+  - story: describe generalized telegrapher's solution
+    steps:
+      - intent: describe_generalized_telegrapher_solution
+      - action: utter_respond_generalized_telegrapher_solution
+
+  - story: explain network description
+    steps:
+      - intent: explain_network_description
+      - action: utter_respond_network_description
+
+  - story: describe network solution process
+    steps:
+      - intent: describe_network_solution_process
+      - action: utter_respond_network_solution_process
+
+  - story: consider iterative solution
+    steps:
+      - intent: consider_iterative_solution
+      - action: utter_respond_iterative_solution
+
+  - story: mention external field terms
+    steps:
+      - intent: mention_external_field_terms
+      - action: utter_respond_external_field_terms
+
+  - story: describe network ports
+    steps:
+      - intent: describe_network_ports
+      - action: utter_respond_network_ports_description
+
+  - story: calculate power available
+    steps:
+      - intent: calculate_power_available
+      - action: utter_respond_power_available_calculation
+
+  - story: calculate power delivered
+    steps:
+      - intent: calculate_power_delivered
+      - action: utter_respond_power_delivered_calculation
+
+  - story: explain scattering parameter
+    steps:
+      - intent: explain_scattering_parameter
+      - action: utter_respond_scattering_parameter_explanation
+
+  - story: separate current components
+    steps:
+      - intent: separate_current_components
+      - action: utter_respond_current_component_separation
+
+  - story: explain loss in network
+    steps:
+      - intent: explain_loss_in_network
+      - action: utter_respond_loss_in_network_explanation
+
+  - story: distinguish loss roles
+    steps:
+      - intent: distinguish_loss_roles
+      - action: utter_respond_distinguish_loss_roles
+
+  - story: calculate loss equations
+    steps:
+      - intent: calculate_loss_equations
+      - action: utter_respond_loss_equations_calculation
+
+  - story: clarify loss roles
+    steps:
+      - intent: clarify_loss_roles
+      - action: utter_respond_clarify_loss_roles
+
+  - story: explain ohmic loss
+    steps:
+      - intent: explain_ohmic_loss
+      - action: utter_respond_ohmic_loss_explanation
+
+  - story: describe thevenin circuit
+    steps:
+      - intent: describe_thevenin_circuit
+      - action: utter_respond_thevenin_circuit_description
+
+  - story: describe norton circuit
+    steps:
+      - intent: describe_norton_circuit
+      - action: utter_respond_norton_circuit_description
+
+  - story: explain transfer impedance
+    steps:
+      - intent: explain_transfer_impedance
+      - action: utter_respond_transfer_impedance_explanation
+
+  - story: describe segment as antenna
+    steps:
+      - intent: describe_segment_as_antenna
+      - action: utter_respond_segment_as_antenna_description
+
+  - story: calculate mean power matched load
+    steps:
+      - intent: calculate_mean_power_matched_load
+      - action: utter_respond_mean_power_matched_load_calculation
+
+  - story: explain distributed voltage source integration
+    steps:
+      - intent: explain_distributed_voltage_source_integration
+      - action: utter_respond_distributed_voltage_source_integration_explanation
+
+  - story: describe gaussian quadrature
+    steps:
+      - intent: describe_gaussian_quadrature
+      - action: utter_respond_gaussian_quadrature_description
+
+  - story: explain quadrature requirements
+    steps:
+      - intent: explain_quadrature_requirements
+      - action: utter_respond_quadrature_requirements_explanation
+
+  - story: describe source translation
+    steps:
+      - intent: describe_source_translation
+      - action: utter_respond_source_translation_description
+
+  - story: outline quadrature formula
+    steps:
+      - intent: outline_quadrature_formula
+      - action: utter_respond_quadrature_formula_outline

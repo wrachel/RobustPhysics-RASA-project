@@ -1132,3 +1132,221 @@ nlu:
       - Can I add Reciever Antenna Loss?
       - Where is Reflective Loss?
       - How do I add Dielectric Laminate Loss?
+  - intent: excitation_external_efield_constraints
+    examples: |
+      - How can I add an external electric field constraint?
+      - Explain adding external electric field contrainst.
+
+  - intent: solve_max_min_field_limit
+    examples: |
+      - How do I solve for the maximum and minimum field limits?
+      - Explain how to solve the mean and statistical max and min field limits.
+
+  - intent: view_efield_outputs
+    examples: |
+      - How do I view the E-field outputs?
+      - Explain how to see the output data from the E-field.
+
+  - intent: describe_connector_model
+    examples: |
+      - What is a connector model?
+      - Explain a connector model.
+
+  - intent: describe_junction_model
+    examples: |
+      - What is a junction model?
+      - Explain junction models.
+
+  - intent: describe_junction_relationship
+    examples: |
+      - What is the combined relationship for the kth junction network?
+
+  - intent: describe_junction_structure
+    examples: |
+      - Describe the junction structure.
+
+  - intent: describe_junction_matrices
+    examples: |
+      - Describe junction matrix structure.
+      - How does Kirchhoff's current laws relate to matrices.
+
+  - intent: describe_external_field_source
+    examples: |
+      - Describe external field sources.
+
+  - intent: describe_plane_wave
+    examples: |
+      - Describe plane waves formula.
+
+  - intent: describe_multiconductor_transmission_line
+    examples: |
+      - Explain multiconductor transmission lines.
+      - How does a multiconductor transmission line work?
+
+  - intent: ask_generalized_telegrapher_equations
+    examples: |
+      - What are the Generalized Telegrapher's Equations?
+      - Explain GTE in transmission lines.
+      - Tell me about multiconductor transmission lines.
+
+  - intent: ask_telegrapher_equations_components
+    examples: |
+      - What are the components of the Telegrapher's equations?
+      - List the elements in the GTE.
+      - Explain impedance and admittance matrices.
+
+  - intent: explain_modal_relationship
+    examples: |
+      - How are the voltages and currents related to modal voltages and currents?
+      - Explain the relationship between V(z) and V_m(z).
+      - Tell me about the connection between individual conductors and modal voltages.
+
+  - intent: describe_generalized_telegrapher_solution
+    examples: |
+      - What is the solution of the generalized Telegrapher's equations?
+      - Explain the forward and backward propagating modes in transmission lines.
+      - Describe the modal voltages and currents in transmission line solutions.
+
+  - intent: explain_network_description
+    examples: |
+      - Describe the network consisting of K MTLs and conductors.
+      - What are the order 2 BLT equations used for in the network?
+      - Explain the terms like network current scattering matrix and network propagation matrix.
+
+  - intent: describe_network_solution_process
+    examples: |
+      - How are the currents at each end of MTL segments found in the network?
+      - Explain the two-step process for solving the network equations.
+      - What is the role of the matrix in the network solution?
+
+  - intent: consider_iterative_solution
+    examples: |
+      - Why was iterative solution using BICGSTAB considered for the network?
+      - Compare sparse LU factorization and iterative solution for network solutions.
+      - Discuss the computational aspects of solving the network equations.
+
+  - intent: mention_external_field_terms
+    examples: |
+      - How are external field terms accounted for in the BLT equations?
+      - Explain the handling of current and voltage source terms due to external fields.
+      - Is a separate source term needed for external field excitation in the network equations?
+
+  - intent: describe_network_ports
+    examples: |
+      - How are the ports in the network described?
+      - Explain the matched voltage source and load impedances on the ports.
+      - What happens after solving the network?
+
+  - intent: calculate_power_available
+    examples: |
+      - How is the power available from the source calculated?
+      - Explain the relationship between source voltage and current for matched loads.
+      - What is the wave entering port m after solving the network?
+
+  - intent: calculate_power_delivered
+    examples: |
+      - How is the power delivered to the load on port n calculated?
+      - Describe the wave exiting port n and the factors involved.
+      - What is the significance of the negative sign in the power calculation?
+
+  - intent: explain_scattering_parameter
+    examples: |
+      - What is the scattering parameter in the context of network solutions?
+      - Explain the formula for the scattering parameter Smn.
+      - How is the scattering parameter related to the network solution?
+
+  - intent: separate_current_components
+    examples: |
+      - How can the current entering port m be separated into propagating wave components?
+      - What is the reflection coefficient looking into the port?
+      - Explain the relationship between the reflection coefficient and the scattering parameter.
+
+  - intent: explain_loss_in_network
+    examples: |
+      - What contributes to the loss in the network?
+      - Explain the role of resistance in network loss.
+      - How is Ohmic loss modeled in the network?
+
+  - intent: distinguish_loss_roles
+    examples: |
+      - How do lumped resistance elements contribute to network loss?
+      - What is the role of multi-conductor transmission line (MTL) PUL resistance in network loss?
+      - Why is it important to distinguish between Ohmic loss and radiation in the network?
+
+  - intent: calculate_loss_equations
+    examples: |
+      - How is loss due to resistance calculated in the network?
+      - Explain the equations used for modeling Ohmic loss and radiation loss.
+      - Are the calculations for Ohmic loss and radiation loss the same?
+
+  - intent: clarify_loss_roles
+    examples: |
+      - Can you clarify the distinct roles of Ohmic loss and radiation loss in the network?
+      - Explain the differences between the effects of lumped resistance, MTL PUL resistance, and radiation resistance.
+      - How should we differentiate between the two types of losses in network analysis?
+
+  - intent: explain_ohmic_loss
+    examples: |
+      - How is Ohmic loss calculated on a lumped element in a network?
+      - Explain the equations for calculating Ohmic loss on MTL terminals.
+      - What is the significance of Thevenin and Norton equivalent circuits in calculating Ohmic loss?
+
+  - intent: describe_thevenin_circuit
+    examples: |
+      - How does Ohmic loss differ when the resistance is in a Thevenin circuit?
+      - Explain the equation for Ohmic loss in a Thevenin equivalent circuit.
+      - What is the role of resistance in series with MTL terminals?
+
+  - intent: describe_norton_circuit
+    examples: |
+      - How does Ohmic loss differ when the resistance is in a Norton circuit?
+      - Explain the equation for Ohmic loss in a Norton equivalent circuit.
+      - What is the role of resistance in parallel with MTL terminals?
+
+  - intent: explain_transfer_impedance
+    examples: |
+      - What is the relationship between the transfer impedance and Ohmic resistance in a shield?
+      - How is the transfer impedance of a shield equivalent to Ohmic resistance?
+      - Why is the transfer impedance a complex variable in this context?
+
+  - intent: describe_segment_as_antenna
+    examples: |
+      - How does a segment exposed to a diffuse field act as a receiving antenna?
+      - Explain the concept of radiation resistance for an antenna exposed to a diffuse field.
+      - What is the equivalent voltage source that accounts for external field excitation?
+
+  - intent: calculate_mean_power_matched_load
+    examples: |
+      - How is the mean power delivered to a matched load calculated for an antenna in an ideal diffuse field?
+      - Explain the formula for mean power <P_r> in the context of an antenna in a diffuse field.
+      - What are the factors involved in calculating the mean power delivered to a matched load?
+
+  - intent: explain_distributed_voltage_source_integration
+    examples: |
+      - How is the integration of the distributed voltage source evaluated?
+      - Explain the formula for P_d, n using Gaussian quadrature.
+      - What are the variables involved in the Gaussian quadrature weighting and sample point position calculations?
+
+  - intent: describe_gaussian_quadrature
+    examples: |
+      - What is Gaussian quadrature and how is it used in evaluating integrals?
+      - Explain the role of Gaussian quadrature weighting (w_i) in the integration process.
+      - How are sample points (x_l) determined in Gaussian quadrature for the distributed voltage source integration?
+
+  - intent: explain_quadrature_requirements
+    examples: |
+      - What are the requirements for using quadrature in solving the network?
+      - Explain the necessity of placing sources at multiple interior points on the line for quadrature.
+      - How can the network be solved without rebuilding it at each case during quadrature?
+
+  - intent: describe_source_translation
+    examples: |
+      - How is the voltage source translated for multiple interior points on the line in quadrature?
+      - Explain the process of translating a voltage source at position x=x_l to become sources at x=L.
+      - Why is it not necessary to split the segment containing the source in the network during quadrature?
+
+  - intent: outline_quadrature_formula
+    examples: |
+      - Can you outline the quadrature formula for P_d,n after the voltage source translation?
+      - What is the updated formula for quadrature (P_d,n) after translating the voltage source?
+      - How does the quadrature formula change when the source is translated to x=L?
