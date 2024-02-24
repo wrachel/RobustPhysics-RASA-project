@@ -246,6 +246,45 @@ intents:
   - describe_source_translation
   - outline_quadrature_formula
   - excitation_external_efield_constraints
+  - ask_simulation_tool_explanation
+  - ask_simulation_tool_features
+  - ask_simulation_tool_use_cases
+  - ask_cable_harness_model
+  - ask_separable_form
+  - ask_deterministic_transmission_line_modeling
+  - ask_canonical_test_cases
+  - ask_model_solution_parameters
+  - ask_frequency_solution_vector
+  - ask_constant_bandwidth
+  - ask_logarithmic_bandwidth
+  - ask_octave_frequencies
+  - ask_spectral_data_input
+  - ask_material_properties
+  - ask_dielectric_gas_properties
+  - ask_dielectric_solid_properties
+  - ask_solid_conductor_properties
+  - ask_direct_field_calculation
+  - ask_total_field_calculation
+  - ask_near_field_corrections
+  - ask_field_distribution
+  - ask_specific_graph_instances
+  - ask_quantiles_definition
+  - ask_pdf_description
+  - ask_cumulative_distribution_function
+  - ask_quantiles_computation
+  - ask_effective_modal_overlap
+  - ask_effective_total_loss_factor
+  - ask_statistical_ensemble_formulation
+  - ask_maximum_minimum_response_spectrum_levels
+  - ask_mean_electric_field
+  - ask_local_electric_field_frequency_stirred
+  - ask_s21_of_local_electric_field_frequency_stirred
+  - ask_build_aircraft_emc_model
+  - ask_build_automobile_emc_model
+  - ask_probabilistic_variance_aperture_coupling_power
+  - ask_relative_variance_multiple_cavities
+  - ask_relative_variance_single_cavity
+  - ask_probabilistic_variance_power_input
 
 responses:
   utter_greet:
@@ -735,11 +774,140 @@ responses:
   utter_respond_source_translation_description:
     - text: "The voltage source is translated for multiple interior points on the line by transforming it into voltage and current sources at x = L. This eliminates the need to split the segment containing the source, simplifying the quadrature approach and reducing computational costs."
 
-  utter_explanation_junction_matrices:
-    - text: "The impedance and admittance matrices for the junction are found from Kirchhoff’s current laws. The voltage at the end of segment 1 is related to the voltage at the end of segment m from the voltage law: V_1 + V_s1 + Z_1 I_1 - Z_m I_s - V_sm = V_m"
-
   utter_respond_quadrature_formula_outline:
     - text: "The updated quadrature formula after voltage source translation is P_d,n = 1/2 Σ_(l = 1)^(L) (w_l * L_n [V_E(L-x_l), L]). The network needs to be solved L times using this quadrature approach. However, since the network is only set up once, no matrix inversions are required in the solution stage, minimizing the computational cost."
+
+  # math specs 1 | section 12
+  utter_quantiles_definition_explanation:
+    - text: "Quantiles in the context of electric field levels represent the maximum expected and minimum expected field levels defined by specific probabilities of the field probability density function."
+
+  utter_pdf_description_explanation:
+    - text: "The probability density function (PDF) for electric field levels describes the likelihood of observing a particular field level at different positions and frequencies within the cavity."
+
+  utter_cumulative_distribution_function_explanation:
+    - text: "The cumulative distribution function (CDF) for electric field levels gives the probability that the field level is less than or equal to a given value. It is related to the PDF and used to compute quantiles."
+
+  utter_quantiles_computation_explanation:
+    - text: "Quantiles are computed from the inverse function of the cumulative distribution function (CDF) for specific maximum expected or minimum expected probability limits."
+
+  utter_relative_variance_single_cavity_explanation:
+    - text: "The relative variance of reverberant energy for a single cavity is derived based on modal overlap and the exponential integral. It characterizes the variance of the energy of a reverberant wave field within the cavity."
+
+  utter_relative_variance_multiple_cavities_explanation:
+    - text: "The relative variance of reverberant energy for multiple connected cavities is formulated using a matrix approach provided by Langley & Cotoni. It propagates the relative variance for any network of multiply connected reverberant fields."
+
+  utter_probabilistic_variance_power_input_explanation:
+    - text: "The probabilistic variance formulation for power input involves evaluating the square of the mean power input vector and the square of the effective constraint power, as defined by Langley & Cotoni."
+
+  utter_probabilistic_variance_aperture_coupling_power_explanation:
+    - text: "The probabilistic variance formulation for aperture coupling power includes evaluating the square of the element of the power balance matrix and the loading correlation coefficient, as provided by Langley & Cotoni."
+
+  utter_effective_modal_overlap_explanation:
+    - text: "The effective modal overlap for multiple connected cavities is calculated as the ratio of the effective, coupled cavity modal overlap to the effective, coupled cavity loss factor."
+
+  utter_effective_total_loss_factor_explanation:
+    - text: "The effective total loss factor for multiple connected cavities is derived from the net power input to the cavity wavefield, using the modal energy solution obtained from the power balance equation."
+
+  utter_statistical_ensemble_formulation_explanation:
+    - text: "The statistical ensemble formulation for the energy of a reverberant wave field is derived for comparison with the statistics of a finite ensemble of sample data. It involves the modal overlap of the cavity wavefield and the finite number of receiver and source positions."
+
+  utter_maximum_minimum_response_spectrum_levels_explanation:
+    - text: "The maximum and minimum response spectrum levels are calculated based on the mean and standard deviation of the logarithm of energy, as well as user-defined probabilities."
+
+  utter_mean_electric_field_explanation:
+    - text: "The mean electric field in a cavity is proportional to the total field energy and follows a Log Normal probability density function."
+
+  utter_local_electric_field_frequency_stirred_explanation:
+    - text: "The stochastic limits of the frequency-stirred local electric field in a cavity are determined by the unconditional probability density function introduced earlier. It involves the calculation of probability density function parameters and user-defined probabilities."
+
+  utter_s21_of_local_electric_field_frequency_stirred_explanation:
+    - text: "The S21 response is proportional to the frequency-stirred stochastic limits of the electric field at any location in the cavity. It is significant in understanding the behavior of the frequency-stirred local electric field."
+
+  # math specs 1 | section 13
+  utter_direct_field_calculation_explanation:
+    - text: "The direct field is calculated as a post-processing operation after the solution of the statistical power balance (SPB) matrix solution. It is the uncorrelated sum of the direct and reverberant fields."
+
+  utter_total_field_calculation_explanation:
+    - text: "The total field is calculated by combining the direct and reverberant fields. For a single power source inside a cavity, the direct electric field at a location beyond the near field of the power source is determined."
+
+  utter_near_field_corrections_explanation:
+    - text: "Near field corrections include field doubling due to coherent reflections at low loss bounding walls and wave scattering about smaller objects within the reverberant field."
+
+  utter_field_distribution_explanation:
+    - text: "The total field within the cavity follows a Rice distribution. In a cavity with very low losses, the reverberant field dominates the direct field, resulting in a spatial distribution determined by statistical power balance with a Chi-squared PDF."
+
+  # math specs 1 | section 14
+
+  utter_specific_graph_instances:
+    - text: "Some speciifc graph instances include: Subsystem wavenumber, Subsystem modes in band, Power Inputs ranking chart for any subsystem, and Power input for each source - Mean with Min, Max uncertainty margins"
+
+  # math specs 2 | section 1
+
+  utter_simulation_tool_explanation:
+    - text: "RobustPhysics' simulation tool simplifies high-frequency cable harness current simulation alongside strong cavity electric fields using stochastic wave mechanics. It couples rigorous physics with statistical modeling, providing a customized solution for NASA's EMC applications. This hybrid approach integrates statistical 3D electric field modeling with deterministic cable harness current modeling. The Phase I STTR validated its efficacy for complex connected cavities, including launch vehicle fairings."
+
+  utter_simulation_tool_features:
+    - text: "The main features of RobustPhysics' simulation tool include: 1. Simulation of cavity 3D electric fields using stochastic methods. 2. Deterministic simulation of 5D cable networks. 3. Coupled simulation of cavity-cable networks using stochastic techniques."
+
+  utter_simulation_tool_use_cases:
+    - text: "RobustPhysics' simulation tool can be applied in various real-world scenarios, including: - Modeling high frequency cable harness currents in the presence of strong cavity electric fields. - Optimizing electromagnetic compatibility (EMC) in NASA's applications. - Simulating complex connected cavities, such as launch vehicle fairings, to ensure efficient power balance."
+
+  # math specs 2 | section 2
+
+  utter_cable_harness_model_explanation:
+    - text: "In the Ph2. STTR Requirements Specification, a cable harness is considered to consist of multiple line segments with uniform section properties."
+
+  utter_separable_form_explanation:
+    - text: "For simulating the high frequency currents in each conductor and the radiation loss from each conductor, a key assumption is that the surrounding vector electric field and the surrounding vector magnetic field is a separable product of a propagation function only along the conductor axis and a radiation / scattering function only in the plane transverse to the conductor axis."
+
+  utter_deterministic_transmission_line_modeling_process:
+    - text: "The computational steps of deterministic transmission line modeling involve calculating the per unit length properties of each cable harness segment, calculating transfer matrices for each segment, calculating radiation impedance, assembling end-to-end transfer matrices, defining terminal voltages and currents, solving the transmission line transfer matrix problem, and post-processing the solution for various parameters."
+
+  utter_canonical_test_cases_explanation:
+    - text: "The Ph2 STTR Test Plan supports validation of transmission line models of specific cable configurations to validate the transmission line computational module."
+
+  # math specs 2 | section 3
+
+  utter_model_solution_parameters_explanation:
+    - text: "explain_model_solution_parameters_explanation"
+
+  utter_frequency_solution_vector_explanation:
+    - text: "The model solution parameters include unit systems in SI, such as voltage, current, length, time, and their respective units. It also involves defining the frequency domain, lowest and highest frequencies, and bandwidth parameters."
+
+  utter_constant_bandwidth_explanation:
+    - text: "Constant bandwidth parameters define a frequency range with a uniform bandwidth. The tabular data input format includes model file names, frequency domain type, start frequency, bandwidth, and end frequency."
+
+  utter_logarithmic_bandwidth_explanation:
+    - text: "Logarithmic bandwidth, such as the Third Octave option, is used for frequency band analysis over a wide domain. It involves specifying start and end center frequencies for each frequency band."
+
+  utter_octave_frequencies_explanation:
+    - text: "Octave frequencies are defined relative to a reference frequency of 1 kHz. The fractional octave frequencies, such as 3rd Octave, 6th Octave, etc., are used to specify lower and upper band frequencies and bandwidth."
+
+  # math specs 2 | section 4
+
+  utter_spectral_data_input_explanation:
+    - text: "There are multiple classes of spectral data, including: relative permittivity, relative permeability, S11, S12, Electric field, conductivity, relative variance, Q factor, loss factor, absorption coefficient, absorption section, reflection loss, power transmission coefficient, transmission section, power, coupling loss factor, voltage source, current source, and impedance. All classes have the same data structure, represented as a table of real valued numbers at frequencies in Hz."
+
+  utter_material_properties_explanation:
+    - text: "Materials with complex, frequency-dependent properties have properties that vary with frequency. These properties include relative permittivity, relative permeability, conductivity, and others. They require special treatment in modeling due to their frequency dependency."
+
+  # math specs 2 | section 5
+
+  utter_dielectric_gas_properties_explanation:
+    - text: "Dielectric gas properties include permittivity and permeability."
+
+  utter_dielectric_solid_properties_explanation:
+    - text: "Dielectric solid properties include permittivity, permeability, conductivity, and mass density."
+
+  utter_solid_conductor_properties_explanation:
+    - text: "Solid conductor properties include permeability, conductivity, and mass density."
+
+  # website
+
+  utter_build_aircraft_emc_model:
+    - text: "To build an aircraft system-level EMC model using Stochastica, follow these steps:\n1. Import simple 3D geometry data using Stochastica's modeling toolbar.\n2. Define area junctions between connected fields and specify field excitation sources.\n3. Solve uncoupled cavity fields and plot output results, including stochastic limits.\n 4. Refine the model based on diagnostic plots and adjust sources or transmission paths as necessary."
+  utter_build_automobile_emc_model:
+    - text: "To build an automobile system-level EMC model using Stochastica, follow these steps:\n1. Import 3D geometry data and define cavity field parameters.\n2. Define area junctions and specify field excitation sources.\n3. Solve cavity fields, plot output results, and analyze stochastic limits.\n4. Create multi-pin connectors, wire conductors, and solve cable harness.\n5. Couple models, identify cable-cavity interactions, and solve coupled model for comprehensive analysis."
 
   # actions:
   #   - utter_create_cylindrical_fairing_volume
