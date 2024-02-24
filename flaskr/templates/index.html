@@ -5,18 +5,28 @@
 <script src="{{ url_for('static', filename='js/required.js')}}"></script>
 {% block content %}
     <h1>{% block title %} Messages {% endblock %}</h1>
-    {% for message in messages %}
-            <div class="message">
-                <p class="question">{{ message['question'] }}</p>
-                <p class="response">{{ message['response'] }}</p>
-        </div>
+    <div class="history">
+        {% for message in messages %}
+        <table class="message">
+            <tr class="index">
+                <td class="index" rowspan="2">{{ loop.index }}:</td>
+                <td class="question">{{ message['question'] }}</td>
+            </tr>
+            <tr>
+                <td class="response">{{ message['response'] }}</td>
+            </tr>
+        </table>
     {% endfor %}
+    </div>
+    <div class="filler">
+        <p></p>
+    </div>
     <div class="form">
-    <h1>TALK TO RASA</h1>
-        <form method="post">
-            <input type="text" name="rasa" class="input-text"
-                placeholder="What's your question?  "></input>
-        </form>
+        <div class="divider py-1 bg-dark"></div>
+            <form method="post">
+                <input type="text" name="rasa" class="input-text"
+                    placeholder="What's your question?  "></input>
+            </form>
     </div>
 {% endblock %}
 
