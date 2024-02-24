@@ -303,7 +303,7 @@ nlu:
   - intent: inquire_radiation_impedance
     examples: |
       - What is the radiation impedance?
-      - Explain the role of radiation impedance in modeling radiation from a cable harness.
+      - What is the role of radiation impedance in modeling radiation from a cable harness.
       - Tell me about the characteristics of radiation impedance as a PUL property or a lumped element.
 
   - intent: define_radiation_impedance
@@ -486,10 +486,10 @@ nlu:
   - intent: ask_about_power_balance_principle
     examples: |
       - What is the power balance principle for cavity reverberant fields?
-       - Can you explain how the power balance principle applies to reverberant fields in a cavity?
-       - How does the power input from an external source relate to the total power dissipated by losses in a reverberant field?
-       - What are the components of the power balance principle for cavity reverberant fields?
-       - Can you provide details about the power balance principle described in the section?
+      - Can you explain how the power balance principle applies to reverberant fields in a cavity?
+      - How does the power input from an external source relate to the total power dissipated by losses in a reverberant field?
+      - What are the components of the power balance principle for cavity reverberant fields?
+      - Can you provide details about the power balance principle described in the section?
   - intent: ask_about_statistical_power_balance_modeling
     examples: |
       - What is statistical power balance modeling?
@@ -504,6 +504,7 @@ nlu:
       - How are damping loss factors calculated in the power balance model?
       - Why are open aperture loss and leakage loss not included in each cavity's damping loss factor?
       - Can you provide details about the coupling loss factor in the power balance model?
+
   - intent: ask_about_absorption_coefficient
     examples: |
       - What is the absorption coefficient?
@@ -511,6 +512,7 @@ nlu:
       - How is the average damping loss factor due to absorption calculated?
       - What is the reflection loss for RF absorbing materials?
       - How are the losses from the absorption of constituent materials and printed circuit board traces quantified?
+
   - intent: ask_about_coupling_loss_factor
     examples: |
       - What is the coupling loss factor?
@@ -712,10 +714,6 @@ nlu:
     examples: |
       - What is the definition of power transmission loss?
       - Can you explain what power transmission loss means?
-  - intent: ask_about_absorption_coefficient_definition
-    examples: |
-      - What is the definition of the absorption coefficient?
-      - Can you explain how the absorption coefficient is defined?
   - intent: ask_about_field_incidence_absorption_coefficient
     examples: |
       - How is the field incidence absorption coefficient calculated?
@@ -752,7 +750,7 @@ nlu:
     examples: |
       - How is average reflection loss calculated?
       - Can you explain how average reflection loss is determined?
-  - intent: ask_about_absorption_coefficient_definition1
+  - intent: ask_about_absorption_coefficient_definition
     examples: |
       - What is the definition of absorption coefficient?
       - Can you explain what absorption coefficient means?
@@ -1089,3 +1087,48 @@ nlu:
       - How is excitation uncertainty incorporated into the model?
       - Explain the procedure for adding excitation uncertainty algorithmically.
       - What steps are taken to include excitation uncertainty in the model?
+
+  - intent: inquire_frequency_vector
+    examples: |
+      - How do I create a frequency vector?
+      - Explain adding a frequency vector under the Tree solution domain node.
+
+  - intent: specify_frequency_sample
+    examples: |
+      - How can I set a frequency sample?
+      - Specify the frequency sample for solving the model.
+
+  - intent: input_spectral_data
+    examples: |
+      - Tell me about inputting spectral data.
+      - How to store frequency-dependent input data like Permittivity and Conductivity?
+
+  - intent: add_spectral_data_dialog
+    examples: |
+      - How do I add spectral data?
+      - Explain the process of right-clicking and selecting "add" to enter spectral data.
+
+  - intent: copy_paste_spectral_data
+    examples: |
+      - Can I cut and paste spectral data from a spreadsheet?
+      - How to Copy & Paste spectral data into the grid from a spreadsheet.
+
+  - intent: inquire_cavity_wavefield
+    examples: |
+      - How do I create a cavity wavefield?
+      - How are cavity wavefields displayed?
+
+  - intent: define_dielectric_gas_volume_cavity_wavefield
+    examples: |
+      - How do I define a dielectric gas?
+      - How do I edit cavity volume?
+
+  - intent: define_q_factor_cavity_wavefield
+    examples: |
+      - How do I find the total q factor for a cavity wavefield?
+      - What are the components of loss factor that establish a total q factor?
+      - What is wall loss?
+      - What is Absorption Section?
+      - Can I add Reciever Antenna Loss?
+      - Where is Reflective Loss?
+      - How do I add Dielectric Laminate Loss?

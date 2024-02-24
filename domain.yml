@@ -8,7 +8,14 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
-
+  - inquire_frequency_vector
+  - specify_frequency_sample
+  - input_spectral_data
+  - add_spectral_data_dialog
+  - copy_paste_spectral_data
+  - inquire_cavity_wavefield
+  - define_dielectric_gas_volume_cavity_wavefield
+  - define_q_factor_cavity_wavefield
   - model_tree_spectral_data
   - add_tx_power_input
   - edit_tx_power_inputs
@@ -123,7 +130,6 @@ intents:
   - ask_about_skin_depth
   - ask_about_reflection_loss_definition
   - ask_about_average_reflection_loss
-  - ask_about_absorption_coefficient_definition1
   - ask_about_cavity_damping_loss_factor
   - ask_about_absorption_section_definition
   - ask_about_cavity_reverberant_wavefield_damping_loss_factor
@@ -221,6 +227,30 @@ responses:
 
   utter_iamabot:
     - text: "I am a bot, powered by Rasa."
+
+  utter_explain_frequency_vector:
+    - text: "To create a frequency vector, go under the Tree solution domain node and add the frequency vector."
+
+  utter_explain_frequency_sample:
+    - text: "Set the frequency sample for solving the model in the window below the Tree solution domain node."
+
+  utter_explain_input_spectral_data:
+    - text: "To input spectral data, store frequency-dependent input data like Permittivity and Conductivity in the model database called 'Spectral Data'."
+
+  utter_explain_add_spectral_data_dialog:
+    - text: "To add spectral data, right-click and select 'add' to open a dialog box for entering the necessary information."
+
+  utter_explain_copy_paste_spectral_data:
+    - text: "You can manually enter Spectral Data in the provided grids or copy & paste it from a spreadsheet."
+
+  utter_explain_create_cavity_wavefield:
+    - text: "To create a Cavity Wave Field, select the cavity geometry from the Geometry Table or view in the 3D window. Click the Create Cavity Wavefield Icon in the Toolbar. Edit dialog will open to complete definition of Cavity reverberant electromagnetic wavefield. In 3D Window, Cavity Wavefields displayed with GREEN BORDER on selected Geometry. In Tree view, Cavity Wavefields are listed in Table view."
+
+  utter_explain_define_dielectric_volume:
+    - text: "To EDIT dialog for each Cavity, name the wavefield model, define the Dielectric Gas, and define the cavity Volume"
+
+  utter_explain_q_factor:
+    - text: "Multiple different components of Loss Factor may need to be defined to establish the Total Q factor for each Cavity Wavefield. These can include Wall Loss, Reflection Loss, and Laminate Loss. To add Wall Loss, in the dialog, select ADD “Wall Loss” components, and define Conductive Solid Material and Exposed surface Area. For Absorption Section, in the dialog, select ADD “Absorption Section” components. Units are an effective area (m2). Multiple Absorption Sections are allowed. For Reciever Antenna Loss, in the dialog, select ADD “Receiver” antenna loss components and reference the antenna. Multiple Absorption Sections are allowed. To add Reflection Loss, in the dialog, select ADD “User-def Reflection Loss” components. Define Reflection Loss of wall material and Exposed surface Area. Multiple Reflection Loss surfaces are allowed. For Laminate Loss, in the dialog, select ADD “Laminate Loss” components. Define the PEC-backed Dielectric Laminate, Exposed surface Area, and Range of EM field incidence. Multiple Laminate surfaces are allowed."
 
   utter_model_tree_spectral_data:
     - text: "To model tree data for an antenna power input, you can follow these steps: In Model Tree/Spectral Data, enter S11. Then, in Model Tree / Power, define a Power (W) spectrum. Finally, in Model Tree / Antenna, define the antenna name and S11."
@@ -508,8 +538,6 @@ responses:
     - text: "Reflection loss refers to the wave reflection loss of a surface, which is averaged over the incidence of the reverberant field and over both TE and TM polarizations. It is typically expressed in dB as a power ratio."
   utter_answer_average_reflection_loss:
     - text: "Average reflection loss is calculated by averaging the wave reflection loss of a surface over the incidence of the reverberant field and over both TE and TM polarizations. This provides a measure of how much energy is lost due to reflection from the surface."
-  utter_answer_absorption_coefficient_definition1:
-    - text: "The absorption coefficient is defined as the wave reflection loss of a surface, averaged over the incidence of the reverberant field and over both TE and TM polarizations. It provides a measure of how much energy is absorbed by the surface."
   utter_answer_cavity_damping_loss_factor:
     - text: "The cavity damping loss factor is the average damping loss factor due to absorption within the cavity, averaged over the incidence of the reverberant field and over both TE and TM polarizations. It is often associated with the Q factor, which represents the quality factor of the cavity."
   utter_answer_absorption_section_definition:
