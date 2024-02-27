@@ -20,3 +20,12 @@ function keep_alive_server(){
 setInterval(keep_alive_server, interval_request)()
 
 })
+
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      document.querySelector('form').submit();
+  }
+});
+

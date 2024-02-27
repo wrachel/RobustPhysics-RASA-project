@@ -1,0 +1,111 @@
+nav {
+    font-size: 13px;
+}
+
+
+.message {
+    position: relative;
+    margin: 1%;
+    width: 100%;
+    background-color: #f3f3f3
+}
+
+.index {
+    text-align:center;
+    font-weight: 100;
+    width:2%;
+}
+
+.input-text {
+    text-align: left;
+    border-radius: 10px;
+    padding:0.5%;
+    padding-left:15px;
+    border-style:hidden;
+    background-color: #d3d3d3;
+    color: black;
+    width:90%;
+}
+
+.form {
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    width:100%;
+    background-color: #57575C;
+    color: white;
+}
+
+h1 {
+    margin-left: 15px;
+}
+
+form {
+    margin-top:2%;
+    margin-bottom: 2%;
+    margin-left: 2%;
+}
+
+
+.question {
+    padding-top:15px;
+    font-weight:700;
+    text-anchor: middle;
+}
+
+.response {
+    font-weight:400;
+    text-anchor: middle;
+    padding-bottom: 1%;
+}
+
+
+body::-webkit-scrollbar {
+    display:none;
+}
+
+.history {
+    margin-bottom: 5%;
+    overflow-y:hidden;
+    text-wrap: wrap;
+    overflow-x: hidden;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 8px;
+    text-align: left;
+}
+
+.filler {
+    margin-top:1%;
+    margin-bottom: 1%;
+}
+
+@media screen and (max-width: 600px) {
+    td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .index {
+        padding-bottom: 5px;
+    }
+
+    .form {
+        margin-top: 10px;
+    }
+
+    .message {
+        margin-bottom: 2%;
+    }
+
+    .history {
+        margin-bottom: 5%;
+    }
+}

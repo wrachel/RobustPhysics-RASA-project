@@ -2,7 +2,34 @@ from flask import Flask, render_template, request, jsonify,flash,redirect,url_fo
 import os,sys,requests, json
 from flaskwebgui import FlaskUI
 
-messages = [{'question': 'my question','response': 'my response'}
+messages = [ {'question': "Hi",
+              'response': "hi"},
+              {'question': "Hi x2",
+              'response': "hi x2"},
+              {'question': "Hi x3",
+              'response': "hi x3"},
+              {'question': "Hi x4",
+              'response': "hi x4"},
+              {'question': "Hi x5",
+              'response': "hi x5"},
+              {'question': "Hi x6",
+              'response': "hi x6"},
+              {'question': "Hi x7",
+              'response': "hi x7"},
+              {'question': "Hi x8",
+              'response': "hi x8"},
+              {'question': "Hi x9",
+              'response': "hi x9"},
+              {'question': "Hi x10",
+              'response': "bro do you not have a job you've been saying hi to a digital bot for like 3 minutes like are you mentally okay"},
+              {'question': "no",
+              'response': "yeah I figured"},
+              {'question': "hi",
+              'response': "you serious"},
+              {'question': "Hi",
+              'response': "please just let me rest"},
+              {'question': "Hi",
+              'response': "bro am i the bot or are you the bot i'm just confused now"},
             ]
 
 app = Flask(__name__)
