@@ -285,6 +285,19 @@ intents:
   - ask_relative_variance_multiple_cavities
   - ask_relative_variance_single_cavity
   - ask_probabilistic_variance_power_input
+  - add_materials
+  - choose_spectral_data
+  - define_PEC_backed_laminates
+  - edit_laminate
+  - define_open_backed_laminates
+  - add_connector
+  - add_branch_to_cable_segment
+  - edit_segment
+  - save_changes
+  - right_click_add_cable_segment
+  - create_cable_segment_3d_model
+  - add_wire_cable_segment_3d_model
+  - solve_cable_section_properties_first
 
 responses:
   utter_greet:
@@ -909,103 +922,6 @@ responses:
   utter_build_automobile_emc_model:
     - text: "To build an automobile system-level EMC model using Stochastica, follow these steps:\n1. Import 3D geometry data and define cavity field parameters.\n2. Define area junctions and specify field excitation sources.\n3. Solve cavity fields, plot output results, and analyze stochastic limits.\n4. Create multi-pin connectors, wire conductors, and solve cable harness.\n5. Couple models, identify cable-cavity interactions, and solve coupled model for comprehensive analysis."
 
-  # actions:
-  #   - utter_create_cylindrical_fairing_volume
-  #   - utter_create_spacecraft_volume
-  #   - utter_cut_shape
-  #   - utter_add_ellipsoid
-  #   - utter_add_sphere
-  #   - utter_pan_model
-  #   - utter_scroll_in_out
-  #   - utter_rotate_model
-  #   - utter_hide_objects
-  #   - utter_add_3d_geometry
-  #   - utter_wire_constructions
-  #   - utter_add_connectors
-  #   - utter_create_junction
-  #   - utter_answer_simulation_tool
-  #   - utter_answer_statistical_power_balance_method
-  #   - utter_answer_SEA_framework
-  #   - utter_answer_deterministic_models_vs_statistical_reduction
-  #   - utter_answer_modal_expansion_basis
-  #   - utter_answer_application_of_statistical_power_balance_approach
-  #   - utter_answer_Inverse_Gamma_distribution
-  #   - utter_answer_E_field_PDF
-  #   - utter_answer_energy_subsystem_in_SPB_modelling
-  #   - utter_answer_total_energy_in_cavity
-  #   - utter_answer_average_modal_density
-  #   - utter_answer_power_balance_principle
-  #   - utter_answer_statistical_power_balance_modeling
-  #   - utter_answer_power_balance_model
-  #   - utter_answer_absorption_coefficient
-  #   - utter_answer_coupling_loss_factor
-  #   - utter_answer_layered_materials
-  #   - utter_answer_transfer_matrix_method
-  #   - utter_answer_dielectric_material_properties
-  #   - utter_answer_conductive_material_properties
-  #   - utter_answer_stochastic_wave_mechanics
-  #   - utter_answer_frequency_stirred_probability_distribution
-  #   - utter_answer_energy_probability_distribution
-  #   - utter_answer_unconditional_electric_field_PDF
-  #   - utter_answer_lossy_cavities
-  #   - utter_answer_hybrid_model_solution
-  #   - utter_answer_RhoPhy_data_structure_definition
-  #   - utter_answer_conductor_radiated_power
-  #   - utter_answer_diffuse_field_modeling
-  #   - utter_answer_cavity_loss_factor_calculation
-  #   - utter_answer_voltage_source_distribution
-  #   - utter_answer_total_power_dissipation
-  #   - utter_answer_cable_harness_response
-  #   - utter_answer_cavity_wavefields_processing
-  #   - utter_answer_mean_field_levels_calculation
-  #   - utter_answer_stochastic_limits_definition
-  #   - utter_answer_uncoupled_cable_harness_limits
-  #   - utter_answer_cable_harness_limits_inside_cavities
-  #   - utter_answer_cable_harness_limits_inside_cavities_terminal_inputs
-  #   - utter_answer_loss_factor_due_to_cavity_radiation_resistance
-  #   - utter_answer_loss_factor_due_to_antenna_loss
-  #   - utter_answer_voltage_calculation_using_reciprocal_theorem
-  #   - utter_answer_current_calculation_using_reciprocal_theorem
-  #   - utter_answer_transfer_matrix_method1
-  #   - utter_answer_wave_reflection_and_transmission_in_dielectric_layers
-  #   - utter_answer_continuity_along_interface_of_dielectric_layers
-  #   - utter_answer_generalization_to_multi_layered_structure
-  #   - utter_answer_transmission_coefficient_definition
-  #   - utter_answer_average_power_transmission_coefficient
-  #   - utter_answer_power_transmission_loss_definition
-  #   - utter_answer_absorption_coefficient_definition
-  #   - utter_answer_field_incidence_absorption_coefficient
-  #   - utter_answer_cavity_damping_loss_factor_contributions
-  #   - utter_answer_wall_losses
-  #   - utter_answer_absorption_cross_sections
-  #   - utter_answer_antenna_loading_losses
-  #   - utter_answer_modal_damping_loss_mechanism
-  #   - utter_answer_skin_depth
-  #   - utter_answer_reflection_loss_definition
-  #   - utter_answer_average_reflection_loss
-  #   - utter_answer_absorption_coefficient_definition1
-  #   - utter_answer_cavity_damping_loss_factor
-  #   - utter_answer_absorption_section_definition
-  #   - utter_answer_cavity_reverberant_wavefield_damping_loss_factor
-  #   - utter_provide_energy_subsystem_parameters
-  #   - utter_specify_energy_subsystem_dimensions
-  #   - utter_specify_additional_parameters_energy_subsystem
-  #   - utter_explain_free_propagation_wavenumber
-  #   - utter_define_cavity_modal_density
-  #   - utter_describe_total_energy_reverberant_wavefield
-  #   - utter_explain_mean_squared_electric_field
-  #   - utter_provide_energy_to_eu_conversion
-  #   - utter_explain_internal_losses_cavity_subsystem
-  #   - utter_express_internal_losses_q_factor
-  #   - utter_mention_inverse_measured_q_factors
-  #   - utter_explain_wall_loss_factor_function
-  #   - utter_define_parameters_wall_loss_factor
-  #   - utter_explain_field_incidence_absorption
-  #   - utter_define_parameters_field_incidence_absorption
-  #   - utter_explain_antenna_loading_losses
-  #   - utter_define_parameters_antenna_loading_losses
-  #   - utter_explain_absorption_section
-  #   - utter_define_parameters_absorption_section
   utter_explain_add_cable_segment:
     - text: "To add a cable segment, go under the Tree view and add a cable segment under 1D Cable Current Fields → Segments by right-clicking and hitting 'Add'."
 
@@ -1141,6 +1057,34 @@ responses:
     - text: "Incorporating excitation uncertainty algorithmically follows a similar procedure as for Q uncertainty. I'll explain the steps involved."
     - text: "Adding excitation uncertainty to the model is done systematically, similar to how Q uncertainty is handled. Let me outline the process."
 
+  utter_add_materials:
+    - text: "Materials are added under the Materials node. Spectral data for each material (permittivity, permeability, conductivity) is chosen from dropdown menus in dialog boxes."
+  utter_choose_spectral_data:
+    - text: "To select spectral data for each material, you can choose from the available options in the dropdown menus provided in the dialog boxes."
+  utter_define_PEC_backed_laminates:
+    - text: "PEC-backed laminates define RF absorption materials on the walls of Cavity Wavefields. To add or edit a multi-layer laminate, right-click and select 'ADD' or 'EDIT'. Choose Dielectric Solid or Gas Material from the drop-down menu and edit the thickness of each layer."
+  utter_edit_laminate:
+    - text: "To edit a multi-layer laminate, right-click on it and select 'EDIT'. Then, you can modify the layers by adjusting their thickness."
+  utter_define_open_backed_laminates:
+    - text: "Open-backed laminates define EM transmission across large aperture laminate junctions between Cavity Wavefields. To add or edit a multi-layer laminate, right-click and select 'ADD' or 'EDIT'. Choose Dielectric Solid or Gas Material from the drop-down menu and edit the thickness of each layer."
+  utter_add_connector:
+    - text: "To add connectors in the model, you can do so either in the 3D Environment or in the Tree View. Once added, make sure to fill out all the appropriate information to ensure accuracy in the computation model."
+  utter_add_branch_to_cable_segment:
+    - text: "To add a branch to a cable segment, edit the segment as needed and fill out all the appropriate information. Once you save the changes, the new branch will be created. It's recommended to edit all segments before saving to ensure accuracy in the computation model."
+  utter_edit_segment:
+    - text: "To edit a segment, simply modify the necessary information. Ensure all details are accurate before saving the changes."
+  utter_save_changes:
+    - text: "To save the changes after editing segments, simply click on the save option. This ensures that the computation model remains accurate."
+  utter_add_cable_segment:
+    - text: "To add a cable segment under 1D Cable Current Fields, navigate to Junctions and then Branch under the Tree view. Right-click and hit 'Add' to add the cable segment."
+  utter_right_click_add_cable_segment:
+    - text: "To add a cable segment by right-clicking, navigate to the desired location under 1D Cable Current Fields → Junctions → Branch in the Tree view. Right-click and select 'Add' to add the cable segment."
+  utter_create_cable_segment_3d_model:
+    - text: "To create cable segments in the 3D Model Window, use the tool palette and click on the appropriate icon, typically labeled 'Create Branch'."
+  utter_add_wire_cable_segment_3d_model:
+    - text: "To add a wire or cable segment to a branch in the 3D Model Window, you can either ctrl select the pins and branch, then click the 'Create Segment' button, or click the 'Add Wire' button to open a dialogue, set the starting and ending connectors and pins, click the 'Add Junction' button within, and then hit save."
+  utter_solve_cable_section_properties_first:
+    - text: "Yes, it's important to solve for Cable Section Properties first before proceeding with any other calculations. The FreeFEM 2D finite element solver integrated in the EMC System Modeler software will calculate the per unit length Capacitance, Inductance, and Conductance of each cable section. The results are cached and stored in Tree / Outputs / Cable Properties."
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

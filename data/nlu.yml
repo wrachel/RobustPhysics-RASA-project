@@ -1620,3 +1620,57 @@ nlu:
       - procedure for building an automobile EMC model using Stochastica
       - tutorial on how to construct an automobile EMC model using Stochastica
       - explain how to create an automobile EMC model using Stochastica
+
+  - intent: add_materials
+    examples: |
+      - How are materials added to the system?
+      - Can you explain the process of adding materials under the Materials node?
+  - intent: choose_spectral_data
+    examples: |
+      - How is spectral data selected for each material?
+      - What are the options for choosing spectral data in the dialog boxes?
+  - intent: define_PEC_backed_laminates
+    examples: |
+      - How are PEC-backed laminates defined for RF absorption materials on cavity walls?
+      - Can you explain the process of adding PEC-backed laminates to define RF absorption materials?
+  - intent: edit_laminate
+    examples: |
+      - How do I edit a multi-layer laminate?
+      - Can I modify the layers of a laminate?
+  - intent: define_open_backed_laminates
+    examples: |
+      - How are open-backed laminates defined for EM transmission across large aperture laminate junctions?
+      - Can you explain the process of adding open-backed laminates to define EM transmission across large aperture laminate junctions?
+  - intent: add_connector
+    examples: |
+      - How do I add connectors in the model?
+      - Can you explain how to add connectors to the model?
+  - intent: add_branch_to_cable_segment
+    examples: |
+      - How can I add a branch to a cable segment?
+      - What is the process for adding a branch to a cable segment?
+  - intent: edit_segment
+    examples: |
+      - How do I edit a segment?
+      - Can I modify the segments in the model?
+  - intent: save_changes
+    examples: |
+      - How do I save the changes after editing segments?
+      - What is the procedure for saving changes in the model?
+
+  - intent: right_click_add_cable_segment
+    examples: |
+      - How do I add a cable segment by right-clicking?
+      - What is the process for adding a cable segment by right-clicking?
+  - intent: create_cable_segment_3d_model
+    examples: |
+      - How do I create cable segments in the 3D Model Window?
+      - Can you explain how to use the tool palette to create cable segments?
+  - intent: add_wire_cable_segment_3d_model
+    examples: |
+      - How do I add a wire or cable segment to a branch in the 3D Model Window?
+      - Can you explain how to use the "Create Segment" button to add a wire or cable segment?
+  - intent: solve_cable_section_properties_first
+    examples: |
+      - Should I solve for Cable Section Properties first before anything else?
+      - Is it necessary to calculate Cable Section Properties before solving anything?

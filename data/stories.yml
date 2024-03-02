@@ -625,24 +625,12 @@ stories:
       - intent: define_parameters_absorption_section
       - action: utter_define_parameters_absorption_section
 
-  - story: Add cable segment
-    steps:
-      - intent: add_cable_segment
-      - action: utter_explain_add_cable_segment
-
   - story: Add wires and specify connectors
     steps:
       - intent: add_wires
       - action: utter_explain_add_wires
       - intent: specify_connectors
       - action: utter_explain_specify_connectors
-
-  - story: Add cable segment in 3D Geometry Window
-    steps:
-      - intent: add_cable_segment
-      - action: utter_explain_add_cable_segment
-      - intent: create_common_backbone_cable_segment
-      - action: utter_explain_create_common_backbone_cable_segment
 
   - story: Add and Edit Cable Segment
     steps:
@@ -1334,3 +1322,60 @@ stories:
     steps:
       - intent: ask_build_automobile_emc_model
       - action: utter_build_automobile_emc_model
+
+  - story: add materials
+    steps:
+      - intent: add_materials
+      - action: utter_add_materials
+  - story: choose spectral data
+    steps:
+      - intent: choose_spectral_data
+      - action: utter_choose_spectral_data
+  - story: define PEC backed laminates
+    steps:
+      - intent: define_PEC_backed_laminates
+      - action: utter_define_PEC_backed_laminates
+  - story: edit laminate
+    steps:
+      - intent: edit_laminate
+      - action: utter_edit_laminate
+  - story: define open backed laminates
+    steps:
+      - intent: define_open_backed_laminates
+      - action: utter_define_open_backed_laminates
+  - story: add connector
+    steps:
+      - intent: add_connector
+      - action: utter_add_connector
+  - story: add branch to cable segment
+    steps:
+      - intent: add_branch_to_cable_segment
+      - action: utter_add_branch_to_cable_segment
+  - story: edit segment
+    steps:
+      - intent: edit_segment
+      - action: utter_edit_segment
+  - story: save changes
+    steps:
+      - intent: save_changes
+      - action: utter_save_changes
+  # - story: add cable segment
+  #   steps:
+  #     - intent: add_cable_segment
+  #     - action: utter_add_cable_segment
+  - story: right click add cable segment
+    steps:
+      - intent: right_click_add_cable_segment
+      - action: utter_right_click_add_cable_segment
+  - story: create cable segment 3d model
+    steps:
+      - intent: create_cable_segment_3d_model
+      - action: utter_create_cable_segment_3d_model
+  - story: add wire cable segment 3d model
+    steps:
+      - intent: add_wire_cable_segment_3d_model
+      - action: utter_add_wire_cable_segment_3d_model
+  - story: solve cable section properties first
+    steps:
+      - intent: solve_cable_section_properties_first
+      - action: utter_solve_cable_section_properties_first
