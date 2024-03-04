@@ -7,6 +7,8 @@ Once python is installed, please clone this github repo, or ensure the code for 
 
 In order to install Rasa, please use the command `pip install rasa`. Ensure that you are in the folder of the repo you just cloned when running this command. 
 
+In order to install Flask, the web server library, use the command `pip install Flask`.
+
 ## Training the Rasa model: 
 
 Ensure that you are in the Rasa folder. 
@@ -19,12 +21,6 @@ To test out the model in your terminal, run the command `rasa shell`. It will re
 
  
 ## Instructions to run Rasa project:
-
-First, we need to install the necessary libraries. On the command line, run:
-
-`pip install rasa`
-
-`pip install flask` 
 
 To interact with the rasa model, we need to start the rasa server. To start the server, utilize the following command on the command line: 
 
@@ -44,6 +40,7 @@ Then navigate to the port where `app.py` is running in your browser. The default
 1. Install python version 3.8, 3.9, or 3.10
 2. Clone the repository and navigate to the folder
 3. Install Rasa using `pip install rasa`
+4. Install Flask using `pip install Flask`
 4. Train the Rasa model using `rasa train`, and optionally interact with the model in the terminal using `rasa shell`
 5. Use `rasa run -m models --enable-api` to start the rasa server
 6. To run the FLASK webapp, navigate to the folder `cd flaskr` and run the script to start the FLASK webapp using `py app.py`
