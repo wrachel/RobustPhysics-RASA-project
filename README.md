@@ -7,7 +7,7 @@ Once python is installed, please clone this github repo, or ensure the code for 
 
 In order to install Rasa, please use the command `pip install rasa`. Ensure that you are in the folder of the repo you just cloned when running this command. 
 
-In order to install Flask, the web server library, use the command `pip install Flask`.
+In order to install Flask, the web server library, use the command `pip install Flask` and `pip install flaskwebgui`.
 
 ## Training the Rasa model: 
 
