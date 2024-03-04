@@ -8,7 +8,6 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
-  - inquire_frequency_domain
   - inquire_frequency_vector
   - specify_frequency_sample
   - input_spectral_data
@@ -17,6 +16,288 @@ intents:
   - inquire_cavity_wavefield
   - define_dielectric_gas_volume_cavity_wavefield
   - define_q_factor_cavity_wavefield
+  - model_tree_spectral_data
+  - add_tx_power_input
+  - edit_tx_power_inputs
+  - locate_tx_power_inputs_3d
+  - edit_component
+  - delete_component
+  - inquire_conductors
+  - inquire_wire_definition
+  - inquire_shield_definition
+  - inquire_shield_transfer_impedance
+  - inquire_shield_construction_subclasses
+  - inquire_inductance
+  - inquire_aperture_inductance
+  - inquire_braid_inductance
+  - inquire_skin_inductance
+  - inquire_cable_structure
+  - inquire_bundle_structure
+  - inquire_high_frequency_behavior
+  - inquire_differential_modes
+  - inquire_ground_return_path_steel
+  - inquire_wire_return_path_fiberglass
+  - inquire_shield_return_path_umbilical_cable
+  - inquire_algorithm_properties_calculation
+  - inquire_integration_transfer_impedance
+  - inquire_approximation_radiation_impedance
+  - inquire_reference_choice_ground
+  - inquire_reference_choice_outermost
+  - inquire_reference_choice_outermost_unique
+  - inquire_reference_choice_outermost_general
+  - inquire_reference_choice_mathematical_practice
+  - inquire_algorithm_first_step
+  - inquire_leaf_node_definition
+  - inquire_non_leaf_non_root_node_definition
+  - inquire_root_node_definition
+  - inquire_node_relationships
+  - inquire_radiation_impedance
+  - define_radiation_impedance
+  - describe_dm_radiation_resistance
+  - inquire_direct_approach_radiation_resistance
+  - inquire_reciprocal_approach_radiation_resistance
+  - create_cylindrical_fairing_volume
+  - create_spacecraft_volume
+  - cut_shape
+  - add_ellipsoid
+  - add_sphere
+  - ask_tree_view
+  - pan_model
+  - scroll_in_out
+  - rotate_model
+  - hide_objects
+  - add_3d_geometry
+  - wire_constructions
+  - add_connectors
+  - create_junction
+  - ask_about_simulation_tool
+  - ask_about_statistical_power_balance_method
+  - ask_about_SEA_framework
+  - ask_about_deterministic_models_vs_statistical_reduction
+  - ask_about_modal_expansion_basis
+  - ask_about_application_of_statistical_power_balance_approach
+  - ask_about_Inverse_Gamma_distribution
+  - ask_about_E_field_PDF
+  - ask_about_energy_subsystem_in_SPB_modelling
+  - ask_about_total_energy_in_cavity
+  - ask_about_average_modal_density
+  - ask_about_power_balance_principle
+  - ask_about_statistical_power_balance_modeling
+  - ask_about_power_balance_model
+  - ask_about_absorption_coefficient
+  - ask_about_coupling_loss_factor
+  - ask_about_layered_materials
+  - ask_about_transfer_matrix_method
+  - ask_about_dielectric_material_properties
+  - ask_about_conductive_material_properties
+  - ask_about_stochastic_wave_mechanics
+  - ask_about_frequency_stirred_probability_distribution
+  - ask_about_energy_probability_distribution
+  - ask_about_unconditional_electric_field_PDF
+  - ask_about_lossy_cavities
+  - ask_about_hybrid_model_solution
+  - ask_about_RhoPhy_data_structure_definition
+  - ask_about_conductor_radiated_power
+  - ask_about_diffuse_field_modeling
+  - ask_about_cavity_loss_factor_calculation
+  - ask_about_voltage_source_distribution
+  - ask_about_total_power_dissipation
+  - ask_about_cable_harness_response
+  - ask_about_cavity_wavefields_processing
+  - ask_about_mean_field_levels_calculation
+  - ask_about_stochastic_limits_definition
+  - ask_about_uncoupled_cable_harness_limits
+  - ask_about_cable_harness_limits_inside_cavities
+  - ask_about_cable_harness_limits_inside_cavities_terminal_inputs
+  - ask_about_loss_factor_due_to_cavity_radiation_resistance
+  - ask_about_loss_factor_due_to_antenna_loss
+  - ask_about_voltage_calculation_using_reciprocal_theorem
+  - ask_about_current_calculation_using_reciprocal_theorem
+  - ask_about_transfer_matrix_method1
+  - ask_about_wave_reflection_and_transmission_in_dielectric_layers
+  - ask_about_continuity_along_interface_of_dielectric_layers
+  - ask_about_generalization_to_multi_layered_structure
+  - ask_about_transmission_coefficient_definition
+  - ask_about_average_power_transmission_coefficient
+  - ask_about_power_transmission_loss_definition
+  - ask_about_absorption_coefficient_definition
+  - ask_about_field_incidence_absorption_coefficient
+  - ask_about_cavity_damping_loss_factor_contributions
+  - ask_about_wall_losses
+  - ask_about_absorption_cross_sections
+  - ask_about_antenna_loading_losses
+  - ask_about_modal_damping_loss_mechanism
+  - ask_about_skin_depth
+  - ask_about_reflection_loss_definition
+  - ask_about_average_reflection_loss
+  - ask_about_cavity_damping_loss_factor
+  - ask_about_absorption_section_definition
+  - ask_about_cavity_reverberant_wavefield_damping_loss_factor
+  - provide_energy_subsystem_parameters
+  - specify_energy_subsystem_dimensions
+  - specify_additional_parameters_energy_subsystem
+  - explain_free_propagation_wavenumber
+  - define_cavity_modal_density
+  - describe_total_energy_reverberant_wavefield
+  - explain_mean_squared_electric_field
+  - provide_energy_to_eu_conversion
+  - explain_internal_losses_cavity_subsystem
+  - express_internal_losses_q_factor
+  - mention_inverse_measured_q_factors
+  - explain_wall_loss_factor_function
+  - define_parameters_wall_loss_factor
+  - explain_field_incidence_absorption
+  - define_parameters_field_incidence_absorption
+  - explain_antenna_loading_losses
+  - define_parameters_antenna_loading_losses
+  - explain_absorption_section
+  - define_parameters_absorption_section
+  - add_cable_segment
+  - add_wires
+  - specify_connectors
+  - create_common_backbone_cable_segment
+  - edit_segment_cross_section
+  - find_closest_proximate_reflecting_plane
+  - override_calculated_value
+  - ask_unit
+  - ask_input_parameters
+  - ask_spectral_data
+  - ask_classes_spectral_data
+  - ask_data_structure
+  - ask_frequency_range
+  - ask_data_forms
+  - ask_parameter_units
+  - ask_reflection_loss
+  - ask_insertion_loss
+  - ask_shielding_effectiveness
+  - ask_spectral_synthesis
+  - ask_complex_constant_synthesis
+  - ask_rational_function_synthesis
+  - ask_pdf_distribution
+  - ask_cdf_distribution
+  - ask_rayleigh_distribution
+  - ask_normal_distribution
+  - ask_log_normal_distribution
+  - ask_lomax_distribution
+  - ask_inverse_gamma_distribution
+  - ask_exponential_distribution
+  - ask_chi_distribution
+  - ask_log_normal_distribution_fit
+  - ask_calculate_pdf_parameters
+  - ask_find_alternative_pdf_model
+  - ask_inverse_gamma_distribution_fit
+  - ask_calculate_inverse_gamma_parameters
+  - ask_lomax_distribution_unconditional_pdf
+  - ask_calculate_lomax_parameters
+  - ask_calculate_lomax_cdf
+  - ask_calculate_lomax_quantiles
+  - ask_reverberant_field_magnitude_pdf
+  - ask_calculate_mean_field_pdf
+  - ask_calculate_uncertainty_pdf
+  - ask_no_uncertainty
+  - ask_uncertainty_q_factor_frequency_variance
+  - ask_pdf_model_uncertainty_q_factor_frequency_variance
+  - ask_statistical_distribution_q_factors
+  - ask_uncertainty_all_mean_field_variables
+  - ask_marginal_pdf_modeled_inverse_gamma
+  - ask_closed_form_analytic_solution_log_normal
+  - ask_implementation_insight_parameter_deduction
+  - ask_excitation_uncertainty
+  - consider_source_current_as_random_variable
+  - derive_pdf_model_excitation_uncertainty
+  - calculate_mean_point_input_conductance
+  - add_excitation_uncertainty_algorithm
+  - solve_max_min_field_limit
+  - view_efield_outputs
+  - describe_connector_model
+  - describe_junction_model
+  - describe_junction_relationship
+  - describe_junction_structure
+  - describe_junction_matrices
+  - describe_external_field_source
+  - describe_plane_wave
+  - describe_multiconductor_transmission_line
+  - ask_generalized_telegrapher_equations
+  - ask_telegrapher_equations_components
+  - explain_modal_relationship
+  - describe_generalized_telegrapher_solution
+  - explain_network_description
+  - describe_network_solution_process
+  - consider_iterative_solution
+  - mention_external_field_terms
+  - describe_network_ports
+  - calculate_power_available
+  - calculate_power_delivered
+  - explain_scattering_parameter
+  - separate_current_components
+  - explain_loss_in_network
+  - distinguish_loss_roles
+  - calculate_loss_equations
+  - clarify_loss_roles
+  - explain_ohmic_loss
+  - describe_thevenin_circuit
+  - describe_norton_circuit
+  - explain_transfer_impedance
+  - describe_segment_as_antenna
+  - calculate_mean_power_matched_load
+  - explain_distributed_voltage_source_integration
+  - describe_gaussian_quadrature
+  - explain_quadrature_requirements
+  - describe_source_translation
+  - outline_quadrature_formula
+  - excitation_external_efield_constraints
+  - ask_simulation_tool_explanation
+  - ask_simulation_tool_features
+  - ask_simulation_tool_use_cases
+  - ask_cable_harness_model
+  - ask_separable_form
+  - ask_deterministic_transmission_line_modeling
+  - ask_canonical_test_cases
+  - ask_model_solution_parameters
+  - ask_frequency_solution_vector
+  - ask_constant_bandwidth
+  - ask_logarithmic_bandwidth
+  - ask_octave_frequencies
+  - ask_spectral_data_input
+  - ask_material_properties
+  - ask_dielectric_gas_properties
+  - ask_dielectric_solid_properties
+  - ask_solid_conductor_properties
+  - ask_direct_field_calculation
+  - ask_total_field_calculation
+  - ask_near_field_corrections
+  - ask_field_distribution
+  - ask_specific_graph_instances
+  - ask_quantiles_definition
+  - ask_pdf_description
+  - ask_cumulative_distribution_function
+  - ask_quantiles_computation
+  - ask_effective_modal_overlap
+  - ask_effective_total_loss_factor
+  - ask_statistical_ensemble_formulation
+  - ask_maximum_minimum_response_spectrum_levels
+  - ask_mean_electric_field
+  - ask_local_electric_field_frequency_stirred
+  - ask_s21_of_local_electric_field_frequency_stirred
+  - ask_build_aircraft_emc_model
+  - ask_build_automobile_emc_model
+  - ask_probabilistic_variance_aperture_coupling_power
+  - ask_relative_variance_multiple_cavities
+  - ask_relative_variance_single_cavity
+  - ask_probabilistic_variance_power_input
+  - add_materials
+  - choose_spectral_data
+  - define_PEC_backed_laminates
+  - edit_laminate
+  - define_open_backed_laminates
+  - add_connector
+  - add_branch_to_cable_segment
+  - edit_segment
+  - save_changes
+  - right_click_add_cable_segment
+  - create_cable_segment_3d_model
+  - add_wire_cable_segment_3d_model
+  - solve_cable_section_properties_first
 
 responses:
   utter_greet:
@@ -58,10 +339,752 @@ responses:
 
   utter_explain_define_dielectric_volume:
     - text: "To EDIT dialog for each Cavity, name the wavefield model, define the Dielectric Gas, and define the cavity Volume"
-  
+
   utter_explain_q_factor:
     - text: "Multiple different components of Loss Factor may need to be defined to establish the Total Q factor for each Cavity Wavefield. These can include Wall Loss, Reflection Loss, and Laminate Loss. To add Wall Loss, in the dialog, select ADD “Wall Loss” components, and define Conductive Solid Material and Exposed surface Area. For Absorption Section, in the dialog, select ADD “Absorption Section” components. Units are an effective area (m2). Multiple Absorption Sections are allowed. For Reciever Antenna Loss, in the dialog, select ADD “Receiver” antenna loss components and reference the antenna. Multiple Absorption Sections are allowed. To add Reflection Loss, in the dialog, select ADD “User-def Reflection Loss” components. Define Reflection Loss of wall material and Exposed surface Area. Multiple Reflection Loss surfaces are allowed. For Laminate Loss, in the dialog, select ADD “Laminate Loss” components. Define the PEC-backed Dielectric Laminate, Exposed surface Area, and Range of EM field incidence. Multiple Laminate surfaces are allowed."
-  
+
+  utter_model_tree_spectral_data:
+    - text: "To model tree data for an antenna power input, you can follow these steps: In Model Tree/Spectral Data, enter S11. Then, in Model Tree / Power, define a Power (W) spectrum. Finally, in Model Tree / Antenna, define the antenna name and S11."
+
+  utter_add_tx_power_input:
+    - text: "To add Tx power input, you can follow these steps: In Tree / Table view, go to Excitation / Power Inputs, right-click the field, and click edit. If you're in the 3D Model Window, select the cavit wavefield and click the power source button in the toolbar."
+
+  utter_edit_tx_power_inputs:
+    - text: "To edit Tx power inputs, go to the power inputs dialog, add multiple Tx sources, define the antenna & power spectrum for each, and define the location of the antenna in 3D. This defaults to the center of the cavity."
+
+  utter_locate_tx_power_inputs_3d:
+    - text: "To locate the Tx power inputs in 3D geometry, right-click on the 3D power input object -> Edit excitation. You can edit, move, delete it, etc."
+
+  utter_edit_component:
+    - text: "To edit a component, right-click the component you'd like to edit, and click the 'edit' option."
+
+  utter_delete_component:
+    - text: "To delete a component, right-click the component you'd like to delete, and click the 'delete' option."
+
+  utter_respond_conductors_description:
+    - text: "Conductors in the Cable Harness model are objects that carry electrical currents and support voltages relative to the Cable Section Reference (or Ground). They include two distinct sub-classes – Wires and Shields."
+
+  utter_respond_wire_definition:
+    - text: "Each wire in the Cable Harness model is defined by Solid Conductor Material and the diameter of a central conduction core, along with an external insulation layer defined by Dielectric Solid Material and thickness."
+
+  utter_respond_shield_definition:
+    - text: "A Shield in the Cable Harness model is a hollow conducting shell that typically surrounds one or more Wires. In most applications, each Shield in a Cable Section is a conductor that carries its own unique current and voltage relative to Ground, even when the Shield is selected as the Reference in a two-conductor cable (e.g., coaxial cable)."
+
+  utter_respond_shield_transfer_impedance:
+    - text: "Shield Transfer Impedance in the Cable Harness model is an intrinsic per-unit-length (PUL) property of the Shield Section. It relates the voltage induced between the center conductor and the shield to the shield current."
+
+  utter_respond_shield_construction_subclasses:
+    - text: "Two sub-classes of Shield Construction are supported in the Cable Harness model: 1. A Tube / Foil Shield, which is impervious but semi-rigid. 2. A Braided Shield, which is flexible but porous."
+
+  utter_respond_inductance:
+    - text: "Inductance in the Cable Harness model is the penetration inductance, which is the sum of the aperture inductance and the braid inductance."
+
+  utter_respond_aperture_inductance:
+    - text: "The aperture inductance in the Cable Harness model is due to the magnetic coupling through the hole. Here, the apertures are modelled as ellipses"
+
+  utter_respond_braid_inductance:
+    - text: "The braid inductance in the Cable Harness model is due to the interaction between the two interlaced halves of the braid."
+
+  utter_respond_skin_inductance:
+    - text: "The skin inductance in the Cable Harness model is due to the eddy current in the apertures’ walls excited by the magnetic field penetrating the shield."
+
+  utter_respond_cable_structure:
+    - text: "A cable in the Cable Harness model has multiple conductors, each with dielectric insulation. It may also have a conductive shield and/or a protective sheath."
+
+  utter_respond_bundle_structure:
+    - text: "A bundle or module within a cable harness line segment may contain multiple cable assemblies. The bundle may have an additional conducting shield and/or protective sheath. The corresponding 'topology' of the cross-section properties for each cable harness line segment may be quite complex, and this complexity is managed by a KBL data structure defined by the cable harness industry."
+
+  utter_respond_high_frequency_behavior:
+    - text: "At high frequencies, a current travels as a transverse electromagnetic (TEM) wave on the surface of each conductor. Since there must always be a current return path, TEM modes on a multiconductor cable are treated as a Transmission Line (as distinct from a Wave Guide) with currents transmitted in multiple Differential Modes (DM)."
+
+  utter_respond_differential_modes:
+    - text: "Since the current return path may not always be the electrical Ground, the number of DMs is not always equal to Nc, the number of conductors."
+
+  utter_respond_ground_return_path_steel:
+    - text: "In a steel-bodied automobile or aluminum fuselage aircraft, the structure material is a good electric conductor and zero potential Ground. It can serve as the current return path for all wires in a cable section."
+
+  utter_respond_wire_return_path_fiberglass:
+    - text: "In a fiberglass boat, where there is no conducting Ground structure, a single Reference conductor in the cable must be chosen as the Ground-equivalent Return Path or Reference."
+
+  utter_respond_shield_return_path_umbilical_cable:
+    - text: "In an umbilical cable between spacecraft on a launch pad and launch tower, where there is no close/proximate Ground for return current, a Shield conductor in the cable is typically designed to be the Return Path or Reference."
+
+  utter_respond_algorithm_properties_calculation:
+    - text: "We present an algorithm to calculate the per-unit-length (PUL) properties of cable harnesses with some cables inside shields. The algorithm mainly solves three problems: 1. The capacitance, inductance, and conductance matrices are calculated from FreeFEM simulations. Shields cut the whole simulation area into several disconnected domains. We have to run FreeFem several times on the connected domains inside or outside shields, then combine the results from multiple FreeFem simulations. 2. A shield is described by its transfer impedance. The algorithm integrates the transfer impedance into PUL properties. 3. An approximation method is developed to estimate the PUL radiation impedance."
+
+  utter_respond_integration_transfer_impedance:
+    - text: "The algorithm integrates transfer impedance into PUL properties by describing a shield with its transfer impedance. This process is essential for accurate calculations in cable harnesses with shields."
+
+  utter_respond_approximation_radiation_impedance:
+    - text: "The algorithm uses an approximation method to estimate the PUL radiation impedance. This allows for efficient and reliable calculations in the context of cable harness properties."
+
+  utter_respond_reference_choice_ground:
+    - text: "If there is a lossless ground in close proximity, always use the ground as the reference. A ground is a large conductor with zero resistance and constant voltage everywhere, making it a natural choice of the reference."
+
+  utter_respond_reference_choice_outermost:
+    - text: "If the first rule doesn't apply, the outermost conductor is used as the reference in the transmission line model."
+
+  utter_respond_reference_choice_outermost_unique:
+    - text: "When there is one outermost shield and all other conductors are inside the shield, there is a unique choice of the reference, and the outermost shield is selected as the reference."
+
+  utter_respond_reference_choice_outermost_general:
+    - text: "If there are multiple outermost shields or wires, any outermost shield or wire can be chosen as the reference."
+
+  utter_respond_reference_choice_mathematical_practice:
+    - text: "Mathematically speaking, any conductor can be used as the reference in the transmission line model. However, in practice, it seems strange to use a wire inside a shield."
+
+  utter_respond_algorithm_first_step:
+    - text: "The first step of the algorithm is to build a tree diagram based on the harness geometry. The tree diagrams depict the arrangement of conductors (wires or shields) in the cable harness."
+
+  utter_respond_leaf_node_definition:
+    - text: "A leaf node in the tree diagram is a node without any children. It represents the end points of the tree branches."
+
+  utter_respond_non_leaf_non_root_node_definition:
+    - text: "A non-leaf non-root node in the tree diagram always represents a shield. It is a node that has children and is not the root of the tree."
+
+  utter_respond_root_node_definition:
+    - text: "The root node in the tree diagram can be the open space or the outermost shield. It is always labeled as 0 to indicate that the system reference is defined as conductor 0."
+
+  utter_respond_node_relationships:
+    - text: "The children of a node in the tree diagram are the conductors directly inside the shield or the open space. The descendants of a node include all the conductors inside the node."
+
+  utter_respond_radiation_impedance:
+    - text: "The radiation impedance in a cable harness is defined to model the radiation from the cable harness. It represents the Ohmic loss consumed by the radiation impedance. The radiation impedance can be treated as a per-unit-length (PUL) property or as a lumped element, depending on the modeling approach used."
+
+  utter_respond_define_radiation_impedance:
+    - text: "The radiation impedance in a cable harness is defined to model the radiation from the cable harness. It represents the Ohmic loss consumed by the radiation impedance. The radiation impedance can be treated as a per-unit-length (PUL) property or as a lumped element, depending on the modeling approach used."
+
+  utter_respond_describe_dm_radiation_resistance:
+    - text: "Numerical calculations have shown that the differential mode (DM) radiation resistance of a transmission line is independent of the length of the line and the termination. It can be found from a finite length of line that is terminated with a matched load and driven with a matched source, determining the total energy radiated."
+
+  utter_respond_direct_approach_radiation_resistance:
+    - text: "The direct approach to finding the radiation resistance of a transmission line involves calculating the radiated field from the current on the line and integrating it over the sphere. This approach requires accurate modeling of the radiated field."
+
+  utter_respond_reciprocal_approach_radiation_resistance:
+    - text: "In the reciprocal approach for determining the radiation resistance of a transmission line, the response of the line to an external field is found using a closed-form solution. This method provides an alternative perspective, considering the impact of an external field on the line's behavior."
+  utter_create_cylindrical_fairing_volume:
+    - text: "To create a cylindrical fairing volume, click on the “Add Cylinder” button, specify the height, radius, and position data, then hit Save."
+  utter_create_spacecraft_volume:
+    - text: "Select a spacecraft volume from the Toolbar Click on the “Add [3D solid selected]” button, specify the dimensions and position data, then hit Save."
+  utter_cut_shape:
+    - text: "To cut a shape:\n\nSelect a shape either in the 3D window (or in the Model tab)\n\nUsing Ctrl + click, select a second shape.\n\nHit the Toolbar CUT button to perform the cut.\n\n\nNote: The second shape will always cut the first shape. Both shapes must be intersecting for this to work. This functionality works with other cut shapes and combined shapes as well."
+  utter_add_ellipsoid:
+    - text: "To add an ellipsoid, click on the “Add Ellipsoid” button, specify the 3 radii and position data, then hit Save.\n\nEdit Height (e.g., above Cylinder) in 3D Location tab."
+  utter_add_sphere:
+    - text: "To add a sphere, click on the “Add Sphere” button, specify the radius and position data, then hit Save."
+  utter_ask_tree_view:
+    - text: "Tree view on the left of the main window shows all the input and output data to the software. When the program starts, it is empty by default."
+
+  utter_pan_model:
+    - text: "Use keyboard arrows or mouse wheel to pan the model."
+
+  utter_scroll_in_out:
+    - text: "Scroll your mouse to zoom in or out."
+
+  utter_rotate_model:
+    - text: "Click the right mouse button and move to rotate."
+
+  utter_hide_objects:
+    - text: "In “MODEL tab” click to select a Model Object & hit SPACEBAR to toggle VISIBILITY ON / OFF."
+
+  utter_add_3d_geometry:
+    - text: "Can be done either via the Tree View under Geometry → Exterior Field or the 3D Model window tool palette."
+
+  utter_wire_constructions:
+    - text: "Wire constructions found under 1D Cable Current Fields → Wires Sections in the Tree / Table view. Wires have the following properties (all units in meters): Conductor material & diameter + Insulation material & thickness."
+
+  utter_add_connectors:
+    - text: "Can be added via the Tree view under Wire Junctions → Connectors or directly within the 3D Model Window via the Tool Palette."
+
+  utter_create_junction:
+    - text: "To automatically create a “Junction” at intersections of Cavities and Geometries, select the “Cavity Intersect” Button. This will create junctions at all points where a cable crosses a face of a cavity or geometry."
+  utter_answer_simulation_tool:
+    - text: "The simulation tool defined in the Math Spec I uses stochastic wave mechanics to predict the electromagnetic field levels within multiply-connected aperture cavities. It quantifies the high-frequency field within cavities statistically, typically by the mean and maximum expected level at a given level of probability."
+
+  utter_answer_statistical_power_balance_method:
+    - text: "Lyon introduced the statistical power balance method in 1962 for predicting the vibration and acoustic response of multiply connected reverberant subsystems within the framework of statistical energy analysis (SEA)."
+
+  utter_answer_SEA_framework:
+    - text: "Statistical energy analysis (SEA) is a framework introduced by Lyon in 1962. Hill has laid the foundations for statistical power balance modeling of EM fields in reverberant, multi-modal domains within this framework."
+
+  utter_answer_deterministic_models_vs_statistical_reduction:
+    - text: "Deterministic models, while an alternative approach, do not reliably estimate the predicted EM field at a specific point and frequency without statistical reduction to account for uncertainties in the EM source field and parameters of the reverberant domain."
+
+  utter_answer_modal_expansion_basis:
+    - text: "Bremner has shown how a modal expansion basis for each reverberant EM field can be used to predict the first two statistical moments of the response - mean and variance - from the physical EM parameters of each subsystem. It involves selecting a suitable probability density function to predict both mean and maximum expected response in each domain."
+
+  utter_answer_application_of_statistical_power_balance_approach:
+    - text: "Hill's statistical power balance approach has been applied to a general network of reverberant electromagnetic subsystems, including modeling EM environments in connected cavities typical of a space launch vehicle payload fairing. Junqua's approach, applied in this context, yielded encouraging results for the statistical mean electric field in each subsystem, beneficial for space vehicle EMC design."
+
+  utter_answer_Inverse_Gamma_distribution:
+    - text: "Bremner recently proposed an Inverse Gamma distribution for the frequency variance of the field energy, offering advantages over the heuristic assumption of a Log Normal distribution. Treating Rayleigh statistics as conditional on this frequency variance results in a non-parametric PDF for the frequency-stirred electric field, valid for a wide range of cavity Q factors."
+
+  utter_answer_E_field_PDF:
+    - text: "The new E field PDF proposed by Bremner is calculated from the predictable mean and variance of the energy. It is shown to be valid for a wide range of cavity Q factors and offers a consistent manner of predicting the electric field at any discrete frequency within a given band, applicable to both under-moded and over-moded cavities."
+  utter_answer_energy_subsystem_in_SPB_modelling:
+    - text: "In statistical power balance (SPB) modeling, an energy subsystem refers to a group of resonant modes with a locally unique reverberant energy level. Variations in reverberant energy levels among connected cavity fields occur due to differences in field excitations in each cavity or significant variations in cavity Q, often caused by localized loss mechanisms such as RF absorbing materials or aperture leakage."
+  utter_answer_total_energy_in_cavity:
+    - text: "The total energy of the reverberant field in a cavity with volume V is equal to the product of its energy density averaged over space, indicated by <>, and its volume. Alternatively, it can be expressed as E = ½(εE^2 + μH^2)V, where ε, μ, E, and H are, respectively, the permittivity, permeability, total electric, and total magnetic fields at any location in the cavity. E is the field magnitude at a location. E^2 and H^2 are mean-squared electric and magnetic fields which are related through Z, where Z is the characteristic impedance of the medium. The total energy E is constant with time, but energy oscillates between electric field energy and magnetic field energy over time. When considering only the electric field energy, E = ½(εE^2)V, we have the additional ½ factor due to time averaging. However, the total constant energy is more important in this context."
+  utter_answer_average_modal_density:
+    - text: "Hill has shown that the average electromagnetic modal density of an enclosed volume is relatively insensitive to geometric details and can be calculated at any given frequency from only the electromagnetic wave speed and the volume of the enclosure."
+  utter_answer_power_balance_principle:
+    - text: "For any cavity reverberant field, the power balance principle requires that the power input from an external source (e.g., antenna) must be balanced by the total power dissipated by all losses, where Q is the cavity Q factor (Δf is the corresponding damping loss factor)."
+  utter_answer_statistical_power_balance_modeling:
+    - text: "Previous work on statistical power balance modeling used δ as the quantity describing energy dissipation in each cavity reverberant field and coupling cross section to describe energy exchange between two reverberant fields between cavities i and j, where δ indicates an average over all angles Ω and polarizations of the field. In this model, Lyon's dimensionless loss factor notation is preferred, denoted by η for the damping loss factor of cavity i and κ for coupling loss factors between cavities i and j."
+  utter_answer_power_balance_model:
+    - text: "In the power balance model, each cavity's damping loss factor includes wall losses, absorption cross sections (surface absorption losses), and antenna loading losses (effective antenna losses). It's important to note that, contrary to Hill's power balance modeling of reverberation chambers, neither the open aperture loss nor any leakage loss are included in each cavity's damping loss factor. This omission is because energy exchange through any aperture is modeled explicitly by a coupling loss factor. The net energy exchange across any aperture or leak depends on the difference in modal energy levels of the reverberant wavefields on each side, which can only be defined by the energy equilibrium solution of the power balance matrix (Eq. Ref 7)."
+  utter_answer_absorption_coefficient:
+    - text: "The absorption coefficient is defined as the integral of the absorption cross section over the surface area of the material. It represents the fraction of incident electromagnetic energy absorbed by the material. The average damping loss factor due to absorption for a cavity, along with its corresponding Q factor, is defined in reference literature. The Reflection Loss for RF absorbing materials is typically measured and published by the manufacturer and stored as spectral data in the model's cavity damping database. Alternatively, the surface absorption of a specific surface area inside a cavity may be defined by the 'absorption section.' In practical applications, such as reverberant field cavities containing electronics, losses from absorption of constituent materials and losses due to printed circuit board traces terminating in matched impedances are accounted for. Complex materials and assemblies within the cavity, such as a spacecraft with an array of electronics, typically have losses quantified as an absorption cross section. Recent measurements by Flintoft et al for an ensemble of different printed circuit board architectures show that surface absorption losses are generally greater than 'effective antenna' losses."
+  utter_answer_coupling_loss_factor:
+    - text: "The coupling loss factor consists of the coupling through apertures. Unlike Lyon's statistical energy analysis (SEA) coupling loss factors, which are less common in electromagnetics, aperture cross section is more widely used to describe the power transmission characteristic of the aperture. The power transmission coefficient (PTC) is defined as the ratio of power incident on the aperture from a source wavefield with reverberant energy E_r to the power transmitted to free field (i.e., reverberant energy level E_t). For an aperture in an enclosure surface, the average PTC over steradians and over all polarities of incident wave is denoted. By definition, the corresponding transmission cross section of the aperture (with units of area) is simply the average PTC multiplied by the area of the aperture. The aperture coupling loss factor is defined as the power transmitted to free field in the receiving space (E_t) for a given reverberant energy level in the source field (E_r). Therefore, the coupling loss factor is always defined for free field conditions in the receiving field (E_t) because it is an influence coefficient in the power balance matrix. Coupling loss factors defined in this way satisfy the reciprocity relationship."
+  utter_answer_layered_materials:
+    - text: "In high-frequency electromagnetic field engineering, two-dimensional panels or sheets of layered materials can play important roles. The laminate may consist of multiple layers, each with quite different materials or constructions, including dielectric materials (e.g., RF absorber, insulator, air, etc.), solid conducting materials (e.g., metals), perforates and screens, and other periodic constructions (e.g., frequency-selective surfaces). Each layer is assumed to have a finite (non-zero) thickness that is small compared to the transverse length and width dimensions of the laminate panel, and not much thicker than the wavelength of electromagnetic propagation in each layer material. Under these conditions, laminated sheets reflect, transmit, and absorb incident electromagnetic waves from a reverberant cavity field, but do not themselves support any strong build-up of local reverberant energy. As a result, they are represented in the statistical power balance (SPB) model as cavity wall loss factors and/or as energy transmission coupling loss factor(s) between reverberant electric fields."
+  utter_answer_transfer_matrix_method:
+    - text: "The surface reflection coefficient of a multi-layer laminate, required to calculate the wall loss factor, and the transmission coefficient of a multi-layer laminate, required to calculate the coupling loss factor, can be calculated using the transfer matrix method. The reflection coefficient is calculated as a function of incident wave angle and for two orthogonal polarities – transverse electric (TE) and transverse magnetic (TM). These results are then averaged to provide the following 'macro' properties for the multi-layer laminate: Reflection Loss and Insertion Loss. For reverberant EM field modeling, the required averaging may be application-specific, and the user should have the option to specify normal incidence, random incidence, or field incidence, as well as TE, TM, or both polarities."
+  utter_answer_dielectric_material_properties:
+    - text: "A dielectric material is defined by three properties: permittivity, permeability, and conductivity. These properties may be approximately constant or defined as complex functions of frequency."
+  utter_answer_conductive_material_properties:
+    - text: "A highly conductive material (e.g., metal) is defined by two properties: conductivity and permeability. Similar to dielectric materials, these properties may be approximately constant or defined as complex functions of frequency."
+  utter_answer_stochastic_wave_mechanics:
+    - text: "The definition of an electromagnetic (EM) field response as an energy level allows the use of stochastic wave mechanics to define the modal properties and response of arbitrarily complex cavity fields. Stochastic wave mechanics models are stochastic in the sense that a larger ensemble of resonant modes in a subsystem – and a larger number of statistically independent subsystems in a total system model – leads to a more reliable, converged result. In statistical models, a converged prediction is one in which the relative variance of uncertainty on the prediction approaches zero, meaning the standard deviation of the uncertainty is very small compared to the predicted mean. In the context of Statistical Power Balance (SPB), the modal parameters of complex cavity fields are considered to be a statistical ensemble due to inherent uncertainty in the 'as-built' dimensions, boundary conditions, etc., and uncertainty in the 'as-operated' mass distribution, material properties, damping, etc., in addition to any uncertainty associated with random loading. These uncertainties are significant in any dynamic system at higher frequencies, and studies have shown that the as-built variability (uncertainty) is significant above only the first 5-10 resonant modes."
+  utter_answer_frequency_stirred_probability_distribution:
+    - text: "It is clear from Figure 9 that there is a stronger variance with frequency than would be typical of an over-moded reverberation chamber. As a result, the 'frequency-stirred' probability distribution differs significantly from the exponential distribution (Chi-squared with 2 degrees of freedom) used in reverberation chambers. Following the work of Lyon and Langley, Bremner used an asymptotic statistical reduction of the modal expansion for electric field in a cavity to confirm that the Chi-squared distribution at a single frequency is conditional on the spatial mean electric field. From Bayesian statistics, the unconditional electric field Probability Density Function (PDF) at any spatial point and frequency (rad/s) can be defined from the product of the conditional Chi-square distribution and the marginal distribution of the spatial mean electric field. The mean field in each cavity is directly proportional to the total energy, where E_total is a component of the total electric field. The mean energy level for k multiply-connected cavities can be readily predicted from the statistical power balance matrix. The unconditional electric field PDF can therefore be written in terms of the marginal PDF of the field energy level. Weaver has derived a non-parametric relative variance formulation for the energy of a reverberant wave field based on modal overlap m of the cavity’s input Conductance, where L and N are respectively the number of receiver and source positions used to calculate cavity energy. Modal overlap is defined as the ratio of the modal damping bandwidth to the frequency spacing. The parameter K is the measure of the spatial variance of the cavity mode shapes, which asymptotes to a value close to 3. Langley & Cotoni have provided a matrix formulation for propagating this relative variance for any network of multiply connected reverberant fields."
+  utter_answer_energy_probability_distribution:
+    - text: "There is not wide agreement on the probability distribution of energy. Researchers have proposed various distributions including Gamma, Log-Normal, and Complex Wishart distributions. Bremner has shown that energy is proportional to the sum of mean-squared electric field levels over the enclosure volume, represented as a sum over N samples. Similar to the total mean-squared electric field being Chi Square distributed with 6 degrees of freedom, the energy should be Chi Square distributed with 6N degrees of freedom. Lyon’s original 1969 paper suggested a Gamma distribution, which has a k parameter to represent the 6N degrees of freedom. However, the Gamma distribution is not a good fit for under-moded fields. The Inverse Gamma distribution has been found to be more suitable, taking the form shown. On a log scale, the inverse gamma distribution is approximately symmetrically banded for all. The relative variance increases asymptotically above unity at small values."
+  utter_answer_unconditional_electric_field_PDF:
+    - text: "A closed form solution for the unconditional electric field Probability Density Function (PDF) is possible if the marginal energy PDF is assumed to be an Inverse Gamma distribution, which is integrable. In this case, the probability density function for electric field level at any spatial point is a new distribution, as shown in the equation provided. The parameters alpha and beta can be calculated from the mean energy and the frequency variance of the energy for each cavity electric field. The parameter alpha is defined by the relative variance of the mean squared electric field, which is equivalent to the Gaussian Orthogonal Ensemble (GOE) relative variance of energy. And the parameter beta is defined by alpha and the power balance equation for mean energy."
+  utter_answer_lossy_cavities:
+    - text: "In lossy cavities, the reverberant field is attenuated by the absorber materials, so the direct field from the source antenna and aperture power inputs to the cavity reverberant field cannot be ignored. The direct field amplitude at any location depends on the distance from the source due to spherical spreading of the radiated power. A direct field is always present for each source driving a reverberant field, and the total field is the uncorrelated sum of the direct and reverberant fields. The direct field is calculated independently for each effective power input, which can usually be assumed to be statistically uncorrelated. Hill has shown that the total field will have a Rice distribution, as described in the equation provided. The measured spatial field distribution shown in [25] indicates that in the Bare condition, the reverberant field dominates the direct field, and the spatial gradient of the field is determined by statistical power balance with a Chi-squared Probability Density Function (PDF). When one-inch-thick RF absorbing foam is added to the cavity walls, the reverberant field is attenuated to less than the direct field, and the total measured field approaches the spatial distribution of an ideal direct field. The top of the cavity (z>150cm) is always reverberant since there is no RF foam on the walls above 150 cm, and the parabolic shape results in strong field reflection and scattering."
+  utter_answer_hybrid_model_solution:
+    - text: "The 'hybrid' deterministic-statistical coupling model is solved in a three-step process. The first step involves cable transmission line modeling with deterministic terminal voltage (and/or current) sources and direct field radiation losses to a source-free and boundary-free exterior field. The second step is the cavity stochastic power balance modeling to predict the reverberant electric field in each cavity due to power sources independent of the cable harness and due to the combination of cable radiation power inputs and cable radiation loading. The third step involves the stochastic modeling of the total cable harness currents and terminal voltages, comprising two components: the (uncoupled) direct field currents and voltages under deterministic terminal loads obtained from Step 1, and the additional reverberant cable currents and voltages under the stochastic excitation by coupled cavity electric fields obtained from Step II. The mean-squared current in a conductor is proportional to the expected value of the squared magnetic field, which can be predicted from the cavity reverberant energy level using the principle of diffuse field reciprocity and from the applied terminal voltages, which are proportional to the expected value of terminal electric fields. Here, m is the modal overlap of the cavity, Z_rad is the free field radiation impedance of the conductor in the cable harness, and Z_line is the total line impedance of the conductor (including conductivity). Both line impedances are obtained from the deterministic Transmission Line model of the cable harness."
+  utter_answer_RhoPhy_data_structure_definition:
+    - text: "The RhoPhy Data Structure is used to define the list of cable segments in each cavity wavefield. It includes information about the uncoupled cable analysis, which calculates the total power radiated to free field for the group of cable segments within each cavity field. The radiation impedance is defined on a cable harness so that the radiation from the cable harness is modeled as the Ohmic loss consumed by the radiation impedance. To find radiation into the cavity, sources are placed on ports and the system is solved. Power dissipated in lumped radiation impedances and PUL radiation impedances gives the power radiated into the cavity. Power in individual impedance terms can be added since interference was taken care of in the radiation impedance calculation. Under the common mode (CM) radiation assumption, the total power radiated to free field by the group of cable segments that lie within a cavity is the summation over power contributions from each individual conductor (wire). The vector of radiated power losses from all of the cable segments within each cavity wavefield is then written to the RhoPhy Model Data Structure."
+  utter_answer_conductor_radiated_power:
+    - text: "The radiated power from the lumped radiation impedance in a conductor is determined by the current network solver, which outputs the current and voltage on both ends of the conductor. The conductor, represented by a cable segment, has lumped radiation and non-radiation impedance on both sides. The radiated power from the lumped radiation impedance can be calculated based on the current and voltage outputs from the solver. This process involves considering the conductor's properties and the impedance characteristics of the surrounding environment. By analyzing the current and voltage data, the radiated power from the lumped radiation impedance can be accurately determined."
+  utter_answer_diffuse_field_modeling:
+    - text: "An ideally diffuse field within a cavity is modeled as a superposition of uniform plane waves. Each plane wave in the expansion excites the propagating modes on the line. The excitation by a plane wave is modeled as a set of current and voltage sources at the termination of the line. The local reference of the line is aligned on the z-axis, allowing the excitation source model of Paul (2008) to be used. The plane wave incidence angle and polarization vectors are rotated to account for differences between the local (z-aligned) and physical coordinates. A plane wave in the local coordinate system can be represented by an arbitrary polarization vector, the free-space wavenumber, and elevation and azimuth angles from which the wave is incident. With this excitation, induced voltage and currents on the MTL segment can be calculated. When the MTL reference conductor is a wire, the voltage source vector is determined using specific equations. Similarly, when the reference conductor is a ground plane in the x = 0 plane (in local coordinates), the voltage source vector is calculated differently. It's important to note that this voltage source vector is only used internally to the OSU Comp. Mod. II transmission Line code and does not need to be written to the RhoPhy data structure."
+  utter_answer_cavity_loss_factor_calculation:
+    - text: "To calculate the cavity loss factor due to radiation loading, the field excitation is applied with any nominal value, such as unity. The radiation resistance is used to find the loading that an MTL segment within a network places on a particular cavity. The segment exposed to the diffuse field acts as a receiving antenna with a radiation resistance, and an equivalent voltage source that accounts for the excitation by the external field is found. The mean power delivered to a matched load placed on the output of an antenna in an ideal diffuse field can be calculated using a specific equation. An equivalent circuit model is then used to deliver the mean-square power to the matched load. The appropriate 'diffuse' voltage source is determined and added to the line, and the power dissipated by the network loads is summed. The power 'dissipated' in the load should not be included since that power is radiated back into the cavity field. The quality factor due to the network loading is found using another equation involving cavity volume, angular frequency, and mean energy density in the diffuse field."
+  utter_answer_voltage_source_distribution:
+    - text: "The voltage source due to a diffuse field ideally should be distributed across the line segment, similar to the distribution of the radiation resistance along the line. However, because the source is incoherent, the contributions of the differential voltage sources on the line must be added incoherently. The distributed voltage source on the line, represented by Q(x), is calculated using an integration formula evaluated using Gaussian quadrature. The network solution that gives the power dissipated in the nth network load when a voltage source of magnitude V(x) is placed at position x on the line can be determined using this approach. The quadrature requires the network to be solved with sources placed at multiple interior points on the line. Translation matrices are used to translate the voltage source at position x to become voltage and current sources at specific points. The network must be solved L times using the quadrature approach, but the network is only set up once so no matrix inversions are required in the solution stage, minimizing the computational cost. Finally, the vector of Cable Segment Loading Q factors should be written to the RhoPhy Model Data Structure, referencing appropriate Spectral Data objects for spectral data and damping loss factor."
+  utter_answer_total_power_dissipation:
+    - text: "The total power dissipated by all losses is equal to the fraction of power loss, denoted as alpha, times the field energy level occurring at rate omega (rad/s). The Q factor, which is the inverse of the loss factor, is a key parameter in determining the total cavity wavefield loss factor. This factor accounts for contributions from multiple different loss mechanisms, including those defined in the Math Spec I [Uncoupled] Cavity Wavefields Analysis. Additionally, in coupled cable-cavity analysis, each cable segment behaves like an antenna, contributing an additional loss mechanism to each cavity wavefield that contains one or more cable segments."
+  utter_answer_cable_harness_response:
+    - text: "For applied (deterministic) voltage and current sources defined in the Terminal Blocks of the model, the OSU Comp. Mod. II transmission Line code calculates the complex and deterministic cable harness response. The results of this calculation are then written to the RhoPhy Data Structure."
+  utter_answer_cavity_wavefields_processing:
+    - text: "For each of the F Cavity Wavefields in sequence, the OSU Comp. Mod. II transmission Line code performs the following steps: 1. It calculates the effective voltage sources on all of the cable segments and their conductors within the cavity, assuming coherent common (antenna) mode coupling. 2. It calculates the complex and deterministic cable harness response. 3. The results of these calculations are then written to the RhoPhy Data Structure. This process is repeated for each of the F Cavity Wavefield Excitation Load cases, and the results are also written to the RhoPhy Data Structure."
+  utter_answer_mean_field_levels_calculation:
+    - text:
+        "To calculate the statistical mean total voltage magnitude of response at the cable harness nodes, the OSU Comp. Mod. II transmission Line code assumes all of the F+1 excitation load cases are statistically uncorrelated and performs the necessary calculations. The resulting vectors of total voltage magnitude field levels are then written to the RhoPhy Data Structure under 'OUTPUTS / COUPLED CABLE-CAVITY FIELD / Mean Field Levels / Voltage – Junctions'.
+        Similarly, the statistical mean total current magnitude of response in the termination loads and the statistical mean 2-port S parameter magnitude are calculated using similar processes and written to the RhoPhy Data Structure under 'OUTPUTS / COUPLED CABLE-CAVITY FIELD / Mean Field Levels / Current - Junctions' and 'OUTPUTS / COUPLED CABLE-CAVITY FIELD / Mean Field Levels / S parameters' respectively."
+  utter_answer_stochastic_limits_definition:
+    - text:
+        "The stochastic limits for any field response are defined by the quantiles of the probability density function or cumulative probability distribution for any user-defined probability. In the case of reverberant electric field magnitude in each cavity wavefield, these stochastic limits are already defined in Math Spec I and implemented in RhoPhy code from Alpha Release 1 (February 2022).
+        However, the stochastic limits of coupled cable voltage and current response are somewhat more complex due to multiple components with different probability distributions."
+  utter_answer_uncoupled_cable_harness_limits:
+    - text: "In the case of a cable harness where all segments are outside all cavities but excited by terminal inputs, it is considered uncoupled. In NASA Release 1, the maximum, mean, and minimum stochastic limits will all be equal to the magnitude of the uncoupled (deterministic) cable segment result."
+  utter_answer_cable_harness_limits_inside_cavities:
+    - text: "A cable harness with segments inside one or more cavities but not excited by terminal inputs will have a Rayleigh probability density function. For each Rayleigh distributed response variable (voltage, current, S parameter), the Quantiles of the Rayleigh distribution (i.e., Max X, Mean X, Min X) scale on the standard deviation of the zero-mean, normally distributed real and imaginary parts of the complex random variable, which is calculated as the mean magnitude response to the cavity wavefield excitation. For terminal voltages, the stochastic limits for user-defined probabilities are calculated using the formula provided. For junction currents and port S parameters, similar formulas are used to determine the stochastic limits."
+  utter_answer_cable_harness_limits_inside_cavities_terminal_inputs:
+    - text: "A cable with segments inside one or more cavities and excited by terminal inputs will have a Rice probability density function. For each Rice distributed total response variable (voltage, current, S parameter), the Quantiles of the Rice distribution (i.e., Max XT, Mean XT, Min XT) scale on two parameters: the deterministic response to applied terminal loads and the standard deviation of the Rayleigh distributed response to all cavity field excitations. There is no closed form solution for the Quantiles of the Rice distribution, so they have to be iteratively calculated from the Rice Cumulative distribution using the Marcum Q function of order 1. For user-defined probabilities, the corresponding Max XT and Min XT are simple roots of the monotonically increasing Rice Cumulative distribution."
+  utter_answer_loss_factor_due_to_cavity_radiation_resistance:
+    - text: "The loss factor due to the coupling between radiation resistance and the electromagnetic field is calculated based on the mean-squared value of the electric field inside the reverberant chamber and the Ohmic loss at the radiation resistance. Essentially, the loss factor is determined by the radiation S parameter calculated from radiation emission. A voltage source is added in series with the radiation resistance, and the resulting radiated power is calculated. Then, the loss factor due to the circuit/antenna absorption is computed using a specific formula, taking into account the volume of the cavity."
+  utter_answer_loss_factor_due_to_antenna_loss:
+    - text: "The loss factor of a cavity due to antenna loss considers the coupling between radiation resistance and the electromagnetic field, as well as the power loss at impedance/admittance. It involves summations over radiation resistances in the cavity, current/voltage sources added, and pins in junctions. The loss factor accounts for the radiation power on radiation resistance when a current/voltage source is placed at specific locations. If the radiation resistance and impedance/admittance belong to the same cavity, the radiation part is not considered since the radiation into the same cavity is not considered as a loss."
+  utter_answer_voltage_calculation_using_reciprocal_theorem:
+    - text: "To calculate the voltages at any point of a circuit in a reverberant cavity using the reciprocal theorem, we can utilize an ideal radiation antenna in the cavity. By applying a current source to drive the antenna, with an ideal impedance match, the power input to the cavity is given by the formula . The mean square of the E field in the cavity is then calculated as . To determine the voltage at a point in our circuit, we can switch the current source and voltage meter and use the same approach. The resulting equation for the voltage giving the mean-squared E-field is . Here,  has the unit of ;  is the vacuum impedance."
+  utter_answer_current_calculation_using_reciprocal_theorem:
+    - text: "To calculate the currents in a circuit generated by the electromagnetic field using the reciprocal theorem, we should place a unit voltage source at the same location in the cavity and calculate the radiation into the cavity . This process yields the equation , where  has the unit of ."
+  utter_answer_transfer_matrix_method1:
+    - text: "The EM wave reflection, absorption, and transmission properties of each multilayer dielectric structure are calculated using the transfer matrix method. This method involves averaging wave reflection and transmission across dielectric material layers in reverberant wavefields. Continuity along the interface between different layers is ensured by maintaining the same wavenumber component throughout all layers. The electric and magnetic fields are decomposed into fields propagating along different directions, and the continuity of the tangential components of these fields along the interface is maintained."
+  utter_answer_wave_reflection_and_transmission_in_dielectric_layers:
+    - text: "In reverberant wavefields, wave reflection and transmission across dielectric material layers are averaged across a range of field incidence angles and over polarity. This averaging process ensures that the EM wave properties are accurately represented in multilayer dielectric structures under reverberant conditions."
+  utter_answer_continuity_along_interface_of_dielectric_layers:
+    - text: "Continuity along the interface between different layers in multilayer dielectric structures is ensured by maintaining the same wavenumber component throughout all layers. This continuity is essential for linking the electric and magnetic fields on both sides of the interface. The tangential components of the electric and magnetic fields are linked through specific equations, ensuring consistent behavior across the interface."
+  utter_answer_generalization_to_multi_layered_structure:
+    - text: "The results presented in the previous section can be easily generalized to a multi-layered structure. The assembled transfer matrix is used to calculate the EM reflection coefficient and the EM transmission coefficient for the structure. It's important to note that all transfer matrices are functions of both frequency and field incidence angle. In many applications, the EM field impinging on the dielectric layer will be reverberant, with EM waves incident over a range of angles. The field incidence reflection coefficient and transmission coefficient are averages over the user-defined angle range and over both TE and TM polarizations."
+  utter_answer_transmission_coefficient_definition:
+    - text: "The transmission coefficient is defined when the layers 1 and N are assumed to be semi-infinite. It is obtained using the scattering matrix, which is related to the transfer matrix. The transmission coefficient is obtained as Transmittance. It represents the fraction of incident power that is transmitted through the layered structure."
+  utter_answer_average_power_transmission_coefficient:
+    - text: "The average power transmission coefficient, ⟨1N⟩1,p, is the magnitude-squared voltage transmission coefficient t1NTE,TM()^2, averaged over a user-defined range of incidence angles and averaged over polarity TE and TM. It represents the average power transmitted through the structure."
+  utter_answer_power_transmission_loss_definition:
+    - text: "The power transmission loss, TL1N, is defined as -10 times the logarithm of the average power transmission coefficient. It quantifies the loss of power during transmission through the structure. It's often represented in decibels."
+  utter_answer_absorption_coefficient_definition:
+    - text: "The absorption coefficient is calculated from the reflection coefficient. It quantifies the fraction of incident power that is absorbed by the material or structure rather than being reflected or transmitted."
+  utter_answer_field_incidence_absorption_coefficient:
+    - text: "The field incidence absorption coefficient is defined as the absorption coefficient averaged over a user-defined range of incidence angles and both TE and TM polarizations. It represents the average absorption of incident power by the material or structure."
+  utter_answer_cavity_damping_loss_factor_contributions:
+    - text: "The cavity damping loss factor can have multiple contributions including wall losses, absorption cross sections (surface absorption losses), and antenna loading losses (also known as 'effective antenna' losses)."
+  utter_answer_wall_losses:
+    - text: "Wall losses refer to the energy dissipation that occurs when electromagnetic waves interact with the walls of the cavity. These losses contribute to the overall damping of the cavity and affect its performance."
+  utter_answer_absorption_cross_sections:
+    - text: "Absorption cross sections represent the area of a material's surface that is effective in absorbing incident electromagnetic waves. In the context of cavity damping loss factor, absorption cross sections contribute to the absorption of energy within the cavity, reducing the resonant behavior."
+  utter_answer_antenna_loading_losses:
+    - text: "Antenna loading losses, also referred to as 'effective antenna' losses, occur when the cavity interacts with external antennas or radiation sources. These losses arise from impedance mismatches or inefficiencies in energy transfer between the cavity and the external antenna, leading to damping of the cavity's resonant behavior."
+  utter_answer_modal_damping_loss_mechanism:
+    - text: "The combined permeability and conductivity of conducting walls contribute to modal damping loss, which is an important mechanism for wave energy dissipation. This damping is limited by the 'skin depth' of the evanescent wavefield inside the conductor."
+  utter_answer_skin_depth:
+    - text: "The skin depth refers to the depth at which the amplitude of an electromagnetic wave decays to about 37% (1/e) of its original value as it penetrates into a conducting material. In the context of conducting walls, the skin depth determines how deeply electromagnetic waves can penetrate into the material, affecting the extent of wave energy dissipation and modal damping loss."
+  utter_answer_reflection_loss_definition:
+    - text: "Reflection loss refers to the wave reflection loss of a surface, which is averaged over the incidence of the reverberant field and over both TE and TM polarizations. It is typically expressed in dB as a power ratio."
+  utter_answer_average_reflection_loss:
+    - text: "Average reflection loss is calculated by averaging the wave reflection loss of a surface over the incidence of the reverberant field and over both TE and TM polarizations. This provides a measure of how much energy is lost due to reflection from the surface."
+  utter_answer_cavity_damping_loss_factor:
+    - text: "The cavity damping loss factor is the average damping loss factor due to absorption within the cavity, averaged over the incidence of the reverberant field and over both TE and TM polarizations. It is often associated with the Q factor, which represents the quality factor of the cavity."
+  utter_answer_absorption_section_definition:
+    - text: "The absorption section refers to the characteristic measure of how materials and assemblies within a cavity absorb electromagnetic energy. For complex 3-dimensional objects, it is averaged over steradians of incident electric field incidence, while for 2-dimensional surfaces, it is also averaged over steradians of incident electric field incidence."
+  utter_answer_cavity_reverberant_wavefield_damping_loss_factor:
+    - text: "The cavity reverberant wavefield damping loss factor due to absorption of these respective absorption sections is a measure of the average damping loss factor within the cavity, taking into account the absorption characteristics of the materials and assemblies present."
+  utter_provide_energy_subsystem_parameters:
+    - text: "The Energy Subsystem dialog box allows users to define various parameters including wall loss materials, additional RF laminate surfaces, transmit and receive antennas, and additional general absorption section objects."
+  utter_specify_energy_subsystem_dimensions:
+    - text: "In the Energy Subsystem dialog box, users can specify dimensions such as cavity size, shape, and material properties to accurately model the energy interactions within the system."
+  utter_specify_additional_parameters_energy_subsystem:
+    - text: "Additional parameters that can be added in the Energy Subsystem dialog box include details about wall loss materials, extra RF laminate surfaces, antennas for transmitting and receiving signals, and other objects contributing to absorption within the system."
+  utter_explain_free_propagation_wavenumber:
+    - text: "The free propagation wavenumber refers to the wavenumber component associated with electromagnetic waves propagating freely in a medium, without any interactions or obstacles."
+  utter_define_cavity_modal_density:
+    - text: "Cavity modal density is a measure of the number of modes, or resonant states, that can exist in a cavity. It quantifies the density of electromagnetic modes within the cavity and is an important parameter in understanding the energy distribution and dynamics in the cavity."
+  utter_describe_total_energy_reverberant_wavefield:
+    - text: "The total energy in the reverberant wavefield is calculated as the volume-averaged mean squared electric field, which represents the average energy density of the electromagnetic field within the cavity."
+  utter_explain_mean_squared_electric_field:
+    - text: "The mean squared time averaged electric field represents the average of the squared electric field magnitude over time and space. It is a preferred engineering unit used to quantify the intensity of the electric field within the cavity."
+  utter_provide_energy_to_eu_conversion:
+    - text: "The energy-to-EU conversion is defined as the conversion factor used to convert energy measurements to engineering units (EU), typically based on the mean squared time averaged electric field."
+  utter_explain_internal_losses_cavity_subsystem:
+    - text: "The internal losses of a reverberant field cavity subsystem include contributions from wall losses, absorber losses, and antenna losses. These losses are typically expressed in terms of the Q factor, which indicates the quality of the cavity with lower Q factors representing higher losses."
+  utter_express_internal_losses_q_factor:
+    - text: "The internal losses of a cavity subsystem are often expressed in terms of the Q factor, where lower Q factors correspond to higher losses. The Q factor is calculated as the inverse of measured Q factors, allowing for addition or subtraction of losses."
+  utter_mention_inverse_measured_q_factors:
+    - text: "Only the inverse of measured Q factors is used in expressing internal losses, as it allows for straightforward addition or subtraction of losses. This approach simplifies calculations and analysis of cavity subsystem performance."
+  utter_explain_wall_loss_factor_function:
+    - text: "The wall loss factor as a function of angular frequency, according to Hill's book, is given by the equation you mentioned."
+  utter_define_parameters_wall_loss_factor:
+    - text: "In the wall loss factor equation, the parameters represent: \n - μ: relative permeability of the wall material \n - A: total exposed surface area of the wall material \n - δ: skin depth, determined by the wall conductivity σ."
+  utter_explain_field_incidence_absorption:
+    - text: "The field incidence absorption is obtained from the Reflection Loss of the RF absorptive laminate, as stated in Hill’s Q models."
+  utter_define_parameters_field_incidence_absorption:
+    - text: "In the field incidence absorption equation, the parameters represent: \n - RL: Reflection Loss of the RF absorptive laminate \n - A: surface area of the RF absorbing laminate deployed within the cavity."
+  utter_explain_antenna_loading_losses:
+    - text: "Any transmit or receive antenna within a reverberant field cavity will contribute loading losses, as per Hill’s Q models."
+  utter_define_parameters_antenna_loading_losses:
+    - text: "In the equation for antenna loading losses, the impedance mismatch (Zm) represents the impedance mismatch of the non-ideal antenna in the enclosure."
+  utter_explain_absorption_section:
+    - text: "For more complex 3D objects within the cavity, which are assemblies of multiple dielectric materials and effective antenna loads (e.g., a full spacecraft with a complex array of electronics), the losses are typically measured and quantified as a characteristic 'absorption section'. This is averaged over steradians and all polarities, as per Hill’s Q models."
+  utter_define_parameters_absorption_section:
+    - text: "The absorption section for complex 3D objects within the cavity represents the averaged losses over steradians and all polarities. From Hill’s Q models, this is derived as per the averaging process described in the model."
+  utter_explain_external_efield_constraints:
+    - text: "In model tree/spectral data, define an Electric Field (V/m) spectrum. In Tree/Table view Excitation/Constraint/Wavefield, right click edit. In 3D model view, select cavity wavefield and click constraint source button in Toolbar. Finally, right click and edit the Add Constraint dialog to define E-field spectrum level."
+
+  utter_explain_max_min_field_limits:
+    - text: "Select solver setting from Menu Bar. In Dialog, define the Probability Percentiles that you would like model to use to calculate Max and Min E-field levels in each cavity wavefield. At Menu Bar/Solve, select Solve Cavity Model. Wait for Calculation complete or Error message to be displayed."
+
+  utter_explain_efield_outputs:
+    - text: "Outputs specral data are shown under Outputs node. Tile Windows (Plots) can be viewed by using Menu Bar/Windows/Tile option to display all open plots. Finally, in the Plot dialog, click the Table tab to access the Graphed Outputs in tabular data form. Copy and Paste to spreadsheet for reports, post-processing, etc."
+
+  utter_explanation_connector_model:
+    - text: "A Connector model object makes the electrical connection between MTL Conductors and the Load Impedances and Excitations Sources at the Terminations of a Cable Harness"
+
+  utter_explanation_junction_model:
+    - text: "A Junction model object makes the electrical connection between Conductors of two or more co-joined MTL segments. The junction is modeled as include N pins (or nodes) where the conductors meet. These may be physical junctions where connectors are included or simply branches where some conductors in a physical cable bundle branch out in a different direction as shown in the figure above. A junction may represent a branch, a splice, a termination, or a simple connection of two MTL segments."
+
+  utter_explanation_junction_relationship:
+    - text: "The combined relationship for the kth junction in the network is Y_k V_k + Z_k I_k = P_k. The equation for the kth junction in the network is given by Y_k V_k + Z_k I_k = P_k, where Y_k is the admittance interaction matrix, Z_k is the impedance interaction matrix, V_k is the vector of voltages at the ends of the conductors, I_k is the vector of currents flowing from the pin onto the conductors, and P_k is the source vector."
+
+  utter_explanation_junction_structure:
+    - text: "A junction will consist of N pins (or terminals) to which the conductors are connected. The nth pin has Mn conductors attached. The conductors connected to the pin can be from multiple different segments or from the same segment. If Mn > 2, the pin is acting as a splice. If Mn = 1, the pin is a termination. If Mn = 2, the junction is likely to be part of a branch."
+
+  utter_explanation_junction_matrice:
+    - text: "The impedance and admittance matrices for the junction are found from Kirchhoff’s current laws. The voltage at the end of segment 1 is related to the voltage at the end of segment m from the voltage law: V_1 + V_s1 + Z_1 I_1 - Z_m I_s - V_sm = V_m"
+
+  utter_explanation_external_field_source:
+    - text: "An ideally diffuse field within a cavity can be written as a superposition of uniform plane waves. Each plane wave in the expansion excites the propagating modes on the line. The excitation by a plane wave is modeled as a set of current and voltage sources at the termination of the line. The local reference of the line is aligned on the z axis, allowing the excitation source model of Paul (2008) to be used. The plane wave incidence angle and polarization vectors are rotated to account for the difference between the local (z-aligned) and physical coordinates."
+
+  utter_explanation_plane_wave:
+    - text: "A plane wave in the local coordinate system can be written as E^i = a_p * exp[jk(xsin(theta)cos(phi) + ysin(theta)sin(phi)+zcos(phi)] = (a_xE_x + a_yE_y + a_yE_z) * e^(-jB_y y) * e^(-jB_z z) where a_p is an arbitrary polarization vector, k is the free-space wavenumber, and theta and phi are the elevation and azimuth angles from which the wave is incident. With this excitation, the induced voltage and currents on the MTL segments are V_FT (L) = 1/2 * Y^(-1) T (M+N_ - E_T(L), I_FT (L) = 1/2 * Y^(-1) T (N-M)."
+
+  utter_explanation_multiconductor_transmission_line:
+    - text: "A multiconductor transmission line (MTL) consists of N+1 conductors. One conductor, typically a ground plane or shield, acts as a reference conductor. The potentials on the other N conductors are referenced to the reference conductor. The line currents are specified on the N conductors. The current on the reference conductor is understood to be the negative of the sum of the currents on the N conductors."
+
+  utter_respond_generalized_telegrapher_equations:
+    - text: "The Generalized Telegrapher's Equations (GTE) describe the propagation of electromagnetic waves in multiconductor transmission lines."
+
+  utter_respond_telegrapher_equations_components:
+    - text: "The GTE components include voltage vector, current vector, impedance matrix, admittance matrix, and they are functions of frequency and physical parameters like resistance, inductance, capacitance, and conductance."
+
+  utter_respond_modal_relationship:
+    - text: "The voltages and currents on the individual conductors are related to the modal voltages and currents through V(z) = T_V * V_m(z), I(z) = T_l * I_m(z) where z is the position of the length of the line."
+
+  utter_respond_generalized_telegrapher_solution:
+    - text: "The solution of the generalized Telegrapher's equations yields both forward (+z) and backward (-z) propagating modes. The modal voltages and currents are given by V_m = e^(-gamma * z) * V+_m + e^(gamma * z) * V-_m, I_m = e^(-gamma * z) * I+_m + e^(gamma * z) * I-_m."
+
+  utter_respond_network_description:
+    - text: "A network consists of K MTLs that include a total of conductors. The order 2 BLT equations allow the finding of the currents at either end of each conductor, giving an overall system order of."
+
+  utter_respond_network_solution_process:
+    - text: "The currents at each end of the MTL segments are found by solving the BLT equations. The network current scattering matrix, network propagation matrix, network current vector, and network current source matrix are involved in the solution process."
+
+  utter_respond_iterative_solution:
+    - text: "Iterative solution using BICGSTAB was considered for the network, but it proved more computationally expensive with the relatively low order of the systems generated in testing."
+
+  utter_respond_external_field_terms:
+    - text: "The current and voltage source terms due to external fields are absorbed into the BLT equations, eliminating the need for a separate source term to account for external field excitation."
+
+  utter_respond_network_ports_description:
+    - text: "The network has M ports, each with its own reference impedance Rm. A matched voltage source with internal impedance Rm is placed on port m, and load impedances Rn are placed on all other ports n = 1..M, n ≠ m."
+
+  utter_respond_power_available_calculation:
+    - text: "The power available from the source is equal to the power that would be delivered to its matched load, where P_available = 0.5 * |V|^2 / Rm."
+
+  utter_respond_power_delivered_calculation:
+    - text: "The power delivered to the load on port n is Pn = 0.5 * |In|^2 * Rn, and the wave exiting port n is related to this power calculation."
+
+  utter_respond_scattering_parameter_explanation:
+    - text: "The scattering parameter Smn is given by a formula involving the network current scattering matrix and propagation matrix."
+
+  utter_respond_current_component_separation:
+    - text: "From the network solution, the current entering port m can be separated into inward and outward propagating wave components, where the reflection coefficient looking into the port is equal to the scattering parameter Smm."
+
+  utter_respond_loss_in_network_explanation:
+    - text: "The loss in the network is primarily due to resistance, which includes lumped resistance elements, multi-conductor transmission line (MTL) PUL resistance, and radiation resistance."
+
+  utter_respond_distinguish_loss_roles:
+    - text: "Lumped resistance elements and MTL PUL resistance contribute to overall network loss, while radiation resistance plays a distinct role. It is crucial to distinguish between these types of losses."
+
+  utter_respond_loss_equations_calculation:
+    - text: "Loss due to resistance, whether Ohmic or radiation, is calculated using the same equations. Despite the common calculation method, it is essential to recognize the different roles that Ohmic loss and radiation play in the network."
+
+  utter_respond_clarify_loss_roles:
+    - text: "Distinguishing between lumped resistance, MTL PUL resistance, and radiation resistance is important for understanding their distinct effects on network performance. Clear differentiation helps in accurate network analysis and modeling."
+
+  utter_respond_ohmic_loss_explanation:
+    - text: "The network solver calculates the voltage and current at both ends of a cable segment, providing the necessary information to calculate lumped element loss. Ohmic loss is computed on all MTL terminals, with different equations for Thevenin and Norton equivalent circuits."
+
+  utter_respond_thevenin_circuit_description:
+    - text: "When the resistance is in a Thevenin circuit, it is in series with the MTL. The Ohmic loss at a terminal (P^Ohm_term) is given by 1/2 Re[|I_term|^2 R^Ohm_term]. The resistors at terminal 1B and 2A in the figure are in series with the MTL, forming a Thevenin equivalent circuit."
+
+  utter_respond_norton_circuit_description:
+    - text: "When the resistance is in a Norton circuit, it is in parallel with the MTL. The Ohmic loss at a terminal (P^Ohm_term) is given by 1/2 Re[|V_term|^2 / R^Ohm_term]. The resistors at terminal 1A and 2E in the figure are in parallel with the MTL, forming a Norton equivalent circuit."
+
+  utter_respond_transfer_impedance_explanation:
+    - text: "For a shield, the transfer impedance Z is equivalent to the Ohmic resistance of a wire. Z is a complex variable, and the Re function is added to the expressions to ensure the loss is a real number."
+
+  utter_respond_segment_as_antenna_description:
+    - text: "The segment exposed to a diffuse field acts as a receiving antenna with a radiation resistance, as found above. An equivalent voltage source is determined to account for the excitation by the external field."
+
+  utter_respond_mean_power_matched_load_calculation:
+    - text: "The mean power delivered to a matched load placed on the output of an antenna in an ideal diffuse field is calculated as <P_r> = 1/2 * (E_0)^2 / eta * lambda^2 / (4pi), where I is the current induced in the load by the field, R_rad is the antenna radiation resistance, and E_0 is the RMS field strength."
+
+  utter_respond_distributed_voltage_source_integration_explanation:
+    - text: "The integration of the distributed voltage source is evaluated using Gaussian quadrature, and the formula for P_d, n is given by 1/2 * Σ_(l = 1)^(t) (w_l * L_n [V_E, x_L]), where w_i is the Gaussian quadrature weighting, and x_l = L/2 * (1 + cos(theta_l)) is the position of the sample point on the line, with theta_l being the Gaussian quadrature node."
+
+  utter_respond_gaussian_quadrature_description:
+    - text: "Gaussian quadrature is a numerical method for approximating definite integrals. In the context of the distributed voltage source integration, Gaussian quadrature weighting (w_i) plays a crucial role in determining the accuracy of the integration. Sample points (x_l) are calculated using x_l = L/2 * (1 + cos(theta_l)), where theta_l represents the Gaussian quadrature node."
+
+  utter_respond_quadrature_requirements_explanation:
+    - text: "Quadrature requires the network to be solved with sources placed at multiple interior points on the line. The segment containing the source does not need to be split at the point of the voltage source. The voltage source at position x = x_l is translated to become voltage and current sources at x = L. The quadrature formula then becomes P_d,n = 1/2 Σ_(l = 1)^(L) (w_l * L_n [V_E(L-x_l), L])."
+
+  utter_respond_source_translation_description:
+    - text: "The voltage source is translated for multiple interior points on the line by transforming it into voltage and current sources at x = L. This eliminates the need to split the segment containing the source, simplifying the quadrature approach and reducing computational costs."
+
+  utter_respond_quadrature_formula_outline:
+    - text: "The updated quadrature formula after voltage source translation is P_d,n = 1/2 Σ_(l = 1)^(L) (w_l * L_n [V_E(L-x_l), L]). The network needs to be solved L times using this quadrature approach. However, since the network is only set up once, no matrix inversions are required in the solution stage, minimizing the computational cost."
+
+  # math specs 1 | section 12
+  utter_quantiles_definition_explanation:
+    - text: "Quantiles in the context of electric field levels represent the maximum expected and minimum expected field levels defined by specific probabilities of the field probability density function."
+
+  utter_pdf_description_explanation:
+    - text: "The probability density function (PDF) for electric field levels describes the likelihood of observing a particular field level at different positions and frequencies within the cavity."
+
+  utter_cumulative_distribution_function_explanation:
+    - text: "The cumulative distribution function (CDF) for electric field levels gives the probability that the field level is less than or equal to a given value. It is related to the PDF and used to compute quantiles."
+
+  utter_quantiles_computation_explanation:
+    - text: "Quantiles are computed from the inverse function of the cumulative distribution function (CDF) for specific maximum expected or minimum expected probability limits."
+
+  utter_relative_variance_single_cavity_explanation:
+    - text: "The relative variance of reverberant energy for a single cavity is derived based on modal overlap and the exponential integral. It characterizes the variance of the energy of a reverberant wave field within the cavity."
+
+  utter_relative_variance_multiple_cavities_explanation:
+    - text: "The relative variance of reverberant energy for multiple connected cavities is formulated using a matrix approach provided by Langley & Cotoni. It propagates the relative variance for any network of multiply connected reverberant fields."
+
+  utter_probabilistic_variance_power_input_explanation:
+    - text: "The probabilistic variance formulation for power input involves evaluating the square of the mean power input vector and the square of the effective constraint power, as defined by Langley & Cotoni."
+
+  utter_probabilistic_variance_aperture_coupling_power_explanation:
+    - text: "The probabilistic variance formulation for aperture coupling power includes evaluating the square of the element of the power balance matrix and the loading correlation coefficient, as provided by Langley & Cotoni."
+
+  utter_effective_modal_overlap_explanation:
+    - text: "The effective modal overlap for multiple connected cavities is calculated as the ratio of the effective, coupled cavity modal overlap to the effective, coupled cavity loss factor."
+
+  utter_effective_total_loss_factor_explanation:
+    - text: "The effective total loss factor for multiple connected cavities is derived from the net power input to the cavity wavefield, using the modal energy solution obtained from the power balance equation."
+
+  utter_statistical_ensemble_formulation_explanation:
+    - text: "The statistical ensemble formulation for the energy of a reverberant wave field is derived for comparison with the statistics of a finite ensemble of sample data. It involves the modal overlap of the cavity wavefield and the finite number of receiver and source positions."
+
+  utter_maximum_minimum_response_spectrum_levels_explanation:
+    - text: "The maximum and minimum response spectrum levels are calculated based on the mean and standard deviation of the logarithm of energy, as well as user-defined probabilities."
+
+  utter_mean_electric_field_explanation:
+    - text: "The mean electric field in a cavity is proportional to the total field energy and follows a Log Normal probability density function."
+
+  utter_local_electric_field_frequency_stirred_explanation:
+    - text: "The stochastic limits of the frequency-stirred local electric field in a cavity are determined by the unconditional probability density function introduced earlier. It involves the calculation of probability density function parameters and user-defined probabilities."
+
+  utter_s21_of_local_electric_field_frequency_stirred_explanation:
+    - text: "The S21 response is proportional to the frequency-stirred stochastic limits of the electric field at any location in the cavity. It is significant in understanding the behavior of the frequency-stirred local electric field."
+
+  # math specs 1 | section 13
+  utter_direct_field_calculation_explanation:
+    - text: "The direct field is calculated as a post-processing operation after the solution of the statistical power balance (SPB) matrix solution. It is the uncorrelated sum of the direct and reverberant fields."
+
+  utter_total_field_calculation_explanation:
+    - text: "The total field is calculated by combining the direct and reverberant fields. For a single power source inside a cavity, the direct electric field at a location beyond the near field of the power source is determined."
+
+  utter_near_field_corrections_explanation:
+    - text: "Near field corrections include field doubling due to coherent reflections at low loss bounding walls and wave scattering about smaller objects within the reverberant field."
+
+  utter_field_distribution_explanation:
+    - text: "The total field within the cavity follows a Rice distribution. In a cavity with very low losses, the reverberant field dominates the direct field, resulting in a spatial distribution determined by statistical power balance with a Chi-squared PDF."
+
+  # math specs 1 | section 14
+
+  utter_specific_graph_instances:
+    - text: "Some speciifc graph instances include: Subsystem wavenumber, Subsystem modes in band, Power Inputs ranking chart for any subsystem, and Power input for each source - Mean with Min, Max uncertainty margins"
+
+  # math specs 2 | section 1
+
+  utter_simulation_tool_explanation:
+    - text: "RobustPhysics' simulation tool simplifies high-frequency cable harness current simulation alongside strong cavity electric fields using stochastic wave mechanics. It couples rigorous physics with statistical modeling, providing a customized solution for NASA's EMC applications. This hybrid approach integrates statistical 3D electric field modeling with deterministic cable harness current modeling. The Phase I STTR validated its efficacy for complex connected cavities, including launch vehicle fairings."
+
+  utter_simulation_tool_features:
+    - text: "The main features of RobustPhysics' simulation tool include: 1. Simulation of cavity 3D electric fields using stochastic methods. 2. Deterministic simulation of 5D cable networks. 3. Coupled simulation of cavity-cable networks using stochastic techniques."
+
+  utter_simulation_tool_use_cases:
+    - text: "RobustPhysics' simulation tool can be applied in various real-world scenarios, including: - Modeling high frequency cable harness currents in the presence of strong cavity electric fields. - Optimizing electromagnetic compatibility (EMC) in NASA's applications. - Simulating complex connected cavities, such as launch vehicle fairings, to ensure efficient power balance."
+
+  # math specs 2 | section 2
+
+  utter_cable_harness_model_explanation:
+    - text: "In the Ph2. STTR Requirements Specification, a cable harness is considered to consist of multiple line segments with uniform section properties."
+
+  utter_separable_form_explanation:
+    - text: "For simulating the high frequency currents in each conductor and the radiation loss from each conductor, a key assumption is that the surrounding vector electric field and the surrounding vector magnetic field is a separable product of a propagation function only along the conductor axis and a radiation / scattering function only in the plane transverse to the conductor axis."
+
+  utter_deterministic_transmission_line_modeling_process:
+    - text: "The computational steps of deterministic transmission line modeling involve calculating the per unit length properties of each cable harness segment, calculating transfer matrices for each segment, calculating radiation impedance, assembling end-to-end transfer matrices, defining terminal voltages and currents, solving the transmission line transfer matrix problem, and post-processing the solution for various parameters."
+
+  utter_canonical_test_cases_explanation:
+    - text: "The Ph2 STTR Test Plan supports validation of transmission line models of specific cable configurations to validate the transmission line computational module."
+
+  # math specs 2 | section 3
+
+  utter_model_solution_parameters_explanation:
+    - text: "explain_model_solution_parameters_explanation"
+
+  utter_frequency_solution_vector_explanation:
+    - text: "The model solution parameters include unit systems in SI, such as voltage, current, length, time, and their respective units. It also involves defining the frequency domain, lowest and highest frequencies, and bandwidth parameters."
+
+  utter_constant_bandwidth_explanation:
+    - text: "Constant bandwidth parameters define a frequency range with a uniform bandwidth. The tabular data input format includes model file names, frequency domain type, start frequency, bandwidth, and end frequency."
+
+  utter_logarithmic_bandwidth_explanation:
+    - text: "Logarithmic bandwidth, such as the Third Octave option, is used for frequency band analysis over a wide domain. It involves specifying start and end center frequencies for each frequency band."
+
+  utter_octave_frequencies_explanation:
+    - text: "Octave frequencies are defined relative to a reference frequency of 1 kHz. The fractional octave frequencies, such as 3rd Octave, 6th Octave, etc., are used to specify lower and upper band frequencies and bandwidth."
+
+  # math specs 2 | section 4
+
+  utter_spectral_data_input_explanation:
+    - text: "There are multiple classes of spectral data, including: relative permittivity, relative permeability, S11, S12, Electric field, conductivity, relative variance, Q factor, loss factor, absorption coefficient, absorption section, reflection loss, power transmission coefficient, transmission section, power, coupling loss factor, voltage source, current source, and impedance. All classes have the same data structure, represented as a table of real valued numbers at frequencies in Hz."
+
+  utter_material_properties_explanation:
+    - text: "Materials with complex, frequency-dependent properties have properties that vary with frequency. These properties include relative permittivity, relative permeability, conductivity, and others. They require special treatment in modeling due to their frequency dependency."
+
+  # math specs 2 | section 5
+
+  utter_dielectric_gas_properties_explanation:
+    - text: "Dielectric gas properties include permittivity and permeability."
+
+  utter_dielectric_solid_properties_explanation:
+    - text: "Dielectric solid properties include permittivity, permeability, conductivity, and mass density."
+
+  utter_solid_conductor_properties_explanation:
+    - text: "Solid conductor properties include permeability, conductivity, and mass density."
+
+  # website
+
+  utter_build_aircraft_emc_model:
+    - text: "To build an aircraft system-level EMC model using Stochastica, follow these steps:\n1. Import simple 3D geometry data using Stochastica's modeling toolbar.\n2. Define area junctions between connected fields and specify field excitation sources.\n3. Solve uncoupled cavity fields and plot output results, including stochastic limits.\n 4. Refine the model based on diagnostic plots and adjust sources or transmission paths as necessary."
+  utter_build_automobile_emc_model:
+    - text: "To build an automobile system-level EMC model using Stochastica, follow these steps:\n1. Import 3D geometry data and define cavity field parameters.\n2. Define area junctions and specify field excitation sources.\n3. Solve cavity fields, plot output results, and analyze stochastic limits.\n4. Create multi-pin connectors, wire conductors, and solve cable harness.\n5. Couple models, identify cable-cavity interactions, and solve coupled model for comprehensive analysis."
+
+  utter_explain_add_cable_segment:
+    - text: "To add a cable segment, go under the Tree view and add a cable segment under 1D Cable Current Fields → Segments by right-clicking and hitting 'Add'."
+
+  utter_explain_add_wires:
+    - text: "To add wires, specify the desired number of wires and the connectors that are being linked."
+
+  utter_explain_specify_connectors:
+    - text: "Specify the connectors that are being linked."
+
+  utter_explain_create_common_backbone_cable_segment:
+    - text: "Within the 3D Model Window, you can use the tool palette to create cable segments using the appropriate icon (click on Create Segment)."
+
+  utter_explain_edit_segment_cross_section:
+    - text: "While creating Cable Segments, it is useful to use the Edit Segment Cross Section option in order to specify important information for calculations."
+
+  utter_explain_find_closest_reflecting_plane:
+    - text: "The 'Find Closest Plane' button will recalculate the value for the closest proximate reflecting plane for this specific cable segment."
+
+  utter_explain_override_calculated_value:
+    - text: "When checked, the 'Override Calculated Value' checkbox allows the user to use their own values for the distance to ground plane and the Direction Cosine vector of the distance."
+
+  utter_ask_unit:
+    - text: "The unit for the provided parameter is unfeaturized."
+  utter_ask_input_parameters:
+    - text: "The input parameters include voltage, current, length, time, etc."
+  utter_ask_spectral_data:
+    - text: "The spectral data includes power, voltage, electric field, energy, current, magnetic field, permittivity, permeability, conductivity, reflection loss, insertion loss, shielding effectiveness, S parameter, Q factor, and loss factor."
+  utter_ask_classes_spectral_data:
+    - text: "The classes of spectral data are power (input, received), voltage, electric field, energy, current, magnetic field, permittivity, permeability, conductivity, reflection loss, insertion loss, and shielding effectiveness."
+  utter_ask_data_structure:
+    - text: "The data structure of spectral data consists of a table of real-valued numbers at various frequencies, and the admissible input data forms are dB RMS in band and EU (Engineering Unit) RMS in band."
+  utter_ask_frequency_range:
+    - text: "The frequency range for spectral data is defined from the lowest frequency to the highest frequency provided."
+  utter_ask_data_forms:
+    - text: "The admissible input data forms for spectral data include dB RMS in band and EU RMS in band."
+  utter_ask_parameter_units:
+    - text: "The units for voltage, current, length, time, etc., are defined in the SI unit system."
+  utter_ask_reflection_loss:
+    - text: "Reflection loss refers to the loss of signal strength due to reflection at a surface interface."
+  utter_ask_insertion_loss:
+    - text: "Insertion loss is the loss of signal power resulting from the insertion of a device into a transmission line or optical fiber."
+  utter_ask_shielding_effectiveness:
+    - text: "Shielding effectiveness measures the ability of a material to attenuate electromagnetic fields and prevent electromagnetic interference."
+  utter_ask_spectral_synthesis:
+    - text: "There are various methods for spectral synthesis, including creating complex constants, rational functions, and probability density functions (PDF). How can I assist you further with spectral synthesis?"
+  utter_ask_complex_constant_synthesis:
+    - text: "To synthesize a constant in the frequency domain, please provide both the real and imaginary parts."
+  utter_ask_rational_function_synthesis:
+    - text: "To synthesize a rational function in the frequency domain, please provide the coefficients for the rational function."
+  utter_ask_pdf_distribution:
+    - text: "To synthesize a probability density function (PDF) for a specific distribution, please specify the distribution type and parameters."
+  utter_ask_cdf_distribution:
+    - text: "To synthesize a cumulative distribution function (CDF) for a specific distribution, please specify the distribution type and parameters."
+  utter_ask_rayleigh_distribution:
+    - text: "The Rayleigh distribution is characterized by a single parameter known as the scale parameter. It is defined over the entire real axis."
+  utter_ask_normal_distribution:
+    - text: "The normal distribution is characterized by two parameters, the mean and standard deviation, and is defined over the entire real axis."
+  utter_ask_log_normal_distribution:
+    - text: "The log-normal distribution is characterized by two parameters, mu and sigma, and is used to model variables whose logarithm is normally distributed."
+  utter_ask_lomax_distribution:
+    - text: "The Lomax distribution, also known as the Pareto Type II distribution, is a heavy-tail probability distribution used in various fields such as business, economics, and queueing theory."
+  utter_ask_inverse_gamma_distribution:
+    - text: "The inverse gamma distribution is a two-parameter family of continuous probability distributions on the positive real line, often used to model the reciprocal of a variable distributed according to the gamma distribution."
+  utter_ask_exponential_distribution:
+    - text: "The Exponential distribution is characterized by a single parameter known as the rate parameter. It is defined over the entire real axis."
+  utter_ask_chi_distribution:
+    - text: "The Chi distribution is characterized by 2 degrees of freedom and is commonly used to model the un-averaged electric field magnitude in overmoded conditions such as reverberation test chambers."
+  utter_ask_log_normal_distribution_fit:
+    - text: "The Log-Normal distribution is utilized as a good fit to measured ensembles. Would you like to know more about how it fits?"
+  utter_ask_calculate_pdf_parameters:
+    - text: "To calculate PDF parameters, we need to determine the mean and variance. Shall I explain how to calculate them?"
+  utter_ask_find_alternative_pdf_model:
+    - text: "Searching for an alternative PDF model that allows a closed form analytical solution. Interested to learn more about it?"
+  utter_ask_inverse_gamma_distribution_fit:
+    - text: "The Inverse-Gamma distribution fits the ensemble well, especially at the upper range of values. Would you like to know how it fits?"
+  utter_ask_calculate_inverse_gamma_parameters:
+    - text: "Calculating Inverse-Gamma distribution parameters involves defining them in terms of the known mean field equation and relative variance equation. Shall I explain the calculation process?"
+  utter_ask_lomax_distribution_unconditional_pdf:
+    - text: "The unconditional PDF for Lomax distribution represents the probability density function of the unconditional electric field. Do you want to learn more about it?"
+  utter_ask_calculate_lomax_parameters:
+    - text: "To calculate Lomax distribution parameters, we need to determine the parameters defined in terms of the known mean field equation and relative variance equation. Shall I explain how to calculate them?"
+  utter_ask_calculate_lomax_cdf:
+    - text: "Calculating the cumulative density function (CDF) for Lomax distribution involves a specific process. Would you like to know more about it?"
+  utter_ask_calculate_lomax_quantiles:
+    - text: "Calculating quantiles for Lomax distribution involves a specific process. Interested to learn more about it?"
+  utter_ask_reverberant_field_magnitude_pdf:
+    - text: "The PDF for reverberant field magnitude represents the probability density function of the (un-squared) magnitude of the reverberant field. Do you want to know more about it?"
+  utter_ask_calculate_mean_field_pdf:
+    - text: "Calculating PDF for mean field involves several factors. Shall I explain the calculation process?"
+  utter_ask_calculate_uncertainty_pdf:
+    - text: "To calculate PDF for uncertainty, we need to consider various factors. Would you like to learn more about it?"
+  utter_ask_no_uncertainty:
+    - text: "When there is no uncertainty in the source current and Q factor, x and y are not random variables and can be replaced by their constant values."
+    - text: "In the absence of uncertainty in the source current and Q factor, x and y become constants, resulting in a simplified equation."
+  utter_ask_uncertainty_q_factor_frequency_variance:
+    - text: "Uncertainty in Q factor and frequency variance in input conductance lead to a different scenario. Let me explain."
+    - text: "When there is uncertainty in Q factor and frequency variance in input conductance, the system behaves differently. Allow me to elaborate."
+  utter_ask_pdf_model_uncertainty_q_factor_frequency_variance:
+    - text: "The PDF model is affected by uncertainty in Q factor and frequency variance in input conductance. Here's how it works."
+    - text: "Let me explain how uncertainty in Q factor and frequency variance in input conductance impacts the PDF model."
+  utter_ask_statistical_distribution_q_factors:
+    - text: "Determining the statistical distributions of reverberant field Q factors is an important aspect. Here's how it's done."
+    - text: "The statistical distributions of reverberant field Q factors play a crucial role. Let me walk you through the process."
+  utter_ask_uncertainty_all_mean_field_variables:
+    - text: "What happens when there is uncertainty in all three mean field variables? Let's explore this scenario."
+    - text: "When uncertainty exists in all three mean field variables, it leads to interesting outcomes. Allow me to explain."
+  utter_ask_marginal_pdf_modeled_inverse_gamma:
+    - text: "Modeling the marginal PDF with the inverse-gamma distribution is significant. Here's how it's accomplished."
+    - text: "Let me explain how the marginal PDF is modeled using the inverse-gamma distribution."
+  utter_ask_closed_form_analytic_solution_log_normal:
+    - text: "Understanding the closed form analytic solution with the log-normal distribution is essential. Here's what you need to know."
+    - text: "Let's delve into the closed form analytic solution with the log-normal distribution."
+  utter_ask_implementation_insight_parameter_deduction:
+    - text: "Gaining insight into the implementation and parameter deduction for the Lomax Distribution is crucial. Let's explore further."
+    - text: "Understanding the implementation and parameter deduction for the Lomax Distribution is important. Here's what you should know."
+  utter_ask_excitation_uncertainty:
+    - text: "Excitation uncertainty introduces variability in the system due to the random nature of the source current. Let me explain further."
+    - text: "Considering the source current as a random variable adds uncertainty to the system. Allow me to elaborate."
+
+  utter_consider_source_current_as_random_variable:
+    - text: "In our model, we treat the source current as a random variable instead of a constant. This accounts for excitation uncertainty."
+    - text: "The source current in our model is considered as a random variable, following a log-normal distribution to represent excitation uncertainty."
+
+  utter_derive_pdf_model_excitation_uncertainty:
+    - text: "The PDF model for excitation uncertainty is derived through a rigorous process. Let me walk you through it."
+    - text: "Deriving the PDF model for excitation uncertainty involves several steps. Here's how it's done."
+
+  utter_calculate_mean_point_input_conductance:
+    - text: "The mean point input conductance is calculated using a specific formula that takes various factors into account."
+    - text: "Calculating the mean point input conductance involves certain calculations based on the characteristics of the system."
+
+  utter_add_excitation_uncertainty_algorithm:
+    - text: "Incorporating excitation uncertainty algorithmically follows a similar procedure as for Q uncertainty. I'll explain the steps involved."
+    - text: "Adding excitation uncertainty to the model is done systematically, similar to how Q uncertainty is handled. Let me outline the process."
+
+  utter_add_materials:
+    - text: "Materials are added under the Materials node. Spectral data for each material (permittivity, permeability, conductivity) is chosen from dropdown menus in dialog boxes."
+  utter_choose_spectral_data:
+    - text: "To select spectral data for each material, you can choose from the available options in the dropdown menus provided in the dialog boxes."
+  utter_define_PEC_backed_laminates:
+    - text: "PEC-backed laminates define RF absorption materials on the walls of Cavity Wavefields. To add or edit a multi-layer laminate, right-click and select 'ADD' or 'EDIT'. Choose Dielectric Solid or Gas Material from the drop-down menu and edit the thickness of each layer."
+  utter_edit_laminate:
+    - text: "To edit a multi-layer laminate, right-click on it and select 'EDIT'. Then, you can modify the layers by adjusting their thickness."
+  utter_define_open_backed_laminates:
+    - text: "Open-backed laminates define EM transmission across large aperture laminate junctions between Cavity Wavefields. To add or edit a multi-layer laminate, right-click and select 'ADD' or 'EDIT'. Choose Dielectric Solid or Gas Material from the drop-down menu and edit the thickness of each layer."
+  utter_add_connector:
+    - text: "To add connectors in the model, you can do so either in the 3D Environment or in the Tree View. Once added, make sure to fill out all the appropriate information to ensure accuracy in the computation model."
+  utter_add_branch_to_cable_segment:
+    - text: "To add a branch to a cable segment, edit the segment as needed and fill out all the appropriate information. Once you save the changes, the new branch will be created. It's recommended to edit all segments before saving to ensure accuracy in the computation model."
+  utter_edit_segment:
+    - text: "To edit a segment, simply modify the necessary information. Ensure all details are accurate before saving the changes."
+  utter_save_changes:
+    - text: "To save the changes after editing segments, simply click on the save option. This ensures that the computation model remains accurate."
+  utter_add_cable_segment:
+    - text: "To add a cable segment under 1D Cable Current Fields, navigate to Junctions and then Branch under the Tree view. Right-click and hit 'Add' to add the cable segment."
+  utter_right_click_add_cable_segment:
+    - text: "To add a cable segment by right-clicking, navigate to the desired location under 1D Cable Current Fields → Junctions → Branch in the Tree view. Right-click and select 'Add' to add the cable segment."
+  utter_create_cable_segment_3d_model:
+    - text: "To create cable segments in the 3D Model Window, use the tool palette and click on the appropriate icon, typically labeled 'Create Branch'."
+  utter_add_wire_cable_segment_3d_model:
+    - text: "To add a wire or cable segment to a branch in the 3D Model Window, you can either ctrl select the pins and branch, then click the 'Create Segment' button, or click the 'Add Wire' button to open a dialogue, set the starting and ending connectors and pins, click the 'Add Junction' button within, and then hit save."
+  utter_solve_cable_section_properties_first:
+    - text: "Yes, it's important to solve for Cable Section Properties first before proceeding with any other calculations. The FreeFEM 2D finite element solver integrated in the EMC System Modeler software will calculate the per unit length Capacitance, Inductance, and Conductance of each cable section. The results are cached and stored in Tree / Outputs / Cable Properties."
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

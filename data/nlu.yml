@@ -90,10 +90,1002 @@ nlu:
       - am I talking to a bot?
       - am I talking to a human?
 
-  - intent: inquire_frequency_domain
+  - intent: model_tree_spectral_data
     examples: |
-      - How do I create a frequency domain?
-      - Explain the steps for setting up a frequency domain.
+      - How do I model tree data required for an antenna power input?
+      - Explain the process for modeling tree data in the context of antenna power input.
+      - What steps should I follow to set up tree data for antenna power calculations?
+
+  - intent: add_tx_power_input
+    examples: |
+      - How do I add Tx power input?
+      - Can you guide me in adding Tx power input to the system?
+      - Explain the procedure for including Tx power input in the simulation.
+
+  - intent: edit_tx_power_inputs
+    examples: |
+      - How do I edit Tx power inputs?
+      - Can I modify the existing Tx power inputs?
+      - Explain the steps to make changes to the Tx power inputs.
+
+  - intent: locate_tx_power_inputs_3d
+    examples: |
+      - How do I locate the Tx power inputs in 3d geometry?
+      - Explain the process of finding Tx power inputs within the 3D geometry.
+      - What are the steps to identify the location of Tx power inputs in 3D?
+
+  - intent: edit_component
+    examples: |
+      - How do I edit a component?
+      - Can you guide me in modifying a component?
+      - Explain the procedure for making changes to a component.
+
+  - intent: delete_component
+    examples: |
+      - How do I delete a component?
+      - Can you guide me in removing a component from the system?
+      - Explain the procedure for deleting a component.
+
+  - intent: inquire_conductors
+    examples: |
+      - What are conductors in the Cable Harness model?
+      - Explain the role of conductors in Cable Harness.
+      - Tell me about the sub-classes of conductors in the Cable Harness model.
+
+  - intent: inquire_wire_definition
+    examples: |
+      - How is each wire defined in the Cable Harness model?
+      - Define a wire in the Cable Harness model.
+      - Explain the properties of a wire in the Cable Harness model.
+
+  - intent: inquire_shield_definition
+    examples: |
+      - What is a Shield in the Cable Harness model?
+      - Define the characteristics of a Shield.
+      - Explain the role of a Shield in the Cable Harness model.
+
+  - intent: inquire_shield_transfer_impedance
+    examples: |
+      - What is Shield Transfer Impedance in the Cable Harness model?
+      - Explain the concept of Shield Transfer Impedance.
+      - Tell me about Shield Transfer Impedance.
+
+  - intent: inquire_shield_construction_subclasses
+    examples: |
+      - What are the sub-classes of Shield Construction in the Cable Harness model?
+      - Describe the supported Shield Construction sub-classes.
+      - Tell me about Shield Construction options.
+
+  - intent: inquire_inductance
+    examples: |
+      - What is inductance in the Cable Harness model?
+      - Explain the concept of inductance.
+      - Tell me about penetration inductance in Cable Harness.
+
+  - intent: inquire_aperture_inductance
+    examples: |
+      - What is aperture inductance in Cable Harness?
+      - Explain aperture inductance.
+      - Tell me about the magnetic coupling through holes in Cable Harness.
+
+  - intent: inquire_braid_inductance
+    examples: |
+      - What is braid inductance in Cable Harness?
+      - Explain the concept of braid inductance.
+      - Tell me about the interaction between halves of the braid in Cable Harness.
+
+  - intent: inquire_skin_inductance
+    examples: |
+      - What is skin inductance in Cable Harness?
+      - Explain skin inductance.
+      - Tell me about eddy currents in the apertures' walls in Cable Harness.
+
+  - intent: inquire_cable_structure
+    examples: |
+      - Describe the structure of a cable in Cable Harness.
+      - What are the components of a cable in Cable Harness?
+      - Explain the topology of the cross-section properties for a cable harness line segment.
+
+  - intent: inquire_bundle_structure
+    examples: |
+      - What is a bundle or module within a cable harness line segment?
+      - Describe the structure of a bundle in Cable Harness.
+      - Explain the components of a bundle in Cable Harness.
+
+  - intent: inquire_high_frequency_behavior
+    examples: |
+      - How does current behave at high frequencies in Cable Harness?
+      - Explain the behavior of current as a transverse electromagnetic wave.
+      - Tell me about Transmission Line behavior in multiconductor cables at high frequencies.
+
+  - intent: inquire_differential_modes
+    examples: |
+      - What are Differential Modes in multiconductor cables?
+      - Explain the concept of Differential Modes.
+      - Tell me about the number of Differential Modes in relation to the number of conductors.
+
+  - intent: inquire_ground_return_path_steel
+    examples: |
+      - How does the Ground Return Path work in a steel-bodied automobile or aluminum fuselage aircraft?
+      - Explain the role of the structure material as the Ground Return Path.
+      - Tell me about the current return path in a steel-bodied automobile.
+
+  - intent: inquire_wire_return_path_fiberglass
+    examples: |
+      - How is the Wire Return Path managed in a fiberglass boat?
+      - Explain the choice of a Reference conductor as the Ground-equivalent Return Path.
+      - Tell me about the absence of a conducting Ground structure in a fiberglass boat.
+
+  - intent: inquire_shield_return_path_umbilical_cable
+    examples: |
+      - How does the Shield serve as the Return Path in an umbilical cable between spacecraft on a launch pad?
+      - Explain the absence of a close Ground for return current in an umbilical cable.
+      - Tell me about the design choice of using a Shield conductor as the Return Path in an umbilical cable.
+
+  - intent: inquire_algorithm_properties_calculation
+    examples: |
+      - Can you explain the algorithm for calculating PUL properties of cable harnesses with shields?
+      - What are the main problems solved by the algorithm in cable harness calculations?
+      - Tell me about the process of calculating capacitance, inductance, and conductance matrices from FreeFEM simulations.
+
+  - intent: inquire_integration_transfer_impedance
+    examples: |
+      - How does the algorithm integrate transfer impedance into PUL properties for shields?
+      - Explain the method used to incorporate shield transfer impedance in the PUL properties calculation.
+      - Tell me about the process of integrating transfer impedance into the algorithm.
+
+  - intent: inquire_approximation_radiation_impedance
+    examples: |
+      - Can you provide details about the approximation method used to estimate PUL radiation impedance in the algorithm?
+      - How is the PUL radiation impedance approximated in the algorithm?
+      - Tell me about the development of the approximation method for radiation impedance in PUL properties calculation.
+
+  - intent: inquire_reference_choice_ground
+    examples: |
+      - How is the reference conductor chosen in the presence of a lossless ground?
+      - Explain the rules for choosing the reference when there is a ground nearby.
+      - Tell me about the choice of reference in the first scenario shown in the figures.
+
+  - intent: inquire_reference_choice_outermost
+    examples: |
+      - When do we use the outermost conductor as the reference in the transmission line model?
+      - Explain the rules for choosing the outermost conductor as the reference.
+      - Tell me about the scenarios where the outermost conductor is chosen as the reference.
+
+  - intent: inquire_reference_choice_outermost_unique
+    examples: |
+      - How is the reference chosen when there is one outermost shield and all other conductors are inside the shield?
+      - Explain the unique choice of reference in scenarios with a single outermost shield.
+      - Tell me about the scenarios where there is a unique choice of reference as shown in the second example.
+
+  - intent: inquire_reference_choice_outermost_general
+    examples: |
+      - How is the reference chosen when there are multiple outermost shields or wires?
+      - Explain the choice of reference in scenarios where any outermost shield or wire can be chosen.
+      - Tell me about the scenarios where multiple choices of reference are possible as shown in the third example.
+
+  - intent: inquire_reference_choice_mathematical_practice
+    examples: |
+      - Can any conductor be used as the reference mathematically in the transmission line model?
+      - Explain the mathematical perspective on choosing the reference conductor.
+      - Tell me about the practical considerations when choosing a reference conductor in the transmission line model.
+
+  - intent: inquire_algorithm_first_step
+    examples: |
+      - What is the first step of the algorithm in cable harness calculations?
+      - Explain the process of building a tree diagram based on harness geometry in the algorithm.
+      - Tell me about the tree diagram construction in the initial step of the algorithm.
+
+  - intent: inquire_leaf_node_definition
+    examples: |
+      - What is a leaf node in the tree diagram?
+      - Explain the concept of a leaf node in the context of the algorithm.
+      - Tell me about nodes without any children in the tree diagram.
+
+  - intent: inquire_non_leaf_non_root_node_definition
+    examples: |
+      - What is a non-leaf non-root node in the tree diagram?
+      - Explain the characteristics of a non-leaf non-root node in the algorithm.
+      - Tell me about nodes that are shields in the tree diagram.
+
+  - intent: inquire_root_node_definition
+    examples: |
+      - What is the root node in the tree diagram?
+      - Explain the role and characteristics of the root node in the algorithm.
+      - Tell me about the labeling of the root node as 0 in the tree diagram.
+
+  - intent: inquire_node_relationships
+    examples: |
+      - How are the children of a node determined in the tree diagram?
+      - Explain the relationships between nodes, children, and descendants in the algorithm.
+      - Tell me about the criteria for defining the root and children of a node in the tree diagram.
+
+  - intent: inquire_radiation_impedance
+    examples: |
+      - What is the radiation impedance?
+      - What is the role of radiation impedance in modeling radiation from a cable harness.
+      - Tell me about the characteristics of radiation impedance as a PUL property or a lumped element.
+
+  - intent: define_radiation_impedance
+    examples: |
+      - What is the definition of radiation impedance in a cable harness?
+      - Explain the role of radiation impedance in modeling radiation from a cable harness.
+
+  - intent: describe_dm_radiation_resistance
+    examples: |
+      - What is the characteristic of the differential mode (DM) radiation resistance in a transmission line?
+      - Explain the findings from numerical calculations regarding the DM radiation resistance and its independence on line length and termination.
+      - Tell me about the approach used to determine the DM radiation resistance from a finite length of line with a matched load and source.
+
+  - intent: inquire_direct_approach_radiation_resistance
+    examples: |
+      - How is the direct approach used to find the radiation resistance of a transmission line?
+      - Explain the steps involved in finding the radiation resistance through a direct approach, considering the radiated field and current on the line.
+      - Tell me about the direct approach to calculate the radiation resistance.
+      - How do I calculate the radiation resistance?
+
+  - intent: inquire_reciprocal_approach_radiation_resistance
+    examples: |
+      - What is the reciprocal approach in determining the radiation resistance of a transmission line?
+      - Explain how the reciprocal approach works, finding the response of the line to an external field with a closed-form solution.
+      - Tell me about the reciprocal approach for calculating radiation resistance.
+  - intent: create_cylindrical_fairing_volume
+    examples: |
+      - create cylindrical fairing volume
+      - how to create a cylindrical fairing volume
+  - intent: create_spacecraft_volume
+    examples: |
+      - create spacecraft volume
+      - how to create a spacecraft volume
+      - add spacecraft volume
+  - intent: cut_shape
+    examples: |
+      - cut shape
+      - how to cut a shape
+  - intent: add_ellipsoid
+    examples: |
+      - add ellipsoid
+      - how to add an ellipsoid
+      - create ellipsoid
+  - intent: add_sphere
+    examples: |
+      - add sphere
+      - how to add a sphere
+      - create sphere
+  - intent: ask_tree_view
+    examples: |
+      - what is tree view
+      - explain tree view
+      - tell me about the tree view
+      - tree view details
+  - intent: pan_model
+    examples: |
+      - how to pan the model
+      - panning the model
+      - move the model
+      - pan controls
+  - intent: scroll_in_out
+    examples: |
+      - how do i scroll in or out
+      - zooming in and out
+      - scrolling in the model
+      - zoom controls
+  - intent: rotate_model
+    examples: |
+      - how do i rotate the model
+      - rotating the model
+      - model rotation
+      - rotate controls
+  - intent: hide_objects
+    examples: |
+      - can i hide objects
+      - hiding objects
+      - toggle visibility
+      - hide and show objects
+  - intent: add_3d_geometry
+    examples: |
+      - how to add 3d geometry
+      - adding 3d shapes
+      - create 3d geometry
+      - geometry addition
+  - intent: wire_constructions
+    examples: |
+      - what are wire constructions
+      - explain wire constructions
+      - wire properties
+      - details on wires
+  - intent: add_connectors
+    examples: |
+      - how to add connectors
+      - adding connectors
+      - connectors in the model
+      - add wire junctions
+  - intent: create_junction
+    examples: |
+      - how to create a junction
+      - creating junctions
+      - junction creation
+      - automatically create junctions
+  - intent: ask_about_simulation_tool
+    examples: |
+      - What is the simulation tool defined in the Math Spec I?
+      - How does the simulation tool described in the paper work?
+      - Can you explain the simulation tool mentioned in the section?
+      - What method does the simulation tool use to predict electromagnetic field levels?
+
+  - intent: ask_about_statistical_power_balance_method
+    examples: |
+      - What is Lyon's statistical power balance method?
+      - Who introduced the statistical power balance method?
+      - Can you provide details about the statistical power balance method proposed by Lyon in 1962?
+      - How does the statistical power balance method predict vibration and acoustic response?
+
+  - intent: ask_about_SEA_framework
+    examples: |
+      - What is statistical energy analysis (SEA)?
+      - Who laid the foundations for statistical power balance modeling of EM fields in reverberant, multi-modal domains?
+      - Can you explain the framework of statistical energy analysis introduced by Lyon in 1962?
+      - How does SEA relate to predicting EM fields in reverberant domains?
+
+  - intent: ask_about_deterministic_models_vs_statistical_reduction
+    examples: |
+      - What are the limitations of deterministic models for estimating EM fields?
+      - How do deterministic models compare to statistical reduction methods in predicting EM fields?
+      - Can you explain why deterministic models may not reliably estimate predicted EM fields?
+      - What is the role of statistical reduction in accounting for uncertainties in EM parameters?
+
+  - intent: ask_about_modal_expansion_basis
+    examples: |
+      - How does Bremner use a modal expansion basis for predicting EM field response?
+      - What is the significance of modal expansion basis in predicting EM field response?
+      - Can you elaborate on how modal expansion basis predicts the statistical moments of EM field response?
+      - What role does a selection of probability density function play in predicting EM field response?
+
+  - intent: ask_about_application_of_statistical_power_balance_approach
+    examples: |
+      - How is Hill's statistical power balance approach applied in the paper?
+      - Can you provide examples of the application of statistical power balance approach to EM environments?
+      - What are the results of applying Junqua's approach to modeling EM environments in connected cavities?
+      - How does Junqua's approach benefit space vehicle EMC design?
+
+  - intent: ask_about_Inverse_Gamma_distribution
+    examples: |
+      - What is the Inverse Gamma distribution proposed by Bremner?
+      - How does the Inverse Gamma distribution differ from the Log Normal distribution?
+      - Can you explain the advantages of using an Inverse Gamma distribution for frequency variance?
+      - What implications does the Inverse Gamma distribution have on predicting EM field strength?
+
+  - intent: ask_about_E_field_PDF
+    examples: |
+      - What is the new E field PDF proposed in the paper?
+      - How is the E field PDF calculated from mean and variance of energy?
+      - Can you explain the validity of the new E field PDF across different cavity Q factors?
+      - What are the characteristics of the new E field PDF in predicting EM field properties?
+  - intent: ask_about_energy_subsystem_in_SPB_modelling
+    examples: |
+      - What is an energy subsystem in statistical power balance modeling?
+      - Can you explain the concept of an energy subsystem in SPB modeling?
+      - What are the characteristics of an energy subsystem in statistical power balance?
+      - How do differences in reverberant energy levels arise in connected cavity fields in SPB modeling?
+      - What causes variations in reverberant energy levels among connected cavity fields in SPB modeling?
+  - intent: ask_about_total_energy_in_cavity
+    examples: |
+      - What is the total energy of the reverberant field in a cavity?
+      - Can you explain the concept of total energy in a cavity with volume?
+      - How is the total energy of the reverberant field calculated in a cavity?
+      - What are the components involved in calculating the total energy of the reverberant field in a cavity?
+      - Can you provide details about the equation for the total energy of the reverberant field in a cavity?
+  - intent: ask_about_average_modal_density
+    examples: |
+      - What is the average electromagnetic modal density in an enclosed volume?
+      - Can you explain how the average electromagnetic modal density is calculated?
+      - How does Hill's work relate to the calculation of the average electromagnetic modal density?
+      - What factors determine the average electromagnetic modal density in an enclosed volume?
+      - Can you provide details about the calculation of the average electromagnetic modal density in an enclosed volume?
+  - intent: ask_about_power_balance_principle
+    examples: |
+      - What is the power balance principle for cavity reverberant fields?
+      - Can you explain how the power balance principle applies to reverberant fields in a cavity?
+      - How does the power input from an external source relate to the total power dissipated by losses in a reverberant field?
+      - What are the components of the power balance principle for cavity reverberant fields?
+      - Can you provide details about the power balance principle described in the section?
+  - intent: ask_about_statistical_power_balance_modeling
+    examples: |
+      - What is statistical power balance modeling?
+      - Can you explain the concept of statistical power balance modeling?
+      - How is energy dissipation described in statistical power balance modeling?
+      - What are coupling cross sections in statistical power balance modeling?
+      - Can you provide details about Lyon's dimensionless loss factor notation in statistical power balance modeling?
+  - intent: ask_about_power_balance_model
+    examples: |
+      - What is the power balance model described in the section?
+      - Can you explain the components of the power balance model equation?
+      - How are damping loss factors calculated in the power balance model?
+      - Why are open aperture loss and leakage loss not included in each cavity's damping loss factor?
+      - Can you provide details about the coupling loss factor in the power balance model?
+
+  - intent: ask_about_absorption_coefficient
+    examples: |
+      - What is the absorption coefficient?
+      - Can you explain how the absorption coefficient is defined?
+      - How is the average damping loss factor due to absorption calculated?
+      - What is the reflection loss for RF absorbing materials?
+      - How are the losses from the absorption of constituent materials and printed circuit board traces quantified?
+
+  - intent: ask_about_coupling_loss_factor
+    examples: |
+      - What is the coupling loss factor?
+      - Can you explain how the coupling loss factor is defined?
+      - How are Lyon's statistical energy analysis coupling loss factors different from aperture cross section?
+      - What is the power transmission coefficient (PTC)?
+      - How is the transmission cross section of an aperture defined?
+      - Can you provide details about the reciprocity relationship of coupling loss factors?
+  - intent: ask_about_layered_materials
+    examples: |
+      - What roles do two-dimensional panels of layered materials play in high-frequency electromagnetic field engineering?
+      - Can you explain the significance of layered materials in electromagnetic field engineering?
+      - What are the different types of materials that can make up layered laminates in electromagnetic field engineering?
+      - How are laminated sheets represented in the statistical power balance (SPB) model?
+      - Can you provide details about the reflection, transmission, and absorption characteristics of layered materials in electromagnetic fields?
+  - intent: ask_about_transfer_matrix_method
+    examples: |
+      - What is the transfer matrix method used for in multi-layer laminates?
+      - Can you explain how the transfer matrix method is used to calculate surface reflection and transmission coefficients in multi-layer laminates?
+      - How are the reflection and transmission coefficients of a multi-layer laminate calculated?
+      - What are the "macro" properties of a multi-layer laminate derived from the transfer matrix method?
+      - Can you provide details about the options for averaging in reverberant EM field modeling?
+  - intent: ask_about_dielectric_material_properties
+    examples: |
+      - What are the properties that define a dielectric material?
+      - Can you explain the characteristics of dielectric materials?
+      - How are permittivity, permeability, and conductivity related in dielectric materials?
+      - Are the properties of dielectric materials constant or frequency-dependent?
+  - intent: ask_about_conductive_material_properties
+    examples: |
+      - What are the properties that define a highly conductive material?
+      - Can you explain the characteristics of highly conductive materials?
+      - How are conductivity and permeability related in highly conductive materials?
+      - Are the properties of highly conductive materials constant or frequency-dependent?
+  - intent: ask_about_stochastic_wave_mechanics
+    examples: |
+      - What is stochastic wave mechanics?
+      - Can you explain how stochastic wave mechanics is used to define EM field responses?
+      - How does stochastic wave mechanics handle arbitrarily complex cavity fields?
+      - What is meant by a converged prediction in statistical models?
+      - How are modal parameters treated in stochastic wave mechanics?
+      - What factors contribute to uncertainty in dynamic systems at higher frequencies?
+  - intent: ask_about_frequency_stirred_probability_distribution
+    examples: |
+      - What is the "frequency-stirred" probability distribution?
+      - Can you explain how the frequency-stirred probability distribution differs from the exponential distribution used in reverberation chambers?
+      - How is the unconditional electric field PDF defined in the context of Bayesian statistics?
+      - What is the relationship between the mean field in each cavity and the total energy?
+      - How is the relative variance of the energy of a reverberant wave field derived based on modal overlap?
+      - Can you provide details about the matrix formulation provided by Langley & Cotoni for propagating the relative variance in a network of multiply connected reverberant fields?
+  - intent: ask_about_energy_probability_distribution
+    examples: |
+      - What are the proposed probability distributions for energy?
+      - Can you explain the differences between the Gamma, Log-Normal, and Complex Wishart distributions for energy?
+      - How is energy related to the mean-squared electric field levels over the enclosure volume?
+      - What is the Chi Square distribution in the context of energy?
+      - Why is the Inverse Gamma distribution considered more suitable for under-moded fields?
+      - What is the form of the Inverse Gamma distribution for energy?
+  - intent: ask_about_unconditional_electric_field_PDF
+    examples: |
+      - Is there a closed form solution for the unconditional electric field PDF?
+      - How is the unconditional electric field PDF calculated?
+      - What assumptions are made for the marginal energy PDF in deriving the unconditional electric field PDF?
+      - Can you explain the parameters involved in the new distribution for electric field level?
+      - What is the significance of the parameters in the new distribution for electric field level?
+  - intent: ask_about_lossy_cavities
+    examples: |
+      - How are reverberant fields affected in lossy cavities?
+      - Can you explain the role of absorber materials in lossy cavities?
+      - What factors contribute to the presence of a direct field in lossy cavities?
+      - How is the total field calculated in lossy cavities?
+      - What is the significance of the Rice distribution in lossy cavities?
+      - What observations were made in the spatial field distribution shown in [25]?
+  - intent: ask_about_hybrid_model_solution
+    examples: |
+      - How is the hybrid deterministic-statistical coupling model solved?
+      - Can you explain the three-step process involved in solving the hybrid model?
+      - What is the first step in the hybrid model solution?
+      - What does the second step involve in the hybrid model solution?
+      - How are the total cable harness currents and terminal voltages modeled in the hybrid solution?
+      - What factors affect the mean-squared current in a conductor in the hybrid model solution?
+  - intent: ask_about_RhoPhy_data_structure_definition
+    examples: |
+      - What is the RhoPhy Data Structure used for?
+      - Can you explain the components of the RhoPhy Data Structure?
+      - How are cable segments defined within the RhoPhy Data Structure?
+      - What is the purpose of uncoupled cable analysis in the RhoPhy model?
+      - How is the radiation impedance defined in the RhoPhy model?
+      - What is the common mode (CM) radiation assumption in the RhoPhy model?
+      - How is the total power radiated to free field calculated in the RhoPhy model?
+  - intent: ask_about_conductor_radiated_power
+    examples: |
+      - How is the radiated power calculated from the lumped radiation impedance in a conductor?
+      - Can you explain the process for calculating radiated power from lumped radiation impedance?
+      - What are the components involved in determining the radiated power from lumped radiation impedance?
+      - How does the current network solver output contribute to calculating radiated power?
+      - What is the significance of the conductor and cable segments in determining radiated power?
+  - intent: ask_about_diffuse_field_modeling
+    examples: |
+      - How is an ideally diffuse field within a cavity modeled?
+      - Can you explain the concept of a superposition of uniform plane waves in cavity modeling?
+      - What is the role of current and voltage sources in modeling plane wave excitation?
+      - How are plane wave incidence angle and polarization vectors accounted for in cavity modeling?
+      - What are the equations used to represent induced voltage and currents on MTL segments?
+      - What is the significance of the excitation source model by Paul (2008) in cavity modeling?
+  - intent: ask_about_cavity_loss_factor_calculation
+    examples: |
+      - How is the cavity loss factor calculated due to radiation loading?
+      - Can you explain the process of determining the cavity loss factor from radiation loading?
+      - What is the significance of radiation resistance in calculating the cavity loss factor?
+      - How are equivalent voltage sources determined to account for external field excitation?
+      - What is the equation used to calculate the mean power delivered to a matched load in an ideal diffuse field?
+  - intent: ask_about_voltage_source_distribution
+    examples: |
+      - How is the voltage source distributed across the line segment?
+      - Can you explain the incoherent distribution of voltage sources on the line?
+      - What is the significance of Gaussian quadrature in evaluating the integration?
+      - How are the translation matrices used in the quadrature approach?
+      - What is the role of the Cable Segment Loading Q factors in the RhoPhy Model Data Structure?
+  - intent: ask_about_total_power_dissipation
+    examples: |
+      - How is the total power dissipated by all losses calculated?
+      - Can you explain the relationship between power loss fraction and field energy level rate?
+      - What is the significance of the Q factor in determining the total cavity wavefield loss factor?
+      - How do cable segments contribute to the loss mechanism in each cavity wavefield?
+  - intent: ask_about_cable_harness_response
+    examples: |
+      - How does the OSU Comp. Mod. II transmission Line code handle applied voltage and current sources?
+      - Can you explain how the cable harness response is calculated by the OSU Comp. Mod. II transmission Line code?
+      - What happens to the results of the cable harness response in the RhoPhy Data Structure?
+  - intent: ask_about_cavity_wavefields_processing
+    examples: |
+      - How does the OSU Comp. Mod. II transmission Line code handle cavity wavefields processing?
+      - Can you explain the steps involved in calculating the effective voltage sources on cable segments within the cavity?
+      - What happens to the results of the cable harness response in the RhoPhy Data Structure for each cavity wavefield excitation load case?
+  - intent: ask_about_mean_field_levels_calculation
+    examples: |
+      - How does the OSU Comp. Mod. II transmission Line code calculate the statistical mean total voltage magnitude of response at the cable harness nodes?
+      - Can you explain the process for calculating the statistical mean total current magnitude of response in the termination loads?
+      - What steps are involved in calculating the statistical mean 2 port S parameter magnitude?
+  - intent: ask_about_stochastic_limits_definition
+    examples: |
+      - Can you explain how the stochastic limits for field response are defined?
+      - What are the stochastic limits for reverberant electric field magnitude in each cavity wavefield?
+      - How are the stochastic limits of coupled cable voltage and current response determined?
+  - intent: ask_about_uncoupled_cable_harness_limits
+    examples: |
+      - What are the stochastic limits for a cable harness where all segments are outside all cavities but excited by terminal inputs?
+      - Can you explain the maximum, mean, and minimum stochastic limits for an uncoupled cable harness?
+  - intent: ask_about_cable_harness_limits_inside_cavities
+    examples: |
+      - What are the stochastic limits for a cable harness with segments inside one or more cavities but not excited by terminal inputs?
+      - Can you explain the stochastic limits for voltages, currents, and S parameters in a cable harness inside cavities?
+  - intent: ask_about_cable_harness_limits_inside_cavities_terminal_inputs
+    examples: |
+      - What are the stochastic limits for a cable harness with segments inside cavities and excited by terminal inputs?
+      - Can you explain the stochastic limits for voltages, currents, and S parameters in a cable harness inside cavities with terminal inputs?
+  - intent: ask_about_loss_factor_due_to_cavity_radiation_resistance
+    examples: |
+      - What is the loss factor due to the coupling between radiation resistance and the electromagnetic field?
+      - Can you explain the loss factor due to the coupling between radiation resistance and the electromagnetic field?
+  - intent: ask_about_loss_factor_due_to_antenna_loss
+    examples: |
+      - How is the loss factor of a cavity affected by antenna loss?
+      - Can you elaborate on the loss factor of a cavity due to antenna loss?
+  - intent: ask_about_voltage_calculation_using_reciprocal_theorem
+    examples: |
+      - How can we calculate the voltages at any point of a circuit in a reverberant cavity using the reciprocal theorem?
+      - Can you explain the process of calculating voltages in a circuit placed in a reverberant cavity using the reciprocal theorem?
+  - intent: ask_about_current_calculation_using_reciprocal_theorem
+    examples: |
+      - How do we calculate the currents in a circuit generated by the electromagnetic field using the reciprocal theorem?
+      - Can you elaborate on the process of calculating currents in a circuit placed in a reverberant cavity using the reciprocal theorem?
+  - intent: ask_about_transfer_matrix_method1
+    examples: |
+      - How are the EM wave reflection, absorption, and transmission properties of multilayer dielectric structures calculated?
+      - Can you explain the process of calculating EM wave reflection, absorption, and transmission in multilayer dielectric structures?
+  - intent: ask_about_wave_reflection_and_transmission_in_dielectric_layers
+    examples: |
+      - How is wave reflection and transmission across dielectric material layers averaged in reverberant wavefields?
+      - Can you elaborate on the averaging process for wave reflection and transmission across dielectric layers in reverberant wavefields?
+  - intent: ask_about_continuity_along_interface_of_dielectric_layers
+    examples: |
+      - How is continuity along the interface between different layers ensured in multilayer dielectric structures?
+      - Can you explain how continuity along the interface of different layers is maintained in multilayer dielectric structures?
+  - intent: ask_about_generalization_to_multi_layered_structure
+    examples: |
+      - How are the results from the previous section generalized to a multi-layered structure?
+      - Can you explain how the findings from the previous section apply to a multi-layered structure?
+  - intent: ask_about_transmission_coefficient_definition
+    examples: |
+      - What is the definition of the transmission coefficient?
+      - Can you explain how the transmission coefficient is defined?
+  - intent: ask_about_average_power_transmission_coefficient
+    examples: |
+      - How is the average power transmission coefficient calculated?
+      - Can you explain the calculation of the average power transmission coefficient?
+  - intent: ask_about_power_transmission_loss_definition
+    examples: |
+      - What is the definition of power transmission loss?
+      - Can you explain what power transmission loss means?
+  - intent: ask_about_field_incidence_absorption_coefficient
+    examples: |
+      - How is the field incidence absorption coefficient calculated?
+      - Can you explain the calculation of the field incidence absorption coefficient?
+  - intent: ask_about_cavity_damping_loss_factor_contributions
+    examples: |
+      - What are the contributions to the cavity damping loss factor?
+      - Can you list the factors contributing to the cavity damping loss factor?
+  - intent: ask_about_wall_losses
+    examples: |
+      - What are wall losses in the context of cavity damping loss factor?
+      - Explain wall losses as a contribution to the cavity damping loss factor.
+  - intent: ask_about_absorption_cross_sections
+    examples: |
+      - Can you explain absorption cross sections in relation to cavity damping loss factor?
+      - What role do absorption cross sections play in the cavity damping loss factor?
+  - intent: ask_about_antenna_loading_losses
+    examples: |
+      - How do antenna loading losses contribute to the cavity damping loss factor?
+      - Explain the concept of antenna loading losses in relation to the cavity damping loss factor.
+  - intent: ask_about_modal_damping_loss_mechanism
+    examples: |
+      - What is the modal damping loss mechanism related to conducting walls?
+      - Can you explain how conducting walls contribute to modal damping loss?
+  - intent: ask_about_skin_depth
+    examples: |
+      - What is the significance of the skin depth in conducting walls?
+      - Explain the concept of skin depth in the context of conducting walls.
+  - intent: ask_about_reflection_loss_definition
+    examples: |
+      - What is the definition of reflection loss?
+      - Can you explain what reflection loss means?
+  - intent: ask_about_average_reflection_loss
+    examples: |
+      - How is average reflection loss calculated?
+      - Can you explain how average reflection loss is determined?
+  - intent: ask_about_absorption_coefficient_definition
+    examples: |
+      - What is the definition of absorption coefficient?
+      - Can you explain what absorption coefficient means?
+  - intent: ask_about_cavity_damping_loss_factor
+    examples: |
+      - What is the definition of cavity damping loss factor?
+      - Can you explain what cavity damping loss factor is?
+  - intent: ask_about_absorption_section_definition
+    examples: |
+      - What is the definition of absorption section?
+      - Can you explain what absorption section means?
+  - intent: ask_about_cavity_reverberant_wavefield_damping_loss_factor
+    examples: |
+      - What is the definition of cavity reverberant wavefield damping loss factor?
+      - Can you explain what cavity reverberant wavefield damping loss factor is?
+  - intent: provide_energy_subsystem_parameters
+    examples: |
+      - Can you provide details on the Energy Subsystem dialog box?
+      - What parameters can be defined in the Energy Subsystem dialog box?
+  - intent: specify_energy_subsystem_dimensions
+    examples: |
+      - What dimensions can be defined in the Energy Subsystem dialog box?
+      - Can you list the dimensions that can be specified in the Energy Subsystem dialog box?
+  - intent: specify_additional_parameters_energy_subsystem
+    examples: |
+      - What additional parameters can be added in the Energy Subsystem dialog box?
+      - Can you explain the extra parameters that can be included in the Energy Subsystem dialog box?
+  - intent: explain_free_propagation_wavenumber
+    examples: |
+      - Can you explain what the free propagation wavenumber is?
+      - What does the term "free propagation wavenumber" refer to?
+  - intent: define_cavity_modal_density
+    examples: |
+      - What is meant by cavity modal density?
+      - Can you define cavity modal density?
+  - intent: describe_total_energy_reverberant_wavefield
+    examples: |
+      - How is the total energy in the reverberant wavefield calculated?
+      - Can you describe the calculation of total energy in the reverberant wavefield?
+  - intent: explain_mean_squared_electric_field
+    examples: |
+      - What does the mean squared time averaged electric field represent?
+      - Can you explain the concept of mean squared time averaged electric field?
+  - intent: provide_energy_to_eu_conversion
+    examples: |
+      - How is the energy-to-EU conversion defined?
+      - Can you provide details on the energy-to-EU conversion?
+  - intent: explain_internal_losses_cavity_subsystem
+    examples: |
+      - What are the internal losses of a reverberant field cavity subsystem?
+      - Can you explain the components of internal losses in a cavity subsystem?
+  - intent: express_internal_losses_q_factor
+    examples: |
+      - How are the internal losses of a cavity subsystem expressed in terms of Q factor?
+      - Can you explain the relationship between internal losses and Q factor?
+  - intent: mention_inverse_measured_q_factors
+    examples: |
+      - Why are only the inverse of measured Q factors added or subtracted?
+      - What is the significance of using the inverse of measured Q factors?
+  - intent: explain_wall_loss_factor_function
+    examples: |
+      - What is the wall loss factor function according to Hill's book?
+      - Can you explain the equation for the wall loss factor from Hill's book?
+  - intent: define_parameters_wall_loss_factor
+    examples: |
+      - What do the parameters in the wall loss factor equation represent?
+      - Can you explain the variables in the equation for the wall loss factor?
+  - intent: explain_field_incidence_absorption
+    examples: |
+      - How is the field incidence absorption obtained from the reflection loss of the RF absorptive laminate?
+      - Can you explain the equation for field incidence absorption from Hill's Q models?
+  - intent: define_parameters_field_incidence_absorption
+    examples: |
+      - What do the parameters in the equation for field incidence absorption represent?
+      - Can you explain the variables in the field incidence absorption equation?
+  - intent: explain_antenna_loading_losses
+    examples: |
+      - How do transmit or receive antennas contribute to loading losses in a reverberant field cavity?
+      - Can you explain the equation for antenna loading losses from Hill's Q models?
+  - intent: define_parameters_antenna_loading_losses
+    examples: |
+      - What does the impedance mismatch represent in the equation for antenna loading losses?
+      - Can you explain the variables in the antenna loading losses equation?
+  - intent: explain_absorption_section
+    examples: |
+      - How are losses quantified for complex 3D objects within a cavity?
+      - Can you explain the concept of absorption section for 3D objects within a cavity?
+  - intent: define_parameters_absorption_section
+    examples: |
+      - What does the absorption section represent for complex 3D objects within the cavity?
+      - Can you explain the averaging process for absorption section from Hill's Q models?
+
+  - intent: add_cable_segment
+    examples: |
+      - Add a cable segment
+      - Create a cable segment
+      - Add a cable segment under 1D Cable Current Fields → Segments
+      - How do I add a cable segment?
+      - Can I create a cable segment?
+  - intent: add_wires
+    examples: |
+      - Add wires
+      - Add desired number of wires
+      - How to add wires?
+      - Specify the number of wires
+  - intent: specify_connectors
+    examples: |
+      - Specify connectors
+      - Specify the connectors that are being linked
+      - How do I specify connectors?
+      - Can I link connectors?
+
+  - intent: create_common_backbone_cable_segment
+    examples: |
+      - Create a common backbone cable segment
+      - How do I create a common backbone cable segment?
+      - Use the tool palette to create cable segments in the 3D Geometry Window
+
+  - intent: edit_segment_cross_section
+    examples: |
+      - Use Edit Segment Cross Section option
+      - How do I specify information for calculations?
+      - What is the Edit Segment Cross Section used for?
+
+  - intent: find_closest_proximate_reflecting_plane
+    examples: |
+      - Find Closest Proximate Reflecting Plane
+      - How to find the closest reflecting plane?
+      - What does the "Find Closest Plane" button do?
+
+  - intent: override_calculated_value
+    examples: |
+      - Override Calculated Value
+      - What happens when I check the Override Calculated Value checkbox?
+      - How to use my own values for distance to ground plane?
+  - intent: ask_unit
+    examples: |
+      - What is the unit for [voltage](parameter_type)?
+      - Tell me the unit for [permeability](parameter_type).
+  - intent: ask_input_parameters
+    examples: |
+      - What are input parameters?
+      - List input parameters.
+  - intent: ask_spectral_data
+    examples: |
+      - What is spectral data input?
+      - Explain spectral data.
+  - intent: ask_classes_spectral_data
+    examples: |
+      - What are classes of spectral data?
+      - List spectral data classes.
+  - intent: ask_data_structure
+    examples: |
+      - What is the data structure of spectral data?
+      - Explain the structure of spectral data.
+  - intent: ask_frequency_range
+    examples: |
+      - What is the frequency range for spectral data?
+      - Define the lowest and highest frequencies for spectral data.
+  - intent: ask_data_forms
+    examples: |
+      - What are the admissible input data forms for spectral data?
+      - Explain the forms of input data accepted for spectral data.
+  - intent: ask_parameter_units
+    examples: |
+      - What are the units for voltage, current, length, time, etc.?
+      - List the units for different parameters.
+  - intent: ask_reflection_loss
+    examples: |
+      - Explain reflection loss.
+      - What is the concept of reflection loss?
+  - intent: ask_insertion_loss
+    examples: |
+      - Describe insertion loss.
+      - What is meant by insertion loss?
+  - intent: ask_shielding_effectiveness
+    examples: |
+      - What is shielding effectiveness?
+      - Explain the concept of shielding effectiveness.
+  - intent: ask_spectral_synthesis
+    examples: |
+      - How to synthesize spectral data?
+      - Explain methods for spectral synthesis.
+  - intent: ask_complex_constant_synthesis
+    examples: |
+      - How to create a constant in the frequency domain?
+      - Explain complex constant synthesis.
+  - intent: ask_rational_function_synthesis
+    examples: |
+      - How to create a rational function in the frequency domain?
+      - Explain rational function synthesis.
+  - intent: ask_pdf_distribution
+    examples: |
+      - How to synthesize a probability density function (PDF)?
+      - Explain PDF synthesis for distributions.
+  - intent: ask_cdf_distribution
+    examples: |
+      - How to synthesize a cumulative distribution function (CDF)?
+      - Explain CDF synthesis for distributions.
+  - intent: ask_rayleigh_distribution
+    examples: |
+      - How to use the Rayleigh distribution to generate spectral data?
+      - Explain spectral data generation with the Rayleigh distribution.
+  - intent: ask_normal_distribution
+    examples: |
+      - How can I utilize the normal distribution for spectral data generation?
+      - Explain generating spectral data using the normal distribution.
+  - intent: ask_log_normal_distribution
+    examples: |
+      - What are the steps to generate spectral data using the log-normal distribution?
+      - Explain log-normal distribution for spectral data synthesis.
+  - intent: ask_lomax_distribution
+    examples: |
+      - How can the Lomax distribution be applied to spectral data analysis?
+      - Explain the parameters and usage of the Lomax distribution for spectral data modeling.
+  - intent: ask_inverse_gamma_distribution
+    examples: |
+      - How is the inverse gamma distribution used in spectral data analysis?
+      - Explain the characteristics and applications of the inverse gamma distribution for spectral data modeling.
+  - intent: ask_exponential_distribution
+    examples: |
+      - How can I use the Exponential distribution for spectral data modeling?
+      - Explain the characteristics of the Exponential distribution for spectral data analysis.
+  - intent: ask_chi_distribution
+    examples: |
+      - How is the Chi distribution used to model un-averaged electric field magnitude?
+      - Explain the characteristics of the Chi distribution in overmoded conditions like reverberation test chambers.
+  - intent: ask_log_normal_distribution_fit
+    examples: |
+      - How does the Log-Normal distribution fit measured ensembles?
+      - Explain the fit of Log-Normal distribution to measured ensembles
+  - intent: ask_calculate_pdf_parameters
+    examples: |
+      - How to calculate PDF parameters?
+      - Explain the calculation of PDF parameters
+  - intent: ask_find_alternative_pdf_model
+    examples: |
+      - What is the alternative PDF model?
+      - Explain the search for an alternative PDF model
+  - intent: ask_inverse_gamma_distribution_fit
+    examples: |
+      - How does the Inverse-Gamma distribution fit the ensemble?
+      - Explain the fit of Inverse-Gamma distribution to the ensemble
+  - intent: ask_calculate_inverse_gamma_parameters
+    examples: |
+      - How to calculate Inverse-Gamma distribution parameters?
+      - Explain the calculation of Inverse-Gamma distribution parameters
+  - intent: ask_lomax_distribution_unconditional_pdf
+    examples: |
+      - What is the unconditional PDF for Lomax distribution?
+      - Explain the unconditional PDF for Lomax distribution
+  - intent: ask_calculate_lomax_parameters
+    examples: |
+      - How to calculate Lomax distribution parameters?
+      - Explain the calculation of Lomax distribution parameters
+  - intent: ask_calculate_lomax_cdf
+    examples: |
+      - How to calculate CDF for Lomax distribution?
+      - Explain the calculation of CDF for Lomax distribution
+  - intent: ask_calculate_lomax_quantiles
+    examples: |
+      - How to calculate quantiles for Lomax distribution?
+      - Explain the calculation of quantiles for Lomax distribution
+  - intent: ask_reverberant_field_magnitude_pdf
+    examples: |
+      - What is the PDF for reverberant field magnitude?
+      - Explain the PDF for reverberant field magnitude
+  - intent: ask_calculate_mean_field_pdf
+    examples: |
+      - How to calculate PDF for mean field?
+      - Explain the calculation of PDF for mean field
+  - intent: ask_calculate_uncertainty_pdf
+    examples: |
+      - How to calculate PDF for uncertainty?
+      - Explain the calculation of PDF for uncertainty
+  - intent: ask_no_uncertainty
+    examples: |
+      - What happens when there is no uncertainty in the source current and Q factor?
+      - Explain the case where there is no uncertainty in source current and Q factor.
+  - intent: ask_uncertainty_q_factor_frequency_variance
+    examples: |
+      - What happens when there is uncertainty in Q factor and frequency variance in input conductance?
+      - Explain the scenario with uncertainty in Q factor and frequency variance in input conductance.
+  - intent: ask_pdf_model_uncertainty_q_factor_frequency_variance
+    examples: |
+      - How is the PDF model affected by uncertainty in Q factor and frequency variance in input conductance?
+      - Explain the PDF model with uncertainty in Q factor and frequency variance in input conductance.
+  - intent: ask_statistical_distribution_q_factors
+    examples: |
+      - How are the statistical distributions of reverberant field Q factors determined?
+      - Explain the determination of statistical distributions of reverberant field Q factors.
+  - intent: ask_uncertainty_all_mean_field_variables
+    examples: |
+      - What happens when there is uncertainty in all three mean field variables?
+      - Explain the scenario with uncertainty in all three mean field variables.
+  - intent: ask_marginal_pdf_modeled_inverse_gamma
+    examples: |
+      - How is the marginal PDF modeled with the inverse-gamma distribution?
+      - Explain the modeling of marginal PDF with the inverse-gamma distribution.
+  - intent: ask_closed_form_analytic_solution_log_normal
+    examples: |
+      - What is the closed form analytic solution with the log-normal distribution?
+      - Explain the closed form analytic solution with the log-normal distribution.
+  - intent: ask_implementation_insight_parameter_deduction
+    examples: |
+      - Can you provide insight into the implementation and parameter deduction for the Lomax Distribution?
+      - Explain the implementation insight and parameter deduction for the Lomax Distribution.
+  - intent: ask_excitation_uncertainty
+    examples: |
+      - How does excitation uncertainty affect the system?
+      - Explain excitation uncertainty.
+      - What is the impact of excitation uncertainty?
+
+  - intent: consider_source_current_as_random_variable
+    examples: |
+      - How is the source current treated in the model?
+      - Explain the treatment of source current in the model.
+      - Is the source current considered as a constant in the model?
+
+  - intent: derive_pdf_model_excitation_uncertainty
+    examples: |
+      - How is the PDF model derived for excitation uncertainty?
+      - Explain the derivation of the PDF model for excitation uncertainty.
+      - What is the procedure for deriving the PDF model for excitation uncertainty?
+
+  - intent: calculate_mean_point_input_conductance
+    examples: |
+      - How is the mean point input conductance calculated?
+      - Explain the calculation of mean point input conductance.
+      - What method is used to determine the mean point input conductance?
+
+  - intent: add_excitation_uncertainty_algorithm
+    examples: |
+      - How is excitation uncertainty incorporated into the model?
+      - Explain the procedure for adding excitation uncertainty algorithmically.
+      - What steps are taken to include excitation uncertainty in the model?
 
   - intent: inquire_frequency_vector
     examples: |
@@ -119,7 +1111,7 @@ nlu:
     examples: |
       - Can I cut and paste spectral data from a spreadsheet?
       - How to Copy & Paste spectral data into the grid from a spreadsheet.
-  
+
   - intent: inquire_cavity_wavefield
     examples: |
       - How do I create a cavity wavefield?
@@ -139,5 +1131,546 @@ nlu:
       - Can I add Reciever Antenna Loss?
       - Where is Reflective Loss?
       - How do I add Dielectric Laminate Loss?
+  - intent: excitation_external_efield_constraints
+    examples: |
+      - How can I add an external electric field constraint?
+      - Explain adding external electric field contrainst.
 
-    
+  - intent: solve_max_min_field_limit
+    examples: |
+      - How do I solve for the maximum and minimum field limits?
+      - Explain how to solve the mean and statistical max and min field limits.
+
+  - intent: view_efield_outputs
+    examples: |
+      - How do I view the E-field outputs?
+      - Explain how to see the output data from the E-field.
+
+  - intent: describe_connector_model
+    examples: |
+      - What is a connector model?
+      - Explain a connector model.
+
+  - intent: describe_junction_model
+    examples: |
+      - What is a junction model?
+      - Explain junction models.
+
+  - intent: describe_junction_relationship
+    examples: |
+      - What is the combined relationship for the kth junction network?
+      - Described a kth junction network.
+
+  - intent: describe_junction_structure
+    examples: |
+      - Describe the junction structure.
+      - what is a junction structure.
+
+  - intent: describe_junction_matrices
+    examples: |
+      - Describe junction matrix structure.
+      - How does Kirchhoff's current laws relate to matrices.
+
+  - intent: describe_external_field_source
+    examples: |
+      - Describe external field sources.
+      - What is an external field source?
+
+  - intent: describe_plane_wave
+    examples: |
+      - Describe plane waves formula.
+      - What is the plane wave formula?
+
+  - intent: describe_multiconductor_transmission_line
+    examples: |
+      - Explain multiconductor transmission lines.
+      - How does a multiconductor transmission line work?
+
+  - intent: ask_generalized_telegrapher_equations
+    examples: |
+      - What are the Generalized Telegrapher's Equations?
+      - Explain GTE in transmission lines.
+      - Tell me about multiconductor transmission lines.
+
+  - intent: ask_telegrapher_equations_components
+    examples: |
+      - What are the components of the Telegrapher's equations?
+      - List the elements in the GTE.
+      - Explain impedance and admittance matrices.
+
+  - intent: explain_modal_relationship
+    examples: |
+      - How are the voltages and currents related to modal voltages and currents?
+      - Explain the relationship between V(z) and V_m(z).
+      - Tell me about the connection between individual conductors and modal voltages.
+
+  - intent: describe_generalized_telegrapher_solution
+    examples: |
+      - What is the solution of the generalized Telegrapher's equations?
+      - Explain the forward and backward propagating modes in transmission lines.
+      - Describe the modal voltages and currents in transmission line solutions.
+
+  - intent: explain_network_description
+    examples: |
+      - Describe the network consisting of K MTLs and conductors.
+      - What are the order 2 BLT equations used for in the network?
+      - Explain the terms like network current scattering matrix and network propagation matrix.
+
+  - intent: describe_network_solution_process
+    examples: |
+      - How are the currents at each end of MTL segments found in the network?
+      - Explain the two-step process for solving the network equations.
+      - What is the role of the matrix in the network solution?
+
+  - intent: consider_iterative_solution
+    examples: |
+      - Why was iterative solution using BICGSTAB considered for the network?
+      - Compare sparse LU factorization and iterative solution for network solutions.
+      - Discuss the computational aspects of solving the network equations.
+
+  - intent: mention_external_field_terms
+    examples: |
+      - How are external field terms accounted for in the BLT equations?
+      - Explain the handling of current and voltage source terms due to external fields.
+      - Is a separate source term needed for external field excitation in the network equations?
+
+  - intent: describe_network_ports
+    examples: |
+      - How are the ports in the network described?
+      - Explain the matched voltage source and load impedances on the ports.
+      - What happens after solving the network?
+
+  - intent: calculate_power_available
+    examples: |
+      - How is the power available from the source calculated?
+      - Explain the relationship between source voltage and current for matched loads.
+      - What is the wave entering port m after solving the network?
+
+  - intent: calculate_power_delivered
+    examples: |
+      - How is the power delivered to the load on port n calculated?
+      - Describe the wave exiting port n and the factors involved.
+      - What is the significance of the negative sign in the power calculation?
+
+  - intent: explain_scattering_parameter
+    examples: |
+      - What is the scattering parameter in the context of network solutions?
+      - Explain the formula for the scattering parameter Smn.
+      - How is the scattering parameter related to the network solution?
+
+  - intent: separate_current_components
+    examples: |
+      - How can the current entering port m be separated into propagating wave components?
+      - What is the reflection coefficient looking into the port?
+      - Explain the relationship between the reflection coefficient and the scattering parameter.
+
+  - intent: explain_loss_in_network
+    examples: |
+      - What contributes to the loss in the network?
+      - Explain the role of resistance in network loss.
+      - How is Ohmic loss modeled in the network?
+
+  - intent: distinguish_loss_roles
+    examples: |
+      - How do lumped resistance elements contribute to network loss?
+      - What is the role of multi-conductor transmission line (MTL) PUL resistance in network loss?
+      - Why is it important to distinguish between Ohmic loss and radiation in the network?
+
+  - intent: calculate_loss_equations
+    examples: |
+      - How is loss due to resistance calculated in the network?
+      - Explain the equations used for modeling Ohmic loss and radiation loss.
+      - Are the calculations for Ohmic loss and radiation loss the same?
+
+  - intent: clarify_loss_roles
+    examples: |
+      - Can you clarify the distinct roles of Ohmic loss and radiation loss in the network?
+      - Explain the differences between the effects of lumped resistance, MTL PUL resistance, and radiation resistance.
+      - How should we differentiate between the two types of losses in network analysis?
+
+  - intent: explain_ohmic_loss
+    examples: |
+      - How is Ohmic loss calculated on a lumped element in a network?
+      - Explain the equations for calculating Ohmic loss on MTL terminals.
+      - What is the significance of Thevenin and Norton equivalent circuits in calculating Ohmic loss?
+
+  - intent: describe_thevenin_circuit
+    examples: |
+      - How does Ohmic loss differ when the resistance is in a Thevenin circuit?
+      - Explain the equation for Ohmic loss in a Thevenin equivalent circuit.
+      - What is the role of resistance in series with MTL terminals?
+
+  - intent: describe_norton_circuit
+    examples: |
+      - How does Ohmic loss differ when the resistance is in a Norton circuit?
+      - Explain the equation for Ohmic loss in a Norton equivalent circuit.
+      - What is the role of resistance in parallel with MTL terminals?
+
+  - intent: explain_transfer_impedance
+    examples: |
+      - What is the relationship between the transfer impedance and Ohmic resistance in a shield?
+      - How is the transfer impedance of a shield equivalent to Ohmic resistance?
+      - Why is the transfer impedance a complex variable in this context?
+
+  - intent: describe_segment_as_antenna
+    examples: |
+      - How does a segment exposed to a diffuse field act as a receiving antenna?
+      - Explain the concept of radiation resistance for an antenna exposed to a diffuse field.
+      - What is the equivalent voltage source that accounts for external field excitation?
+
+  - intent: calculate_mean_power_matched_load
+    examples: |
+      - How is the mean power delivered to a matched load calculated for an antenna in an ideal diffuse field?
+      - Explain the formula for mean power <P_r> in the context of an antenna in a diffuse field.
+      - What are the factors involved in calculating the mean power delivered to a matched load?
+
+  - intent: explain_distributed_voltage_source_integration
+    examples: |
+      - How is the integration of the distributed voltage source evaluated?
+      - Explain the formula for P_d, n using Gaussian quadrature.
+      - What are the variables involved in the Gaussian quadrature weighting and sample point position calculations?
+
+  - intent: describe_gaussian_quadrature
+    examples: |
+      - What is Gaussian quadrature and how is it used in evaluating integrals?
+      - Explain the role of Gaussian quadrature weighting (w_i) in the integration process.
+      - How are sample points (x_l) determined in Gaussian quadrature for the distributed voltage source integration?
+
+  - intent: explain_quadrature_requirements
+    examples: |
+      - What are the requirements for using quadrature in solving the network?
+      - Explain the necessity of placing sources at multiple interior points on the line for quadrature.
+      - How can the network be solved without rebuilding it at each case during quadrature?
+
+  - intent: describe_source_translation
+    examples: |
+      - How is the voltage source translated for multiple interior points on the line in quadrature?
+      - Explain the process of translating a voltage source at position x=x_l to become sources at x=L.
+      - Why is it not necessary to split the segment containing the source in the network during quadrature?
+
+  - intent: outline_quadrature_formula
+    examples: |
+      - Can you outline the quadrature formula for P_d,n after the voltage source translation?
+      - What is the updated formula for quadrature (P_d,n) after translating the voltage source?
+      - How does the quadrature formula change when the source is translated to x=L?
+
+  # math specs 1 | section 12
+
+  - intent: ask_quantiles_definition
+    examples: |
+      - What are quantiles in the context of electric field levels?
+      - Can you explain the concept of quantiles?
+      - What do you mean by quantiles?
+
+  - intent: ask_pdf_description
+    examples: |
+      - Can you describe the probability density function (PDF) for electric field levels?
+      - What is the probability density function (PDF) used for?
+      - How is the probability density function (PDF) calculated?
+
+  - intent: ask_cumulative_distribution_function
+    examples: |
+      - What is the cumulative distribution function (CDF) for electric field levels?
+      - Can you explain the cumulative distribution function (CDF)?
+      - How is the cumulative distribution function (CDF) related to the PDF?
+
+  - intent: ask_quantiles_computation
+    examples: |
+      - How are quantiles computed from the cumulative distribution function (CDF)?
+      - What is the process for computing quantiles?
+      - Can you explain how to compute quantiles from the CDF?
+
+  - intent: ask_relative_variance_single_cavity
+    examples: |
+      - What is the relative variance of reverberant energy for a single cavity?
+      - Can you explain the relative variance of reverberant energy in a single cavity?
+      - How is the relative variance of reverberant energy calculated for a single cavity?
+
+  - intent: ask_relative_variance_multiple_cavities
+    examples: |
+      - What is the relative variance of reverberant energy for multiple connected cavities?
+      - Can you explain the relative variance of reverberant energy in multiple connected cavities?
+      - How is the relative variance of reverberant energy calculated for multiple cavities?
+
+  - intent: ask_probabilistic_variance_power_input
+    examples: |
+      - What is the probabilistic variance formulation for power input?
+      - Can you explain the probabilistic variance formulation for power input?
+      - How is the probabilistic variance formulation for power input evaluated?
+
+  - intent: ask_probabilistic_variance_aperture_coupling_power
+    examples: |
+      - What is the probabilistic variance formulation for aperture coupling power?
+      - Can you explain the probabilistic variance formulation for aperture coupling power?
+      - How is the probabilistic variance formulation for aperture coupling power evaluated?
+
+  - intent: ask_effective_modal_overlap
+    examples: |
+      - What is the effective modal overlap for multiple connected cavities?
+      - Can you explain the effective modal overlap in the context of multiple connected cavities?
+      - How is the effective modal overlap calculated for connected cavities?
+
+  - intent: ask_effective_total_loss_factor
+    examples: |
+      - What is the effective total loss factor for multiple connected cavities?
+      - Can you explain the effective total loss factor in the context of multiple connected cavities?
+      - How is the effective total loss factor calculated for connected cavities?
+
+  - intent: ask_statistical_ensemble_formulation
+    examples: |
+      - What is the statistical ensemble formulation for the energy of a reverberant wave field?
+      - Can you explain the statistical ensemble formulation for reverberant wave field energy?
+      - How does the statistical ensemble formulation relate to the energy of a reverberant wave field?
+
+  - intent: ask_maximum_minimum_response_spectrum_levels
+    examples: |
+      - What are the maximum and minimum response spectrum levels?
+      - Can you explain the concept of maximum and minimum response spectrum levels?
+      - How are the maximum and minimum response spectrum levels calculated?
+
+  - intent: ask_mean_electric_field
+    examples: |
+      - What is the mean electric field in a cavity?
+      - Can you explain the concept of the mean electric field?
+      - How is the mean electric field calculated in a cavity?
+
+  - intent: ask_local_electric_field_frequency_stirred
+    examples: |
+      - What are the stochastic limits of the frequency-stirred local electric field in a cavity?
+      - Can you explain the stochastic limits of the frequency-stirred local electric field?
+      - How are the stochastic limits of the frequency-stirred local electric field determined?
+
+  - intent: ask_s21_of_local_electric_field_frequency_stirred
+    examples: |
+      - How does the S21 response relate to the frequency-stirred local electric field in a cavity?
+      - Can you explain the relationship between S21 response and the frequency-stirred local electric field?
+      - What is the significance of S21 response in the context of the frequency-stirred local electric field?
+
+  # math specs 1 | section 13
+
+  - intent: ask_direct_field_calculation
+    examples: |
+      - How is the direct field calculated?
+      - Can you explain the calculation of the direct electric field?
+      - What is the formula for calculating the direct field?
+
+  - intent: ask_total_field_calculation
+    examples: |
+      - How is the total field calculated?
+      - Can you explain how the total electric field is calculated?
+      - What is the process for calculating the total field?
+
+  - intent: ask_near_field_corrections
+    examples: |
+      - What are the near field corrections?
+      - Can you explain the corrections applied to the near field?
+      - How are near field corrections accounted for?
+
+  - intent: ask_field_distribution
+    examples: |
+      - What is the distribution of the total field?
+      - Can you explain the spatial distribution of the field?
+      - How is the field distributed within the cavity?
+
+  # math specs 1 | section 14
+
+  - intent: ask_specific_graph_instances
+    examples: |
+      - What are some specific graph instances
+      - Can you provide some graph instances
+      - Specific graph results instannces for 0ne0thrid octave solution frequency range
+
+  # math specs 2 | section 1
+
+  - intent: ask_simulation_tool_explanation
+    examples: |
+      - Can you explain how RobustPhysics' new simulation tool works?
+      - What does the hybrid solution offered by RobustPhysics entail?
+      - Can you provide more details about the statistical electromagnetics simulation tool?
+
+  - intent: ask_simulation_tool_features
+    examples: |
+      - What are the main features of RobustPhysics' simulation tool?
+      - Can you outline the key functionalities of the simulation tool?
+      - What tasks can the simulation tool perform?
+
+  - intent: ask_simulation_tool_use_cases
+    examples: |
+      - How can RobustPhysics' simulation tool be used in real-world applications?
+      - Can you provide examples of scenarios where the simulation tool is beneficial?
+      - In what contexts can the simulation tool be applied?
+      - What are Robust Physics simulation tool use cases
+
+  # math specs 2 | section 2
+
+  - intent: ask_cable_harness_model
+    examples: |
+      - What is a cable harness model?
+      - Explain the cable harness model.
+      - Can you provide details about the cable harness model?
+
+  - intent: ask_separable_form
+    examples: |
+      - What is the separable form of TEM mode fields?
+      - Explain the concept of separable form in TEM mode fields.
+      - Can you elaborate on the separable form of fields?
+
+  - intent: ask_deterministic_transmission_line_modeling
+    examples: |
+      - How does deterministic transmission line modeling work?
+      - Can you explain the process of deterministic transmission line modeling?
+      - What are the computational steps involved in deterministic transmission line modeling?
+
+  - intent: ask_canonical_test_cases
+    examples: |
+      - What are the canonical test cases for transmission line models?
+      - Can you provide details about the canonical test cases?
+      - What configurations are used for testing transmission line computational modules?
+
+  # math specs 2 | section 3
+
+  - intent: ask_model_solution_parameters
+    examples: |
+      - What are the model solution parameters?
+      - Explain the parameters for the model solution.
+      - Can you provide details about the solution parameters?
+
+  - intent: ask_frequency_solution_vector
+    examples: |
+      - What is the frequency solution vector?
+      - Explain the concept of frequency solution vector.
+      - Can you elaborate on the frequency solution vector?
+
+  - intent: ask_constant_bandwidth
+    examples: |
+      - How do constant bandwidth parameters work?
+      - Explain the constant bandwidth option.
+      - What is the tabular data input format for constant bandwidth?
+
+  - intent: ask_logarithmic_bandwidth
+    examples: |
+      - What is logarithmic bandwidth used for?
+      - Explain the logarithmic bandwidth option.
+      - Can you provide details about the Third Octave option?
+
+  - intent: ask_octave_frequencies
+    examples: |
+      - What are octave frequencies?
+      - Explain the concept of octave frequencies.
+      - Can you provide details about the fractional octave frequencies?
+
+  # math specs 2 | section 4
+
+  - intent: ask_spectral_data_input
+    examples: |
+      - What are the classes of spectral data?
+      - Explain the types of spectral data.
+      - Can you provide details about spectral data input?
+
+  - intent: ask_material_properties
+    examples: |
+      - What are materials with complex, frequency-dependent properties?
+      - Explain materials with frequency-dependent properties.
+      - Can you provide details about materials with complex properties?
+
+  # math specs 2 | section 5
+
+  - intent: ask_dielectric_gas_properties
+    examples: |
+      - What are the properties of dielectric gas?
+      - Can you provide details about dielectric gas properties?
+      - Explain the characteristics of dielectric gas.
+
+  - intent: ask_dielectric_solid_properties
+    examples: |
+      - What are the properties of dielectric solid?
+      - Can you provide details about dielectric solid properties?
+      - Explain the characteristics of dielectric solid.
+
+  - intent: ask_solid_conductor_properties
+    examples: |
+      - What are the properties of solid conductor?
+      - Can you provide details about solid conductor properties?
+      - Explain the characteristics of solid conductor.
+
+  # website
+
+  - intent: ask_build_aircraft_emc_model
+    examples: |
+      - how do you build an aircraft system-level EMC model using Stochastica
+      - steps to create an EMC model for aircraft systems with Stochastica
+      - how to construct an aircraft EMC model using Stochastica
+      - explain the process of building an aircraft EMC model using Stochastica
+      - learning how to create an EMC model for aircraft systems
+      - instructions on building an aircraft EMC model with Stochastica
+      - using Stochastica to build an EMC model for aircraft systems
+      - procedure for building an aircraft EMC model using Stochastica
+      - tutorial on how to construct an aircraft EMC model using Stochastica
+      - explain how to create an aircraft EMC model using Stochastica
+
+  - intent: ask_build_automobile_emc_model
+    examples: |
+      - how do you build an automobile system-level EMC model using Stochastica
+      - steps to create an EMC model for automobiles with Stochastica
+      - how to construct an automobile EMC model using Stochastica
+      - explain the process of building an automobile EMC model using Stochastica
+      - learning how to create an EMC model for automobiles
+      - instructions on building an automobile EMC model with Stochastica
+      - using Stochastica to build an EMC model for automobiles
+      - procedure for building an automobile EMC model using Stochastica
+      - tutorial on how to construct an automobile EMC model using Stochastica
+      - explain how to create an automobile EMC model using Stochastica
+
+  - intent: add_materials
+    examples: |
+      - How are materials added to the system?
+      - Can you explain the process of adding materials under the Materials node?
+  - intent: choose_spectral_data
+    examples: |
+      - How is spectral data selected for each material?
+      - What are the options for choosing spectral data in the dialog boxes?
+  - intent: define_PEC_backed_laminates
+    examples: |
+      - How are PEC-backed laminates defined for RF absorption materials on cavity walls?
+      - Can you explain the process of adding PEC-backed laminates to define RF absorption materials?
+  - intent: edit_laminate
+    examples: |
+      - How do I edit a multi-layer laminate?
+      - Can I modify the layers of a laminate?
+  - intent: define_open_backed_laminates
+    examples: |
+      - How are open-backed laminates defined for EM transmission across large aperture laminate junctions?
+      - Can you explain the process of adding open-backed laminates to define EM transmission across large aperture laminate junctions?
+  - intent: add_connector
+    examples: |
+      - How do I add connectors in the model?
+      - Can you explain how to add connectors to the model?
+  - intent: add_branch_to_cable_segment
+    examples: |
+      - How can I add a branch to a cable segment?
+      - What is the process for adding a branch to a cable segment?
+  - intent: edit_segment
+    examples: |
+      - How do I edit a segment?
+      - Can I modify the segments in the model?
+  - intent: save_changes
+    examples: |
+      - How do I save the changes after editing segments?
+      - What is the procedure for saving changes in the model?
+
+  - intent: right_click_add_cable_segment
+    examples: |
+      - How do I add a cable segment by right-clicking?
+      - What is the process for adding a cable segment by right-clicking?
+  - intent: create_cable_segment_3d_model
+    examples: |
+      - How do I create cable segments in the 3D Model Window?
+      - Can you explain how to use the tool palette to create cable segments?
+  - intent: add_wire_cable_segment_3d_model
+    examples: |
+      - How do I add a wire or cable segment to a branch in the 3D Model Window?
+      - Can you explain how to use the "Create Segment" button to add a wire or cable segment?
+  - intent: solve_cable_section_properties_first
+    examples: |
+      - Should I solve for Cable Section Properties first before anything else?
+      - Is it necessary to calculate Cable Section Properties before solving anything?

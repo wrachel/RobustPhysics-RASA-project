@@ -28,6 +28,854 @@ stories:
       - intent: deny
       - action: utter_goodbye
 
+  - story: Model Tree Spectral Data
+    steps:
+      - intent: model_tree_spectral_data
+      - action: utter_model_tree_spectral_data
+
+  - story: Add Tx Power Input
+    steps:
+      - intent: add_tx_power_input
+      - action: utter_add_tx_power_input
+
+  - story: Edit Tx Power Inputs
+    steps:
+      - intent: edit_tx_power_inputs
+      - action: utter_edit_tx_power_inputs
+
+  - story: Locate Tx Power Inputs in 3D
+    steps:
+      - intent: locate_tx_power_inputs_3d
+      - action: utter_locate_tx_power_inputs_3d
+
+  - story: Edit Component
+    steps:
+      - intent: edit_component
+      - action: utter_edit_component
+
+  - story: Delete Component
+    steps:
+      - intent: delete_component
+      - action: utter_delete_component
+
+  - story: User asks about conductors in the Cable Harness model
+    steps:
+      - intent: inquire_conductors
+      - action: utter_respond_conductors_description
+
+  - story: User inquires about wire definition in Cable Harness
+    steps:
+      - intent: inquire_wire_definition
+      - action: utter_respond_wire_definition
+
+  - story: User asks about Shield in the Cable Harness model
+    steps:
+      - intent: inquire_shield_definition
+      - action: utter_respond_shield_definition
+
+  - story: User asks about Shield Transfer Impedance in Cable Harness
+    steps:
+      - intent: inquire_shield_transfer_impedance
+      - action: utter_respond_shield_transfer_impedance
+
+  - story: User inquires about Shield Construction subclasses
+    steps:
+      - intent: inquire_shield_construction_subclasses
+      - action: utter_respond_shield_construction_subclasses
+
+  - story: User asks about inductance in Cable Harness
+    steps:
+      - intent: inquire_inductance
+      - action: utter_respond_inductance
+
+  - story: User inquires about aperture inductance in Cable Harness
+    steps:
+      - intent: inquire_aperture_inductance
+      - action: utter_respond_aperture_inductance
+
+  - story: User asks about braid inductance in Cable Harness
+    steps:
+      - intent: inquire_braid_inductance
+      - action: utter_respond_braid_inductance
+
+  - story: User inquires about skin inductance in Cable Harness
+    steps:
+      - intent: inquire_skin_inductance
+      - action: utter_respond_skin_inductance
+
+  - story: User asks about cable structure in Cable Harness
+    steps:
+      - intent: inquire_cable_structure
+      - action: utter_respond_cable_structure
+
+  - story: User inquires about bundle structure in Cable Harness
+    steps:
+      - intent: inquire_bundle_structure
+      - action: utter_respond_bundle_structure
+
+  - story: User inquires about high-frequency behavior in Cable Harness
+    steps:
+      - intent: inquire_high_frequency_behavior
+      - action: utter_respond_high_frequency_behavior
+
+  - story: User asks about Differential Modes in multiconductor cables
+    steps:
+      - intent: inquire_differential_modes
+      - action: utter_respond_differential_modes
+
+  - story: User asks about Ground Return Path in steel-bodied automobile
+    steps:
+      - intent: inquire_ground_return_path_steel
+      - action: utter_respond_ground_return_path_steel
+
+  - story: User inquires about Wire Return Path in fiberglass boat
+    steps:
+      - intent: inquire_wire_return_path_fiberglass
+      - action: utter_respond_wire_return_path_fiberglass
+
+  - story: User asks about Shield Return Path in umbilical cable
+    steps:
+      - intent: inquire_shield_return_path_umbilical_cable
+      - action: utter_respond_shield_return_path_umbilical_cable
+
+  - story: User inquires about the algorithm for PUL properties calculation
+    steps:
+      - intent: inquire_algorithm_properties_calculation
+      - action: utter_respond_algorithm_properties_calculation
+
+  - story: User asks about integrating transfer impedance into PUL properties
+    steps:
+      - intent: inquire_integration_transfer_impedance
+      - action: utter_respond_integration_transfer_impedance
+
+  - story: User wants details on the approximation method for radiation impedance
+    steps:
+      - intent: inquire_approximation_radiation_impedance
+      - action: utter_respond_approximation_radiation_impedance
+
+  - story: User asks about reference choice with a lossless ground nearby
+    steps:
+      - intent: inquire_reference_choice_ground
+      - action: utter_respond_reference_choice_ground
+
+  - story: User inquires about using the outermost conductor as the reference
+    steps:
+      - intent: inquire_reference_choice_outermost
+      - action: utter_respond_reference_choice_outermost
+
+  - story: User asks about the unique choice of reference with one outermost shield
+    steps:
+      - intent: inquire_reference_choice_outermost_unique
+      - action: utter_respond_reference_choice_outermost_unique
+
+  - story: User inquires about choosing reference with multiple outermost shields or wires
+    steps:
+      - intent: inquire_reference_choice_outermost_general
+      - action: utter_respond_reference_choice_outermost_general
+
+  - story: User wants to know about mathematical and practical considerations in reference choice
+    steps:
+      - intent: inquire_reference_choice_mathematical_practice
+      - action: utter_respond_reference_choice_mathematical_practice
+
+  - story: User asks about the first step of the algorithm in cable harness calculations
+    steps:
+      - intent: inquire_algorithm_first_step
+      - action: utter_respond_algorithm_first_step
+
+  - story: User inquires about the definition of a leaf node in the tree diagram
+    steps:
+      - intent: inquire_leaf_node_definition
+      - action: utter_respond_leaf_node_definition
+
+  - story: User asks about non-leaf non-root nodes in the tree diagram
+    steps:
+      - intent: inquire_non_leaf_non_root_node_definition
+      - action: utter_respond_non_leaf_non_root_node_definition
+
+  - story: User wants to know about the root node in the tree diagram
+    steps:
+      - intent: inquire_root_node_definition
+      - action: utter_respond_root_node_definition
+
+  - story: User asks about relationships between nodes in the tree diagram
+    steps:
+      - intent: inquire_node_relationships
+      - action: utter_respond_node_relationships
+
+  - story: User asks for the definition of radiation impedance in a cable harness
+    steps:
+      - intent: inquire_radiation_impedance
+      - action: utter_respond_radiation_impedance
+
+  - story: User asks for the definition of radiation impedance in a cable harness
+    steps:
+      - intent: define_radiation_impedance
+      - action: utter_respond_define_radiation_impedance
+
+  - story: User asks about the characteristics of DM radiation resistance in a transmission line
+    steps:
+      - intent: describe_dm_radiation_resistance
+      - action: utter_respond_describe_dm_radiation_resistance
+
+  - story: User inquires about the direct approach to finding radiation resistance
+    steps:
+      - intent: inquire_direct_approach_radiation_resistance
+      - action: utter_respond_direct_approach_radiation_resistance
+
+  - story: User asks about the reciprocal approach in determining radiation resistance
+    steps:
+      - intent: inquire_reciprocal_approach_radiation_resistance
+      - action: utter_respond_reciprocal_approach_radiation_resistance
+  - story: create cylindrical fairing volume
+    steps:
+      - intent: create_cylindrical_fairing_volume
+      - action: utter_create_cylindrical_fairing_volume
+  - story: create spacecraft volume
+    steps:
+      - intent: create_spacecraft_volume
+      - action: utter_create_spacecraft_volume
+  - story: cut shape
+    steps:
+      - intent: cut_shape
+      - action: utter_cut_shape
+  - story: add ellipsoid
+    steps:
+      - intent: add_ellipsoid
+      - action: utter_add_ellipsoid
+  - story: add sphere
+    steps:
+      - intent: add_sphere
+      - action: utter_add_sphere
+  - story: ask about tree view
+    steps:
+      - intent: ask_tree_view
+      - action: utter_ask_tree_view
+  - story: inquire about panning the model
+    steps:
+      - intent: pan_model
+      - action: utter_pan_model
+  - story: question about scrolling in or out
+    steps:
+      - intent: scroll_in_out
+      - action: utter_scroll_in_out
+
+  - story: ask how to rotate the model
+    steps:
+      - intent: rotate_model
+      - action: utter_rotate_model
+
+  - story: inquire about hiding objects
+    steps:
+      - intent: hide_objects
+      - action: utter_hide_objects
+
+  - story: ask how to add 3d geometry
+    steps:
+      - intent: add_3d_geometry
+      - action: utter_add_3d_geometry
+
+  - story: inquire about wire constructions
+    steps:
+      - intent: wire_constructions
+      - action: utter_wire_constructions
+
+  - story: ask how to add connectors
+    steps:
+      - intent: add_connectors
+      - action: utter_add_connectors
+
+  - story: inquire about creating a junction
+    steps:
+      - intent: create_junction
+      - action: utter_create_junction
+  - story: ask about simulation tool
+    steps:
+      - intent: ask_about_simulation_tool
+      - action: utter_answer_simulation_tool
+
+  - story: ask about statistical power balance method
+    steps:
+      - intent: ask_about_statistical_power_balance_method
+      - action: utter_answer_statistical_power_balance_method
+
+  - story: ask about SEA framework
+    steps:
+      - intent: ask_about_SEA_framework
+      - action: utter_answer_SEA_framework
+
+  - story: ask about deterministic models vs statistical reduction
+    steps:
+      - intent: ask_about_deterministic_models_vs_statistical_reduction
+      - action: utter_answer_deterministic_models_vs_statistical_reduction
+
+  - story: ask about modal expansion basis
+    steps:
+      - intent: ask_about_modal_expansion_basis
+      - action: utter_answer_modal_expansion_basis
+
+  - story: ask about application of statistical power balance approach
+    steps:
+      - intent: ask_about_application_of_statistical_power_balance_approach
+      - action: utter_answer_application_of_statistical_power_balance_approach
+
+  - story: ask about inverse gamma distribution
+    steps:
+      - intent: ask_about_Inverse_Gamma_distribution
+      - action: utter_answer_Inverse_Gamma_distribution
+
+  - story: ask about e field pdf
+    steps:
+      - intent: ask_about_E_field_PDF
+      - action: utter_answer_E_field_PDF
+  - story: ask about energy subsystem in SPB modelling
+    steps:
+      - intent: ask_about_energy_subsystem_in_SPB_modelling
+      - action: utter_answer_energy_subsystem_in_SPB_modelling
+  - story: ask about total energy in cavity
+    steps:
+      - intent: ask_about_total_energy_in_cavity
+      - action: utter_answer_total_energy_in_cavity
+  - story: ask about average modal density
+    steps:
+      - intent: ask_about_average_modal_density
+      - action: utter_answer_average_modal_density
+  - story: ask about power balance principle
+    steps:
+      - intent: ask_about_power_balance_principle
+      - action: utter_answer_power_balance_principle
+  - story: ask about statistical power balance modeling
+    steps:
+      - intent: ask_about_statistical_power_balance_modeling
+      - action: utter_answer_statistical_power_balance_modeling
+  - story: ask about power balance model
+    steps:
+      - intent: ask_about_power_balance_model
+      - action: utter_answer_power_balance_model
+  - story: ask about absoption coefficient
+    steps:
+      - intent: ask_about_absorption_coefficient
+      - action: utter_answer_absorption_coefficient
+  - story: ask about coupling loss factor
+    steps:
+      - intent: ask_about_coupling_loss_factor
+      - action: utter_answer_coupling_loss_factor
+  - story: ask about layered materials
+    steps:
+      - intent: ask_about_layered_materials
+      - action: utter_answer_layered_materials
+  - story: ask about transfer matrix method
+    steps:
+      - intent: ask_about_transfer_matrix_method
+      - action: utter_answer_transfer_matrix_method
+  - story: ask about dielectric material properties
+    steps:
+      - intent: ask_about_dielectric_material_properties
+      - action: utter_answer_dielectric_material_properties
+  - story: ask about conductive material properties
+    steps:
+      - intent: ask_about_conductive_material_properties
+      - action: utter_answer_conductive_material_properties
+  - story: ask about stochastic wave mechanics
+    steps:
+      - intent: ask_about_stochastic_wave_mechanics
+      - action: utter_answer_stochastic_wave_mechanics
+  - story: ask about frequency stirred probability distribution
+    steps:
+      - intent: ask_about_frequency_stirred_probability_distribution
+      - action: utter_answer_frequency_stirred_probability_distribution
+  - story: ask about energy probability distribution
+    steps:
+      - intent: ask_about_energy_probability_distribution
+      - action: utter_answer_energy_probability_distribution
+  - story: ask about unconditional electric field PDF
+    steps:
+      - intent: ask_about_unconditional_electric_field_PDF
+      - action: utter_answer_unconditional_electric_field_PDF
+  - story: ask about lossy cavities
+    steps:
+      - intent: ask_about_lossy_cavities
+      - action: utter_answer_lossy_cavities
+  - story: ask about hybrid model solution
+    steps:
+      - intent: ask_about_hybrid_model_solution
+      - action: utter_answer_hybrid_model_solution
+  - story: ask about RhoPhy data structure definition
+    steps:
+      - intent: ask_about_RhoPhy_data_structure_definition
+      - action: utter_answer_RhoPhy_data_structure_definition
+  - story: ask about conductor radiated power
+    steps:
+      - intent: ask_about_conductor_radiated_power
+      - action: utter_answer_conductor_radiated_power
+  - story: ask about diffuse field modeling
+    steps:
+      - intent: ask_about_diffuse_field_modeling
+      - action: utter_answer_diffuse_field_modeling
+  - story: ask about cavity loss factor calculation
+    steps:
+      - intent: ask_about_cavity_loss_factor_calculation
+      - action: utter_answer_cavity_loss_factor_calculation
+  - story: ask about voltage source distribution
+    steps:
+      - intent: ask_about_voltage_source_distribution
+      - action: utter_answer_voltage_source_distribution
+  - story: ask about total power dissipation
+    steps:
+      - intent: ask_about_total_power_dissipation
+      - action: utter_answer_total_power_dissipation
+  - story: ask about cable harness response
+    steps:
+      - intent: ask_about_cable_harness_response
+      - action: utter_answer_cable_harness_response
+  - story: ask about cavity wavefields processing
+    steps:
+      - intent: ask_about_cavity_wavefields_processing
+      - action: utter_answer_cavity_wavefields_processing
+  - story: ask about mean field levels calculation
+    steps:
+      - intent: ask_about_mean_field_levels_calculation
+      - action: utter_answer_mean_field_levels_calculation
+  - story: ask about stochastic limits definition
+    steps:
+      - intent: ask_about_stochastic_limits_definition
+      - action: utter_answer_stochastic_limits_definition
+  - story: ask about uncoupled cable harness limits
+    steps:
+      - intent: ask_about_uncoupled_cable_harness_limits
+      - action: utter_answer_uncoupled_cable_harness_limits
+  - story: ask about cable harness limits inside cavities
+    steps:
+      - intent: ask_about_cable_harness_limits_inside_cavities
+      - action: utter_answer_cable_harness_limits_inside_cavities
+  - story: ask about cable harness limits inside cavities terminal inputs
+    steps:
+      - intent: ask_about_cable_harness_limits_inside_cavities_terminal_inputs
+      - action: utter_answer_cable_harness_limits_inside_cavities_terminal_inputs
+  - story: ask about loss factor due to cavity radiation resistance
+    steps:
+      - intent: ask_about_loss_factor_due_to_cavity_radiation_resistance
+      - action: utter_answer_loss_factor_due_to_cavity_radiation_resistance
+  - story: ask about loss factor due to antenna loss
+    steps:
+      - intent: ask_about_loss_factor_due_to_antenna_loss
+      - action: utter_answer_loss_factor_due_to_antenna_loss
+  - story: ask about voltage calclation using reciprocal theorem
+    steps:
+      - intent: ask_about_voltage_calculation_using_reciprocal_theorem
+      - action: utter_answer_voltage_calculation_using_reciprocal_theorem
+  - story: ask about current calculation using reciprocal theorem
+    steps:
+      - intent: ask_about_current_calculation_using_reciprocal_theorem
+      - action: utter_answer_current_calculation_using_reciprocal_theorem
+  - story: ask about transfer matrix method1
+    steps:
+      - intent: ask_about_transfer_matrix_method1
+      - action: utter_answer_transfer_matrix_method1
+  - story: ask about wave reflection and transmission in dielectric layers
+    steps:
+      - intent: ask_about_wave_reflection_and_transmission_in_dielectric_layers
+      - action: utter_answer_wave_reflection_and_transmission_in_dielectric_layers
+  - story: ask about continuity along interface of dielectric layers
+    steps:
+      - intent: ask_about_continuity_along_interface_of_dielectric_layers
+      - action: utter_answer_continuity_along_interface_of_dielectric_layers
+  - story: ask about generalization to multi layered structure
+    steps:
+      - intent: ask_about_generalization_to_multi_layered_structure
+      - action: utter_answer_generalization_to_multi_layered_structure
+  - story: ask about transmission coefficient definition
+    steps:
+      - intent: ask_about_transmission_coefficient_definition
+      - action: utter_answer_transmission_coefficient_definition
+  - story: ask about average power transmission coefficient
+    steps:
+      - intent: ask_about_average_power_transmission_coefficient
+      - action: utter_answer_average_power_transmission_coefficient
+  - story: ask about power transmission loss definition
+    steps:
+      - intent: ask_about_power_transmission_loss_definition
+      - action: utter_answer_power_transmission_loss_definition
+  - story: ask about field incidence absorption coefficient
+    steps:
+      - intent: ask_about_field_incidence_absorption_coefficient
+      - action: utter_answer_field_incidence_absorption_coefficient
+  - story: ask about cavity damping loss factor contributions
+    steps:
+      - intent: ask_about_cavity_damping_loss_factor_contributions
+      - action: utter_answer_cavity_damping_loss_factor_contributions
+  - story: ask about wall losses
+    steps:
+      - intent: ask_about_wall_losses
+      - action: utter_answer_wall_losses
+  - story: ask about absorption cross sections
+    steps:
+      - intent: ask_about_absorption_cross_sections
+      - action: utter_answer_absorption_cross_sections
+  - story: ask about antenna loading losses
+    steps:
+      - intent: ask_about_antenna_loading_losses
+      - action: utter_answer_antenna_loading_losses
+  - story: ask about modal damping loss mechanism
+    steps:
+      - intent: ask_about_modal_damping_loss_mechanism
+      - action: utter_answer_modal_damping_loss_mechanism
+  - story: ask about skin depth
+    steps:
+      - intent: ask_about_skin_depth
+      - action: utter_answer_skin_depth
+  - story: ask about reflection loss definition
+    steps:
+      - intent: ask_about_reflection_loss_definition
+      - action: utter_answer_reflection_loss_definition
+  - story: ask about average reflection loss
+    steps:
+      - intent: ask_about_average_reflection_loss
+      - action: utter_answer_average_reflection_loss
+  - story: ask about absoption coefficient definition
+    steps:
+      - intent: ask_about_absorption_coefficient_definition
+      - action: utter_answer_absorption_coefficient_definition
+  - story: ask about cavity damping loss factor
+    steps:
+      - intent: ask_about_cavity_damping_loss_factor
+      - action: utter_answer_cavity_damping_loss_factor
+  - story: ask about absoption section definition
+    steps:
+      - intent: ask_about_absorption_section_definition
+      - action: utter_answer_absorption_section_definition
+  - story: ask about cavity reverberant wavefield damping loss factor
+    steps:
+      - intent: ask_about_cavity_reverberant_wavefield_damping_loss_factor
+      - action: utter_answer_cavity_reverberant_wavefield_damping_loss_factor
+  - story: provide energy subsystem parameters
+    steps:
+      - intent: provide_energy_subsystem_parameters
+      - action: utter_provide_energy_subsystem_parameters
+  - story: specify energy subsystem dimensions
+    steps:
+      - intent: specify_energy_subsystem_dimensions
+      - action: utter_specify_energy_subsystem_dimensions
+  - story: specify additional parameters energy subsystem
+    steps:
+      - intent: specify_additional_parameters_energy_subsystem
+      - action: utter_specify_additional_parameters_energy_subsystem
+  - story: explain free propagation wavenumber
+    steps:
+      - intent: explain_free_propagation_wavenumber
+      - action: utter_explain_free_propagation_wavenumber
+  - story: define cavity modal density
+    steps:
+      - intent: define_cavity_modal_density
+      - action: utter_define_cavity_modal_density
+  - story: describe total energy reverberant wavefield
+    steps:
+      - intent: describe_total_energy_reverberant_wavefield
+      - action: utter_describe_total_energy_reverberant_wavefield
+  - story: explain mean squared electric field
+    steps:
+      - intent: explain_mean_squared_electric_field
+      - action: utter_explain_mean_squared_electric_field
+  - story: provide energy to eu conversion
+    steps:
+      - intent: provide_energy_to_eu_conversion
+      - action: utter_provide_energy_to_eu_conversion
+  - story: explain internal losses cavity subsystem
+    steps:
+      - intent: explain_internal_losses_cavity_subsystem
+      - action: utter_explain_internal_losses_cavity_subsystem
+  - story: express internal losses q factor
+    steps:
+      - intent: express_internal_losses_q_factor
+      - action: utter_express_internal_losses_q_factor
+  - story: mention inverse measured q factors
+    steps:
+      - intent: mention_inverse_measured_q_factors
+      - action: utter_mention_inverse_measured_q_factors
+  - story: explain wall loss factor function
+    steps:
+      - intent: explain_wall_loss_factor_function
+      - action: utter_explain_wall_loss_factor_function
+  - story: define parameters wall loss factor
+    steps:
+      - intent: define_parameters_wall_loss_factor
+      - action: utter_define_parameters_wall_loss_factor
+  - story: explain field incidence absorption
+    steps:
+      - intent: explain_field_incidence_absorption
+      - action: utter_explain_field_incidence_absorption
+  - story: define parameters field incidence absorption
+    steps:
+      - intent: define_parameters_field_incidence_absorption
+      - action: utter_define_parameters_field_incidence_absorption
+  - story: explain antenna loading losses
+    steps:
+      - intent: explain_antenna_loading_losses
+      - action: utter_explain_antenna_loading_losses
+  - story: define parameters antenna loading losses
+    steps:
+      - intent: define_parameters_antenna_loading_losses
+      - action: utter_define_parameters_antenna_loading_losses
+  - story: explain absorption section
+    steps:
+      - intent: explain_absorption_section
+      - action: utter_explain_absorption_section
+  - story: define parameters absorption section
+    steps:
+      - intent: define_parameters_absorption_section
+      - action: utter_define_parameters_absorption_section
+
+  - story: Add wires and specify connectors
+    steps:
+      - intent: add_wires
+      - action: utter_explain_add_wires
+      - intent: specify_connectors
+      - action: utter_explain_specify_connectors
+
+  - story: Add and Edit Cable Segment
+    steps:
+      - intent: add_cable_segment
+      - action: utter_explain_add_cable_segment
+      - intent: create_common_backbone_cable_segment
+      - action: utter_explain_create_common_backbone_cable_segment
+      - intent: edit_segment_cross_section
+      - action: utter_explain_edit_segment_cross_section
+
+  - story: Find Closest Reflecting Plane
+    steps:
+      - intent: find_closest_proximate_reflecting_plane
+      - action: utter_explain_find_closest_reflecting_plane
+
+  - story: Override Calculated Value
+    steps:
+      - intent: override_calculated_value
+      - action: utter_explain_override_calculated_value
+
+  # Math specs I - Section 3
+  - story: Unit Inquiry
+    steps:
+      - intent: ask_unit
+        entities:
+          - parameter_type: "voltage"
+      - action: utter_ask_unit
+  - story: Input Parameters Inquiry
+    steps:
+      - intent: ask_input_parameters
+      - action: utter_ask_input_parameters
+  - story: Spectral Data Inquiry
+    steps:
+      - intent: ask_spectral_data
+      - action: utter_ask_spectral_data
+  - story: Classes of Spectral Data Inquiry
+    steps:
+      - intent: ask_classes_spectral_data
+      - action: utter_ask_classes_spectral_data
+  - story: Data Structure Inquiry
+    steps:
+      - intent: ask_data_structure
+      - action: utter_ask_data_structure
+  - story: Frequency Range Inquiry
+    steps:
+      - intent: ask_frequency_range
+      - action: utter_ask_frequency_range
+  - story: Data Forms Inquiry
+    steps:
+      - intent: ask_data_forms
+      - action: utter_ask_data_forms
+  - story: Parameter Units Inquiry
+    steps:
+      - intent: ask_parameter_units
+      - action: utter_ask_parameter_units
+  - story: Reflection Loss Inquiry
+    steps:
+      - intent: ask_reflection_loss
+      - action: utter_ask_reflection_loss
+  - story: Insertion Loss Inquiry
+    steps:
+      - intent: ask_insertion_loss
+      - action: utter_ask_insertion_loss
+  - story: Shielding Effectiveness Inquiry
+    steps:
+      - intent: ask_shielding_effectiveness
+      - action: utter_ask_shielding_effectiveness
+  - story: Spectral Synthesis with Distributions
+    steps:
+      - intent: ask_spectral_synthesis
+      - action: utter_ask_spectral_synthesis
+
+  - story: Chi Distribution Inquiry
+    steps:
+      - intent: ask_chi_distribution
+      - action: utter_ask_chi_distribution
+  - story: Rayleigh Distribution Inquiry
+    steps:
+      - intent: ask_rayleigh_distribution
+      - action: utter_ask_rayleigh_distribution
+  - story: Normal Distribution Inquiry
+    steps:
+      - intent: ask_normal_distribution
+      - action: utter_ask_normal_distribution
+  - story: Log-normal Distribution Inquiry
+    steps:
+      - intent: ask_log_normal_distribution
+      - action: utter_ask_log_normal_distribution
+  - story: Complex Constant Synthesis Inquiry
+    steps:
+      - intent: ask_complex_constant_synthesis
+      - action: utter_ask_complex_constant_synthesis
+
+  - story: Rational Function Synthesis Inquiry
+    steps:
+      - intent: ask_rational_function_synthesis
+      - action: utter_ask_rational_function_synthesis
+
+  - story: PDF Distribution Synthesis Inquiry
+    steps:
+      - intent: ask_pdf_distribution
+      - action: utter_ask_pdf_distribution
+
+  - story: CDF Distribution Synthesis Inquiry
+    steps:
+      - intent: ask_cdf_distribution
+      - action: utter_ask_cdf_distribution
+  - story: Exponential Distribution Inquiry /// New story
+    steps:
+      - intent: ask_exponential_distribution
+      - action: utter_ask_exponential_distribution
+  - story: Lomax Distribution Inquiry
+    steps:
+      - intent: ask_lomax_distribution
+      - action: utter_ask_lomax_distribution
+
+  - story: Inverse Gamma Distribution Inquiry
+    steps:
+      - intent: ask_inverse_gamma_distribution
+      - action: utter_ask_inverse_gamma_distribution
+  - story: Log-Normal Distribution Fit
+    steps:
+      - intent: ask_log_normal_distribution_fit
+      - action: utter_ask_log_normal_distribution_fit
+
+  - story: Calculate PDF Parameters
+    steps:
+      - intent: ask_calculate_pdf_parameters
+      - action: utter_ask_calculate_pdf_parameters
+
+  - story: Find Alternative PDF Model
+    steps:
+      - intent: ask_find_alternative_pdf_model
+      - action: utter_ask_find_alternative_pdf_model
+
+  - story: Inverse-Gamma Distribution Fit
+    steps:
+      - intent: ask_inverse_gamma_distribution_fit
+      - action: utter_ask_inverse_gamma_distribution_fit
+
+  - story: Calculate Inverse-Gamma Parameters
+    steps:
+      - intent: ask_calculate_inverse_gamma_parameters
+      - action: utter_ask_calculate_inverse_gamma_parameters
+
+  - story: Lomax Distribution Unconditional PDF
+    steps:
+      - intent: ask_lomax_distribution_unconditional_pdf
+      - action: utter_ask_lomax_distribution_unconditional_pdf
+
+  - story: Calculate Lomax Parameters
+    steps:
+      - intent: ask_calculate_lomax_parameters
+      - action: utter_ask_calculate_lomax_parameters
+
+  - story: Calculate Lomax CDF
+    steps:
+      - intent: ask_calculate_lomax_cdf
+      - action: utter_ask_calculate_lomax_cdf
+
+  - story: Calculate Lomax Quantiles
+    steps:
+      - intent: ask_calculate_lomax_quantiles
+      - action: utter_ask_calculate_lomax_quantiles
+
+  - story: Reverberant Field Magnitude PDF
+    steps:
+      - intent: ask_reverberant_field_magnitude_pdf
+      - action: utter_ask_reverberant_field_magnitude_pdf
+
+  - story: Calculate Mean Field PDF
+    steps:
+      - intent: ask_calculate_mean_field_pdf
+      - action: utter_ask_calculate_mean_field_pdf
+
+  - story: Calculate Uncertainty PDF
+    steps:
+      - intent: ask_calculate_uncertainty_pdf
+      - action: utter_ask_calculate_uncertainty_pdf
+
+  - story: No Uncertainty in Source Current and Q Factor
+    steps:
+      - intent: ask_no_uncertainty
+      - action: utter_ask_no_uncertainty
+
+  - story: Uncertainty in Q Factor and Frequency Variance in Input Conductance
+    steps:
+      - intent: ask_uncertainty_q_factor_frequency_variance
+      - action: utter_ask_uncertainty_q_factor_frequency_variance
+
+  - story: PDF Model with Uncertainty in Q Factor and Frequency Variance in Input Conductance
+    steps:
+      - intent: ask_pdf_model_uncertainty_q_factor_frequency_variance
+      - action: utter_ask_pdf_model_uncertainty_q_factor_frequency_variance
+
+  - story: Statistical Distribution of Reverberant Field Q Factors
+    steps:
+      - intent: ask_statistical_distribution_q_factors
+      - action: utter_ask_statistical_distribution_q_factors
+
+  - story: Uncertainty in All Three Mean Field Variables
+    steps:
+      - intent: ask_uncertainty_all_mean_field_variables
+      - action: utter_ask_uncertainty_all_mean_field_variables
+
+  - story: Marginal PDF Modeled with Inverse-Gamma Distribution
+    steps:
+      - intent: ask_marginal_pdf_modeled_inverse_gamma
+      - action: utter_ask_marginal_pdf_modeled_inverse_gamma
+
+  - story: Closed Form Analytic Solution with Log-Normal Distribution
+    steps:
+      - intent: ask_closed_form_analytic_solution_log_normal
+      - action: utter_ask_closed_form_analytic_solution_log_normal
+
+  - story: Implementation Insight and Parameter Deduction for Lomax Distribution
+    steps:
+      - intent: ask_implementation_insight_parameter_deduction
+      - action: utter_ask_implementation_insight_parameter_deduction
+
+  - story: Excitation Uncertainty Inquiry
+    steps:
+      - intent: ask_excitation_uncertainty
+      - action: utter_ask_excitation_uncertainty
+
+  - story: Source Current Treatment
+    steps:
+      - intent: consider_source_current_as_random_variable
+      - action: utter_consider_source_current_as_random_variable
+
+  - story: PDF Model for Excitation Uncertainty
+    steps:
+      - intent: derive_pdf_model_excitation_uncertainty
+      - action: utter_derive_pdf_model_excitation_uncertainty
+
+  - story: Calculate Mean Point Input Conductance
+    steps:
+      - intent: calculate_mean_point_input_conductance
+      - action: utter_calculate_mean_point_input_conductance
+
+  - story: Incorporate Excitation Uncertainty
+    steps:
+      - intent: add_excitation_uncertainty_algorithm
+      - action: utter_add_excitation_uncertainty_algorithm
+
   - story: User inquires about frequency vector and sample
     steps:
       - intent: inquire_frequency_vector
@@ -49,18 +897,485 @@ stories:
     steps:
       - intent: copy_paste_spectral_data
       - action: utter_explain_copy_paste_spectral_data
-  
+
   - story: User inquires about cavity wavefield
     steps:
       - intent: inquire_cavity_wavefield
       - action: utter_explain_create_cavity_wavefield
-  
+
   - story: User asks to define dielectric gas
     steps:
       - intent: define_dielectric_gas_volume_cavity_wavefield
       - action: utter_explain_define_dielectric_volume
-  
+
   - story: User asks about q factor
     steps:
       - intent: define_q_factor_cavity_wavefield
       - action: utter_explain_q_factor
+
+  - story: User wants to know how to add external electric field constraints for excitation
+    steps:
+      - intent: excitation_external_efield_constraints
+      - action: utter_explain_external_efield_constraints
+
+  - story: User wants to know how to solve for the mean and statistical max, min field limits.
+    steps:
+      - intent: solve_max_min_field_limit
+      - action: utter_explain_max_min_field_limits
+
+  - story: User wants to see how to view E-field outputs.
+    steps:
+      - intent: view_efield_outputs
+      - action: utter_explain_efield_outputs
+
+  - story: describe connector model
+    steps:
+      - intent: describe_connector_model
+      - action: utter_explanation_connector_model
+
+  - story: describe junction model
+    steps:
+      - intent: describe_junction_model
+      - action: utter_explanation_junction_model
+
+  - story: describe junction relationship
+    steps:
+      - intent: describe_junction_relationship
+      - action: utter_explanation_junction_relationship
+
+  - story: describe junction structure
+    steps:
+      - intent: describe_junction_structure
+      - action: utter_explanation_junction_structure
+
+  - story: describe junction matrices
+    steps:
+      - intent: describe_junction_matrices
+      - action: utter_explanation_junction_matrice
+
+  - story: describe external field source
+    steps:
+      - intent: describe_external_field_source
+      - action: utter_explanation_external_field_source
+
+  - story: describe plane wave
+    steps:
+      - intent: describe_plane_wave
+      - action: utter_explanation_plane_wave
+
+  - story: describe multiconductor transmission line
+    steps:
+      - intent: describe_multiconductor_transmission_line
+      - action: utter_explanation_multiconductor_transmission_line
+
+  - story: gte explanation
+    steps:
+      - intent: ask_generalized_telegrapher_equations
+      - action: utter_respond_generalized_telegrapher_equations
+
+  - story: components of gte
+    steps:
+      - intent: ask_telegrapher_equations_components
+      - action: utter_respond_telegrapher_equations_components
+
+  - story: explain modal relationship
+    steps:
+      - intent: explain_modal_relationship
+      - action: utter_respond_modal_relationship
+
+  - story: describe generalized telegrapher's solution
+    steps:
+      - intent: describe_generalized_telegrapher_solution
+      - action: utter_respond_generalized_telegrapher_solution
+
+  - story: explain network description
+    steps:
+      - intent: explain_network_description
+      - action: utter_respond_network_description
+
+  - story: describe network solution process
+    steps:
+      - intent: describe_network_solution_process
+      - action: utter_respond_network_solution_process
+
+  - story: consider iterative solution
+    steps:
+      - intent: consider_iterative_solution
+      - action: utter_respond_iterative_solution
+
+  - story: mention external field terms
+    steps:
+      - intent: mention_external_field_terms
+      - action: utter_respond_external_field_terms
+
+  - story: describe network ports
+    steps:
+      - intent: describe_network_ports
+      - action: utter_respond_network_ports_description
+
+  - story: calculate power available
+    steps:
+      - intent: calculate_power_available
+      - action: utter_respond_power_available_calculation
+
+  - story: calculate power delivered
+    steps:
+      - intent: calculate_power_delivered
+      - action: utter_respond_power_delivered_calculation
+
+  - story: explain scattering parameter
+    steps:
+      - intent: explain_scattering_parameter
+      - action: utter_respond_scattering_parameter_explanation
+
+  - story: separate current components
+    steps:
+      - intent: separate_current_components
+      - action: utter_respond_current_component_separation
+
+  - story: explain loss in network
+    steps:
+      - intent: explain_loss_in_network
+      - action: utter_respond_loss_in_network_explanation
+
+  - story: distinguish loss roles
+    steps:
+      - intent: distinguish_loss_roles
+      - action: utter_respond_distinguish_loss_roles
+
+  - story: calculate loss equations
+    steps:
+      - intent: calculate_loss_equations
+      - action: utter_respond_loss_equations_calculation
+
+  - story: clarify loss roles
+    steps:
+      - intent: clarify_loss_roles
+      - action: utter_respond_clarify_loss_roles
+
+  - story: explain ohmic loss
+    steps:
+      - intent: explain_ohmic_loss
+      - action: utter_respond_ohmic_loss_explanation
+
+  - story: describe thevenin circuit
+    steps:
+      - intent: describe_thevenin_circuit
+      - action: utter_respond_thevenin_circuit_description
+
+  - story: describe norton circuit
+    steps:
+      - intent: describe_norton_circuit
+      - action: utter_respond_norton_circuit_description
+
+  - story: explain transfer impedance
+    steps:
+      - intent: explain_transfer_impedance
+      - action: utter_respond_transfer_impedance_explanation
+
+  - story: describe segment as antenna
+    steps:
+      - intent: describe_segment_as_antenna
+      - action: utter_respond_segment_as_antenna_description
+
+  - story: calculate mean power matched load
+    steps:
+      - intent: calculate_mean_power_matched_load
+      - action: utter_respond_mean_power_matched_load_calculation
+
+  - story: explain distributed voltage source integration
+    steps:
+      - intent: explain_distributed_voltage_source_integration
+      - action: utter_respond_distributed_voltage_source_integration_explanation
+
+  - story: describe gaussian quadrature
+    steps:
+      - intent: describe_gaussian_quadrature
+      - action: utter_respond_gaussian_quadrature_description
+
+  - story: explain quadrature requirements
+    steps:
+      - intent: explain_quadrature_requirements
+      - action: utter_respond_quadrature_requirements_explanation
+
+  - story: describe source translation
+    steps:
+      - intent: describe_source_translation
+      - action: utter_respond_source_translation_description
+
+  - story: outline quadrature formula
+    steps:
+      - intent: outline_quadrature_formula
+      - action: utter_respond_quadrature_formula_outline
+
+  - story: junction matrice
+
+  # math specs 1 | section 12
+
+  - story: User asks about quantiles definition
+    steps:
+      - intent: ask_quantiles_definition
+      - action: utter_quantiles_definition_explanation
+
+  - story: User asks about PDF description
+    steps:
+      - intent: ask_pdf_description
+      - action: utter_pdf_description_explanation
+
+  - story: User asks about cumulative distribution function
+    steps:
+      - intent: ask_cumulative_distribution_function
+      - action: utter_cumulative_distribution_function_explanation
+
+  - story: User asks about quantiles computation
+    steps:
+      - intent: ask_quantiles_computation
+      - action: utter_quantiles_computation_explanation
+
+  - story: User asks about relative variance of reverberant energy for a single cavity
+    steps:
+      - intent: ask_relative_variance_single_cavity
+      - action: utter_relative_variance_single_cavity_explanation
+
+  - story: User asks about relative variance of reverberant energy for multiple connected cavities
+    steps:
+      - intent: ask_relative_variance_multiple_cavities
+      - action: utter_relative_variance_multiple_cavities_explanation
+
+  - story: User asks about probabilistic variance formulation for power input
+    steps:
+      - intent: ask_probabilistic_variance_power_input
+      - action: utter_probabilistic_variance_power_input_explanation
+
+  - story: User asks about probabilistic variance formulation for aperture coupling power
+    steps:
+      - intent: ask_probabilistic_variance_aperture_coupling_power
+      - action: utter_probabilistic_variance_aperture_coupling_power_explanation
+
+  - story: User asks about effective modal overlap for multiple connected cavities
+    steps:
+      - intent: ask_effective_modal_overlap
+      - action: utter_effective_modal_overlap_explanation
+
+  - story: User asks about effective total loss factor for multiple connected cavities
+    steps:
+      - intent: ask_effective_total_loss_factor
+      - action: utter_effective_total_loss_factor_explanation
+
+  - story: User asks about statistical ensemble formulation for reverberant wave field energy
+    steps:
+      - intent: ask_statistical_ensemble_formulation
+      - action: utter_statistical_ensemble_formulation_explanation
+
+  - story: User asks about maximum and minimum response spectrum levels
+    steps:
+      - intent: ask_maximum_minimum_response_spectrum_levels
+      - action: utter_maximum_minimum_response_spectrum_levels_explanation
+
+  - story: User asks about mean electric field in a cavity
+    steps:
+      - intent: ask_mean_electric_field
+      - action: utter_mean_electric_field_explanation
+
+  - story: User asks about stochastic limits of frequency-stirred local electric field in a cavity
+    steps:
+      - intent: ask_local_electric_field_frequency_stirred
+      - action: utter_local_electric_field_frequency_stirred_explanation
+
+  - story: User asks about relationship between S21 response and frequency-stirred local electric field
+    steps:
+      - intent: ask_s21_of_local_electric_field_frequency_stirred
+      - action: utter_s21_of_local_electric_field_frequency_stirred_explanation
+
+  # math specs 1 | section 13
+
+  - story: User asks about direct field calculation
+    steps:
+      - intent: ask_direct_field_calculation
+      - action: utter_direct_field_calculation_explanation
+
+  - story: User asks about total field calculation
+    steps:
+      - intent: ask_total_field_calculation
+      - action: utter_total_field_calculation_explanation
+
+  - story: User asks about near field corrections
+    steps:
+      - intent: ask_near_field_corrections
+      - action: utter_near_field_corrections_explanation
+
+  - story: User asks about field distribution
+    steps:
+      - intent: ask_field_distribution
+      - action: utter_field_distribution_explanation
+
+  # math specs 1 | section 14
+
+  - story: User asks for specific graph instances
+    steps:
+      - intent: ask_specific_graph_instances
+      - action: utter_specific_graph_instances
+
+  # math specs 2 | section 1
+
+  - story: User asks for simulation tool explanation
+    steps:
+      - intent: ask_simulation_tool_explanation
+      - action: utter_simulation_tool_explanation
+
+  - story: User asks for simulation tool features
+    steps:
+      - intent: ask_simulation_tool_features
+      - action: utter_simulation_tool_features
+
+  - story: User asks for simulation tool features
+    steps:
+      - intent: ask_simulation_tool_use_cases
+      - action: utter_simulation_tool_use_cases
+
+  # math specs 2 | section 2
+
+  - story: User asks for cable harness model explanation
+    steps:
+      - intent: ask_cable_harness_model
+      - action: utter_cable_harness_model_explanation
+
+  - story: User asks for separable form of TEM mode fields explanation
+    steps:
+      - intent: ask_separable_form
+      - action: utter_separable_form_explanation
+
+  - story: User asks for deterministic transmission line modeling process
+    steps:
+      - intent: ask_deterministic_transmission_line_modeling
+      - action: utter_deterministic_transmission_line_modeling_process
+
+  - story: User asks for canonical test cases explanation
+    steps:
+      - intent: ask_canonical_test_cases
+      - action: utter_canonical_test_cases_explanation
+
+  # math specs 2 | section 3
+
+  - story: User asks for model solution parameters explanation
+    steps:
+      - intent: ask_model_solution_parameters
+      - action: utter_model_solution_parameters_explanation
+
+  - story: User asks for frequency solution vector explanation
+    steps:
+      - intent: ask_frequency_solution_vector
+      - action: utter_frequency_solution_vector_explanation
+
+  - story: User asks for constant bandwidth explanation
+    steps:
+      - intent: ask_constant_bandwidth
+      - action: utter_constant_bandwidth_explanation
+
+  - story: User asks for logarithmic bandwidth explanation
+    steps:
+      - intent: ask_logarithmic_bandwidth
+      - action: utter_logarithmic_bandwidth_explanation
+
+  - story: User asks for octave frequencies explanation
+    steps:
+      - intent: ask_octave_frequencies
+      - action: utter_octave_frequencies_explanation
+
+  # math specs 2 | section 4
+
+  - story: User asks about spectral data input
+    steps:
+      - intent: ask_spectral_data_input
+      - action: utter_spectral_data_input_explanation
+
+  - story: User asks about materials with complex properties
+    steps:
+      - intent: ask_material_properties
+      - action: utter_material_properties_explanation
+
+  # math specs 2 | section 5
+
+  - story: User asks about dielectric gas properties
+    steps:
+      - intent: ask_dielectric_gas_properties
+      - action: utter_dielectric_gas_properties_explanation
+
+  - story: User asks about dielectric solid properties
+    steps:
+      - intent: ask_dielectric_solid_properties
+      - action: utter_dielectric_solid_properties_explanation
+
+  - story: User asks about solid conductor properties
+    steps:
+      - intent: ask_solid_conductor_properties
+      - action: utter_solid_conductor_properties_explanation
+
+  # website
+
+  - story: build aircraft EMC model
+    steps:
+      - intent: ask_build_aircraft_emc_model
+      - action: utter_build_aircraft_emc_model
+
+  - story: build automobile EMC model
+    steps:
+      - intent: ask_build_automobile_emc_model
+      - action: utter_build_automobile_emc_model
+
+  - story: add materials
+    steps:
+      - intent: add_materials
+      - action: utter_add_materials
+  - story: choose spectral data
+    steps:
+      - intent: choose_spectral_data
+      - action: utter_choose_spectral_data
+  - story: define PEC backed laminates
+    steps:
+      - intent: define_PEC_backed_laminates
+      - action: utter_define_PEC_backed_laminates
+  - story: edit laminate
+    steps:
+      - intent: edit_laminate
+      - action: utter_edit_laminate
+  - story: define open backed laminates
+    steps:
+      - intent: define_open_backed_laminates
+      - action: utter_define_open_backed_laminates
+  - story: add connector
+    steps:
+      - intent: add_connector
+      - action: utter_add_connector
+  - story: add branch to cable segment
+    steps:
+      - intent: add_branch_to_cable_segment
+      - action: utter_add_branch_to_cable_segment
+  - story: edit segment
+    steps:
+      - intent: edit_segment
+      - action: utter_edit_segment
+  - story: save changes
+    steps:
+      - intent: save_changes
+      - action: utter_save_changes
+  # - story: add cable segment
+  #   steps:
+  #     - intent: add_cable_segment
+  #     - action: utter_add_cable_segment
+  - story: right click add cable segment
+    steps:
+      - intent: right_click_add_cable_segment
+      - action: utter_right_click_add_cable_segment
+  - story: create cable segment 3d model
+    steps:
+      - intent: create_cable_segment_3d_model
+      - action: utter_create_cable_segment_3d_model
+  - story: add wire cable segment 3d model
+    steps:
+      - intent: add_wire_cable_segment_3d_model
+      - action: utter_add_wire_cable_segment_3d_model
+  - story: solve cable section properties first
+    steps:
+      - intent: solve_cable_section_properties_first
+      - action: utter_solve_cable_section_properties_first
