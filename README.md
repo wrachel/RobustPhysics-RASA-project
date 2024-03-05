@@ -1,5 +1,7 @@
 # RobustPhysics RASA project
 
+Authored by Triton Consulting Group
+
 ## Necessary packages needed:
 Please make sure python verison 3.8, 3.9, or 3.10 as Rasa is only compatible with these python versions. You can download python here: [https://www.python.org/downloads/release/python-31013/](https://www.python.org/downloads/release/python-31013/).
 
